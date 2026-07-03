@@ -27,6 +27,8 @@ jobs:
             golmansketreninky/package-lock.json
             hcricany/package-lock.json
             ceskadopravnistavba/package-lock.json
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
       - name: Build Gólmanské tréninky
         working-directory: golmansketreninky
         env:
@@ -58,7 +60,7 @@ jobs:
           cp -R golmansketreninky/dist/. _site/golmansketreninky/
           cp -R hcricany/dist/. _site/hcricany/
           cp -R ceskadopravnistavba/dist/. _site/ceskadopravnistavba/
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
   deploy:
@@ -69,4 +71,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

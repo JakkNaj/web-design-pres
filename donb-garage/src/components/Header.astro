@@ -1,0 +1,29 @@
+---
+const navItems = [
+  { href: "/#hero", label: "Domů" },
+  { href: "/#sluzby", label: "Služby" },
+  { href: "/#postup", label: "Jak to probíhá" },
+  { href: "/#onas", label: "O nás" },
+  { href: "/kontakt/", label: "Kontakt" }
+];
+---
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Hlavní navigace">
+    <a class="brand" href="/#hero" aria-label="DON B Diagnostic Garage domů">
+      <img src="/assets/donb-logo.svg" alt="DON B Diagnostic Garage" />
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Otevřít menu</span>
+    </button>
+    <div class="nav-cluster" id="main-nav" data-nav-links>
+      <div class="nav-links">
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+      <a class="header-phone" href="tel:+420777852398">777 852 398</a>
+    </div>
+  </nav>
+</header>

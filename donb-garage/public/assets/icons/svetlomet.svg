@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Světlomet</title>
+  <desc id="desc">Ikona automobilového světlometu s paprsky.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="line" d="M77 284c73-91 180-121 358-84 8 2 13 10 10 18-24 67-94 110-181 116-64 5-126-11-187-50z"/>
+  <path class="line-thin" d="M142 278c54-41 132-55 236-35"/>
+  <path class="line-thin" d="M274 164l16-55M349 181l45-48M409 226l59-18M394 301l54 29"/>
+</svg>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../components/BaseLayout.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import MapEmbed from "../../components/MapEmbed.astro";
+---
+
+<BaseLayout title="Kontakt | DON B Diagnostic Garage" description="Kontakt na DON B Diagnostic Garage v Plané nad Lužnicí. Telefon, e-mail, adresa a formulář pro poptávku diagnostiky nebo servisu.">
+  <section class="contact-hero">
+    <div class="container">
+      <p class="section-label">Kontakt</p>
+      <h1>Domluvte si termín</h1>
+      <p>Potřebujete diagnostiku, autoelektriku nebo běžný servis? Zavolejte nebo napište - domluvíme vhodný čas.</p>
+    </div>
+  </section>
+
+  <section class="contact-body">
+    <div class="contact-sidebar">
+      <div class="contact-info">
+        <a href="tel:+420777852398">
+          <span>Telefon</span>
+          <strong>+420 777 852 398</strong>
+        </a>
+        <a href="mailto:info@donbgarage.cz">
+          <span>E-mail</span>
+          <strong>info@donbgarage.cz</strong>
+        </a>
+        <div>
+          <span>Adresa</span>
+          <strong>ČSLA, Planá nad Lužnicí</strong>
+        </div>
+        <div>
+          <span>Otevírací doba</span>
+          <p><b>Po - Pá</b><span>8:00 - 17:00</span></p>
+          <p><b>So</b><span>po domluvě</span></p>
+          <p><b>Ne</b><span>zavřeno</span></p>
+        </div>
+      </div>
+
+      <figure class="contact-photo">
+        <img src="/assets/photos/contact-diagnostics-tools.jpg" alt="Diagnostická aplikace a servisní nářadí" />
+      </figure>
+    </div>
+
+    <div class="contact-main">
+      <div class="form-panel" id="formular">
+        <h2>Napište nám</h2>
+        <ContactForm />
+      </div>
+      <div class="map-panel" aria-label="Mapa: ČSLA, Planá nad Lužnicí">
+        <MapEmbed title="Mapa: ČSLA, Planá nad Lužnicí" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

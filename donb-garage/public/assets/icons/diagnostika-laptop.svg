@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Diagnostický notebook</title>
+  <desc id="desc">Ikona notebooku s diagnostickou křivkou a připojovacím kabelem.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="line" d="M111 131h290v192H111z"/>
+  <path class="line" d="M78 368h356l-34 45H112l-34-45z"/>
+  <path class="line-thin" d="M153 233h57l27-45 43 91 31-46h48"/>
+  <path class="line-thin" d="M400 228h46c20 0 36 16 36 36v28"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Obecná silueta sedanu bez loga</title>
+  <desc id="desc">Monochromatická boční silueta sedanu bez značkových prvků.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="fill" d="M37 316c8-38 35-63 80-73l42-52c18-22 45-35 74-35h72c27 0 53 11 71 31l49 54c31 4 53 18 66 42 8 15 11 32 8 52H37c-4-6-4-13 0-19z"/>
+  <path class="cut" d="M179 225l31-36c8-9 20-15 32-15h40v51H179zM305 174h18c15 0 30 7 40 18l31 33h-89v-51z"/>
+  <path class="fill" d="M55 286c17-20 41-31 75-33l-12-10c-31 7-52 21-63 43zM415 243c31 3 54 17 68 39-19-13-41-20-65-20l-3-19z"/>
+  <circle class="fill" cx="151" cy="337" r="45"/>
+  <circle class="cut" cx="151" cy="337" r="20"/>
+  <circle class="fill" cx="381" cy="337" r="45"/>
+  <circle class="cut" cx="381" cy="337" r="20"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Jemný technický pattern pro pozadí autoservisu</title>
+<desc id="desc">Tlumený vzor linek, bodů a servisních symbolů pro sekční pozadí webu.</desc>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0d1218"/>
+    <stop offset="1" stop-color="#17202b"/>
+  </linearGradient>
+  <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+    <path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="1"/>
+    <circle cx="0" cy="0" r="2" fill="#ffffff" fill-opacity=".12"/>
+  </pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#g)"/>
+<rect width="1600" height="900" fill="url(#grid)"/>
+<g fill="none" stroke="#ffffff" stroke-opacity=".10" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M144 180h170l40-68h150l52 68h178"/>
+  <path d="M1120 230h210l38-64h86"/>
+  <path d="M104 676h270l42-74h118"/>
+  <path d="M1080 696h340"/>
+</g>
+<g fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M128 450l105 105M233 450L128 555"/>
+  <rect x="1220" y="416" width="152" height="96" rx="20"/>
+  <path d="M1250 464h92M1272 446v36"/>
+  <path d="M608 407c56-58 150-72 284-44"/>
+  <path d="M650 455c58-36 130-42 216-20"/>
+</g>
+<circle cx="1320" cy="160" r="170" fill="#ffffff" fill-opacity=".035"/>
+<circle cx="330" cy="740" r="230" fill="#ffffff" fill-opacity=".025"/>
+</svg>

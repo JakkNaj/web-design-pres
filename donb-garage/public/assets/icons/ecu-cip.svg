@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Řídicí jednotka / čip</title>
+  <desc id="desc">Ikona čipu řídicí jednotky pro autoelektriku.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <rect class="line" x="145" y="145" width="222" height="222" rx="38"/>
+  <path class="line-thin" d="M111 184h34M111 232h34M111 280h34M111 328h34M367 184h34M367 232h34M367 280h34M367 328h34"/>
+  <path class="line-thin" d="M184 111v34M232 111v34M280 111v34M328 111v34M184 367v34M232 367v34M280 367v34M328 367v34"/>
+  <path class="line-thin" d="M205 262h46l25-42 31 83h40M205 303h56"/>
+</svg>

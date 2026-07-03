@@ -1,0 +1,39 @@
+---
+import MapEmbed from "./MapEmbed.astro";
+
+const year = new Date().getFullYear();
+const navItems = [
+  { href: "/#hero", label: "Domů" },
+  { href: "/#sluzby", label: "Služby" },
+  { href: "/#postup", label: "Jak to probíhá" },
+  { href: "/#onas", label: "O nás" },
+  { href: "/kontakt/", label: "Kontakt" }
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/assets/donb-logo.svg" alt="DON B Diagnostic Garage" />
+      <p>Diagnostika, autoelektrika a servis moderních vozů v Plané nad Lužnicí.</p>
+      <a class="footer-phone" href="tel:+420777852398">777 852 398</a>
+    </div>
+
+    <nav class="footer-menu" aria-label="Navigace v patičce">
+      <p>Menu</p>
+      <div>
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+    </nav>
+
+    <div class="footer-map" aria-label="Mapa provozovny v Plané nad Lužnicí">
+      <MapEmbed class="footer-map-embed" title="Mapa provozovny v Plané nad Lužnicí" />
+    </div>
+
+    <div class="footer-bottom">
+      <span>Planá nad Lužnicí</span>
+      <span>Created by Jakub Najman</span>
+      <span>© {year} DON B Diagnostic Garage</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../components/BaseLayout.astro";
+import SectionIntro from "../components/SectionIntro.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+
+const quals = [
+  "Absolvent ČVUT - obor spalovací motory",
+  "Zkušenosti z vývoje vozů ve Škoda Auto",
+  "Podíl na vývoji řídicích jednotek",
+  "Specialista na autoelektriku",
+  "Certifikace pro práci na hybridních vozech"
+];
+
+const services = [
+  {
+    number: "01",
+    title: "Hloubková diagnostika",
+    icon: "/assets/icons/diagnostika-laptop.svg",
+    text: "Načtení a vyhodnocení chybových kódů, kontrola živých dat a testování elektronických systémů vozu. Využijete ji při svítící kontrolce motoru, ABS, airbagu, problémech se startováním nebo nepravidelném chodu motoru."
+  },
+  {
+    number: "02",
+    title: "Autoelektrika",
+    icon: "/assets/icons/ecu-cip.svg",
+    text: "Řešíme závady elektroinstalace, dobíjení, startování, osvětlení, senzorů, centrálního zamykání a dalších elektrických částí vozu. Najdeme i přerušené vodiče, zkraty a závady, které se neprojevují pořád stejně."
+  },
+  {
+    number: "03",
+    title: "Servisní úkony",
+    icon: "/assets/icons/autozdvihak.svg",
+    text: "Po dohodě provedeme běžné servisní práce, kontrolu podvozku, brzd, motoru a dalších částí. Rozsah práce i cenu řešíme předem."
+  },
+  {
+    number: "04",
+    title: "Moderní vozy a hybridy",
+    icon: "/assets/icons/motor.svg",
+    text: "Zkušenosti z automobilového vývoje pomáhají při diagnostice moderních vozů, řídicích jednotek a hybridních systémů, kde je důležitý správný postup a bezpečnost."
+  }
+];
+
+const chips = [
+  "Svítí kontrolka motoru",
+  "Auto špatně startuje",
+  "Vybíjí se baterie",
+  "Nefungují světla nebo zamykání",
+  "Závada se objevuje jen občas",
+  "Problém s ABS nebo airbagem"
+];
+
+const steps = [
+  { n: "01", title: "Domluvíme termín", text: "Zavoláte na 777 852 398 nebo napíšete zprávu, stručně popíšete problém a domluvíme vhodný čas." },
+  { n: "02", title: "Zkontrolujeme vůz", text: "Provedeme základní kontrolu, diagnostiku nebo měření podle typu závady." },
+  { n: "03", title: "Vysvětlíme zjištění", text: "Řekneme, co jsme našli, co je potřeba opravit a jaký postup dává smysl." },
+  { n: "04", title: "Po odsouhlasení opravíme", text: "Do opravy se pouštíme až po domluvě. Po dokončení auto předáme a vysvětlíme provedené práce." }
+];
+
+const benefits = [
+  { num: "01", title: "Nejdřív hledáme příčinu", text: "Nechceme jen mazat chyby nebo měnit díly naslepo." },
+  { num: "02", title: "Srozumitelně vysvětlíme problém", text: "Řekneme, co se s autem děje a jaké jsou možnosti opravy." },
+  { num: "03", title: "Osobní přístup", text: "Komunikujete přímo s člověkem, který se vašemu autu věnuje." },
+  { num: "04", title: "Servis po domluvě", text: "Termín, rozsah práce i cenu řešíme předem." },
+  { num: "05", title: "Zázemí z automobilového vývoje", text: "Zkušenosti z ČVUT a Škoda Auto přenášíme do běžné diagnostiky a oprav." }
+];
+
+const faqs = [
+  { q: "Musím se objednat předem?", a: "Ano, ideálně telefonicky nebo zprávou - vyhradíme si na vůz čas." },
+  { q: "Kolik stojí diagnostika?", a: "Cena záleží na rozsahu závady. Orientační cenu i další postup sdělíme předem." },
+  { q: "Stačí jen vymazat chybu v diagnostice?", a: "Někdy ano, často je ale potřeba najít skutečnou příčinu - samotné vymazání chyby nemusí problém vyřešit." },
+  { q: "Umíte i hybridní nebo elektrická auta?", a: "Ano, máme certifikaci pro práci na hybridních vozech. Rozsah u konkrétního vozu ověříme při domluvě." },
+  { q: "Jaké značky vozidel servisujete?", a: "Servisujeme osobní vozy většiny běžných značek, konkrétní vůz ověříme při domluvě termínu." }
+];
+
+const contactIssueHref = (issue: string) => `/kontakt/?typ=${encodeURIComponent(issue)}#formular`;
+---
+
+<BaseLayout title="DON B Diagnostic Garage | Diagnostika a autoelektrika">
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Diagnostika, autoelektrika a servis vašeho auta</h1>
+        <svg class="pulse-line" viewBox="0 0 340 24" aria-hidden="true">
+          <polyline points="0,12 120,12 132,12 140,4 148,20 156,2 164,22 172,12 340,12" />
+        </svg>
+        <p>
+          Absolvent ČVUT se zkušenostmi z vývoje vozů ve Škoda Auto. Nejdřív najdeme skutečnou příčinu závady, pak navrhneme řešení, které dává smysl.
+        </p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="tel:+420777852398">Zavolat: 777 852 398</a>
+          <a class="button button--ghost" href="/kontakt/">Napsat zprávu</a>
+        </div>
+        <ul class="proof-list" aria-label="Kvalifikace">
+          <li>ČVUT - spalovací motory</li>
+          <li>zkušenosti ze Škoda Auto</li>
+          <li>certifikace pro hybridní vozy</li>
+        </ul>
+      </div>
+      <div class="diagnostic-frame">
+        <img src="/assets/photos/diagnostika-interier.jpg" alt="Diagnostika vozu přes notebook v interiéru auta" />
+        <div class="frame-grid" aria-hidden="true"></div>
+        <div class="frame-location">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 12 7 12s7-7 7-12a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+          Planá nad Lužnicí
+        </div>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+      </div>
+    </div>
+    <div class="hazard" aria-hidden="true"></div>
+  </section>
+
+  <section class="section section--paper" id="onas">
+    <div class="split">
+      <SectionIntro label="O nás" title="Kdo stojí za DON B Diagnostic Garage" text="DON B Diagnostic Garage je menší garáž zaměřená na diagnostiku, autoelektriku a servis moderních vozů. Za diagnostikou stojí absolvent ČVUT v oboru spalovací motory, který má za sebou zkušenosti z vývoje vozů ve Škoda Auto a podíl na vývoji řídicích jednotek." />
+      <div class="qualification-panel">
+        {quals.map((qual) => (
+          <div class="qualification-row">
+            <span aria-hidden="true"></span>
+            <p>{qual}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="sluzby">
+    <div class="container">
+      <SectionIntro label="Služby" title="Co pro vaše auto uděláme" light />
+      <div class="service-grid">
+        {services.map((service) => <ServiceCard {...service} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--case">
+    <div class="case-grid">
+      <figure class="case-image">
+        <img src="/assets/photos/motor-red.jpg" alt="Servis motorového prostoru červeného auta" />
+        <figcaption>Profesionální přístup</figcaption>
+      </figure>
+      <div class="case-copy">
+        <SectionIntro label="Ukázka z praxe" title="Jak vypadá diagnostika v praxi" light />
+        <p>
+          Audi A7 přijelo s nefunkčními dálkovými světly po několika neúspěšných návštěvách autorizovaných servisů. Diagnostika odhalila, že jednotka levého světlometu neměla napájení - příčinou byla prasklá pojistka. Po výměně světla fungovala bezchybně, pro jistotu jsme zkontrolovali i kabeláž a servomotory.
+        </p>
+        <blockquote>Správná diagnostika šetří čas i peníze - i tam, kde to jiné servisy nenašly.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper section--center" id="kdy">
+    <SectionIntro
+      label="Kdy se ozvat"
+      title="Kdy má smysl přijet na diagnostiku?"
+      text="Ozvěte se, pokud svítí kontrolka motoru, ABS nebo airbagu, auto špatně startuje, samovolně zhasíná, vybíjí se baterie, nefungují světla, okna, zamykání, nebo se závada objevuje jen občas. Čím dřív se problém zkontroluje, tím větší je šance předejít zbytečně drahé opravě."
+      align="center"
+    />
+    <div class="chip-grid">
+      {chips.map((chip) => <a href={contactIssueHref(chip)}>{chip}</a>)}
+    </div>
+  </section>
+
+  <section class="section section--dark" id="postup">
+    <div class="container">
+      <SectionIntro label="Jak to probíhá" title="Čtyři kroky od telefonu k opravě" light />
+      <div class="timeline">
+        {steps.map((step) => (
+          <article class="timeline-step">
+            <div>{step.n}</div>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="proc">
+    <div class="split split--benefits">
+      <SectionIntro label="Proč k nám" title="Férová domluva a práce podle skutečné závady" />
+      <div class="benefit-list">
+        {benefits.map((benefit) => (
+          <article>
+            <span>{benefit.num}</span>
+            <div>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="kontakt">
+    <div class="cta-panel">
+      <div>
+        <p class="section-label">Kontakt</p>
+        <h2>Domluvte si termín</h2>
+        <p>Potřebujete diagnostiku, autoelektriku nebo běžný servis? Zavolejte, napište, nebo si prohlédněte kontaktní údaje.</p>
+        <div class="hero-actions">
+          <a class="button button--light" href="tel:+420777852398">Zavolat: 777 852 398</a>
+          <a class="button button--ghost-light" href="/kontakt/">Napsat zprávu</a>
+        </div>
+      </div>
+      <img class="cta-photo" src="/assets/photos/cta-car-tail-lights.jpg" alt="Zadní světla auta v tmavé garáži" />
+    </div>
+  </section>
+
+  <section class="section section--black" id="faq">
+    <div class="faq-wrap">
+      <SectionIntro label="Časté dotazy" title="Na co se lidé ptají" align="center" light />
+      <div class="faq-list">
+        {faqs.map((faq, index) => (
+          <article class="faq-item" data-faq-item data-open={index === 0 ? true : undefined}>
+            <button type="button" aria-expanded={index === 0 ? "true" : "false"} data-faq-button>
+              <span>{faq.q}</span>
+              <span aria-hidden="true"></span>
+            </button>
+            <p data-faq-answer>{faq.a}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

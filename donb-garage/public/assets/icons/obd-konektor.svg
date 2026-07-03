@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">OBD diagnostický konektor</title>
+  <desc id="desc">Ikona OBD diagnostického konektoru pro autodiagnostiku.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="line" d="M113 153h286l-31 206H144L113 153z"/>
+  <path class="line-thin" d="M146 196h220M167 244h178"/>
+  <circle class="fill" cx="184" cy="296" r="12"/>
+  <circle class="fill" cx="224" cy="296" r="12"/>
+  <circle class="fill" cx="264" cy="296" r="12"/>
+  <circle class="fill" cx="304" cy="296" r="12"/>
+  <circle class="fill" cx="344" cy="296" r="12"/>
+  <path class="line-thin" d="M256 153v-42M256 111h66"/>
+</svg>

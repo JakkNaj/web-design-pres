@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Dvousloupový zvedák</title>
+  <desc id="desc">Ikona autoservisního zvedáku s autem pro pozadí sekcí.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="line" d="M95 96v320M417 96v320"/>
+  <path class="line-thin" d="M72 416h70M370 416h70"/>
+  <path class="line-thin" d="M118 170h276"/>
+  <path class="line-thin" d="M143 251l76-42h74l76 42"/>
+  <path class="line-thin" d="M173 251h166"/>
+  <circle class="fill" cx="201" cy="274" r="24"/>
+  <circle class="fill" cx="311" cy="274" r="24"/>
+  <path class="line-thin" d="M143 252l-53 35M369 252l53 35"/>
+</svg>

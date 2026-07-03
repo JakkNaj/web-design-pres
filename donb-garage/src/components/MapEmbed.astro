@@ -1,0 +1,25 @@
+---
+interface Props {
+  class?: string;
+  title?: string;
+}
+
+const {
+  class: className = "map-embed",
+  title = "Mapa provozovny DON B Diagnostic Garage"
+} = Astro.props;
+
+const mapSrc =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17158.510711901712!2d14.706904628362048!3d49.35274779056687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470cbcf1362284e9%3A0x6b3ed9024e94edbb!2zxIxTTEEsIDM5MSAxMSBQbGFuw6EgbmFkIEx1xb5uaWPDrQ!5e1!3m2!1scs!2scz!4v1783064170219!5m2!1scs!2scz";
+---
+
+<iframe
+  class={className}
+  src={mapSrc}
+  width="600"
+  height="450"
+  title={title}
+  allowfullscreen
+  loading="lazy"
+  referrerpolicy="strict-origin-when-cross-origin"
+></iframe>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Otevřený servisní klíč</title>
+  <desc id="desc">Ikona otevřeného klíče pro servisní úkony.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="line" d="M337 80c37 5 69 30 84 66l-65 22-20 60 43 50c-34 19-78 18-113-7L117 420c-15 15-40 15-55 0s-15-40 0-55l149-149c-25-35-26-79-7-113l50 43 60-20 23-46z"/>
+</svg>

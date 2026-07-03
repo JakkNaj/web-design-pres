@@ -1,0 +1,21 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  text: string;
+  icon: string;
+}
+
+const { number, title, text, icon } = Astro.props;
+---
+
+<article class="service-card">
+  <span class="bolt bolt--top" aria-hidden="true"></span>
+  <span class="bolt bolt--bottom" aria-hidden="true"></span>
+  <span class="service-number" aria-hidden="true">{number}</span>
+  <div class="service-icon">
+    <img src={icon} alt="" />
+  </div>
+  <h3>{title}</h3>
+  <p>{text}</p>
+</article>

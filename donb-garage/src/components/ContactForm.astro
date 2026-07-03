@@ -1,0 +1,30 @@
+---
+---
+
+<form
+  class="contact-form"
+  action="mailto:info@donbgarage.cz?subject=Popt%C3%A1vka%20z%20webu%20DON%20B%20Diagnostic%20Garage"
+  method="post"
+  enctype="text/plain"
+  data-contact-form
+>
+  <div class="form-grid">
+    <label>
+      <span>Jméno</span>
+      <input name="name" type="text" autocomplete="name" required placeholder="Vaše jméno" />
+    </label>
+    <label>
+      <span>Telefon</span>
+      <input name="phone" type="tel" autocomplete="tel" placeholder="+420 ..." />
+    </label>
+  </div>
+  <label>
+    <span>E-mail</span>
+    <input name="email" type="email" autocomplete="email" placeholder="vas@email.cz" />
+  </label>
+  <label>
+    <span>Vůz a popis závady</span>
+    <textarea name="message" rows="9" required placeholder="Značka a model vozu, co se děje, kdy se to objevuje..."></textarea>
+  </label>
+  <button class="button button--primary" type="submit">Odeslat zprávu</button>
+</form>

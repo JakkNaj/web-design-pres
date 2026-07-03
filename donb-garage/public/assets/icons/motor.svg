@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Motor</title>
+  <desc id="desc">Monochromatická ikona motoru pro servis a diagnostiku.</desc>
+  <style>
+    svg { color: #121820; }
+    .fill { fill: currentColor; }
+    .line { fill: none; stroke: currentColor; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+    .line-thin { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+    .cut { fill: #ffffff; }
+  </style>
+  <path class="line" d="M144 194h210c22 0 40 18 40 40v96c0 22-18 40-40 40H144c-22 0-40-18-40-40v-96c0-22 18-40 40-40z"/>
+  <path class="line-thin" d="M182 194v-48h111v48M215 146v-32h45"/>
+  <path class="line-thin" d="M394 258h50v66h-50M104 256H67v62h37"/>
+  <path class="line-thin" d="M173 277h47l28-39 37 84 31-45h44"/>
+  <path class="line-thin" d="M136 370v39h190v-39"/>
+</svg>

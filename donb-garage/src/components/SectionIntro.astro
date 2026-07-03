@@ -1,0 +1,17 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  text?: string;
+  align?: "left" | "center";
+  light?: boolean;
+}
+
+const { label, title, text, align = "left", light = false } = Astro.props;
+---
+
+<div class:list={["section-intro", `section-intro--${align}`, { "section-intro--light": light }]}>
+  <p class="section-label">{label}</p>
+  <h2>{title}</h2>
+  {text && <p class="section-copy">{text}</p>}
+</div>

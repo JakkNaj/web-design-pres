@@ -27,6 +27,7 @@ jobs:
             golmansketreninky/package-lock.json
             hcricany/package-lock.json
             ceskadopravnistavba/package-lock.json
+            donb-garage/package-lock.json
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
       - name: Build Gólmanské tréninky
@@ -53,13 +54,22 @@ jobs:
           npm ci
           npm run build
           node ../scripts/prepare-pages.mjs dist /web-design-pres/ceskadopravnistavba
+      - name: Build DON B Garage
+        working-directory: donb-garage
+        env:
+          ASTRO_BASE: /web-design-pres/donb-garage
+        run: |
+          npm ci
+          npm run build
+          node ../scripts/prepare-pages.mjs dist /web-design-pres/donb-garage
       - name: Assemble Pages artifact
         run: |
-          mkdir -p _site/golmansketreninky _site/hcricany _site/ceskadopravnistavba
+          mkdir -p _site/golmansketreninky _site/hcricany _site/ceskadopravnistavba _site/donb-garage
           cp index.html _site/index.html
           cp -R golmansketreninky/dist/. _site/golmansketreninky/
           cp -R hcricany/dist/. _site/hcricany/
           cp -R ceskadopravnistavba/dist/. _site/ceskadopravnistavba/
+          cp -R donb-garage/dist/. _site/donb-garage/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

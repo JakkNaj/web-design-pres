@@ -1,0 +1,98 @@
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "DON B Diagnostic Garage - diagnostika, autoelektrika a servis moderních vozů v Plané nad Lužnicí."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0C0C0C" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <script is:inline>
+      const navToggle = document.querySelector("[data-nav-toggle]");
+      const navLinks = document.querySelector("[data-nav-links]");
+
+      navToggle?.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+        navLinks?.toggleAttribute("data-open", !expanded);
+      });
+
+      navLinks?.addEventListener("click", (event) => {
+        if (event.target instanceof HTMLAnchorElement) {
+          navToggle?.setAttribute("aria-expanded", "false");
+          navLinks.removeAttribute("data-open");
+        }
+      });
+
+      document.querySelectorAll("[data-faq-button]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest("[data-faq-item]");
+          const isOpen = button.getAttribute("aria-expanded") === "true";
+          button.setAttribute("aria-expanded", String(!isOpen));
+          item?.toggleAttribute("data-open", !isOpen);
+        });
+      });
+
+      const contactForm = document.querySelector("[data-contact-form]");
+      const queryParams = new URLSearchParams(window.location.search);
+      const issueType = queryParams.get("typ");
+      const messageField = contactForm?.querySelector('textarea[name="message"]');
+
+      if (issueType && messageField instanceof HTMLTextAreaElement && !messageField.value.trim()) {
+        messageField.value = [
+          `Typ problému: ${issueType}`,
+          "",
+          "Vůz: prosím doplňte",
+          "Rok výroby / motorizace: prosím doplňte",
+          "Najeto kilometrů: prosím doplňte",
+          "Kdy se problém objevuje: prosím doplňte",
+          "Svítí kontrolka nebo hláška: prosím doplňte",
+          "Co už bylo kontrolováno nebo opravováno: prosím doplňte",
+          "Další poznámky: prosím doplňte"
+        ].join("\n");
+      }
+
+      contactForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(contactForm);
+        const body = [
+          `Jméno: ${formData.get("name") || ""}`,
+          `Telefon: ${formData.get("phone") || ""}`,
+          `E-mail: ${formData.get("email") || ""}`,
+          "",
+          `Vůz a popis závady:`,
+          `${formData.get("message") || ""}`
+        ].join("\n");
+        const subject = encodeURIComponent("Poptávka z webu DON B Diagnostic Garage");
+        window.location.href = `mailto:info@donbgarage.cz?subject=${subject}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+  </body>
+</html>

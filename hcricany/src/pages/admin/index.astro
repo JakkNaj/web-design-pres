@@ -1,7 +1,6 @@
 ---
 // UI-only Decap showcase. The mock login gates the editor visually; the CMS uses
 // Decap's test backend and does not write to GitHub.
-const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="cs">
@@ -184,7 +183,7 @@ const base = import.meta.env.BASE_URL;
     <section class="mock-login" data-mock-login>
       <form class="mock-login__panel" data-mock-form>
         <div class="mock-login__brand">
-          <span><img src={`${base}images/brand/hc-comsys-ricany-logo.webp`} alt="HC Říčany" width="300" height="296" /></span>
+          <span><img src="../images/brand/hc-comsys-ricany-logo.webp" alt="HC Říčany" width="300" height="296" /></span>
           <div>
             <strong>HC ŘÍČANY</strong>
             <small>redakční rozhraní</small>

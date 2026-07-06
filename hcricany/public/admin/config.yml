@@ -1,14 +1,16 @@
 local_backend: true
 backend:
-  name: git-gateway
+  name: test-repo
+  login: false
   branch: main
-media_folder: "public/uploads"
+media_folder: "uploads"
 public_folder: "/uploads"
 locale: "cs"
 collections:
   - name: "news"
     label: "Aktuality"
-    folder: "src/content/news"
+    label_singular: "Aktualita"
+    folder: "aktuality"
     create: true
     slug: "{{slug}}"
     extension: "md"
@@ -22,70 +24,24 @@ collections:
       - { label: "Kategorie", name: "category", widget: "string" }
       - { label: "Publikováno", name: "published", widget: "boolean", default: false }
       - { label: "Obsah", name: "body", widget: "markdown" }
-  - name: "teams"
-    label: "Týmy"
-    folder: "src/content/teams"
+  - name: "gallery"
+    label: "Fotogalerie"
+    label_singular: "Album"
+    folder: "fotogalerie"
     create: true
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Název", name: "name", widget: "string" }
-      - { label: "Věková skupina", name: "ageGroup", widget: "string" }
-      - { label: "Pořadí", name: "order", widget: "number", required: false }
-      - { label: "Ročníky", name: "birthYears", widget: "string", required: false }
-      - { label: "Úroveň / kategorie", name: "level", widget: "string", required: false }
-      - { label: "Popis", name: "description", widget: "text" }
-      - { label: "Obrázek", name: "image", widget: "image", required: false }
-      - { label: "Kontaktní osoba", name: "contactPerson", widget: "string" }
-      - { label: "Trenér", name: "coach", widget: "string", required: false }
-      - { label: "Tréninky", name: "training", widget: "string", required: false }
-      - { label: "Odkaz na soutěže", name: "resultsLink", widget: "string", required: false }
-      - { label: "Doplňující obsah", name: "body", widget: "markdown", required: false }
-  - name: "settings"
-    label: "Nastavení webu"
-    files:
-      - label: "Klubové údaje"
-        name: "settings"
-        file: "src/content/data/settings.yaml"
+      - { label: "Název alba", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Úvodní fotka", name: "coverImage", widget: "image", required: false }
+      - { label: "Popis", name: "description", widget: "text", required: false }
+      - label: "Fotky"
+        name: "photos"
+        widget: "list"
+        summary: "{{fields.caption}}"
         fields:
-          - { label: "Název klubu", name: "clubName", widget: "string" }
-          - { label: "E-mail", name: "contactEmail", widget: "string" }
-          - { label: "Adresa", name: "address", widget: "text" }
-          - label: "Sociální sítě"
-            name: "socialLinks"
-            widget: "object"
-            fields:
-              - { label: "Facebook", name: "facebook", widget: "string" }
-              - { label: "Instagram", name: "instagram", widget: "string" }
-      - label: "Partneři"
-        name: "partners"
-        file: "src/content/data/partners.yaml"
-        fields:
-          - label: "Partneři"
-            name: "partners"
-            widget: "list"
-            fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - { label: "Název", name: "name", widget: "string" }
-              - { label: "Text/logotyp", name: "logo", widget: "string" }
-              - { label: "Obrázkový logotyp", name: "image", widget: "image", required: false }
-              - { label: "Web", name: "website", widget: "string" }
-              - label: "Úroveň"
-                name: "tier"
-                widget: "select"
-                options: ["generalni", "hlavni", "partner"]
-      - label: "Události a rozpis"
-        name: "events"
-        file: "src/content/data/events.yaml"
-        fields:
-          - label: "Události"
-            name: "events"
-            widget: "list"
-            fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - { label: "Název", name: "title", widget: "string" }
-              - { label: "Datum a čas", name: "date", widget: "datetime" }
-              - { label: "Místo", name: "location", widget: "string" }
-              - { label: "Typ", name: "type", widget: "string" }
-              - { label: "Odkaz", name: "link", widget: "string" }
+          - { label: "Fotka", name: "image", widget: "image" }
+          - { label: "Popisek", name: "caption", widget: "string", required: false }

@@ -1,5 +1,7 @@
 ---
-// Astro bundles the CMS editor locally; Decap reads /admin/config.yml from public.
+// UI-only Decap showcase. The mock login gates the editor visually; the CMS uses
+// Decap's test backend and does not write to GitHub.
+const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="cs">
@@ -8,11 +10,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>HC Říčany · redakce</title>
+    <style>
+      :root {
+        --black: #0f1114;
+        --black-soft: #14171b;
+        --steel: #5a6470;
+        --muted: #8a939c;
+        --ice: #f0f3f5;
+        --line: #e3e8eb;
+        --white: #ffffff;
+        --red: #c8102e;
+        --red-dark: #a50d26;
+        --teal: #2f8f88;
+        --teal-bright: #52b3ac;
+        --font-body: Barlow, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-display: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background:
+          linear-gradient(135deg, rgba(47, 143, 136, 0.12), transparent 34%),
+          var(--black);
+        color: var(--black-soft);
+        font-family: var(--font-body);
+      }
+
+      .mock-login {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+      }
+
+      .mock-login[hidden],
+      .cms-root[hidden] {
+        display: none;
+      }
+
+      .mock-login__panel {
+        width: min(100%, 440px);
+        padding: clamp(1.35rem, 4vw, 2rem);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 6px;
+        background: var(--white);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      }
+
+      .mock-login__brand {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .mock-login__brand span {
+        display: grid;
+        place-items: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 6px;
+        background: var(--ice);
+      }
+
+      .mock-login__brand img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+      }
+
+      .mock-login__brand strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.65rem;
+        line-height: 1;
+      }
+
+      .mock-login__brand small {
+        color: var(--steel);
+        font-weight: 600;
+      }
+
+      .mock-login h1 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 8vw, 2.85rem);
+        line-height: 1.02;
+      }
+
+      .mock-login p {
+        margin: 0.7rem 0 1.35rem;
+        color: var(--steel);
+        line-height: 1.55;
+      }
+
+      .mock-login label {
+        display: grid;
+        gap: 0.35rem;
+        margin-bottom: 0.85rem;
+        color: var(--steel);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .mock-login input {
+        width: 100%;
+        border: 1px solid #d4dbe0;
+        border-radius: 4px;
+        padding: 0.78rem 0.9rem;
+        color: var(--black-soft);
+        font: inherit;
+      }
+
+      .mock-login input:focus {
+        border-color: var(--teal);
+        outline: 3px solid rgba(82, 179, 172, 0.24);
+      }
+
+      .mock-login__honeypot {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .mock-login button {
+        width: 100%;
+        min-height: 46px;
+        border: 0;
+        border-radius: 4px;
+        background: var(--red);
+        color: var(--white);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        transition:
+          background-color 220ms ease,
+          transform 220ms ease;
+      }
+
+      .mock-login button:hover {
+        background: var(--red-dark);
+        transform: translateY(-1px);
+      }
+
+      .mock-login__note,
+      .mock-login__error {
+        display: block;
+        margin-top: 0.85rem;
+        color: var(--muted);
+        font-size: 0.83rem;
+        line-height: 1.45;
+      }
+
+      .mock-login__error {
+        color: var(--red-dark);
+        font-weight: 700;
+      }
+
+      .cms-root {
+        min-height: 100vh;
+        background: var(--white);
+      }
+    </style>
   </head>
   <body>
+    <section class="mock-login" data-mock-login>
+      <form class="mock-login__panel" data-mock-form>
+        <div class="mock-login__brand">
+          <span><img src={`${base}images/brand/hc-comsys-ricany-logo.webp`} alt="HC Říčany" width="300" height="296" /></span>
+          <div>
+            <strong>HC ŘÍČANY</strong>
+            <small>redakční rozhraní</small>
+          </div>
+        </div>
+        <h1>Ukázka CMS</h1>
+        <p>Toto je demo přihlášení pro prezentaci administrace. Vyplňte libovolný e-mail a heslo, data se nikam neodesílají.</p>
+        <label>
+          E-mail
+          <input name="email" type="email" autocomplete="email" placeholder="redakce@hcricany.cz" required />
+        </label>
+        <label>
+          Heslo
+          <input name="password" type="password" autocomplete="current-password" placeholder="libovolné heslo" required />
+        </label>
+        <label class="mock-login__honeypot" aria-hidden="true">
+          Web
+          <input name="website" tabindex="-1" autocomplete="off" />
+        </label>
+        <button type="submit">Vstoupit do CMS</button>
+        <span class="mock-login__note">Demo režim: změny se uloží jen v prohlížeči a nevytvoří commit do GitHubu.</span>
+        <span class="mock-login__error" data-mock-error hidden>Přihlášení se nezdařilo.</span>
+      </form>
+    </section>
+    <main class="cms-root" data-cms-root hidden></main>
     <script>
       import CMS from 'decap-cms-app';
-      CMS.init();
+
+      type DemoWindow = Window & {
+        repoFiles?: Record<string, unknown>;
+      };
+
+      const demoWindow = window as DemoWindow;
+      const login = document.querySelector<HTMLElement>('[data-mock-login]');
+      const form = document.querySelector<HTMLFormElement>('[data-mock-form]');
+      const error = document.querySelector<HTMLElement>('[data-mock-error]');
+      const cmsRoot = document.querySelector<HTMLElement>('[data-cms-root]');
+      const sessionKey = 'hc-ricany-cms-demo';
+      let cmsStarted = false;
+
+      const seedDemoContent = () => {
+        if (demoWindow.repoFiles && Object.keys(demoWindow.repoFiles).length > 0) return;
+        demoWindow.repoFiles = {
+          aktuality: {
+            'tyden-hokeje-2026.md': {
+              path: 'aktuality/tyden-hokeje-2026.md',
+              content: `---
+title: "Týden hokeje 2026 se blíží"
+slug: "tyden-hokeje-2026"
+date: "2026-09-23T16:00:00.000Z"
+excerpt: "Přijďte si vyzkoušet první hokejový trénink v COM-SYS ICE ARENĚ."
+image: "/images/navrh01/ricany_kids.jpg"
+category: "Nábor"
+published: true
+---
+
+Ukázková aktualita pro demo redakčního systému. V produkční verzi by se po uložení vytvořil commit v GitHub repozitáři a web by se znovu nasadil.`,
+            },
+            'rozpis-pripravneho-obdobi.md': {
+              path: 'aktuality/rozpis-pripravneho-obdobi.md',
+              content: `---
+title: "Rozpis přípravného období"
+slug: "rozpis-pripravneho-obdobi"
+date: "2026-08-10T08:00:00.000Z"
+excerpt: "Tréninky a klubové akce pro začátek sezóny jsou připravené."
+image: "/images/navrh01/ricany_boy.jpg"
+category: "Mládež"
+published: true
+---
+
+Ukázkový obsah pro náhled práce s aktualitami.`,
+            },
+          },
+          fotogalerie: {
+            'tyden-hokeje.md': {
+              path: 'fotogalerie/tyden-hokeje.md',
+              content: `---
+title: "Týden hokeje v COM-SYS ICE ARENĚ"
+slug: "tyden-hokeje"
+date: "2026-09-23T16:00:00.000Z"
+coverImage: "/images/navrh01/ricany_kids.jpg"
+description: "Ukázkové album pro předvedení správy fotogalerie."
+photos:
+  - image: "/images/navrh01/ricany_kids.jpg"
+    caption: "Společný trénink na ledě"
+  - image: "/images/navrh01/ricany_girl.jpg"
+    caption: "První kroky na bruslích"
+---
+`,
+            },
+          },
+        };
+      };
+
+      const startCms = () => {
+        if (cmsStarted) return;
+        cmsStarted = true;
+        if (!login || !cmsRoot) return;
+        login.hidden = true;
+        cmsRoot.hidden = false;
+        seedDemoContent();
+        CMS.init();
+      };
+
+      if (sessionStorage.getItem(sessionKey) === '1') {
+        startCms();
+      }
+
+      form?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const honeypot = String(data.get('website') ?? '').trim();
+
+        if (honeypot) {
+          if (error) error.hidden = false;
+          return;
+        }
+
+        if (error) error.hidden = true;
+        sessionStorage.setItem(sessionKey, '1');
+        startCms();
+      });
     </script>
   </body>
 </html>

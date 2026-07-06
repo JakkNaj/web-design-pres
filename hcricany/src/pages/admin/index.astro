@@ -173,9 +173,12 @@
         font-weight: 700;
       }
 
-      .cms-root {
-        min-height: 100vh;
+      body.is-cms-active {
         background: var(--white);
+      }
+
+      .cms-root {
+        display: none;
       }
     </style>
   </head>
@@ -211,9 +214,20 @@
     <main class="cms-root" data-cms-root hidden></main>
     <script>
       import CMS from 'decap-cms-app';
+      import { createElement as h } from 'react';
+      import type { ReactNode } from 'react';
 
       type DemoWindow = Window & {
         repoFiles?: Record<string, unknown>;
+      };
+
+      type PreviewEntry = {
+        getIn: (path: string[], fallback?: unknown) => unknown;
+      };
+
+      type NewsPreviewProps = {
+        entry: PreviewEntry;
+        widgetFor: (name: string) => ReactNode;
       };
 
       const demoWindow = window as DemoWindow;
@@ -223,6 +237,207 @@
       const cmsRoot = document.querySelector<HTMLElement>('[data-cms-root]');
       const sessionKey = 'hc-ricany-cms-demo';
       let cmsStarted = false;
+
+      const siteBasePath = new URL('../', window.location.href).pathname;
+
+      const formatDate = (value: unknown) => {
+        const date = value ? new Date(String(value)) : null;
+        if (!date || Number.isNaN(date.valueOf())) return 'Datum aktuality';
+
+        return new Intl.DateTimeFormat('cs-CZ', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        }).format(date);
+      };
+
+      const getField = (entry: PreviewEntry, field: string, fallback = '') => {
+        const value = entry.getIn(['data', field]);
+        return typeof value === 'string' && value.trim() ? value : fallback;
+      };
+
+      const getImageUrl = (value: string) => {
+        if (!value) return `${siteBasePath}images/navrh01/ricany_kids.jpg`;
+        if (/^(https?:|data:|blob:)/.test(value)) return value;
+        if (value.startsWith(siteBasePath)) return value;
+        if (value.startsWith('/')) return `${siteBasePath}${value.slice(1)}`;
+        return `${siteBasePath}${value}`;
+      };
+
+      CMS.registerPreviewStyle(
+        `
+          .cms-news-preview {
+            min-height: 100%;
+            background: #ffffff;
+            color: #14171b;
+            font-family: Barlow, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          }
+
+          .cms-news-preview * {
+            box-sizing: border-box;
+          }
+
+          .cms-news-preview__inner {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 42px 28px 70px;
+          }
+
+          .cms-news-preview__breadcrumbs {
+            margin-bottom: 1rem;
+            color: #5f6872;
+            font-size: 0.9rem;
+            font-weight: 700;
+          }
+
+          .cms-news-preview__breadcrumbs span {
+            color: #c8102e;
+          }
+
+          .cms-news-preview__meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.9rem;
+          }
+
+          .cms-news-preview__tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 0.35rem 0.65rem;
+            border-radius: 4px;
+            background: #c8102e;
+            color: #ffffff;
+            font-size: 0.74rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+          }
+
+          .cms-news-preview time {
+            color: #5f6872;
+            font-weight: 700;
+          }
+
+          .cms-news-preview h1 {
+            margin: 0.6rem 0 1rem;
+            color: #14171b;
+            font-family: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+            font-size: clamp(2.4rem, 6vw, 3rem);
+            font-weight: 800;
+            line-height: 0.98;
+          }
+
+          .cms-news-preview__lead {
+            margin: 0 0 1.35rem;
+            color: #3a424b;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.55;
+          }
+
+          .cms-news-preview__image {
+            display: block;
+            width: 100%;
+            height: min(52vw, 440px);
+            min-height: 260px;
+            object-fit: cover;
+            border-radius: 6px;
+          }
+
+          .cms-news-preview__caption {
+            display: block;
+            margin-top: 0.5rem;
+            color: #6d7580;
+            font-size: 0.84rem;
+          }
+
+          .cms-news-preview__body {
+            margin-top: 1.35rem;
+            color: #3a424b;
+            font-size: 1rem;
+            line-height: 1.75;
+          }
+
+          .cms-news-preview__body p {
+            margin: 0 0 1rem;
+          }
+
+          .cms-news-preview__info {
+            margin-top: 1.35rem;
+            padding: 1.25rem 1.45rem;
+            border-radius: 6px;
+            background: #f0f3f5;
+          }
+
+          .cms-news-preview__info h2 {
+            margin: 0 0 0.7rem;
+            color: #14171b;
+            font-family: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+            font-size: 1.7rem;
+            line-height: 1;
+          }
+
+          .cms-news-preview__info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.65rem 1rem;
+            color: #3a424b;
+          }
+
+          .cms-news-preview__info-grid strong {
+            color: #14171b;
+          }
+
+          @media (max-width: 720px) {
+            .cms-news-preview__inner {
+              padding: 30px 18px 52px;
+            }
+
+            .cms-news-preview__info-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        `,
+        { raw: true },
+      );
+
+      CMS.registerPreviewTemplate('news', ({ entry, widgetFor }: NewsPreviewProps) => {
+        const title = getField(entry, 'title', 'Titulek aktuality');
+        const excerpt = getField(entry, 'excerpt', 'Krátký perex aktuality se zobrazí pod titulkem stejně jako na webu.');
+        const category = getField(entry, 'category', 'Aktuality');
+        const image = getImageUrl(getField(entry, 'image'));
+        const date = formatDate(entry.getIn(['data', 'date']));
+
+        return h('article', { className: 'cms-news-preview' }, [
+          h('div', { className: 'cms-news-preview__inner', key: 'inner' }, [
+            h('div', { className: 'cms-news-preview__breadcrumbs', key: 'breadcrumbs' }, [
+              'Úvod / Aktuality / ',
+              h('span', { key: 'current' }, title),
+            ]),
+            h('div', { className: 'cms-news-preview__meta', key: 'meta' }, [
+              h('span', { className: 'cms-news-preview__tag', key: 'tag' }, category),
+              h('time', { key: 'time' }, date),
+            ]),
+            h('h1', { key: 'title' }, title),
+            h('p', { className: 'cms-news-preview__lead', key: 'excerpt' }, excerpt),
+            h('img', { className: 'cms-news-preview__image', src: image, alt: title, key: 'image' }),
+            h('span', { className: 'cms-news-preview__caption', key: 'caption' }, 'Foto z klubového archivu HC Říčany.'),
+            h('div', { className: 'cms-news-preview__body', key: 'body' }, widgetFor('body')),
+            h('div', { className: 'cms-news-preview__info', key: 'info' }, [
+              h('h2', { key: 'info-title' }, 'Praktické informace'),
+              h('div', { className: 'cms-news-preview__info-grid', key: 'info-grid' }, [
+                h('span', { key: 'when' }, [h('strong', { key: 'when-label' }, 'Kdy: '), 'dle aktuálního rozpisu klubu']),
+                h('span', { key: 'where' }, [h('strong', { key: 'where-label' }, 'Kde: '), 'COM-SYS ICE ARENA, Říčany']),
+                h('span', { key: 'gear' }, [h('strong', { key: 'gear-label' }, 'S sebou: '), 'teplé oblečení a rukavice']),
+                h('span', { key: 'contact' }, [h('strong', { key: 'contact-label' }, 'Kontakt: '), 'nabor@hcricany.cz']),
+              ]),
+            ]),
+          ]),
+        ]);
+      });
 
       const seedDemoContent = () => {
         if (demoWindow.repoFiles && Object.keys(demoWindow.repoFiles).length > 0) return;
@@ -281,11 +496,13 @@ photos:
       const startCms = () => {
         if (cmsStarted) return;
         cmsStarted = true;
-        if (!login || !cmsRoot) return;
+        if (!login) return;
         login.hidden = true;
-        cmsRoot.hidden = false;
+        cmsRoot?.setAttribute('hidden', '');
+        document.body.classList.add('is-cms-active');
         seedDemoContent();
         CMS.init();
+        window.scrollTo({ top: 0, left: 0 });
       };
 
       if (sessionStorage.getItem(sessionKey) === '1') {

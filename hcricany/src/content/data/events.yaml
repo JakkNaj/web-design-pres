@@ -1,19 +1,19 @@
 events:
-  - id: "trening-pripravky"
-    title: "Trénink přípravky"
-    date: 2026-06-23T16:30:00+02:00
-    location: "Zimní stadion Říčany"
-    type: "Trénink"
-    link: "#kontakt"
-  - id: "mladez-sucha-priprava"
-    title: "Mládež · suchá příprava"
-    date: 2026-06-24T17:00:00+02:00
-    location: "Sportovní areál Říčany"
+  - id: "start-letni-pripravy"
+    title: "Start letní suché přípravy"
+    date: 2026-07-13T17:00:00+02:00
+    location: "Venkovní hřiště u COM-SYS ICE ARENY"
     type: "Příprava"
-    link: "#kontakt"
-  - id: "nabor-na-lede"
-    title: "Nábor na ledě"
-    date: 2026-06-26T16:00:00+02:00
-    location: "Zimní stadion Říčany"
+    link: "/mladez/"
+  - id: "prvni-led"
+    title: "První led sezóny 2026/27"
+    date: 2026-08-10T16:30:00+02:00
+    location: "COM-SYS ICE ARENA"
+    type: "Trénink"
+    link: "/mladez/"
+  - id: "tyden-hokeje"
+    title: "Týden hokeje — Pojď hrát hokej"
+    date: 2026-09-23T16:30:00+02:00
+    location: "COM-SYS ICE ARENA"
     type: "Nábor"
-    link: "#nabor"
+    link: "/nabor/"

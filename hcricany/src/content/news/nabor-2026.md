@@ -1,9 +1,9 @@
 ---
 title: "Nábor malých hokejistů: první bruslení je na nás"
 slug: "nabor-malych-hokejistu"
-date: 2026-06-05
+date: 2026-06-12
 excerpt: "Zveme kluky i holky ročníků 2018–2021 na otevřené náborové odpoledne v Říčanech."
-image: "/images/news/nabor-na-lede.png"
+image: "/images/navrh01/ricany_girl.jpg"
 category: "Nábor"
 published: true
 ---

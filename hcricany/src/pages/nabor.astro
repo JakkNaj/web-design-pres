@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import { recruitmentFacts, recruitmentSteps, contactPeople } from '../lib/siteData';
+
+const settingsCollection = await getCollection('settings');
+const settings = settingsCollection[0].data;
+---
+
+<BaseLayout title="Nábor | HC Říčany" description="Přijďte si vyzkoušet první hokejový trénink v HC Říčany." settings={settings} active="Nábor">
+  <PageHero title="Chci začít s hokejem" description="Nábor je otevřený celoročně pro děti od 4 do 10 let. První trénink domluvíme podle věku dítěte a aktuální skupiny." active="Nábor" />
+
+  <section class="section section--white">
+    <div class="site-shell nabor-grid">
+      <div data-reveal>
+        <p class="eyebrow">První trénink</p>
+        <h2>Přijďte na led bez zbytečných starostí</h2>
+        <p>Chcete, aby si vaše dítě vyzkoušelo hokej? Přijďte na trénink na zkoušku do COM-SYS ICE ARENY. Děti si vyzkouší základy bruslení a první hokejové dovednosti pod vedením trenérů. Rodičům vysvětlíme, jak klub funguje, co je potřeba na začátek a jak postupovat při přihlášení.</p>
+        <div class="content-grid-2 recruit-steps">
+          {recruitmentSteps.map((step, index) => (
+            <article class="step-card" data-reveal>
+              <span class="tag">{index + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div class="nabor-photo nabor-photo--recruitment" data-reveal>
+        <img src="/images/navrh01/ricany_girl.jpg" alt="Dítě na ledě při náboru HC Říčany" loading="eager" />
+        <span>Nábor probíhá celoročně</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="site-shell">
+      <div class="section-heading section-heading--facts" data-reveal>
+        <div>
+          <p class="eyebrow">Pro rodiče</p>
+          <h2>Co je dobré vědět před první návštěvou</h2>
+        </div>
+        <div class="fact-list fact-list--heading">
+          {recruitmentFacts.map((fact) => <span>{fact}</span>)}
+        </div>
+      </div>
+      <div class="content-grid-2">
+        <article class="feature-card" data-reveal>
+          <h3>Co si vzít s sebou</h3>
+          <p>Teplé sportovní oblečení, rukavice, ponožky do bruslí a ideálně cyklistickou nebo lyžařskou helmu. Pokud vybavení nemáte, ozvěte se předem.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <h3>Výstroj půjčíme</h3>
+          <p>Na první tréninky umíme půjčit základní výstroj podle aktuální dostupnosti. Důležité je hlavně přijít a vyzkoušet si led.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <h3>Kde se trénuje</h3>
+          <p>Tréninky probíhají v COM-SYS ICE ARENĚ v Říčanech. Přesný čas domluvíme podle věku dítěte a skupiny.</p>
+        </article>
+        <article class="feature-card" data-reveal>
+          <h3>Pro koho je nábor</h3>
+          <p>Nejčastěji přijímáme děti od 4 do 10 let. Starší děti posoudíme individuálně podle bruslařských a sportovních zkušeností.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice">
+    <div class="site-shell contact-grid">
+      <div data-reveal>
+        <p class="eyebrow">Kontakt pro nábor</p>
+        <h2>Ozvěte se a domluvíme první trénink</h2>
+        <p>Nejrychlejší je napsat krátkou zprávu: věk dítěte, zda už bruslilo a kdy se vám hodí přijít na stadion. Odpovíme s konkrétním termínem.</p>
+        <div class="content-grid-2 contact-cards">
+          {contactPeople.slice(0, 2).map((person) => (
+            <article class="contact-card">
+              <span class="mini-label">{person.label}</span>
+              <h3>{person.name}</h3>
+              <a href={`mailto:${person.email}`}>{person.email}</a>
+              <a href={`tel:${person.phone.replaceAll(' ', '')}`}>{person.phone}</a>
+            </article>
+          ))}
+        </div>
+      </div>
+      <form class="contact-form" data-reveal>
+        <label>Jméno rodiče<input type="text" name="name" placeholder="Vaše jméno" /></label>
+        <label>E-mail<input type="email" name="email" placeholder="vas@email.cz" /></label>
+        <label>Věk dítěte<input type="text" name="age" placeholder="např. 6 let" /></label>
+        <label>Zpráva<textarea name="message" placeholder="Napište, kdy byste chtěli přijít na první trénink."></textarea></label>
+        <button class="button" type="button">Odeslat dotaz</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

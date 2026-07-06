@@ -1,9 +1,9 @@
 ---
 title: "Rozpis přípravného období 2026"
 slug: "rozpis-pripravneho-obdobi-2026"
-date: 2026-04-27
+date: 2026-06-15
 excerpt: "Příprava na sezónu 2026/2027 začíná. Přehled tréninků pro jednotlivé kategorie je zveřejněný."
-image: "/images/news/mladez-trenink.png"
+image: "/images/navrh01/ricany_room.jpg"
 category: "Mládež"
 published: true
 ---

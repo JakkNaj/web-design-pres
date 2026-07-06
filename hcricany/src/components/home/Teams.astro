@@ -4,7 +4,7 @@ import SectionHeading from '../ui/SectionHeading.astro';
 interface Props { teams: CollectionEntry<'teams'>[]; }
 const { teams } = Astro.props;
 ---
-<section id="tymy" class="section teams"><div class="container"><div class="teams__heading"><SectionHeading title="Týmy" eyebrow="Jedna klubová rodina" href="#kontakt" linkLabel="Najít svůj tým" /><img class="teams__crest" src="/images/brand/hc-ricany-logo.jpg" alt="Znak HC Říčany" width="150" height="115" /></div>
+<section id="tymy" class="section teams"><div class="container"><div class="teams__heading"><SectionHeading title="Týmy" eyebrow="Jedna klubová rodina" href="#kontakt" linkLabel="Najít svůj tým" /><img class="teams__crest" src="/images/brand/hc-comsys-ricany-logo.webp" alt="Znak HC Com-Sys Říčany" width="300" height="296" /></div>
 <div class="teams__grid">{teams.map((team, index) => <article class="team"><div class="team__image" style={`background-image:url(${team.data.image})`}></div><div class="team__info"><span>0{index + 1} · {team.data.ageGroup}</span><h3 class="display">{team.data.name}</h3><p>{team.data.description}</p><small>{team.data.contactPerson}</small></div></article>)}</div>
 </div></section>
 <style>

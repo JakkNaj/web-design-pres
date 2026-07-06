@@ -32,9 +32,15 @@ collections:
     fields:
       - { label: "Název", name: "name", widget: "string" }
       - { label: "Věková skupina", name: "ageGroup", widget: "string" }
+      - { label: "Pořadí", name: "order", widget: "number", required: false }
+      - { label: "Ročníky", name: "birthYears", widget: "string", required: false }
+      - { label: "Úroveň / kategorie", name: "level", widget: "string", required: false }
       - { label: "Popis", name: "description", widget: "text" }
       - { label: "Obrázek", name: "image", widget: "image", required: false }
       - { label: "Kontaktní osoba", name: "contactPerson", widget: "string" }
+      - { label: "Trenér", name: "coach", widget: "string", required: false }
+      - { label: "Tréninky", name: "training", widget: "string", required: false }
+      - { label: "Odkaz na soutěže", name: "resultsLink", widget: "string", required: false }
       - { label: "Doplňující obsah", name: "body", widget: "markdown", required: false }
   - name: "settings"
     label: "Nastavení webu"

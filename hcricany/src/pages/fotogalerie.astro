@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import GalleryGrid from '../components/site/GalleryGrid.astro';
+
+const settingsCollection = await getCollection('settings');
+const settings = settingsCollection[0].data;
+---
+
+<BaseLayout title="Fotogalerie | HC Říčany" description="Fotogalerie z tréninků, náborů, turnajů a života HC Říčany." settings={settings} active="Fotogalerie">
+  <PageHero title="Fotogalerie" description="Momentky z tréninků, náborových akcí, turnajů a klubového života." active="Fotogalerie" />
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <GalleryGrid page />
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="site-shell nabor-grid">
+      <div data-reveal>
+        <p class="eyebrow">Chcete na led?</p>
+        <h2>Fotky jsou jen začátek. Přijďte si hokej vyzkoušet.</h2>
+        <p>Nábor je otevřený celoročně pro děti od 4 do 10 let. Domluvíme první trénink, půjčíme základní výstroj a rodičům vysvětlíme další kroky.</p>
+        <p><a class="button" href="/nabor/">Chci začít s hokejem</a></p>
+      </div>
+      <div class="nabor-photo" data-reveal>
+        <img src="/images/navrh01/ricany_kids.jpg" alt="Děti HC Říčany na ledě" loading="lazy" />
+        <span>První trénink bez starostí</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

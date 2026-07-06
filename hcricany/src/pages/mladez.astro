@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+
+const [teamsCollection, settingsCollection] = await Promise.all([
+  getCollection('teams'),
+  getCollection('settings'),
+]);
+
+const teams = teamsCollection.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+const settings = settingsCollection[0].data;
+---
+
+<BaseLayout title="Mládež | HC Říčany" description="Přehled mládežnických kategorií HC Říčany." settings={settings} active="Mládež">
+  <PageHero title="Mládežnické kategorie" description="Jedna přehledová stránka pro rodiče a hráče: ročníky, trenéři, tréninky a odkazy na soutěže." active="Mládež" />
+
+  <section class="section section--white youth-categories-section">
+    <img class="youth-categories-section__silhouette" src="/images/silhouettes/hockey-silhouette-youth.svg" width="189" height="301" alt="" aria-hidden="true" loading="lazy" />
+    <div class="site-shell">
+      <SectionHeading eyebrow="Sezóna 2026/27" title="Přehled kategorií" />
+      <div class="category-list">
+        {teams.map((team) => (
+          <article class="category-row" data-reveal>
+            <div>
+              <h3>{team.data.name}</h3>
+              <p>{team.data.description}</p>
+            </div>
+            <strong>{team.data.birthYears ?? team.data.ageGroup}</strong>
+            <div><span class="mini-label">Trenér</span><span>{team.data.coach ?? team.data.contactPerson}</span></div>
+            <div><span class="mini-label">Tréninky</span><span>{team.data.training ?? 'dle rozpisu'}</span></div>
+            <div class="category-actions">
+              <a
+                class="text-link"
+                href={team.data.resultsLink ?? '/nabor/'}
+                target={team.data.resultsLink ? '_blank' : undefined}
+                rel={team.data.resultsLink ? 'noreferrer' : undefined}
+              >
+                {team.data.resultsLink ? 'Zápasy →' : 'Nábor →'}
+              </a>
+              {team.data.rosterLink && <a class="text-link text-link--muted" href={team.data.rosterLink} target="_blank" rel="noreferrer">Soupiska →</a>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <div class="youth-actions">
+        <article class="youth-action youth-action--dark" data-reveal>
+          <span class="tag tag--teal">Tréninky</span>
+          <h2>Rozpis ledu pro rodiče a hráče</h2>
+          <p>Aktuální časy se mohou měnit podle provozu stadionu. Domovský rozpis najdete na úvodní stránce, finální časy vždy potvrzuje trenér kategorie.</p>
+          <a class="button" href="/#rozpis">Přejít na rozpis</a>
+        </article>
+        <article class="youth-action" data-reveal>
+          <span class="tag">Soutěže</span>
+          <h2>Výsledky, tabulky a zápasy</h2>
+          <p>Výsledky a soutěžní přehledy budeme držet jako externí odkaz, dokud nebude jasné napojení na oficiální soutěžní data.</p>
+          <a class="button-dark" href="https://www.ceskyhokej.cz">Otevřít Český hokej</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="site-shell nabor-grid">
+      <div data-reveal>
+        <p class="eyebrow">Noví hráči</p>
+        <h2>Nejste si jistí kategorií?</h2>
+        <p>Ozvěte se nám. Podle věku a zkušeností dítěte doporučíme správnou skupinu a domluvíme první trénink.</p>
+        <p><a class="button" href="/nabor/">Chci začít s hokejem</a></p>
+      </div>
+      <div class="nabor-photo" data-reveal>
+        <img src="/images/navrh01/ricany_kids.jpg" alt="Mládež HC Říčany na ledě" loading="lazy" />
+        <span>Od školičky po žákovské kategorie</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

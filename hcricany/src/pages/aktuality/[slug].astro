@@ -1,0 +1,80 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsCard from '../../components/site/NewsCard.astro';
+import { formatDate } from '../../lib/siteData';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news', ({ data }) => data.published);
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const [settingsCollection, relatedCollection] = await Promise.all([
+  getCollection('settings'),
+  getCollection('news', ({ data }) => data.published && data.slug !== entry.data.slug),
+]);
+const { Content } = await render(entry);
+const settings = settingsCollection[0].data;
+const related = relatedCollection.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
+---
+
+<BaseLayout title={`${entry.data.title} | HC Říčany`} description={entry.data.excerpt} settings={settings} active="Aktuality">
+  <article class="article">
+    <div class="article__inner" data-reveal>
+      <div class="breadcrumbs">
+        <a href="/">Úvod</a> / <a href="/aktuality/">Aktuality</a> / <span>{entry.data.title}</span>
+      </div>
+      <div class="meta-row">
+        <span class="tag">{entry.data.category}</span>
+        <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+      </div>
+      <h1>{entry.data.title}</h1>
+      <p class="article__lead">{entry.data.excerpt}</p>
+      <img class="article__image" src={entry.data.image} alt={entry.data.title} loading="eager" />
+      <span class="article__caption">Foto z klubového archivu HC Říčany.</span>
+      <div class="article__body">
+        <Content />
+      </div>
+
+      <div class="info-box">
+        <h2>Praktické informace</h2>
+        <div class="info-grid">
+          <span><strong>Kdy:</strong> dle aktuálního rozpisu klubu</span>
+          <span><strong>Kde:</strong> COM-SYS ICE ARENA, Říčany</span>
+          <span><strong>S sebou:</strong> teplé oblečení a rukavice</span>
+          <span><strong>Kontakt:</strong> nabor@hcricany.cz</span>
+        </div>
+      </div>
+
+      <div class="photo-row">
+        <img src="/images/navrh01/ricany_girl.jpg" alt="Momentka z klubu" loading="lazy" />
+        <img src="/images/navrh01/ricany_boy.jpg" alt="Momentka z klubu" loading="lazy" />
+        <img src="/images/navrh01/ricany_kids.jpg" alt="Momentka z klubu" loading="lazy" />
+        <span class="image-placeholder">+ další fotky</span>
+      </div>
+
+      <div class="page-actions">
+        <a class="button-outline" href="/aktuality/">← Zpět na aktuality</a>
+        <a class="button-outline" href="/kontakt/">Kontaktovat klub</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <div class="section-heading" data-reveal>
+        <div>
+          <p class="eyebrow">Z klubu</p>
+          <h2>Další aktuality</h2>
+        </div>
+      </div>
+      <div class="news-list-grid">
+        {related.map((item) => <NewsCard item={item} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

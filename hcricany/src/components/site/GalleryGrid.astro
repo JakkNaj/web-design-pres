@@ -1,0 +1,23 @@
+---
+import { galleryAlbums } from '../../lib/siteData';
+
+interface Props {
+  limit?: number;
+  page?: boolean;
+}
+
+const { limit, page = false } = Astro.props;
+const albums = typeof limit === 'number' ? galleryAlbums.slice(0, limit) : galleryAlbums;
+---
+
+<div class:list={['gallery-grid', { 'gallery-grid--page': page }]}>
+  {albums.map((album) => (
+    <a class="album-card" href="/fotogalerie/" data-reveal>
+      <img class="album-card__image" src={album.image} alt={album.title} loading="lazy" />
+      <span class="album-card__caption">
+        {album.title}
+        <small>{album.meta}</small>
+      </span>
+    </a>
+  ))}
+</div>

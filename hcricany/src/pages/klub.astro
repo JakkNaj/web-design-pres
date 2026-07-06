@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import { coaches, contactPeople, legalInfo } from '../lib/siteData';
+
+const settingsCollection = await getCollection('settings');
+const settings = settingsCollection[0].data;
+---
+
+<BaseLayout title="Klub | HC Říčany" description="O klubu HC Říčany, zázemí, vedení a trenérech." settings={settings} active="Klub">
+  <PageHero title="O klubu HC Říčany" description="Zázemí pro dětský a mládežnický hokej v Říčanech a okolí." active="Klub" />
+
+  <section class="section section--white">
+    <div class="site-shell club-grid">
+      <div class="club-media club-media--compact" data-reveal>
+        <img src="/images/navrh01/ricany_room.jpg" alt="Zázemí klubu HC Říčany" loading="eager" />
+      </div>
+      <div data-reveal>
+        <p class="eyebrow">Klub & zázemí</p>
+        <h2>Domov máme v COM-SYS ICE ARENĚ</h2>
+        <p>HC Říčany dlouhodobě vytváří zázemí pro lední hokej v Říčanech a okolí. Klub se věnuje zejména dětem a mládeži, kterým nabízí pravidelné tréninky, zápasy, rozvoj bruslení a týmové prostředí.</p>
+        <p>Důležitou součástí klubu je spolupráce s rodiči, trenéry a partnery, kteří pomáhají udržovat kvalitní podmínky pro sportovní rozvoj hráčů.</p>
+        <div class="coach-strip">
+          <div class="coach-avatars">{coaches.map((coach) => <span title={coach.name}>{coach.initials}</span>)}</div>
+          <span>O hráče se stará <strong>12 trenérů a vedoucích</strong> s licencemi Českého hokeje.</span>
+        </div>
+        <p class="action-row">
+          <a class="button-dark" href="https://www.comsysicearena.cz/" target="_blank" rel="noreferrer">COM-SYS ICE ARENA</a>
+          <a class="button-outline" href="/kontakt/">Kontakt na klub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Zázemí klubu" title="Lidé, stadion a základní údaje" />
+      <div class="club-info-grid">
+        <article class="arena-panel" data-reveal>
+          <span class="tag tag--teal">COM-SYS ICE ARENA</span>
+          <h2>Moderní zimní stadion v Říčanech</h2>
+          <p>Tréninky probíhají v aréně s celoročním provozem, zázemím pro mládežnické kategorie, půjčovnou bruslí a službami pro rodiče během tréninků.</p>
+          <div class="arena-facts">
+            <span><strong>365</strong> dní provozu</span>
+            <span><strong>2</strong> ledové plochy</span>
+            <span><strong>COM-SYS</strong> domov klubu</span>
+          </div>
+          <a class="button-dark" href="https://www.comsysicearena.cz/" target="_blank" rel="noreferrer">Otevřít web arény</a>
+        </article>
+
+        <div class="staff-panel" data-reveal>
+          <h2>Realizační tým</h2>
+          <div class="staff-list">
+            {coaches.map((coach) => (
+              <article>
+                <span>{coach.initials}</span>
+                <div>
+                  <h3>{coach.name}</h3>
+                  <p>{coach.role}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <article class="legal-panel" data-reveal>
+          <div>
+            <h2>Kontakt</h2>
+            <p>{contactPeople[2].name}<br /><a href={`mailto:${contactPeople[2].email}`}>{contactPeople[2].email}</a><br /><a href={`tel:${contactPeople[2].phone.replaceAll(' ', '')}`}>{contactPeople[2].phone}</a></p>
+          </div>
+          <div>
+            <h2>Právní údaje</h2>
+            <p>{legalInfo.map((line) => <>{line}<br /></>)}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

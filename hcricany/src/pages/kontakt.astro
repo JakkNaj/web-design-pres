@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import { contactPeople, legalInfo } from '../lib/siteData';
+
+const settingsCollection = await getCollection('settings');
+const settings = settingsCollection[0].data;
+---
+
+<BaseLayout title="Kontakt | HC Říčany" description="Kontakt na HC Říčany, nábor, mládežnické kategorie a vedení klubu." settings={settings} active="Kontakt">
+  <PageHero title="Kontakt" description="Jeden rozcestník pro rodiče, nové zájemce, partnery a veřejnost." active="Kontakt" />
+
+  <section class="section section--white">
+    <div class="site-shell contact-grid">
+      <div data-reveal>
+        <p class="eyebrow">Napište nám</p>
+        <h2>Vyberte správný kontakt</h2>
+        <p>Pokud nevíte, komu napsat, použijte obecný e-mail. Dotaz předáme správné osobě v klubu.</p>
+        <div class="content-grid-2" style="margin-top: 1.5rem">
+          {contactPeople.map((person) => (
+            <article class="contact-card">
+              <span class="mini-label">{person.label}</span>
+              <h3>{person.name}</h3>
+              <a href={`mailto:${person.email}`}>{person.email}</a>
+              <a href={`tel:${person.phone.replaceAll(' ', '')}`}>{person.phone}</a>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <form class="contact-form" data-reveal>
+        <label>Jméno<input type="text" name="name" placeholder="Vaše jméno" /></label>
+        <label>E-mail<input type="email" name="email" placeholder="vas@email.cz" /></label>
+        <label>Předmět<select name="subject"><option>Nábor</option><option>Obecná zpráva</option><option>Partnerství</option><option>Jiný dotaz</option></select></label>
+        <label>Zpráva<textarea name="message" placeholder="Jak vám můžeme pomoci?"></textarea></label>
+        <button class="button" type="button">Odeslat zprávu</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <div class="contact-info-band">
+        <article class="arena-panel" data-reveal>
+          <span class="tag tag--teal">Stadion</span>
+          <h2>COM-SYS ICE ARENA Říčany</h2>
+          <p>{settings.address}</p>
+          <p>Na stejném místě probíhají tréninky mládeže, náborové lekce, veřejné bruslení i klubové akce.</p>
+          <p class="action-row">
+            <a class="button-dark" href="https://maps.google.com/?q=COM-SYS%20ICE%20ARENA%20Říčany">Otevřít mapu</a>
+            <a class="button-outline" href="https://www.comsysicearena.cz/" target="_blank" rel="noreferrer">Web arény</a>
+          </p>
+        </article>
+        <article class="legal-panel" data-reveal>
+          <div>
+            <h2>Klubové údaje</h2>
+            <p>{legalInfo.map((line) => <>{line}<br /></>)}</p>
+          </div>
+          <div>
+            <h2>Dokumenty</h2>
+            <p>Dotazy k fakturaci, GDPR a klubovým dokumentům řešíme přes obecný klubový kontakt.</p>
+            <a href={`mailto:${settings.contactEmail}`}>{settings.contactEmail}</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

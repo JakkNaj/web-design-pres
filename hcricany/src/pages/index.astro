@@ -1,21 +1,272 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/home/Hero.astro';
-import QuickActions from '../components/home/QuickActions.astro';
-import NewsGrid from '../components/home/NewsGrid.astro';
-import Teams from '../components/home/Teams.astro';
-import Events from '../components/home/Events.astro';
-import Partners from '../components/home/Partners.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import NewsCard from '../components/site/NewsCard.astro';
+import EventList from '../components/site/EventList.astro';
+import GalleryGrid from '../components/site/GalleryGrid.astro';
+import { clubStats, recruitmentFacts, coaches } from '../lib/siteData';
 
-const [news, teams, events, partners, settings] = await Promise.all([
-  getCollection('news', ({ data }) => data.published), getCollection('teams'), getCollection('events'), getCollection('partners'), getCollection('settings'),
+const [newsCollection, teamsCollection, eventsCollection, partnersCollection, settingsCollection] = await Promise.all([
+  getCollection('news', ({ data }) => data.published),
+  getCollection('teams'),
+  getCollection('events'),
+  getCollection('partners'),
+  getCollection('settings'),
 ]);
-const latestNews = news.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
-const siteSettings = settings[0].data;
-const eventItems = events[0].data;
-const partnerItems = partners[0].data;
+
+const news = newsCollection.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const featuredNews = news[0];
+const sideNews = news.slice(1, 4);
+const teams = teamsCollection.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+const starterTeam = teams.find((team) => team.data.order === 1) ?? teams[0];
+const ninthGradeTeam = teams.find((team) => team.data.ageGroup === '9. třída' || team.data.level === 'Extraliga 9. tříd');
+const dorostTeam = teams.find((team) => team.data.ageGroup === 'Dorost');
+const youthGroups = [
+  {
+    label: '2.–4. třída',
+    text: 'první pravidelné zápasy, minihokej a přechod do týmového režimu',
+  },
+  {
+    label: 'Mladší žáci A/B',
+    text: 'navazující soutěžní kategorie pro hráče, kteří už pravidelně trénují',
+  },
+  {
+    label: 'Starší žáci A/B',
+    text: 'vyšší tempo, větší samostatnost a příprava na starší soutěže',
+  },
+  {
+    label: dorostTeam ? 'Dorost' : 'Starší dorost',
+    text: dorostTeam?.data.level ?? 'pokračování hráčské cesty pro starší hokejisty',
+  },
+];
+const events = eventsCollection[0]?.data ?? [];
+const partners = partnersCollection[0]?.data ?? [];
+const settings = settingsCollection[0].data;
 ---
-<BaseLayout title="HC Říčany | Hokej patří do Říčan" description="Moderní hokejový klub pro malé i velké hráče v Říčanech." settings={siteSettings}>
-  <Hero /><QuickActions /><NewsGrid news={latestNews} /><Teams teams={teams} /><Events events={eventItems} /><Partners partners={partnerItems} />
+
+<BaseLayout
+  title="HC Říčany | Hokejový klub pro děti a mládež"
+  description="HC Říčany je hokejový klub pro děti, mládež a hráče z Říčan a okolí."
+  settings={settings}
+  active="Úvod"
+  hidePartnerStrip
+>
+  <section class="hero">
+    <div class="site-shell">
+      <div class="hero__grid">
+        <div class="hero__content" data-reveal>
+          <div class="hero__label">Hokejový klub <span>·</span> Říčany</div>
+          <h1>HC ŘÍČANY</h1>
+          <p class="hero__lead">Hokejový klub pro děti, mládež a hráče z Říčan a okolí.</p>
+          <p class="hero__text">Učíme děti bruslit, hrát hokej a být součástí týmu. Od školičky bruslení po žákovské kategorie trénujeme v moderní COM-SYS ICE ARENĚ v Říčanech.</p>
+          <div class="hero__actions">
+            <a class="button" href="/nabor/">Chci začít s hokejem</a>
+            <a class="button-secondary" href="/mladez/">Mládež</a>
+          </div>
+          <div class="hero__stats" aria-label="Základní čísla klubu">
+            {clubStats.map((stat) => (
+              <div>
+                <strong>{stat.value}</strong>
+                <span>{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="hero__media" data-reveal>
+          <img class="hero__media-main" src="/images/navrh01/ricany_kids.jpg" alt="Děti a trenéři HC Říčany na ledě" loading="eager" />
+          <div class="hero__media-note">
+            <p>
+              <span>Momentka z tréninku</span>
+              COM-SYS ICE ARENA
+            </p>
+          </div>
+          <div class="hero__thumbs">
+            <img src="/images/navrh01/ricany_girl.jpg" alt="Malá bruslařka na ledě" loading="eager" />
+            <img src="/images/navrh01/ricany_boy.jpg" alt="Malý hokejista v kabině" loading="eager" />
+            <small>reálné fotky klubu</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-links" data-reveal>
+        <a class="quick-link" href="/aktuality/">
+          <span class="quick-link__date"><strong>22</strong><span>ČVN</span></span>
+          <span class="quick-link__body"><b>Aktuality</b><strong>Týden hokeje 2026 se blíží</strong><span>všechny novinky z klubu</span></span>
+          <span class="quick-link__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="quick-link" href="#rozpis">
+          <span class="quick-link__date"><strong>SO</strong><span>8:00</span></span>
+          <span class="quick-link__body"><b>Rozpis ledu</b><strong>Tréninky a kalendář akcí</strong><span>rozpis pro všechny kategorie</span></span>
+          <span class="quick-link__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="quick-link" href="/nabor/">
+          <span class="quick-link__date"><strong>4+</strong><span>LET</span></span>
+          <span class="quick-link__body"><b>Nábor & kontakt</b><strong>Vyzkoušejte první trénink</strong><span>nábor probíhá celoročně</span></span>
+          <span class="quick-link__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Z klubu" title="Aktuality" />
+      <div class="news-feature-grid">
+        {featuredNews && <NewsCard item={featuredNews} featured />}
+        <div class="side-news">
+          {sideNews.map((item) => (
+            <a class="side-news__item" href={`/aktuality/${item.data.slug}/`} data-reveal>
+              <img src={item.data.image} alt={item.data.title} loading="lazy" />
+              <span class="side-news__content">
+                <span class="meta-row">{item.data.category}</span>
+                <b>{item.data.title}</b>
+                <small>{item.data.date.toLocaleDateString('cs-CZ')}</small>
+              </span>
+            </a>
+          ))}
+          <a class="button-outline side-news__cta" href="/aktuality/">Všechny aktuality</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="site-shell nabor-grid">
+      <div class="nabor-panel" data-reveal>
+        <p class="eyebrow">Nábor 2026/27</p>
+        <h2>Přijďte si vyzkoušet první trénink</h2>
+        <p>Nábor je otevřený celoročně pro děti od 4 do 10 let. Brusle, helmu i chrániče na první tréninky půjčíme - stačí přijít v teplém oblečení. Rodičům vše vysvětlíme přímo na stadionu.</p>
+        <div class="fact-list">
+          {recruitmentFacts.map((fact) => <span>{fact}</span>)}
+        </div>
+        <div class="hero__actions">
+          <a class="button" href="/nabor/">Chci začít s hokejem</a>
+          <a class="button-secondary" href="/nabor/">Vše o náboru</a>
+        </div>
+      </div>
+      <div class="nabor-photo" data-reveal>
+        <img src="/images/navrh01/ricany_boy.jpg" alt="Malý hokejista HC Říčany v plné výstroji" loading="lazy" />
+        <span>První sezóna v HC Říčany</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice youth-categories-section">
+    <img class="youth-categories-section__silhouette" src="/images/silhouettes/hockey-silhouette-youth.svg" width="189" height="301" alt="" aria-hidden="true" loading="lazy" />
+    <div class="site-shell">
+      <SectionHeading eyebrow="Sezóna 2026/27" title="Mládežnické kategorie" href="/mladez/" linkLabel="Přehled mládeže" />
+      <p class="youth-path__intro" data-reveal>
+        V Říčanech mohou děti začít od prvních kroků na ledě a pokračovat až do 9. třídy nebo dorostu.
+      </p>
+      <div class="youth-path">
+        <div class="youth-path__features">
+          {starterTeam && (
+            <article class="youth-stage-card youth-stage-card--start" data-reveal>
+              <span class="youth-stage-card__kicker">Začínáme</span>
+              <h3>{starterTeam.data.name}</h3>
+              <p>{starterTeam.data.description}</p>
+              <dl>
+                <div><dt>Věk</dt><dd>{starterTeam.data.birthYears ?? starterTeam.data.ageGroup}</dd></div>
+                <div><dt>Tréninky</dt><dd>{starterTeam.data.training ?? 'dle rozpisu'}</dd></div>
+              </dl>
+              <div class="youth-stage-card__actions">
+                <a class="button" href="/nabor/">Chci začít s hokejem</a>
+                <a class="text-link" href="/mladez/">Jak navazuje mládež →</a>
+              </div>
+            </article>
+          )}
+
+          {ninthGradeTeam && (
+            <article class="youth-stage-card youth-stage-card--elite" data-reveal>
+              <span class="youth-stage-card__kicker">Starší hráči</span>
+              <h3>{ninthGradeTeam.data.ageGroup}</h3>
+              <p><strong>{ninthGradeTeam.data.level}</strong> ukazuje, že klub má návaznost i pro hráče, kteří už chtějí pravidelnou soutěžní úroveň.</p>
+              <dl>
+                <div><dt>Kategorie</dt><dd>{ninthGradeTeam.data.name}</dd></div>
+                <div><dt>Trenér</dt><dd>{ninthGradeTeam.data.coach ?? ninthGradeTeam.data.contactPerson}</dd></div>
+              </dl>
+              <div class="youth-stage-card__actions">
+                {ninthGradeTeam.data.resultsLink && <a class="text-link" href={ninthGradeTeam.data.resultsLink} target="_blank" rel="noreferrer">Zápasy →</a>}
+                {ninthGradeTeam.data.rosterLink && <a class="text-link" href={ninthGradeTeam.data.rosterLink} target="_blank" rel="noreferrer">Soupiska →</a>}
+              </div>
+            </article>
+          )}
+        </div>
+
+        <div class="youth-category-summary" aria-label="Další mládežnické kategorie">
+          {youthGroups.map((group) => (
+            <article data-reveal>
+              <strong>{group.label}</strong>
+              <span>{group.text}</span>
+            </article>
+          ))}
+        </div>
+
+        <div class="youth-path__footer" data-reveal>
+          <span>Kompletní přehled kategorií včetně oficiálních odkazů na zápasy a soupisky.</span>
+          <a class="button-dark" href="/mladez/">Všechny kategorie a soupisky</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rozpis" class="section section--white section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Kalendář" title="Rozpis ledu a akce klubu" teal />
+      <div class="calendar-grid">
+        <div class="calendar-box" data-reveal>
+          <div class="calendar-box__inner">
+            <code>[ EMBED - Google kalendář ]</code>
+            <strong>Rozpis ledu · tréninky · zápasy · akce klubu</strong>
+            <span>veřejný Google kalendář klubu - vloží se přes iframe</span>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--teal">Nejbližší akce</p>
+          <EventList events={events} />
+          <p class="article__caption">Výsledky a tabulky soutěží najdete na webu <a class="text-link" href="https://www.ceskyhokej.cz">ceskyhokej.cz</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--border">
+    <div class="site-shell club-grid">
+      <div class="club-media club-media--compact" data-reveal>
+        <img src="/images/navrh01/ricany_room.jpg" alt="Zázemí HC Říčany v COM-SYS ICE ARENĚ" loading="lazy" />
+      </div>
+      <div data-reveal>
+        <p class="eyebrow">Klub & zázemí</p>
+        <h2>Domov máme v COM-SYS ICE ARENĚ</h2>
+        <p>HC Říčany dlouhodobě vytváří zázemí pro dětský a mládežnický hokej v Říčanech. Trénujeme na moderním zimním stadionu s celoročním provozem, šatnami pro všechny kategorie a půjčovnou výstroje pro začínající hokejisty.</p>
+        <div class="coach-strip">
+          <div class="coach-avatars">{coaches.map((coach) => <span title={coach.name}>{coach.initials}</span>)}</div>
+          <span>O hráče se stará <strong>12 trenérů a vedoucích</strong> s licencemi Českého hokeje.</span>
+        </div>
+        <p><a class="button-dark" href="/klub/">Více o klubu</a> <a class="button-outline" href="https://www.comsysicearena.cz/" target="_blank" rel="noreferrer">COM-SYS ICE ARENA</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Život klubu" title="Fotogalerie" href="/fotogalerie/" linkLabel="Celá fotogalerie" />
+      <GalleryGrid limit={4} />
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Děkujeme za podporu" title="Partneři klubu" />
+      <div class="partner-strip">
+        {partners.map((partner) => (
+          <a class="partner-card" href={partner.website} target="_blank" rel="noreferrer" data-reveal>
+            {partner.image ? <img src={partner.image} alt={partner.name} loading="lazy" /> : <strong>{partner.logo}</strong>}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>

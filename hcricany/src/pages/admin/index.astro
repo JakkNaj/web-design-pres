@@ -230,6 +230,10 @@
         widgetFor: (name: string) => ReactNode;
       };
 
+      type GalleryPreviewProps = {
+        entry: PreviewEntry;
+      };
+
       const demoWindow = window as DemoWindow;
       const login = document.querySelector<HTMLElement>('[data-mock-login]');
       const form = document.querySelector<HTMLFormElement>('[data-mock-form]');
@@ -251,9 +255,64 @@
         }).format(date);
       };
 
+      const formatAlbumDate = (value: unknown) => {
+        const date = value ? new Date(String(value)) : null;
+        if (!date || Number.isNaN(date.valueOf())) return 'Datum alba';
+
+        return new Intl.DateTimeFormat('cs-CZ', {
+          day: 'numeric',
+          month: 'numeric',
+          year: 'numeric',
+        }).format(date);
+      };
+
       const getField = (entry: PreviewEntry, field: string, fallback = '') => {
         const value = entry.getIn(['data', field]);
         return typeof value === 'string' && value.trim() ? value : fallback;
+      };
+
+      const toPlainRecord = (value: unknown): Record<string, unknown> | null => {
+        if (!value || typeof value !== 'object') return null;
+
+        const withToJs = value as { toJS?: () => unknown };
+        const plain = typeof withToJs.toJS === 'function' ? withToJs.toJS() : value;
+
+        if (!plain || typeof plain !== 'object' || Array.isArray(plain)) return null;
+        return plain as Record<string, unknown>;
+      };
+
+      const getListItems = (value: unknown) => {
+        if (!value) return [];
+
+        if (Array.isArray(value)) {
+          return value.map(toPlainRecord).filter((item): item is Record<string, unknown> => Boolean(item));
+        }
+
+        if (typeof value === 'object') {
+          const withToJs = value as { toJS?: () => unknown };
+          if (typeof withToJs.toJS === 'function') return getListItems(withToJs.toJS());
+
+          const maybeList = value as { size?: unknown; get?: (index: number) => unknown };
+          const getItem = maybeList.get;
+          if (typeof maybeList.size === 'number' && typeof getItem === 'function') {
+            return Array.from({ length: maybeList.size }, (_, index) => getItem(index))
+              .map(toPlainRecord)
+              .filter((item): item is Record<string, unknown> => Boolean(item));
+          }
+        }
+
+        return [];
+      };
+
+      const getRecordString = (record: Record<string, unknown> | undefined, field: string, fallback = '') => {
+        const value = record?.[field];
+        return typeof value === 'string' && value.trim() ? value : fallback;
+      };
+
+      const formatPhotoCount = (count: number) => {
+        if (count === 1) return '1 fotka';
+        if (count > 1 && count < 5) return `${count} fotky`;
+        return `${count} fotek`;
       };
 
       const getImageUrl = (value: string) => {
@@ -400,6 +459,146 @@
               grid-template-columns: 1fr;
             }
           }
+
+          .cms-gallery-preview {
+            min-height: 100%;
+            background: #ffffff;
+            color: #14171b;
+            font-family: Barlow, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.55;
+          }
+
+          .cms-gallery-preview * {
+            box-sizing: border-box;
+          }
+
+          .cms-gallery-preview img {
+            display: block;
+            max-width: 100%;
+          }
+
+          .cms-gallery-preview a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          .cms-gallery-preview__inner {
+            width: 100%;
+            max-width: 1304px;
+            margin: 0 auto;
+            padding: 42px 32px 70px;
+          }
+
+          .cms-gallery-preview__eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin: 0 0 0.55rem;
+            color: #5a6470;
+            font-family: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+            font-size: 0.94rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+          }
+
+          .cms-gallery-preview__eyebrow::before {
+            content: "";
+            width: 22px;
+            height: 3px;
+            background: #c8102e;
+          }
+
+          .cms-gallery-preview h1 {
+            margin: 0;
+            color: #14171b;
+            font-family: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+            font-size: clamp(2.8rem, 7vw, 4.2rem);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 0.95;
+          }
+
+          .cms-gallery-preview__lead {
+            max-width: 640px;
+            margin: 0.9rem 0 2.25rem;
+            color: #5a6470;
+            font-size: 1.05rem;
+            font-weight: 500;
+          }
+
+          .cms-gallery-preview .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+          }
+
+          .cms-gallery-preview .album-card {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #0f1114;
+            transition:
+              transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 280ms cubic-bezier(0.22, 0.61, 0.36, 1);
+          }
+
+          .cms-gallery-preview .album-card__image {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+
+          .cms-gallery-preview .album-card__caption {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 2rem 0.9rem 0.85rem;
+            background: linear-gradient(transparent, rgba(15, 17, 20, 0.86));
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.25;
+          }
+
+          .cms-gallery-preview .album-card__caption small {
+            display: block;
+            margin-top: 0.2rem;
+            color: #c6cdd4;
+            font-weight: 500;
+            line-height: 1.35;
+          }
+
+          @media (hover: hover) and (pointer: fine) {
+            .cms-gallery-preview .album-card:hover {
+              box-shadow: 0 18px 44px rgba(15, 23, 32, 0.13);
+              transform: translateY(-3px);
+            }
+
+            .cms-gallery-preview .album-card:hover .album-card__image {
+              transform: scale(1.04);
+            }
+          }
+
+          @media (max-width: 860px) {
+            .cms-gallery-preview .gallery-grid {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+          }
+
+          @media (max-width: 620px) {
+            .cms-gallery-preview__inner {
+              padding: 30px 18px 52px;
+            }
+
+            .cms-gallery-preview .gallery-grid {
+              grid-template-columns: 1fr;
+            }
+
+            .cms-gallery-preview .album-card__image {
+              height: 230px;
+            }
+          }
         `,
         { raw: true },
       );
@@ -433,6 +632,36 @@
                 h('span', { key: 'where' }, [h('strong', { key: 'where-label' }, 'Kde: '), 'COM-SYS ICE ARENA, Říčany']),
                 h('span', { key: 'gear' }, [h('strong', { key: 'gear-label' }, 'S sebou: '), 'teplé oblečení a rukavice']),
                 h('span', { key: 'contact' }, [h('strong', { key: 'contact-label' }, 'Kontakt: '), 'nabor@hcricany.cz']),
+              ]),
+            ]),
+          ]),
+        ]);
+      });
+
+      CMS.registerPreviewTemplate('gallery', ({ entry }: GalleryPreviewProps) => {
+        const photos = getListItems(entry.getIn(['data', 'photos']));
+        const title = getField(entry, 'title', 'Název alba');
+        const date = formatAlbumDate(entry.getIn(['data', 'date']));
+        const coverImage = getField(entry, 'coverImage') || getRecordString(photos[0], 'image');
+        const image = getImageUrl(coverImage);
+        const meta = `${date} · ${formatPhotoCount(photos.length)}`;
+
+        return h('article', { className: 'cms-gallery-preview' }, [
+          h('div', { className: 'cms-gallery-preview__inner', key: 'inner' }, [
+            h('p', { className: 'cms-gallery-preview__eyebrow', key: 'eyebrow' }, 'Fotogalerie'),
+            h('h1', { key: 'title' }, 'Fotogalerie'),
+            h(
+              'p',
+              { className: 'cms-gallery-preview__lead', key: 'lead' },
+              'Momentky z tréninků, náborových akcí, turnajů a klubového života.',
+            ),
+            h('div', { className: 'gallery-grid gallery-grid--page', key: 'grid' }, [
+              h('a', { className: 'album-card', href: '/fotogalerie/', key: 'card' }, [
+                h('img', { className: 'album-card__image', src: image, alt: title, key: 'image' }),
+                h('span', { className: 'album-card__caption', key: 'caption' }, [
+                  title,
+                  h('small', { key: 'meta' }, meta),
+                ]),
               ]),
             ]),
           ]),

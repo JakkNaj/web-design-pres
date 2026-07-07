@@ -1521,6 +1521,33 @@ select {
   font-weight: 600;
 }
 
+.legal-document .article__body h2,
+.legal-document .article__body h3 {
+  margin: 1.7rem 0 0.55rem;
+  color: var(--black-soft);
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.legal-document .article__body h2 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.legal-document .article__body h3 {
+  font-size: 1.35rem;
+}
+
+.legal-document .article__body ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.65rem 0 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.legal-document .article__body li {
+  padding-left: 0.25rem;
+}
+
 .info-box {
   margin: 1.35rem 0;
   padding: 1.35rem 1.6rem;

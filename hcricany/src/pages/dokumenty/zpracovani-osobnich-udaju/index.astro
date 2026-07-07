@@ -1,0 +1,139 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/site/PageHero.astro';
+import { legalInfo } from '../../../lib/siteData';
+
+const settingsCollection = await getCollection('settings');
+const settings = settingsCollection[0].data;
+
+const processingPurposes = [
+  'Evidence členů, hráčů a zákonných zástupců pro organizaci tréninků, zápasů, soustředění a klubových akcí.',
+  'Komunikace se zájemci o nábor, rodiči, členy klubu, trenéry, partnery a veřejností.',
+  'Plnění povinností vůči sportovním svazům, orgánům veřejné správy, účetnictví a dalším zákonným evidencím.',
+  'Správa plateb, členských příspěvků, fakturace, darů a partnerské spolupráce.',
+  'Prezentace klubové činnosti, fotogalerie, aktuality a dokumentace veřejných klubových akcí.',
+  'Zajištění funkčnosti webových stránek, ochrana webu a vyhodnocení základní návštěvnosti.',
+];
+
+const personalDataCategories = [
+  'Identifikační údaje: jméno, příjmení, datum narození, případně členské nebo registrační údaje hráče.',
+  'Kontaktní údaje: e-mail, telefon, adresa a kontakty zákonných zástupců.',
+  'Sportovní a organizační údaje: kategorie, docházka, přihlášky na akce, informace nezbytné pro bezpečnou organizaci tréninků.',
+  'Účetní údaje: údaje o platbách, příspěvcích, fakturách, darech nebo partnerských smlouvách.',
+  'Obrazové záznamy: fotografie a videozáznamy z tréninků, zápasů, náborových a klubových akcí.',
+  'Technické údaje webu: IP adresa, typ zařízení, údaje o používání webu a nezbytné soubory cookies.',
+];
+
+const rights = [
+  {
+    title: 'Právo na informace a přístup k osobním údajům',
+    paragraphs: [
+      'Máte právo požadovat potvrzení, zda o vás osobní údaje zpracováváme, a pokud ano, také přístup k těmto údajům a souvisejícím informacím.',
+      'Na požádání vám poskytneme informace zejména o účelech zpracování, kategoriích údajů, příjemcích, plánované době uložení a o vašich právech.',
+    ],
+  },
+  {
+    title: 'Právo na opravu a doplnění',
+    paragraphs: [
+      'Pokud jsou zpracovávané osobní údaje nepřesné nebo neúplné, můžete požádat o jejich opravu nebo doplnění.',
+    ],
+  },
+  {
+    title: 'Právo na výmaz',
+    paragraphs: [
+      'V případech stanovených právními předpisy můžete požadovat výmaz osobních údajů, například pokud již nejsou potřebné pro účely, pro které byly získány.',
+      'Výmaz není možné provést v rozsahu, ve kterém nám další uchování ukládá právní povinnost nebo je nezbytné pro ochranu našich oprávněných nároků.',
+    ],
+  },
+  {
+    title: 'Právo na omezení zpracování',
+    paragraphs: [
+      'V určitých situacích můžete požadovat, abychom zpracování vašich osobních údajů omezili, například po dobu ověření přesnosti údajů nebo posouzení námitky.',
+    ],
+  },
+  {
+    title: 'Právo na přenositelnost údajů',
+    paragraphs: [
+      'U údajů zpracovávaných na základě souhlasu nebo smlouvy máte právo získat osobní údaje ve strukturovaném a běžně používaném formátu, pokud je to technicky možné.',
+    ],
+  },
+  {
+    title: 'Právo vznést námitku',
+    paragraphs: [
+      'Pokud zpracováváme osobní údaje na základě oprávněného zájmu, máte právo proti takovému zpracování vznést námitku.',
+      'Námitku posoudíme individuálně a budeme vás informovat o výsledku.',
+    ],
+  },
+  {
+    title: 'Právo odvolat souhlas',
+    paragraphs: [
+      'Pokud je zpracování založeno na vašem souhlasu, můžete jej kdykoliv odvolat. Odvolání souhlasu nemá vliv na zákonnost zpracování před jeho odvoláním.',
+    ],
+  },
+  {
+    title: 'Právo podat stížnost',
+    paragraphs: [
+      'Máte právo obrátit se se stížností na Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, webové stránky https://www.uoou.cz/.',
+    ],
+  },
+];
+---
+
+<BaseLayout title="Zpracování osobních údajů | HC Říčany" description="Vzorové informace o zpracování osobních údajů v HC Říčany." settings={settings} active="GDPR">
+  <PageHero title="Zpracování osobních údajů" description="Vzorové informace o tom, jak HC Říčany pracuje s osobními údaji členů, rodičů, zájemců, partnerů a návštěvníků webu." active="GDPR" />
+
+  <section class="article">
+    <article class="site-shell article__inner legal-document" data-reveal>
+      <p class="article__lead">Tento dokument je ukázkový text pro doplnění a následnou právní kontrolu. Před zveřejněním na ostrém webu je potřeba ověřit správce, účely zpracování, právní tituly, doby uchování i skutečné zpracovatele.</p>
+
+      <div class="article__body">
+        <h2>Správce osobních údajů</h2>
+        <p>Správcem osobních údajů je {legalInfo[0]}, {legalInfo[1]}, {legalInfo[3]}. Kontaktní e-mail pro dotazy k ochraně osobních údajů je <a href={`mailto:${settings.contactEmail}`}>{settings.contactEmail}</a>.</p>
+
+        <h2>Účely zpracování osobních údajů</h2>
+        <p>Osobní údaje zpracováváme pouze v rozsahu nezbytném pro činnost hokejového klubu, komunikaci, splnění zákonných povinností a prezentaci klubového života.</p>
+        <ul>
+          {processingPurposes.map((item) => <li>{item}</li>)}
+        </ul>
+
+        <h2>Kategorie zpracovávaných osobních údajů</h2>
+        <ul>
+          {personalDataCategories.map((item) => <li>{item}</li>)}
+        </ul>
+
+        <h2>Právní důvody zpracování</h2>
+        <p>Osobní údaje můžeme zpracovávat zejména na základě plnění smlouvy nebo členského vztahu, splnění právní povinnosti, oprávněného zájmu klubu, ochrany důležitých zájmů osob nebo na základě uděleného souhlasu.</p>
+
+        <h2>Příjemci a zpracovatelé</h2>
+        <p>Osobní údaje mohou být v nezbytném rozsahu předány osobám, které pro klub zajišťují účetnictví, správu webu, e-mailovou komunikaci, sportovní evidenci, organizaci soutěží nebo technickou podporu. Údaje mohou být dále předány orgánům veřejné správy nebo sportovním svazům, pokud to vyžaduje právní předpis nebo pravidla soutěží.</p>
+
+        <h2>Předávání údajů mimo EU</h2>
+        <p>Osobní údaje standardně nepředáváme mimo Evropskou unii nebo Evropský hospodářský prostor. Pokud by k takovému předání mělo dojít, zajistíme odpovídající právní mechanismus a budeme vás o tom informovat.</p>
+
+        <h2>Doba uchování</h2>
+        <p>Osobní údaje uchováváme pouze po dobu nezbytnou pro splnění daného účelu. Údaje související s členstvím a sportovní evidencí uchováváme po dobu trvání členství a následně po dobu potřebnou pro ochranu právních nároků. Účetní a daňové doklady uchováváme po dobu stanovenou právními předpisy.</p>
+        <p>Údaje zpracovávané na základě souhlasu uchováváme po dobu platnosti souhlasu nebo do jeho odvolání, pokud neexistuje jiný právní důvod pro další zpracování.</p>
+
+        <h2>Fotografie a videozáznamy</h2>
+        <p>Fotografie a videozáznamy z veřejných klubových akcí, tréninků a zápasů můžeme používat k informování o činnosti klubu a k prezentaci sportovního života. Pokud nechcete, aby byla konkrétní fotografie nebo záznam dále používán, kontaktujte nás na e-mailu <a href={`mailto:${settings.contactEmail}`}>{settings.contactEmail}</a>.</p>
+
+        <h2>Vaše práva</h2>
+        <p>Svá práva můžete uplatnit e-mailem na adrese <a href={`mailto:${settings.contactEmail}`}>{settings.contactEmail}</a> nebo písemně na adrese klubu. Na žádosti reagujeme bez zbytečného odkladu, nejpozději v zákonné lhůtě.</p>
+
+        {rights.map((right) => (
+          <>
+            <h3>{right.title}</h3>
+            {right.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </>
+        ))}
+
+        <h2>Automatizované rozhodování</h2>
+        <p>Při zpracování osobních údajů neprovádíme automatizované individuální rozhodování ani profilování, které by pro vás mělo právní nebo obdobně významné účinky.</p>
+
+        <h2>Kontakt</h2>
+        <p>Dotazy k ochraně osobních údajů směřujte na <a href={`mailto:${settings.contactEmail}`}>{settings.contactEmail}</a> nebo na adresu {settings.address}.</p>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

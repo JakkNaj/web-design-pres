@@ -43,6 +43,20 @@ const youthGroups = [
 const events = eventsCollection[0]?.data ?? [];
 const partners = partnersCollection[0]?.data ?? [];
 const settings = settingsCollection[0].data;
+const heroSlides = [
+  {
+    src: '/images/navrh01/ricany_kids.jpg',
+    alt: 'Děti a trenéři HC Říčany na ledě',
+  },
+  {
+    src: '/images/navrh01/ricany_girl.jpg',
+    alt: 'Malá bruslařka HC Říčany na ledě',
+  },
+  {
+    src: '/images/navrh01/ricany_boy.jpg',
+    alt: 'Malý hokejista HC Říčany v kabině',
+  },
+];
 ---
 
 <BaseLayout
@@ -74,18 +88,37 @@ const settings = settingsCollection[0].data;
           </div>
         </div>
 
-        <div class="hero__media" data-reveal>
-          <img class="hero__media-main" src="/images/navrh01/ricany_kids.jpg" alt="Děti a trenéři HC Říčany na ledě" loading="eager" />
-          <div class="hero__media-note">
-            <p>
-              <span>Momentka z tréninku</span>
-              COM-SYS ICE ARENA
-            </p>
+        <div class="hero__media" data-reveal data-hero-carousel>
+          <div class="hero__slides">
+            {heroSlides.map((slide, index) => (
+              <img
+                class:list={['hero__media-main', 'hero__slide', { 'is-active': index === 0 }]}
+                src={slide.src}
+                alt={slide.alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                data-carousel-slide
+                aria-hidden={index === 0 ? 'false' : 'true'}
+              />
+            ))}
           </div>
-          <div class="hero__thumbs">
-            <img src="/images/navrh01/ricany_girl.jpg" alt="Malá bruslařka na ledě" loading="eager" />
-            <img src="/images/navrh01/ricany_boy.jpg" alt="Malý hokejista v kabině" loading="eager" />
-            <small>reálné fotky klubu</small>
+          <div class="hero__controls" aria-label="Fotky z HC Říčany">
+            <button class="hero__nav hero__nav--prev" type="button" data-carousel-prev aria-label="Předchozí fotka">‹</button>
+            <div class="hero__thumbs" role="tablist" aria-label="Vyberte fotku">
+              {heroSlides.map((slide, index) => (
+                <button
+                  class:list={['hero__thumb', { 'is-active': index === 0 }]}
+                  type="button"
+                  role="tab"
+                  data-carousel-thumb={index}
+                  aria-label={`Zobrazit fotku ${index + 1}`}
+                  aria-selected={index === 0 ? 'true' : 'false'}
+                  tabindex={index === 0 ? '0' : '-1'}
+                >
+                  <img src={slide.src} alt="" loading="eager" />
+                </button>
+              ))}
+            </div>
+            <button class="hero__nav hero__nav--next" type="button" data-carousel-next aria-label="Další fotka">›</button>
           </div>
         </div>
       </div>
@@ -109,6 +142,56 @@ const settings = settingsCollection[0].data;
       </div>
     </div>
   </section>
+  <script>
+    document.querySelectorAll('[data-hero-carousel]').forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
+      const thumbs = Array.from(carousel.querySelectorAll('[data-carousel-thumb]'));
+      const previous = carousel.querySelector('[data-carousel-prev]');
+      const next = carousel.querySelector('[data-carousel-next]');
+      let activeIndex = Math.max(0, slides.findIndex((slide) => slide.classList.contains('is-active')));
+
+      const setActiveSlide = (index: number) => {
+        if (!slides.length) return;
+        activeIndex = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === activeIndex;
+          slide.classList.toggle('is-active', isActive);
+          slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+
+        thumbs.forEach((thumb, thumbIndex) => {
+          const isActive = thumbIndex === activeIndex;
+          thumb.classList.toggle('is-active', isActive);
+          thumb.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          thumb.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+      };
+
+      thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => setActiveSlide(index));
+      });
+
+      previous?.addEventListener('click', () => setActiveSlide(activeIndex - 1));
+      next?.addEventListener('click', () => setActiveSlide(activeIndex + 1));
+
+      carousel.addEventListener('keydown', (event) => {
+        const keyboardEvent = event as KeyboardEvent;
+
+        if (keyboardEvent.key === 'ArrowLeft') {
+          event.preventDefault();
+          setActiveSlide(activeIndex - 1);
+        }
+
+        if (keyboardEvent.key === 'ArrowRight') {
+          event.preventDefault();
+          setActiveSlide(activeIndex + 1);
+        }
+      });
+
+      setActiveSlide(activeIndex);
+    });
+  </script>
 
   <section class="section section--white">
     <div class="site-shell">

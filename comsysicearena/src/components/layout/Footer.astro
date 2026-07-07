@@ -1,0 +1,69 @@
+---
+import logoUrl from '../../assets/arena/logos/comsys-ice-arena-ricany.svg?url';
+import comsysWordmarkLightUrl from '../../assets/arena/logos/comsys-wordmark-na-tmave-pozadi.svg?url';
+import { advertisingOffer, documents, navItems, partners, site } from '../../lib/siteData';
+
+const advertisingMailto = `mailto:${advertisingOffer.email}?subject=${encodeURIComponent('Reklamní plochy v COM-SYS Ice Arena')}`;
+---
+
+<footer class="site-footer">
+  <div class="site-shell site-footer__partners" data-reveal>
+    <span>Sportovní ekosystém</span>
+    <div>
+      {partners.map((partner) => (
+        <a href={partner.url} target={partner.url.startsWith('http') ? '_blank' : undefined} rel={partner.url.startsWith('http') ? 'noreferrer' : undefined}>
+          {partner.name === 'COM-SYS' ? (
+            <img class="site-footer__partner-logo" src={comsysWordmarkLightUrl} alt="COM-SYS" width="112" height="17" loading="lazy" decoding="async" />
+          ) : (
+            partner.name
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="site-shell site-footer__advertising" data-reveal>
+    <div>
+      <span>Pro partnery</span>
+      <h2>{advertisingOffer.title}</h2>
+      <p>{advertisingOffer.text}</p>
+    </div>
+    <a href={advertisingMailto}>Kontaktovat arénu</a>
+  </div>
+
+  <div class="site-shell site-footer__grid">
+    <div data-reveal>
+      <a class="site-footer__brand" href="/">
+        <span><img src={logoUrl} alt="COM-SYS Ice Arena Říčany" width="230" height="56" loading="lazy" decoding="async" /></span>
+      </a>
+      <p>Moderní zimní stadion v Říčanech se dvěma ledovými plochami, celoročním provozem a zázemím pro veřejnost, sportovce i firmy.</p>
+    </div>
+
+    <nav class="site-footer__links" aria-label="Navigace v patičce" data-reveal>
+      <h2>Návštěva</h2>
+      {navItems.slice(1, 5).map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <nav class="site-footer__links" aria-label="Aréna a dokumenty" data-reveal>
+      <h2>Aréna</h2>
+      <a href="/aktuality/">Aktuality</a>
+      <a href="/virtualni-prohlidka/">Virtuální prohlídka</a>
+      {documents.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <div class="site-footer__contact" data-reveal>
+      <h2>Kontakt</h2>
+      <p>{site.name}<br />{site.address}</p>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a href={`tel:${site.gatePhone.replaceAll(' ', '')}`}>Vrátnice: {site.gatePhone}</a>
+      <a href={`tel:${site.eventsPhone.replaceAll(' ', '')}`}>Akce a pronájem: {site.eventsPhone}</a>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="site-shell">
+      <span>© {new Date().getFullYear()} {site.name}</span>
+      <span><a href="/dokumenty/zpracovani-osobnich-udaju/">GDPR</a> · <a href="/dokumenty/provozni-rad/">Provozní řád</a></span>
+    </div>
+  </div>
+</footer>

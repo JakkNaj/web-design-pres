@@ -1,0 +1,251 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import arenaHero from '../assets/arena/arena-3.jpg';
+import castaRinkMain from '../assets/arena/casta/casta-rink-main.jpg';
+import castaRinkTraining from '../assets/arena/casta/casta-rink-training.jpg';
+import castaShop from '../assets/arena/casta/casta-ccm-shop.jpg';
+import castaRestaurant from '../assets/arena/casta/casta-restaurant.jpg';
+import castaFitness from '../assets/arena/casta/casta-fitness.jpg';
+import castaTrainingRoom from '../assets/arena/casta/casta-training-room.jpg';
+import hcLogo from '../assets/arena/hc-comsys-ricany-logo.webp';
+import { arenaFeatures, audience, formatDate, publicSkatingDates, quickLinks, site } from '../lib/siteData';
+
+const nextPublicSkating = publicSkatingDates[0];
+const homepageArenaFeatures = arenaFeatures.filter((item) => item.label !== 'Zázemí haly');
+const newsCollection = await getCollection('news', ({ data }) => data.published);
+const latestNews = newsCollection.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 2);
+
+const servicePhotos = [
+  {
+    title: 'CCM obchod + broušení',
+    text: 'Hokejové vybavení, servis bruslí a půjčovna přímo v aréně.',
+    image: castaShop,
+    alt: 'CCM obchod v COM-SYS Ice Arena',
+    href: site.ccmShopUrl,
+    external: true,
+  },
+  {
+    title: 'Restaurace Longál',
+    text: 'Občerstvení a zázemí pro rodiče, týmy i firemní akce.',
+    image: castaRestaurant,
+    alt: 'Restaurace Longál v areálu',
+    href: site.restaurantMapsUrl,
+    external: true,
+  },
+  {
+    title: 'Fitness',
+    text: 'Doplňková příprava a tréninkové zázemí mimo led.',
+    image: castaFitness,
+    alt: 'Fitness zóna v aréně',
+    href: site.fitnessUrl,
+    external: true,
+  },
+  {
+    title: 'Tělocvična',
+    text: 'Boxerna a prostor pro rozcvičení, kompenzaci a suchou přípravu.',
+    image: castaTrainingRoom,
+    alt: 'Tělocvična a boxerna v aréně',
+    href: '/sluzby/',
+  },
+];
+
+const audienceTones = ['teal', 'blue', 'muted', 'dark'];
+
+---
+
+<BaseLayout title="COM-SYS Ice Arena Říčany | Zimní stadion a pronájem ledu" active="Úvod">
+  <section class="hero">
+    <Image class="hero__image" src={arenaHero} alt="Budova COM-SYS Ice Arena v Říčanech" widths={[960, 1440, 1920]} sizes="100vw" loading="eager" />
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="site-shell">
+      <div class="hero__content" data-reveal>
+        <p class="eyebrow">Zimní stadion · Říčany</p>
+        <h1>COM-SYS<br />Ice Arena</h1>
+        <p class="hero__lead">Moderní ledová aréna v Říčanech otevřená po celý rok. Dvě ledové plochy, veřejné bruslení a pronájem ledu.</p>
+        <div class="hero__facts" aria-label="Základní informace arény">
+          <span>2 ledové plochy</span>
+          <span>365 dní v roce</span>
+          <span>15 min od Prahy</span>
+        </div>
+        <div class="hero__actions">
+          <Button href="/verejne-brusleni/">Veřejné bruslení</Button>
+          <Button href={site.reservationFormUrl} tone="red">Rezervace ledu</Button>
+        </div>
+      </div>
+    </div>
+    <div class="quick-links">
+      <div class="site-shell quick-links__grid">
+        {quickLinks.map((link) => (
+          <a class:list={['quick-link', `quick-link--${link.tone}`]} href={link.href}>
+            <span class="quick-link__body">
+              <b>{link.label}</b>
+              <strong>{link.title}</strong>
+              <span>{link.text}</span>
+            </span>
+            <span class="quick-link__arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Aktuálně v aréně" title="Nejbližší bruslení, novinky a rozpis ledu" href="/aktuality/" linkLabel="Všechny aktuality" />
+      <div class="home-current-grid">
+        <article class="current-skating-card" data-reveal>
+          <span class="info-card__label status-dot">Nejbližší termín pro veřejnost</span>
+          <h3>Veřejné bruslení</h3>
+          <span class="current-skating-card__date">{nextPublicSkating.day} · {nextPublicSkating.date}</span>
+          <span class="current-skating-card__time">{nextPublicSkating.time}</span>
+          <p>{nextPublicSkating.surface} · otevřeno pro rodiny, děti i rekreační bruslaře.</p>
+          <span class="current-skating-card__note">Vstupné na místě, půjčovna bruslí otevřená. Další termíny se řídí aktuálním rozpisem arény.</span>
+          <a class="button-red" href="/verejne-brusleni/">Zobrazit veřejné bruslení</a>
+        </article>
+
+        <div class="latest-news-panel" data-reveal>
+          <div class="latest-news-panel__header">
+            <div>
+              <span class="info-card__label status-dot status-dot--blue">Aktuality</span>
+              <h3>Nejnovější provozní zprávy</h3>
+            </div>
+            <a class="text-link" href="/aktuality/">Archiv novinek</a>
+          </div>
+          <div class="latest-news-list">
+            {latestNews.map((item) => (
+              <a class="latest-news-item" href={`/aktuality/${item.data.slug}/`}>
+                <span class="tag">{item.data.category}</span>
+                <b>{item.data.title}</b>
+                <small>{formatDate(item.data.date)}</small>
+                <span>{item.data.excerpt}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <a class="rink-summary-card" href="/rozpis-a-rezervace/" data-reveal>
+          <Image src={castaRinkTraining} alt="Malá ledová plocha a tréninkové zázemí COM-SYS Ice Arena" widths={[480, 720, 960]} sizes="(max-width: 1080px) 100vw, 28vw" loading="lazy" />
+          <span class="rink-summary-card__content">
+            <span class="info-card__label">Rozpis ledu</span>
+            <h3>Kalendář obsazenosti arény</h3>
+            <span class="rink-summary-card__facts">
+              <span><b>Vše na jednom místě</b> tréninky, zápasy, veřejné bruslení i pronájmy</span>
+              <span><b>Obě ledové plochy</b> přehled velké plochy i malé tréninkové plochy</span>
+            </span>
+            <span class="photo-card__cta" aria-hidden="true">
+              Otevřít rozpis
+              <svg width="15" height="15" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Co v aréně najdete" title="Velká plocha i malá říčanská nudle" description="Dvě ledové plochy pro veřejné bruslení, tréninky, zápasy i individuální přípravu. Vedle nich najdete půjčovnu, CCM obchod, restauraci, fitness a prostor pro suchou přípravu." />
+      <div class="home-services home-services--compact">
+        <a class="rental-focus-card" href={site.reservationFormUrl} data-reveal>
+          <Image src={castaRinkMain} alt="Velká ledová plocha COM-SYS Ice Arena" widths={[640, 960, 1280]} sizes="(max-width: 1080px) 100vw, 44vw" loading="lazy" />
+          <span class="rental-focus-card__content">
+            <span class="eyebrow">Dvě ledové plochy</span>
+            <h3>Vyberte velkou plochu nebo malou nudli</h3>
+            <p>Pro trénink, zápas, gólmany nebo firemní akci pošlete preferovaný čas a plochu. Aréna dostupnost ověří a rezervaci potvrdí.</p>
+            <span class="button-red">Poptat rezervaci</span>
+          </span>
+        </a>
+        <div class="home-services__side" data-reveal>
+          <div class="service-photo-strip">
+            {servicePhotos.map((item) => (
+              <a class="photo-card" href={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noreferrer' : undefined}>
+                <Image src={item.image} alt={item.alt} widths={[320, 480, 640]} sizes="(max-width: 900px) 100vw, 24vw" loading="lazy" />
+                <span class="photo-card__body">
+                  <b>{item.title}</b>
+                  <span class="photo-card__details">
+                    <small>{item.text}</small>
+                    <span class="photo-card__cta" aria-hidden="true">
+                      Otevřít
+                      <svg width="15" height="15" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    </span>
+                  </span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Pro koho je aréna" title="Místo pro veřejnost, sport i firmy" />
+      <div class="grid-4">
+        {audience.map((item, index) => (
+          <a class:list={['audience-card', `audience-card--${audienceTones[index]}`]} href={item.href} data-reveal>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <b>{item.cta} →</b>
+          </a>
+        ))}
+      </div>
+      <div class="home-club-strip" data-reveal>
+        <Image class="home-club-strip__logo" src={hcLogo} alt="HC COM-SYS Říčany" width={92} height={92} loading="lazy" />
+        <div class="home-club-strip__copy">
+          <p class="eyebrow">Domácí klub</p>
+          <h3>HC Říčany trénuje právě tady</h3>
+          <p>Aréna je každodenním zázemím pro mládež, tréninky i zápasy HC Říčany. Pro nábor, dětský hokej a klubové týmy pokračujte na klubový web.</p>
+        </div>
+        <div class="home-club-strip__actions">
+          <Button href={site.hcRicanyRecruitmentUrl} tone="red" external>Nábor HC Říčany</Button>
+          <Button href={site.hcRicanyUrl} tone="secondary" external>Web klubu</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-split-section">
+    <div class="about-split-section__image">
+      <Image src={arenaHero} alt="Exteriér COM-SYS Ice Arena" widths={[720, 1080, 1440]} sizes="(max-width: 1080px) 100vw, 50vw" loading="lazy" />
+    </div>
+    <div class="about-split-section__content" data-reveal>
+      <p class="eyebrow">O aréně</p>
+      <h2>Moderní ledová aréna v Říčanech</h2>
+      <p>Dvě ledové plochy, osm moderních šaten, zázemí pro suchou přípravu a celoroční provoz v jednom areálu. Velká plocha má kanadsko-americké NHL rozměry, malá říčanská nudle zase kamerový systém pro okamžitý tréninkový rozbor.</p>
+      <div class="stat-strip">
+        <div><strong>8</strong><span>moderních šaten</span></div>
+        <div><strong>NHL</strong><span>rozměr velké plochy</span></div>
+        <div><strong>LED</strong><span>rozbor na malé ploše</span></div>
+      </div>
+      <div class="about-feature-list">
+        {homepageArenaFeatures.map((item) => (
+          <article>
+            <span>{item.label}</span>
+            <strong>{item.title}</strong>
+          </article>
+        ))}
+      </div>
+      <div class="about-contact-panel">
+        <strong>Kontakt a poptávka</strong>
+        <p>Napište na provoz arény nebo pošlete poptávku pronájmu. Rezervace je vždy žádost, kterou aréna potvrdí podle dostupnosti.</p>
+        <div class="about-contact-panel__links">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={`tel:${site.gatePhone.replaceAll(' ', '')}`}>Vrátnice: {site.gatePhone}</a>
+          <a href={`tel:${site.eventsPhone.replaceAll(' ', '')}`}>Akce: {site.eventsPhone}</a>
+        </div>
+      </div>
+      <div class="actions-row">
+        <Button href="/kontakt/" tone="secondary">Kontakt a mapa</Button>
+        <Button href={site.reservationFormUrl} tone="red">Poptat led</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

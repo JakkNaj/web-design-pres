@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import { site, virtualTours } from '../lib/siteData';
+---
+
+<BaseLayout title="Virtuální prohlídka | COM-SYS Ice Arena" description="Virtuální prohlídka COM-SYS Ice Arena: velká plocha, malá říčanská nudle, vstup do haly a šatna." active="Virtuální prohlídka">
+  <PageHero title="Virtuální prohlídka" active="Virtuální prohlídka" eyebrow="Prostory arény" description="Prohlédněte si ledové plochy a šatnu přímo na stránce. V každém okně můžete otáčet pohled, přibližovat a přepnout na celou obrazovku." />
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Google Street View" title="Virtuálně projít velkou plochu, malou nudli i šatnu" description="Panoramata jsou vložená přímo do stránky. Pokud se některé okno nenačte, pod ním zůstává přímý odkaz do Google Maps." />
+      <div class="virtual-tour-grid">
+        {virtualTours.map((tour) => (
+          <article class="service-card virtual-tour-card" data-reveal>
+            <span class="service-card__media virtual-tour-card__media">
+              <iframe
+                title={`Virtuální prohlídka - ${tour.title}`}
+                src={tour.embedSrc}
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </span>
+            <span class="service-card__body virtual-tour-card__body">
+              <span class="info-card__label">{tour.label}</span>
+              <h3>{tour.title}</h3>
+              <p>{tour.text}</p>
+              <a class="text-link" href={tour.href} target="_blank" rel="noreferrer">Otevřít v Google Maps →</a>
+            </span>
+          </article>
+        ))}
+      </div>
+      <div class="tip-box"><strong>Ovládání:</strong> V každém okně můžete tažením měnit směr pohledu. Ikona v rohu otevře prohlídku na celou obrazovku.</div>
+      <div class="actions-row" style="margin-top: 1rem;">
+        <Button href="/kontakt/">Kontakt</Button>
+        <Button href={site.reservationFormUrl} tone="red">Rezervovat led</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

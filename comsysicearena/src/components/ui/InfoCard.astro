@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  text: string;
+  href?: string;
+}
+
+const { label, title, text, href } = Astro.props;
+const Tag = href ? 'a' : 'article';
+const isExternal = href?.startsWith('http');
+---
+
+<Tag class="info-card" href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noreferrer' : undefined} data-reveal>
+  <span class="info-card__label">{label}</span>
+  <h3>{title}</h3>
+  <p>{text}</p>
+  {href && <span class="text-link">Detail <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span>}
+</Tag>

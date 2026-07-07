@@ -1,0 +1,37 @@
+---
+import { site } from '../../lib/siteData';
+
+interface Props {
+  title?: string;
+  text?: string;
+}
+
+const {
+  title = 'Kontakt na arénu',
+  text = 'Napište nám nebo zavolejte. Provoz arény vám potvrdí termín, dostupnost i podmínky rezervace.',
+} = Astro.props;
+---
+
+<aside class="contact-card" data-reveal>
+  <span class="contact-card__label">Kontakt</span>
+  <h3>{title}</h3>
+  <p>{text}</p>
+  <div class="contact-list">
+    <a href={`mailto:${site.email}`}>{site.email}</a>
+    <a href={`tel:${site.gatePhone.replaceAll(' ', '')}`}>Vrátnice: {site.gatePhone}</a>
+    <a href={`tel:${site.eventsPhone.replaceAll(' ', '')}`}>Akce a pronájem: {site.eventsPhone}</a>
+  </div>
+</aside>
+
+<style>
+  .contact-list {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 1rem;
+  }
+
+  .contact-list a {
+    color: var(--blue);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../../lib/siteData';
+
+interface Props {
+  item: CollectionEntry<'news'>;
+  featured?: boolean;
+}
+
+const { item, featured = false } = Astro.props;
+---
+
+<a class:list={['news-card', { 'news-card--featured': featured, 'news-card--logo': item.data.imageStyle === 'logo' }]} href={`/aktuality/${item.data.slug}/`} data-reveal>
+  <img class="news-card__image" src={item.data.image} alt={item.data.title} loading={featured ? 'eager' : 'lazy'} />
+  <div class="news-card__content">
+    <div class="meta-row">
+      <span class="tag">{item.data.category}</span>
+      <time datetime={item.data.date.toISOString()}>{formatDate(item.data.date)}</time>
+    </div>
+    <h3>{item.data.title}</h3>
+    <p>{item.data.excerpt}</p>
+    <span class="text-link">Číst aktualitu →</span>
+  </div>
+</a>

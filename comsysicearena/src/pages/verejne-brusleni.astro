@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import PriceTable from '../components/ui/PriceTable.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import { prices, publicSkatingDates, site } from '../lib/siteData';
+
+const practicalInfos = [
+  'Děti musí mít při bruslení nasazenou helmu. Bez helmy nesmí na led.',
+  'K dispozici je cca 100 párů bruslí včetně dětských velikostí.',
+  'Broušení bruslí řeší CCM obchod v aréně.',
+  'Řiďte se pokyny personálu a provozním řádem.',
+  'Parkování u arény je do 15 minut zdarma.',
+  'Kontakt pro dotazy: ' + site.email,
+];
+---
+
+<BaseLayout title="Veřejné bruslení | COM-SYS Ice Arena" description="Termíny, vstupné, půjčovna bruslí a pravidla veřejného bruslení v COM-SYS Ice Arena Říčany." active="Veřejné bruslení">
+  <PageHero title="Veřejné bruslení" active="Veřejné bruslení" eyebrow="Pro veřejnost" description="Přijďte si zabruslit s rodinou i přáteli. Veřejné bruslení probíhá podle aktuálního rozpisu a brusle si můžete půjčit přímo v aréně." />
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Termíny" title="Aktuální rozpis veřejného bruslení" description="Přehled nejbližších termínů pro veřejnost. Aktuální informace najdete vždy v seznamu termínů a provozních aktualitách." />
+      <div class="price-table" data-reveal>
+        <div class="price-table__header">
+          <h2>Červenec 2026</h2>
+          <span class="table-label">nejbližší termíny</span>
+        </div>
+        {publicSkatingDates.map((item) => (
+          <div class="price-row">
+            <span>{item.day} {item.date} · {item.surface}</span>
+            <strong>{item.time}</strong>
+          </div>
+        ))}
+      </div>
+      <div class="tip-box"><strong>Tip:</strong> Doporučujeme přijít 15 minut před začátkem kvůli přezutí a půjčovně bruslí.</div>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Ceny a půjčovna" title="Vstup, půjčovna a platba" />
+      <div class="price-grid grid-3">
+        <PriceTable title="Vstupné" rows={prices.publicSkating} />
+        <PriceTable title="Půjčovna" rows={prices.services.slice(0, 2)} />
+        <article class="info-card" data-reveal>
+          <span class="info-card__label">Platba</span>
+          <h3>Pouze hotově</h3>
+          <p>Vstupné i půjčovna se hradí hotově přímo na místě. Brusle se nepůjčují mimo areál COM-SYS Ice Arena.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--border">
+    <div class="site-shell practical-section">
+      <SectionHeading eyebrow="Před návštěvou" title="Praktické informace" />
+      <div class="practical-list">
+        {practicalInfos.map((item, index) => (
+          <article class="practical-item" data-reveal>
+            <span class="practical-item__icon">{String(index + 1).padStart(2, '0')}</span>
+            <p>{item}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="site-shell dual-cta" data-reveal>
+      <div>
+        <p class="eyebrow">Co dál</p>
+        <h2>Nenašli jste, co hledáte?</h2>
+        <p>Kontaktujte provoz arény, nebo si zamluvte led jen pro sebe, tým či skupinu.</p>
+      </div>
+      <div class="actions-row">
+        <Button href="/kontakt/" tone="secondary">Kontaktovat arénu</Button>
+        <Button href={site.reservationFormUrl} tone="red">Zamluvit led</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

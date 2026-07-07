@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string;
+  tone?: 'blue' | 'red' | 'dark' | 'outline' | 'secondary';
+  external?: boolean;
+}
+
+const { href, tone = 'blue', external = false } = Astro.props;
+const className = {
+  blue: 'button',
+  red: 'button-red',
+  dark: 'button-dark',
+  outline: 'button-outline',
+  secondary: 'button-secondary',
+}[tone];
+---
+
+<a class={className} href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}>
+  <slot />
+</a>

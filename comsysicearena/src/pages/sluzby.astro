@@ -1,0 +1,139 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import castaRinkMain from '../assets/arena/casta/casta-rink-main.jpg';
+import castaRinkTraining from '../assets/arena/casta/casta-rink-training.jpg';
+import castaShop from '../assets/arena/casta/casta-ccm-shop.jpg';
+import castaRestaurant from '../assets/arena/casta/casta-restaurant.jpg';
+import castaFitness from '../assets/arena/casta/casta-fitness.jpg';
+import castaTrainingRoom from '../assets/arena/casta/casta-training-room.jpg';
+import { arenaFeatures, arenaStatements, prices, site } from '../lib/siteData';
+
+const serviceCards = [
+  {
+    label: 'Led',
+    title: 'Velká a malá ledová plocha',
+    text: 'Tréninky, zápasy, školy, skupinové bruslení a individuální práce na malé říčanské nudli.',
+    href: '/rozpis-a-rezervace/',
+    image: castaRinkMain,
+    alt: 'Velká ledová plocha COM-SYS Ice Arena',
+  },
+  {
+    label: 'Veřejnost',
+    title: 'Veřejné bruslení a půjčovna',
+    text: 'Pravidelné termíny pro veřejnost, půjčení bruslí a zázemí pro rodinnou návštěvu.',
+    href: '/verejne-brusleni/',
+    image: castaRinkTraining,
+    alt: 'Malá ledová plocha pro bruslení a tréninky',
+  },
+  {
+    label: 'Servis',
+    title: 'CCM obchod a broušení',
+    text: 'Hokejové vybavení, doplňky, servis a broušení bruslí přímo v aréně.',
+    href: site.ccmShopUrl,
+    image: castaShop,
+    alt: 'CCM obchod v COM-SYS Ice Arena',
+  },
+  {
+    label: 'Gastro',
+    title: 'Restaurace Longál',
+    text: 'Občerstvení a posezení pro rodiče, týmy i návštěvníky během programu na ledě.',
+    href: site.restaurantMapsUrl,
+    image: castaRestaurant,
+    alt: 'Restaurace Longál v areálu',
+  },
+  {
+    label: 'Kondice',
+    title: 'Ice Arena Fitness',
+    text: 'Fitness zóna pro kondici, kompenzaci a doplňkový trénink mimo led.',
+    href: site.fitnessUrl,
+    image: castaFitness,
+    alt: 'Fitness zóna v COM-SYS Ice Arena',
+  },
+  {
+    label: 'Suchá příprava',
+    title: 'Tělocvična a boxerna',
+    text: 'Prostor pro strečink, stabilitu, kompenzační cvičení a suchou přípravu hráčů.',
+    href: '/kontakt/',
+    image: castaTrainingRoom,
+    alt: 'Tělocvična a boxerna v COM-SYS Ice Arena',
+  },
+];
+---
+
+<BaseLayout title="Služby a zázemí | COM-SYS Ice Arena" description="Přehled služeb COM-SYS Ice Arena: CCM obchod, půjčovna, broušení, tělocvična, fitness, restaurace, školička a tréninky." active="Služby">
+  <PageHero title="Služby a zázemí" active="Služby" eyebrow="Pod jednou střechou" description="Vedle ledových ploch nabízí aréna servis pro návštěvníky, hráče, trenéry i rodiče. Vše je postavené prakticky kolem provozu stadionu." />
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Přehled služeb" title="Co můžete v aréně využít" description="Aréna není jen ledová plocha. V jednom areálu řešíte bruslení, servis, kondici, občerstvení i pronájem." />
+      <div class="service-showcase-grid">
+        {serviceCards.map((item) => (
+          <a class="service-card" href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noreferrer' : undefined} data-reveal>
+            <span class="service-card__media">
+              <Image src={item.image} alt={item.alt} widths={[420, 640, 960]} sizes="(max-width: 900px) 100vw, 31vw" loading="lazy" />
+            </span>
+            <span class="service-card__body">
+              <span class="info-card__label">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span class="text-link">Detail</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Tréninková hala" title="Zázemí, které odlišuje COM-SYS Ice Arenu" description="Moderní tréninková hala pro hráče, trenéry i návštěvníky s plnohodnotným zázemím pro led, suchou přípravu a každodenní provoz." />
+      <div class="arena-feature-grid">
+        {arenaFeatures.map((item, index) => (
+          <article class="arena-feature-card" data-reveal>
+            <span class="arena-feature-card__index">{String(index + 1).padStart(2, '0')}</span>
+            <span class="info-card__label">{item.label}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+      <div class="arena-statement-grid">
+        {arenaStatements.map((item) => (
+          <figure class="arena-statement-card" data-reveal>
+            <blockquote>{item.text}</blockquote>
+            <figcaption>
+              <strong>{item.name}</strong>
+              <span>{item.role}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--border">
+    <div class="site-shell split-grid">
+      <div class="media-frame" data-reveal>
+        <Image src={castaShop} alt="CCM obchod a servis bruslí v COM-SYS Ice Arena" widths={[640, 960, 1280]} sizes="(max-width: 1080px) 100vw, 58vw" loading="lazy" />
+        <span class="media-label">Půjčovna a broušení</span>
+      </div>
+      <div class="content-copy" data-reveal>
+        <p class="eyebrow">CCM obchod</p>
+        <h2>Servis bruslí přímo v aréně</h2>
+        <p>V CCM obchodě je možnost broušení bruslí. Otevírací doba: Po-Pá 13:00-19:00, So-Ne 10:00-16:00.</p>
+        <div class="service-price-strip">
+          <article><span>Půjčení bruslí</span><strong>{prices.services[0].value}</strong></article>
+          <article><span>Vratná záloha</span><strong>{prices.services[1].value}</strong></article>
+        </div>
+        <div class="actions-row">
+          <Button href={site.ccmShopUrl} external>Otevřít CCM obchod</Button>
+          <Button href="/verejne-brusleni/" tone="outline">Veřejné bruslení</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

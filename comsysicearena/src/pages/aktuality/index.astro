@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/site/PageHero.astro';
+import NewsCard from '../../components/site/NewsCard.astro';
+import SectionHeading from '../../components/site/SectionHeading.astro';
+
+const newsCollection = await getCollection('news', ({ data }) => data.published);
+const news = newsCollection.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const featured = news[0];
+const rest = news.slice(1);
+const categorySlug = (value: string) =>
+  value
+    .toLocaleLowerCase('cs-CZ')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+const categories = [
+  { label: 'Vše', value: 'all' },
+  ...Array.from(new Set(news.map((item) => item.data.category))).map((category) => ({
+    label: category,
+    value: categorySlug(category),
+  })),
+];
+---
+
+<BaseLayout title="Aktuality | COM-SYS Ice Arena" description="Novinky, provozní informace a archiv aktualit COM-SYS Ice Arena." active="Aktuality">
+  <PageHero title="Aktuality" active="Aktuality" eyebrow="Novinky z arény" description="Provozní zprávy, sportovní akce, návštěvy a informace z COM-SYS Ice Areny." />
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <div class="filter-row filter-row--light" data-reveal>
+        {categories.map((category, index) => (
+          <button
+            class:list={{ 'is-active': index === 0 }}
+            type="button"
+            data-news-filter={category.value}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          >
+            {category.label}
+          </button>
+        ))}
+      </div>
+
+      <SectionHeading eyebrow="Archiv" title="Nejnovější aktuality" description="Obsah je připravený jako lokální CMS kolekce, takže pozdější napojení Decap bude pracovat se stejnými poli a Markdown soubory." />
+      {featured && (
+        <div class="news-feature" data-news-item data-news-category={categorySlug(featured.data.category)}>
+          <NewsCard item={featured} featured />
+        </div>
+      )}
+      <div class="news-list-grid">
+        {rest.map((item) => (
+          <div data-news-item data-news-category={categorySlug(item.data.category)}>
+            <NewsCard item={item} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const filterControls = Array.from(document.querySelectorAll('[data-news-filter]'));
+    const newsItems = Array.from(document.querySelectorAll('[data-news-item]'));
+
+    const setFilter = (filter: string | null | undefined) => {
+      const activeFilter = typeof filter === 'string' && filter ? filter : 'all';
+
+      filterControls.forEach((control) => {
+        if (!(control instanceof HTMLButtonElement)) return;
+        const isActive = control.dataset.newsFilter === activeFilter;
+        control.classList.toggle('is-active', isActive);
+        control.setAttribute('aria-pressed', String(isActive));
+      });
+
+      newsItems.forEach((item) => {
+        if (!(item instanceof HTMLElement)) return;
+        item.hidden = activeFilter !== 'all' && item.dataset.newsCategory !== activeFilter;
+      });
+
+      const url = new URL(window.location.href);
+      if (activeFilter === 'all') {
+        url.searchParams.delete('kategorie');
+      } else {
+        url.searchParams.set('kategorie', activeFilter);
+      }
+      window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+    };
+
+    filterControls.forEach((control) => {
+      control.addEventListener('click', () => {
+        if (!(control instanceof HTMLButtonElement)) return;
+        setFilter(control.dataset.newsFilter);
+      });
+    });
+
+    setFilter(new URLSearchParams(window.location.search).get('kategorie') || 'all');
+  </script>
+</BaseLayout>

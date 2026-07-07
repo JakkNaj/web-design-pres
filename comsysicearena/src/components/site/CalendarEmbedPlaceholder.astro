@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  label?: string;
+  minHeight?: string;
+  description?: string;
+}
+
+const {
+  title,
+  label = '[ iframe Google kalendář ]',
+  minHeight = '320px',
+  description = 'Iframe slot je připravený pro živý rozpis. URL kalendáře se doplní až při integračním napojení.',
+} = Astro.props;
+---
+
+<div class="calendar-placeholder" style={`min-height:${minHeight}`} data-reveal>
+  <div class="calendar-placeholder__inner">
+    <code>{label}</code>
+    <strong>{title}</strong>
+    <span>{description}</span>
+  </div>
+</div>

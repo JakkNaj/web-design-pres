@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import { site } from '../lib/siteData';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: string;
+}
+
+const { title, description = site.description, active = '' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0f1114" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header active={active} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const menuButton = document.querySelector('[data-menu-toggle]');
+      const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+      menuButton?.addEventListener('click', () => {
+        const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!expanded));
+        if (mobileMenu instanceof HTMLElement) {
+          mobileMenu.hidden = expanded;
+        }
+        document.body.classList.toggle('no-scroll', !expanded);
+      });
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menuButton?.setAttribute('aria-expanded', 'false');
+          if (mobileMenu instanceof HTMLElement) mobileMenu.hidden = true;
+          document.body.classList.remove('no-scroll');
+        });
+      });
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion) {
+        document.documentElement.classList.add('reveal-ready');
+        const revealItems = document.querySelectorAll('[data-reveal]');
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-revealed');
+            revealObserver.unobserve(entry.target);
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealItems.forEach((item) => revealObserver.observe(item));
+      }
+
+      document.querySelectorAll('[data-mail-form]').forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (!(form instanceof HTMLFormElement)) return;
+          const data = new FormData(form);
+          const recipient = form.dataset.mailRecipient || 'info@comsysicearena.cz';
+          const subjectPrefix = form.dataset.mailSubject || 'Dotaz z webu COM-SYS Ice Arena';
+          const subjectValue = String(data.get('predmet') || data.get('typ') || '').trim();
+          const subject = subjectValue ? `${subjectPrefix}: ${subjectValue}` : subjectPrefix;
+          const lines = [];
+          for (const [key, value] of data.entries()) {
+            if (value instanceof File) continue;
+            if (!String(value).trim()) continue;
+            lines.push(`${key}: ${value}`);
+          }
+          window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+---
+import RedirectPage from '../../components/site/RedirectPage.astro';
+import { legacyRedirects } from '../../lib/siteData';
+
+export function getStaticPaths() {
+  return legacyRedirects.map((redirect) => ({
+    params: { legacy: redirect.from },
+    props: { to: redirect.to },
+  }));
+}
+
+const { to } = Astro.props;
+---
+
+<RedirectPage to={to} />

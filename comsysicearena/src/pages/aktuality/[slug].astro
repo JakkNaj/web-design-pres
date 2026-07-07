@@ -1,0 +1,140 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NewsCard from '../../components/site/NewsCard.astro';
+import { formatDate, site } from '../../lib/siteData';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('news', ({ data }) => data.published);
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const relatedCollection = await getCollection('news', ({ data }) => data.published && data.slug !== entry.data.slug);
+const related = relatedCollection.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
+const { Content } = await render(entry);
+const gallery = entry.data.gallery.length > 0 ? entry.data.gallery : [entry.data.image];
+const hasGallery = gallery.length > 1;
+---
+
+<BaseLayout title={`${entry.data.title} | COM-SYS Ice Arena`} description={entry.data.excerpt} active="Aktuality">
+  <article class="article">
+    <div class="site-shell article__inner" data-reveal>
+      <div class="breadcrumbs" aria-label="Drobečková navigace">
+        <a href="/">Úvod</a>
+        <span aria-hidden="true">/</span>
+        <a href="/aktuality/">Aktuality</a>
+        <span aria-hidden="true">/</span>
+        <strong>{entry.data.title}</strong>
+      </div>
+      <div class="meta-row">
+        <span class="tag">{entry.data.category}</span>
+        <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+      </div>
+      <h1>{entry.data.title}</h1>
+      <p class="article__lead">{entry.data.excerpt}</p>
+      {hasGallery ? (
+        <div class="article-gallery" data-news-gallery data-gallery-total={gallery.length}>
+          <div class="article-gallery__stage">
+            <img class="article__image article-gallery__image" src={gallery[0]} alt={`${entry.data.title} - fotografie 1`} loading="eager" data-gallery-image />
+            <button class="article-gallery__control article-gallery__control--prev" type="button" aria-label="Předchozí fotografie" data-gallery-prev>←</button>
+            <button class="article-gallery__control article-gallery__control--next" type="button" aria-label="Další fotografie" data-gallery-next>→</button>
+            <span class="article-gallery__count" data-gallery-count>1 / {gallery.length}</span>
+          </div>
+          <div class="article-gallery__thumbs" aria-label="Fotografie k aktualitě">
+            {gallery.map((image, index) => (
+              <button
+                class:list={{ 'is-active': index === 0 }}
+                type="button"
+                aria-label={`Zobrazit fotografii ${index + 1}`}
+                aria-pressed={index === 0 ? 'true' : 'false'}
+                data-gallery-thumb
+                data-gallery-index={index}
+                data-gallery-src={image}
+              >
+                <img src={image} alt="" loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <img class:list={['article__image', { 'article__image--logo': entry.data.imageStyle === 'logo' }]} src={entry.data.image} alt={entry.data.title} loading="eager" />
+      )}
+      <span class="article__caption">Archiv COM-SYS Ice Arena.</span>
+      <div class="article__body">
+        <Content />
+      </div>
+
+      <aside class="info-box">
+        <h2>Kontakt k aktualitě</h2>
+        <div class="info-grid">
+          <span><strong>E-mail:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></span>
+          <span><strong>Telefon:</strong> <a href={`tel:${site.gatePhone.replaceAll(' ', '')}`}>{site.gatePhone}</a></span>
+          <span><strong>Adresa:</strong> {site.address}</span>
+        </div>
+      </aside>
+
+      <div class="page-actions">
+        <a class="button-outline" href="/aktuality/">← Zpět na aktuality</a>
+        <a class="button-outline" href="/kontakt/">Kontaktovat arénu</a>
+      </div>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section section--ice section--border">
+      <div class="site-shell">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Z arény</p>
+            <h2>Další aktuality</h2>
+          </div>
+        </div>
+        <div class="news-list-grid">
+          {related.map((item) => <NewsCard item={item} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <script>
+    document.querySelectorAll('[data-news-gallery]').forEach((galleryRoot) => {
+      if (!(galleryRoot instanceof HTMLElement)) return;
+      const image = galleryRoot.querySelector('[data-gallery-image]');
+      const count = galleryRoot.querySelector('[data-gallery-count]');
+      const thumbs = Array.from(galleryRoot.querySelectorAll('[data-gallery-thumb]'));
+      const prev = galleryRoot.querySelector('[data-gallery-prev]');
+      const next = galleryRoot.querySelector('[data-gallery-next]');
+      const total = Number(galleryRoot.dataset.galleryTotal || thumbs.length);
+      let activeIndex = 0;
+
+      const showImage = (index: number) => {
+        if (!(image instanceof HTMLImageElement)) return;
+        if (total < 1) return;
+        activeIndex = (index + total) % total;
+        const activeThumb = thumbs[activeIndex];
+        if (!(activeThumb instanceof HTMLElement)) return;
+        const src = activeThumb.dataset.gallerySrc;
+        if (!src) return;
+        image.src = src;
+        image.alt = `${document.title.replace(' | COM-SYS Ice Arena', '')} - fotografie ${activeIndex + 1}`;
+        if (count) count.textContent = `${activeIndex + 1} / ${total}`;
+        thumbs.forEach((thumb, thumbIndex) => {
+          if (!(thumb instanceof HTMLButtonElement)) return;
+          const isActive = thumbIndex === activeIndex;
+          thumb.classList.toggle('is-active', isActive);
+          thumb.setAttribute('aria-pressed', String(isActive));
+        });
+      };
+
+      thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => showImage(index));
+      });
+      prev?.addEventListener('click', () => showImage(activeIndex - 1));
+      next?.addEventListener('click', () => showImage(activeIndex + 1));
+    });
+  </script>
+</BaseLayout>

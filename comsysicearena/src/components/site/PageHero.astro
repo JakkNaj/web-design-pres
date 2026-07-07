@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  active: string;
+  eyebrow?: string;
+}
+
+const { title, description, active } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="site-shell page-hero__inner" data-reveal>
+    <div class="breadcrumbs" aria-label="Drobečková navigace">
+      <a href="/">Úvod</a>
+      <span aria-hidden="true">/</span>
+      <strong>{active}</strong>
+    </div>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <slot />
+  </div>
+</section>

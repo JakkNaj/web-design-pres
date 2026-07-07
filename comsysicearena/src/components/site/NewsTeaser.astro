@@ -1,0 +1,22 @@
+---
+import type { NewsTeaserItem } from '../../lib/siteData';
+
+interface Props {
+  item: NewsTeaserItem;
+  href?: string;
+}
+
+const { item, href = '/aktuality/' } = Astro.props;
+const formattedDate = new Intl.DateTimeFormat('cs-CZ', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(new Date(item.date));
+---
+
+<a class="side-news__item" href={href} data-reveal>
+  <span class="tag">{item.category}</span>
+  <b>{item.title}</b>
+  <small>{formattedDate}</small>
+  <span>{item.excerpt}</span>
+</a>

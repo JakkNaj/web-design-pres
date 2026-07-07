@@ -1,0 +1,39 @@
+---
+import logoUrl from '../../assets/arena/logos/comsys-ice-arena-ricany-na-tmave-pozadi.svg?url';
+import { navItems, site } from '../../lib/siteData';
+
+interface Props {
+  active?: string;
+}
+
+const { active = '' } = Astro.props;
+---
+
+<header class="site-header" data-site-header>
+  <div class="site-shell site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="COM-SYS Ice Arena - úvod">
+      <span class="site-header__logo">
+        <img src={logoUrl} alt="COM-SYS Ice Arena Říčany" width="210" height="51" loading="eager" decoding="async" />
+      </span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Hlavní navigace">
+      {navItems.map((item) => (
+        <a class:list={{ 'is-active': item.label === active }} href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <a class="site-header__cta" href={site.reservationFormUrl}>Rezervovat led</a>
+
+    <button class="mobile-menu-fab" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      Menu
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="site-header__mobile" aria-label="Mobilní navigace" hidden data-mobile-menu>
+    {navItems.map((item) => (
+      <a class:list={{ 'is-active': item.label === active }} href={item.href}>{item.label}</a>
+    ))}
+    <a class="site-header__mobile-cta" href={site.reservationFormUrl}>Rezervovat led</a>
+  </nav>
+</header>

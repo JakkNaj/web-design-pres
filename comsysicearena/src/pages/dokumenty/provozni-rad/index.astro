@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/site/PageHero.astro';
+
+const sections = [
+  {
+    title: 'I. Základní ustanovení',
+    items: [
+      'Všichni uživatelé včetně nájemců, pořadatelů akcí, diváků a návštěvníků jsou povinni respektovat tento Provozní řád v plném rozsahu, přizpůsobit své chování a jednání jeho podmínkám, dbát a uposlechnout bez výhrad pokynů a nařízení pořadatelů, pracovníků bezpečnostní agentury a zástupce provozovatele.',
+      'Pořadatelé akcí jsou povinni přizpůsobit režim průběhu akce tomuto Provoznímu řádu.',
+      'Nájemce a uživatel ledových ploch je povinen zajistit dodržování tohoto Provozního řádu všemi účastníky akce. Za osoby uživatele odpovídá odpovědná osoba, například trenér nebo vedoucí družstva.',
+      'Uživatelé, návštěvníci a diváci jsou plně odpovědni za důsledky takového chování a jednání, které je v rozporu s tímto Provozním řádem. Případná porušení budou řešena na místě pořadatelem akce nebo zástupcem provozovatele.',
+      'V případě porušení povinností ze strany uživatele nezodpovídá provozovatel za vzniklé škody a následky.',
+      'Uživatelé, diváci, návštěvníci a nájemci jsou povinni dbát příslušných bezpečnostních návěstidel, zákazů a nařízení a řídit se jimi.',
+      'V případě vzniku požáru nebo jiné havárie je povinností každého tuto skutečnost bezodkladně nahlásit pracovníkům provozovatele nebo pořadatele akce, případně Hasičskému záchrannému sboru na telefonní číslo 150.',
+    ],
+  },
+  {
+    title: 'II. Vstup do prostor COM-SYS Ice Areny',
+    items: [
+      'Do vnitřních prostorů COM-SYS Ice Areny mohou vstupovat pouze osoby, které provozují činnost spojenou s užíváním ledové plochy nebo tělocvičny, a to výhradně v době a čase přiměřeném sjednanému užívání dle rezervace nebo uzavřené nájemní smlouvy.',
+      'Tyto osoby vstupují do vnitřních prostorů hlavním vchodem.',
+      'Ve dnech a hodinách, kdy v aréně probíhají pouze tréninky, jsou do vnitřních prostorů oprávněny vstupovat pouze osoby uživatelů, kteří mají na konkrétní dobu sjednán pronájem podle platného harmonogramu obsazení. Oprávnění ke vstupu kontroluje pracovník arény.',
+      'Rodiče hráčů mládežnických družstev mohou jako doprovod vstupovat do vnitřních prostorů pouze a výhradně v časech, kdy probíhá trénink, a to pouze na dobu tréninku družstva, jehož členem je jejich dítě.',
+      'Rodiče jsou povinni bez výhrad uposlechnout pokynů pracovníků arény a trenérů. Hráči mládežnických družstev vstupují do vnitřních prostorů výhradně společně a pouze v doprovodu odpovědných osob.',
+      'Uživatel je povinen nahlásit svůj příchod a odchod pověřenému pracovníkovi arény.',
+      'Osoby odborných firem a jejich pracovníci, kteří provádějí v aréně opravy, úpravy, instalují reklamy a podobné činnosti, jsou povinni nahlásit svůj příchod na recepci a vyčkat příchodu osoby provozovatele.',
+      'Pracovníci odborných firem jsou povinni nahlásit zástupci provozovatele ukončení pracovní činnosti a dotčené prostory předat v řádně uklizeném stavu.',
+    ],
+  },
+  {
+    title: 'III. Užívání prostor arény',
+    items: [
+      'Uživatel je povinen užívat pouze a výhradně prostory pro něj určené, do jiných prostorů není oprávněn vstupovat.',
+      'Uživatel je povinen pohybovat se pouze po určených přístupových trasách.',
+      'Uživatel je povinen užívat šatnové prostory a sociální zařízení pouze na dobu nezbytně nutnou k jeho činnosti, a to výhradně podle harmonogramu obsazení. Po této době je uživatel povinen neprodleně vnitřní prostory opustit.',
+      'Uživatelům se zakazuje po skončení doby užívání ledové plochy vstupovat na ledovou plochu.',
+      'Klíče od šatnových prostorů vydá pracovník arény výhradně odpovědné osobě uživatele proti podpisu.',
+      'Odpovědná osoba uživatele nahlásí příchod pracovníkovi arény v čase přiměřeném před zahájením užívání ledové plochy, maximálně 1 hodinu předem, a uvede jméno uživatele.',
+      'Pracovník arény ověří, zda je jméno uživatele uvedeno v harmonogramu obsazení ledových ploch. Pro vydání klíčů od šatnových prostorů je uživatel povinen předložit pracovníkovi vrátnice průkaz totožnosti.',
+      'Pracovník arény a odpovědná osoba uživatele společně zkontrolují stav předávaných prostorů. Kontroluje se stav vybavení, obkladů, dveří, zámků, sprch, WC, osvětlení a dalšího zařízení.',
+      'Případné zjištěné závady zapíše pracovník arény do knihy závad na místě a zápis podepíše odpovědná osoba uživatele. Zápis se pořizuje i v případě, že žádné závady nebyly zjištěny.',
+      'Při přebírání šatnových prostorů z užívání pracovník vrátnice a odpovědná osoba uživatele společně zkontrolují stav předávaných prostorů stejným způsobem jako při předávání do užívání.',
+      'Bylo-li zjištěno, že závada byla způsobena v době uživatelem obsazených šatnových prostorů a sociálních zařízení, je uživatel povinen uhradit náklady spojené s jejím odstraněním.',
+      'Předávání a přebírání šaten u uživatelů, kterým jsou šatny trvale přiděleny na základě nájemní smlouvy, nepodléhá výše popsanému režimu.',
+    ],
+  },
+  {
+    title: 'IV. Pořádání sportovních, kulturních a podobných akcí',
+    items: [
+      'Pořadatel akcí přebírá na dohodnutou dobu trvání akce do nájmu vymezené prostory.',
+      'Rodičům hráčů mládežnických družstev a dalším osobám je umožněn vstup do haly při utkáních výhradně do vyhrazených prostorů tribuny.',
+      'Sportovní kluby musí zajistit při pořádání sportovní akce pořadatelskou službu v dostatečném počtu osob, podle velikosti akce.',
+      'Pořadatelská služba přebírá v době konání akce plnou zodpovědnost za pronajatý majetek provozovatele, za chování diváků, za evakuaci diváků v případě vzniku mimořádné události, za únikové cesty a příjezdové trasy zásahových vozidel.',
+      'Pořadatelská služba otevírá a zavírá vstupy pro vstup diváků. Po ukončení akce je povinností pořadatelské služby řádně uzamknout všechny dotčené vstupy a klíče předat pracovníkovi arény.',
+      'Pořadatel je povinen zajistit, aby počet diváků nepřekročil úředně stanovenou kapacitu tribuny.',
+      'Pořadatel akce je povinen zabezpečit volný prostor pro možný únik osob z jakéhokoliv místa hlediště dvěma směry.',
+      'Všechny únikové cesty musí být bezpodmínečně volné po celou dobu konání akce.',
+      'Pořadatel akce je povinen pro potřebu bezpečné evakuace a možnosti vedení zásahu jednotek HZS organizačně zabezpečit okamžitou možnost otevření všech vstupů areálu navazujících na únikové cesty.',
+      'Pořadatel akce je povinen zabezpečit pro akci asistenční požární hlídku s volnou telefonní linkou pro okamžité spojení se zásahovou jednotkou.',
+      'Pořadatel akce je povinen seznámit se s prostředky hasební techniky umístěnými v prostorách arény.',
+      'Pořadatel je povinen zabezpečit přístupové komunikace trvale volné pro potřeby protipožárního zásahu požárními jednotkami.',
+    ],
+  },
+  {
+    title: 'V. Ostatní ustanovení',
+    items: [
+      'Vodění kol do vnitřních prostorů arény a jejich odkládání na jiném místě než na místě k tomu určeném je nepřípustné.',
+      'Provozovatel za odložená kola nepřebírá jakoukoliv zodpovědnost, včetně kolostavů.',
+      'Odstavovat a parkovat vozidla je povoleno pouze na parkovišti před a za arénou. Na jiném místě v areálu je parkování vozidel zakázáno.',
+      'Parkování vozidel v době pořádání sportovních, kulturních a podobných akcí se řídí zvláštním režimem a pokyny odpovědných osob provozovatele nebo pořadatele akce.',
+      'Parkování vozidel odborných firem provádějících v aréně odborné práce se řídí pokyny odpovědných osob provozovatele arény.',
+      'Do všech vnitřních prostorů arény, včetně obchodu, restaurace a posilovny, je zakázáno vodit jakákoliv zvířata.',
+      'Do vnitřních prostorů arény je zakázáno vnášet cizí předměty, které nesouvisí s činností uživatelů, diváků a návštěvníků. Jedná se zejména o pyrotechnické pomůcky, tyče, zbraně, nože a alkoholické nápoje.',
+      'Při akcích je navíc zakázáno vnášet nápoje v plastových, skleněných a kovových obalech.',
+    ],
+  },
+  {
+    title: 'VI. Vyloučení ze vstupu do prostor arény',
+    items: [
+      'Ze vstupu do arény se vylučují všechny osoby, které jsou opilé nebo podnapilé.',
+      'Zakazuje se vstup s otevřeným ohněm i s předměty, které ohrožují bezpečnost návštěvníků a majetek arény.',
+      'Vyloučeny z prostor arény budou osoby, které porušují zákaz kouření v prostorách arény a porušují tento provozní řád.',
+      'Vyloučeny z arény budou osoby, které prokazatelně ruší pořádek, ohrožují zdraví sportovců nebo ostatních návštěvníků. Vyloučeny budou i osoby za nesportovní chování.',
+      'Vyloučeny budou rovněž osoby, které ničí nebo manipulují s technickým zařízením a vybavením arény.',
+    ],
+  },
+  {
+    title: 'VII. Provozní pokyny',
+    items: [
+      'Každý návštěvník je povinen šetřit zařízení arény, neplýtvat vodou a elektrickou energií.',
+      'Uživatelé i návštěvníci arény jsou povinni dodržovat pořádek ve všech prostorech arény a dodržovat další pokyny provozovatele a pořadatele.',
+      'Zakazuje se znečišťování sociálního zařízení arény.',
+      'Pro sportovce v době tréninků a pronájmů jsou přidělovány šatny po dohodě s pověřeným pracovníkem arény.',
+      'Doba bruslení veřejnosti je předem vymezena. Po ohlášeném ukončení bruslení musí bruslící ihned uvolnit ledovou plochu, převléci se a opustit prostory šaten.',
+      'Při bruslení veřejnosti je nutno na ledové ploše jezdit ukázněně podle ohlášeného směru, přiměřenou rychlostí a neohrožovat ostatní osoby.',
+      'Na ledovou plochu v době bruslení je vstup určenými vchody, nikoliv přelézáním hrazení.',
+      'Zakazuje se veřejnosti v době bruslení vstupovat na ledovou plochu bez bruslí.',
+      'Zakazuje se veřejnosti, hráčům, rozhodčím a trenérům vstup na ledovou plochu po dobu její úpravy.',
+      'Je zakázáno vstupovat na ledovou plochu mimo dobu pronájmu ledové plochy.',
+      'Nalezené předměty se odevzdávají ve vrátnici nebo pořadateli, který zajistí jejich uschování.',
+      'Za škody, poranění nebo úrazy způsobené neopatrností nebo nedodržováním provozního řádu, jakož i pokynů odpovědných zaměstnanců, nenese provozovatel žádnou odpovědnost.',
+      'Ve všech prostorách arény je přísný zákaz kouření pod pokutou 500 Kč až 5 000 Kč.',
+    ],
+  },
+];
+
+const emergencyLines = [
+  'Tísňové volání: 112',
+  'Zdravotnická záchranná služba: 155',
+  'Hasičský záchranný sbor: 150',
+  'Policie ČR: 158',
+];
+---
+
+<BaseLayout title="Provozní řád | COM-SYS Ice Arena" description="Provozní řád COM-SYS Ice Arena." active="">
+  <PageHero title="Provozní řád COM-SYS Ice Arena" active="Dokumenty" eyebrow="Pravidla provozu" description="Pravidla pro návštěvníky, uživatele, nájemce, pořadatele akcí a diváky v prostorách COM-SYS Ice Areny." />
+
+  <section class="section section--white">
+    <article class="site-shell article-shell">
+      <h1>Provozní řád COM-SYS Ice Arena</h1>
+      <p>Provozovatel COM-SYS Ice Areny Říčanská hokejová s.r.o. upozorňuje uživatele, nájemce, diváky a návštěvníky na přísný zákaz kouření ve vnitřních prostorech haly, kromě prostorů k tomu vyhrazených.</p>
+
+      {sections.map((section) => (
+        <>
+          <h2>{section.title}</h2>
+          <ol>
+            {section.items.map((item) => <li>{item}</li>)}
+          </ol>
+        </>
+      ))}
+
+      <h2>Tísňové linky</h2>
+      <ul>
+        {emergencyLines.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>Platnost</h2>
+      <p>Tento Provozní řád nabývá platnosti a účinnosti dnem 01.11.2024.</p>
+      <p>Říčanská hokejová s.r.o.<br />HC Říčanská hokejová akademie, z.s.</p>
+    </article>
+  </section>
+</BaseLayout>

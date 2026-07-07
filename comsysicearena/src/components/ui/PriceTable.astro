@@ -1,0 +1,26 @@
+---
+interface PriceRow {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  title: string;
+  rows: PriceRow[];
+}
+
+const { title, rows } = Astro.props;
+---
+
+<div class="price-table" data-reveal>
+  <div class="price-table__header">
+    <h2>{title}</h2>
+    <span class="table-label">včetně DPH, pokud není uvedeno jinak</span>
+  </div>
+  {rows.map((row) => (
+    <div class="price-row">
+      <span>{row.label}</span>
+      <strong class:list={{ 'is-free': row.value.toLowerCase() === 'zdarma' }}>{row.value}</strong>
+    </div>
+  ))}
+</div>

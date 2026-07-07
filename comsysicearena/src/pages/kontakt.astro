@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/site/PageHero.astro';
+import { advertisingOffer, prices, site } from '../lib/siteData';
+
+const advertisingMailto = `mailto:${advertisingOffer.email}?subject=${encodeURIComponent('Reklamní plochy v COM-SYS Ice Arena')}`;
+---
+
+<BaseLayout title="Kontakt | COM-SYS Ice Arena" description="Kontakt na COM-SYS Ice Arena Říčany, adresa, e-mail, telefony, parkování a kontaktní formulář." active="Kontakt">
+  <PageHero title="Kontakt" active="Kontakt" eyebrow="Napište nebo zavolejte" description="Jeden rozcestník pro veřejné bruslení, rezervace ledu, akce, služby a obecné dotazy." />
+
+  <section class="section section--white">
+    <div class="site-shell contact-grid">
+      <div>
+        <div class="grid-2">
+          <article class="contact-card" data-reveal><span class="contact-card__label">Adresa</span><h3>COM-SYS Ice Arena</h3><p>{site.address}<br />vedle Sportovní haly</p></article>
+          <article class="contact-card" data-reveal><span class="contact-card__label">E-mail</span><h3>Obecné dotazy</h3><p><a href={`mailto:${site.email}`}>{site.email}</a></p></article>
+          <article class="contact-card" data-reveal><span class="contact-card__label">Vrátnice</span><h3>Telefon</h3><p><a href={`tel:${site.gatePhone.replaceAll(' ', '')}`}>{site.gatePhone}</a></p></article>
+          <article class="contact-card" data-reveal><span class="contact-card__label">Rezervace a akce</span><h3>Pronájem ledu</h3><p>Provoz arény vám potvrdí termín, dostupnost i podmínky rezervace.<br /><a href={`tel:${site.eventsPhone.replaceAll(' ', '')}`}>{site.eventsPhone}</a></p></article>
+        </div>
+        <div style="margin-top: 1rem;">
+          <div class="map-embed" data-reveal>
+            <iframe
+              title="Mapa COM-SYS Ice Arena"
+              src={site.mapEmbedUrl}
+              width="600"
+              height="450"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+          <p class="map-note"><strong>Parkování:</strong> do 15 minut {prices.parking[0].value}, první 3 hodiny 20 Kč, každá další započatá hodina 10 Kč.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-column">
+        <div class="form-panel" data-reveal>
+          <p class="eyebrow">Kontaktní formulář</p>
+          <h2>Odeslat zprávu</h2>
+          <p class="form-note">Formulář otevře e-mail s vyplněnými údaji. Přímý kontakt: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+          <form class="form-grid" data-mail-form data-mail-recipient={site.email} data-mail-subject="Zpráva z webu COM-SYS Ice Arena">
+            <label><span>Jméno</span><input name="jmeno" autocomplete="name" required /></label>
+            <label><span>E-mail</span><input name="email" type="email" autocomplete="email" required /></label>
+            <label class="full">
+              <span>Předmět</span>
+              <select name="predmet" required>
+                <option>Veřejné bruslení</option>
+                <option>Rezervace ledu</option>
+                <option>Pronájem / akce</option>
+                <option>Reklamní plochy</option>
+                <option>Služby</option>
+                <option>Obecný dotaz</option>
+              </select>
+            </label>
+            <label class="full"><span>Zpráva</span><textarea name="zprava" required></textarea></label>
+            <button class="button full" type="submit">Odeslat zprávu</button>
+          </form>
+        </div>
+        <article class="contact-ad-card" data-reveal>
+          <span class="contact-card__label">Pro partnery</span>
+          <h3>{advertisingOffer.title}</h3>
+          <p>{advertisingOffer.text}</p>
+          <a class="text-link" href={advertisingMailto}>Napsat na {advertisingOffer.email}</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

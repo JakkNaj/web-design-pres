@@ -1,0 +1,30 @@
+:root {
+  --white: #ffffff;
+  --ice: #f0f3f5;
+  --ice-2: #f6f8f9;
+  --line: #e3e8eb;
+  --line-dark: rgba(255, 255, 255, 0.12);
+  --graphite: #0f1114;
+  --black-soft: #14171b;
+  --charcoal: #1b2026;
+  --steel: #5a6470;
+  --muted: #8a939c;
+  --blue: #0b5fa5;
+  --blue-dark: #094d86;
+  --red: #c8102e;
+  --red-dark: #a50d26;
+  --teal: #00aab2;
+  --teal-dark: #008a91;
+  --teal-bright: #00aab2;
+  --shadow: 0 18px 44px rgba(15, 23, 32, 0.13);
+  --shadow-dark: 0 20px 60px rgba(0, 0, 0, 0.34);
+  --radius: 6px;
+  --radius-button: 4px;
+  --shell: min(1304px, calc(100% - 64px));
+  --font-body: Barlow, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Barlow Condensed", Barlow, ui-sans-serif, system-ui, sans-serif;
+  --ease-hover: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-move: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-hover: 220ms;
+  --duration-card: 280ms;
+}

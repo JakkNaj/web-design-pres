@@ -26,6 +26,7 @@ jobs:
           cache-dependency-path: |
             golmansketreninky/package-lock.json
             hcricany/package-lock.json
+            comsysicearena/package-lock.json
             ceskadopravnistavba/package-lock.json
             donb-garage/package-lock.json
       - name: Configure GitHub Pages
@@ -46,6 +47,14 @@ jobs:
           npm ci
           npm run build
           node ../scripts/prepare-pages.mjs dist /web-design-pres/hcricany
+      - name: Build COM-SYS Ice Arena
+        working-directory: comsysicearena
+        env:
+          ASTRO_BASE: /web-design-pres/comsysicearena
+        run: |
+          npm ci
+          npm run build
+          node ../scripts/prepare-pages.mjs dist /web-design-pres/comsysicearena
       - name: Build Česká dopravní stavba
         working-directory: ceskadopravnistavba
         env:
@@ -64,10 +73,11 @@ jobs:
           node ../scripts/prepare-pages.mjs dist /web-design-pres/donb-garage
       - name: Assemble Pages artifact
         run: |
-          mkdir -p _site/golmansketreninky _site/hcricany _site/ceskadopravnistavba _site/donb-garage
+          mkdir -p _site/golmansketreninky _site/hcricany _site/comsysicearena _site/ceskadopravnistavba _site/donb-garage
           cp index.html _site/index.html
           cp -R golmansketreninky/dist/. _site/golmansketreninky/
           cp -R hcricany/dist/. _site/hcricany/
+          cp -R comsysicearena/dist/. _site/comsysicearena/
           cp -R ceskadopravnistavba/dist/. _site/ceskadopravnistavba/
           cp -R donb-garage/dist/. _site/donb-garage/
       - uses: actions/upload-pages-artifact@v5

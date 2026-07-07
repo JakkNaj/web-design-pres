@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/site/PageHero.astro';
+import { site } from '../../../lib/siteData';
+
+const processingPurposes = [
+  'Rezervace ledové plochy - kontaktní údaje (jméno, telefon, datum rezervace)',
+  'Bezpečnost hráčů a návštěvníků - kamerový záznam',
+  'Zajištění funkčnosti, sledování návštěvnosti a personalizace vložené reklamy internetových stránek www.comsysicearena.cz',
+];
+
+const personalDataCategories = [
+  'Údaje ve vztahu k našim obchodním partnerům: titul, jméno, příjmení, IČ, DIČ, fakturační adresa, kontaktní adresa',
+  'Údaje ve vztahu k zákazníkům: titul, jméno, příjmení, telefonní číslo, e-mailová adresa, kontaktní adresa',
+  'Údaje ve vztahu ke kamerovému systému: obrazový záznam z kamerového systému zachycující podobu a jednání monitorovaných osob v prostorách Com-Sys Ice',
+];
+
+const rights = [
+  {
+    title: 'Právo na informace o zpracování vašich osobních údajů',
+    paragraphs: [
+      'Jste oprávněn/a od nás požadovat informace, zda jsou osobní údaje zpracovávány či nikoli. Pokud jsou osobní údaje zpracovávány, máte právo od nás požadovat informace zejména o účelech zpracování, o kategoriích dotčených osobních údajů, o příjemcích nebo kategoriích příjemců osobních údajů, o oprávněných správcích, o výčtu vašich práv, o možnosti obrátit se na Úřad pro ochranu osobních údajů, o zdroji zpracovávaných osobních údajů a o automatizovaném rozhodování a profilování.',
+      'Informace vám poskytované v rámci uplatnění tohoto práva jsou obsaženy již v tomto memorandu, to vám však nebrání, abyste si o ně požádali znovu.',
+    ],
+  },
+  {
+    title: 'Právo na přístup k osobním údajům',
+    paragraphs: [
+      'Jste oprávněn/a od nás požadovat informaci, zda jsou vaše osobní údaje jsou zpracovávány či nikoliv a pokud ano, máte přístup k informacím o účelech zpracování, kategoriích dotčených osobních údajů, příjemcích nebo kategoriích příjemců, dobu uchovávaní osobních údajů, informace o vašich právech, o právu podat stížnost Úřadu pro ochranu osobních údajů, informace o zdroji osobních údajů, informace o tom, zda dochází k automatizovanému rozhodování a profilování a informace týkající se použitého postupu, jakož i významu a předpokládaných důsledcích takového zpracování pro vás, informace a záruky v případě předávání osobních údajů do třetí země nebo mezinárodní organizace.',
+      'Máte právo na poskytnutí kopií zpracovávaných osobních údajů. Právem získat tuto kopii však nesmějí být nepříznivě dotčena práva a svobody jiných osob.',
+    ],
+  },
+  {
+    title: 'Právo na opravu',
+    paragraphs: [
+      'Pokud došlo na vaší straně například ke změně bydliště, telefonního čísla nebo jiné skutečnosti, kterou lze považovat za osobní údaj, máte právo od nás požadovat opravu zpracovávaných osobních údajů. Navíc máte právo na doplnění neúplných osobních údajů, a to i poskytnutím dodatečného prohlášení.',
+    ],
+  },
+  {
+    title: 'Právo na výmaz (právo být zapomenut)',
+    paragraphs: [
+      'V určitých stanovených případech máte právo požadovat, abychom vaše osobní údaje vymazali. Mezi takové případy patří například, že zpracovávané údaje nejsou pro výše zmíněné účely nadále potřebné. Po uplynutí doby nezbytnosti smažeme vaše osobní údaje automaticky, můžete se však na nás se svou žádostí kdykoliv obrátit.',
+      'Vaše žádost pak podléhá individuálnímu posouzení a o jejím vyřízení budete detailně informováni.',
+    ],
+  },
+  {
+    title: 'Právo na omezení zpracování',
+    paragraphs: [
+      'Zpracováváme vaše osobní údaje pouze v nezbytně nutném rozsahu. Pokud byste však měli pocit, že např. překračujeme výše stanovené účely, pro které vaše osobní údaje zpracováváme, můžete podat žádost, aby vaše osobní údaje byly zpracovávány výhradně pro nejnutnější zákonné důvody nebo aby byly osobní údaje blokovány. Vaše žádost pak podléhá individuálnímu posouzení a o jejím vyřízení budete detailně informováni.',
+    ],
+  },
+  {
+    title: 'Právo na přenositelnost údajů',
+    paragraphs: [
+      'Pokud si přejete, abychom poskytli vaše osobní údaje jinému správci, resp. jiné společnosti, předáme vaše osobní údaje v odpovídajícím formátu, vámi určenému subjektu, pokud nám v tom nebudou bránit žádné zákonné či jiné významné překážky.',
+    ],
+  },
+  {
+    title: 'Právo vznést námitku a automatizované individuální rozhodování',
+    paragraphs: [
+      'Pokud byste zjistili nebo se jen domníváte, že provádíme zpracování osobních údajů v rozporu s ochranou vašeho soukromého a osobního života nebo v rozporu s právními předpisy, můžete se na nás obrátit a požádat o vysvětlení či odstranění vzniklého závadného stavu.',
+      'Máte právo nebýt předmětem automatizovaného rozhodování (včetně profilování).',
+    ],
+  },
+  {
+    title: 'Právo podat stížnost u Úřadu pro ochranu osobních údajů',
+    paragraphs: [
+      'Můžete se kdykoliv obrátit s vaším podnětem či stížností ve věci zpracování osobních údajů na dozorový orgán, a to na Úřad na ochranu osobních údajů, se sídlem Pplk. Sochora 27, 170 00 Praha 7, webové stránky https://www.uoou.cz/',
+    ],
+  },
+];
+---
+
+<BaseLayout title="Zpracování osobních údajů | COM-SYS Ice Arena" description="Informace o zpracování osobních údajů v COM-SYS Ice Arena." active="">
+  <PageHero title="Zpracování osobních údajů" active="Dokumenty" eyebrow="GDPR" description="Informace o tom, jak COM-SYS Ice Arena zpracovává osobní údaje návštěvníků, zákazníků a obchodních partnerů." />
+
+  <section class="section section--white">
+    <article class="site-shell article-shell">
+      <h1>Informace o zpracování osobních údajů</h1>
+      <p>Vážení přátelé sportu, dokument, který právě čtete, obsahuje základní informace ohledně toho, jak zpracováváme osobní údaje.</p>
+      <p>Vážíme si toho, že s námi své osobní údaje sdílíte a jsme odhodláni je v maximální možné míře chránit. Rovněž se snažíme být ve vztahu k vám co nejvíce transparentní, zejména ohledně toho, jak vaše osobní údaje zpracováváme.</p>
+      <p>Tyto zásady zpracování osobních údajů jsou vydány za účelem poskytnutí informací o tom, jaké osobní údaje Com-Sys Ice Arena zpracovává o fyzických osobách při své činnosti. Tyto zásady jsou účinné od 25. 5. 2018 a jsou vydány v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679.</p>
+
+      <h2>Správce osobních údajů</h2>
+      <p>Správcem osobních údajů je Říčanská hokejová s.r.o., IČO 02886758, se sídlem: Na Babě 452, 252 42 Osnice.</p>
+
+      <h2>Příjemci osobních údajů</h2>
+      <p>Zpracování osobních údajů mohou provádět pouze zpracovatelé, a to výhradně na základě smlouvy o zpracování osobních údajů. Aktuální zpracovatel: Vivea s.r.o., U Hadovky 564/3, 160 00 Praha 6.</p>
+      <p>Osobní údaje dále musíme v rámci zákonných mezí poskytnout orgánům státní správy, například správci daně, soudům nebo orgánům činným v trestním řízení.</p>
+
+      <h2>Účely zpracování osobních údajů</h2>
+      <p>Osobní údaje zpracováváme pouze pro níže uvedené účely:</p>
+      <ul>
+        {processingPurposes.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>Kategorie zpracovávaných osobních údajů</h2>
+      <ul>
+        {personalDataCategories.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>Předávání osobních údajů do třetích zemí nebo mezinárodní organizaci</h2>
+      <p>Osobní údaje nejsou předávány do žádné třetí země nebo mimo EU/EHP. Pokud by mělo dojít k předání mimo EU/EHP a současně do zemí, které nesplňují podmínky dostatečné úrovně ochrany osobních údajů, vyžádáme si váš souhlas.</p>
+
+      <h2>Doba, po kterou jsou osobní údaje uloženy</h2>
+      <p>Osobní údaje nebudou nikdy uchovávány déle, než je stanovené maximum vyplývající z účelu zpracování daných údajů. Po uplynutí archivační doby budou osobní údaje bezpečně a nenávratně zničeny tak, aby nemohlo dojít k jejich zneužití.</p>
+      <p>Osobní údaje budou zpracovávány a ukládány nejméně po dobu trvání smlouvy. Některé osobní údaje potřebné například pro daňové a fakturační povinnosti budou uchovávány 5 let počínaje rokem následujícím od vzniku uchovávané skutečnosti, případně pouze po dobu stanovenou přímo právním předpisem.</p>
+      <p>Osobní údaje důležité pro uplatnění oprávněných zájmů správce budou uchovávány maximálně po dobu 3 let od konce smluvního vztahu se správcem. Osobní údaje zpracovávané pro marketingové účely budou uchovávány maximálně po dobu 5 let od doby, kdy jste navštívili některou z námi nebo našimi partnery pořádaných akcí.</p>
+
+      <h2>Práva fyzických osob</h2>
+      <p>Jednotlivá práva můžete uplatnit zasláním e-mailu na adresu <a href={`mailto:${site.email}`}>{site.email}</a>. Svá práva můžete uplatnit rovněž formou písemné žádosti zaslané na korespondenční adresu.</p>
+      <p>Veškerá sdělení a vyjádření k vámi uplatněným právům vám poskytneme bezplatně. Pokud by však byla žádost zjevně nedůvodná nebo nepřiměřená, jsme oprávněni si účtovat přiměřený poplatek zohledňující administrativní náklady.</p>
+      <p>Vyjádření a případně informace o přijatých opatřeních vám poskytneme co nejdříve, nejpozději však do jednoho měsíce. Lhůtu jsme oprávněni v případě potřeby prodloužit o dva měsíce.</p>
+
+      {rights.map((right) => (
+        <>
+          <h2>{right.title}</h2>
+          {right.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </>
+      ))}
+
+      <h2>Automatizované rozhodování, včetně profilování</h2>
+      <p>Osobní údaje fyzických osob nejsou v Com-Sys Ice předmětem žádného rozhodnutí založeného výhradně na automatizovaném zpracování.</p>
+
+      <h2>Zdroje osobních údajů</h2>
+      <p>Osobní údaje získává Com-Sys Ice Arena pomocí registračního formuláře na webové adrese www.comsysicearena.cz.</p>
+
+      <h2>Kontakt</h2>
+      <p>V případě jakýchkoliv dotazů ohledně zpracování vašich osobních údajů nás neváhejte kontaktovat elektronicky na e-mailové adrese <a href={`mailto:${site.email}`}>{site.email}</a> případně osobně na adrese {site.address}.</p>
+    </article>
+  </section>
+</BaseLayout>

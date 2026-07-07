@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PriceTable from '../components/ui/PriceTable.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import castaRinkMain from '../assets/arena/casta/casta-rink-main.jpg';
+import castaExteriorEntry from '../assets/arena/casta/casta-exterior-entry.jpg';
+import { cancellationTerms, prices, site } from '../lib/siteData';
+---
+
+<BaseLayout title="Ceník | COM-SYS Ice Arena" description="Ceník pronájmu ledových ploch, veřejného bruslení, půjčovny bruslí, školičky a parkování." active="Ceník">
+  <PageHero title="Ceník" active="Ceník" eyebrow="Ceny služeb" description="Přehled cen ledových ploch, veřejného bruslení, půjčovny, školičky a parkování. Ceny pronájmu jsou platné od 1. 2. 2024." />
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Pronájem ledu" title="Velká a malá ledová plocha" />
+      <div class="price-rental-grid">
+        <div>
+          <PriceTable title="Pronájem ledových ploch" rows={prices.rental} />
+          <div class="tip-box"><strong>Poznámka:</strong> Přijímá se pouze hotovost. Přesný termín vždy potvrzuje aréna.</div>
+        </div>
+        <a class="price-cta-card" href={site.reservationFormUrl} data-reveal>
+          <Image src={castaRinkMain} alt="Velká ledová plocha COM-SYS Ice Arena" widths={[480, 720, 960]} sizes="(max-width: 1080px) 100vw, 30vw" loading="lazy" />
+          <span class="price-cta-card__content">
+            <span class="eyebrow">Poptávka</span>
+            <h2>Chcete si pronajmout led?</h2>
+            <p>Vyberte plochu, datum a čas. Aréna ověří dostupnost a ozve se zpět.</p>
+            <span class="button-red">Poptat pronájem</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell price-grid grid-3">
+      <PriceTable title="Veřejné bruslení" rows={prices.publicSkating} />
+      <PriceTable title="Půjčovna a školička" rows={prices.services} />
+      <PriceTable title="Parkování" rows={prices.parking} />
+    </div>
+  </section>
+
+  <section class="section section--white section--border">
+    <div class="site-shell split-grid">
+      <div class="info-card" data-reveal>
+        <span class="info-card__label">Storno podmínky</span>
+        <h3>Zrušení rezervace ledu</h3>
+        {cancellationTerms.map((item) => <p>{item}</p>)}
+      </div>
+      <a class="image-cta-card" href="/kontakt/" data-reveal>
+        <Image src={castaExteriorEntry} alt="Vstup do COM-SYS Ice Arena" widths={[640, 960, 1280]} sizes="(max-width: 1080px) 100vw, 42vw" loading="lazy" />
+        <span class="image-cta-card__content">
+          <span class="eyebrow">Dotazy k cenám</span>
+          <h2>Potřebujete potvrdit cenu?</h2>
+          <p>Napište provozu arény. U rezervací se konečná cena potvrzuje podle termínu, plochy a typu akce.</p>
+          <span class="button">Kontaktovat arénu</span>
+        </span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

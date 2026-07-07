@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import PageHero from '../components/site/PageHero.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import castaRinkMain from '../assets/arena/casta/casta-rink-main.jpg';
+import castaRestaurant from '../assets/arena/casta/casta-restaurant.jpg';
+import castaTrainingRoom from '../assets/arena/casta/casta-training-room.jpg';
+import { eventsAndRentals, site } from '../lib/siteData';
+
+const featuredEvents = [
+  {
+    title: 'Turnaje a kempy',
+    text: 'Led, šatny i zázemí pro sportovní program na celý den.',
+    image: castaRinkMain,
+    alt: 'Ledová plocha pro turnaje a kempy',
+  },
+  {
+    title: 'Firemní akce',
+    text: 'Bruslení, rekreační hokej a občerstvení v jednom areálu.',
+    image: castaRestaurant,
+    alt: 'Restaurace a zázemí pro akce',
+  },
+  {
+    title: 'Suchá příprava',
+    text: 'Tělocvična, boxerna a fitness jako doplněk k ledu.',
+    image: castaTrainingRoom,
+    alt: 'Tělocvična pro suchou přípravu',
+  },
+];
+---
+
+<BaseLayout title="Akce a pronájem | COM-SYS Ice Arena" description="Pronájem ledu a arény pro firemní akce, dětské oslavy, turnaje, kempy, rekreační hokej a skupinové bruslení." active="Akce a pronájem">
+  <PageHero title="Akce a pronájem" active="Akce a pronájem" eyebrow="Skupiny, firmy, týmy" description="Uspořádejte turnaj, kemp, firemní akci nebo dětskou oslavu na ledě. Pošlete nám preferovaný termín a typ akce." />
+
+  <section class="section section--white">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Možnosti pronájmu" title="Pro jaké akce aréna funguje" />
+      <div class="event-visual-grid">
+        <div class="event-card-stack">
+          {featuredEvents.map((item) => (
+            <a class="event-card" href={site.reservationFormUrl} data-reveal>
+              <Image src={item.image} alt={item.alt} widths={[520, 760, 1040]} sizes="(max-width: 1080px) 100vw, 44vw" loading="lazy" />
+              <span class="event-card__body">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+        <div class="home-services__list" data-reveal>
+          {eventsAndRentals.map((title, index) => (
+            <a class="service-row" href={site.reservationFormUrl}>
+              <span class="service-row__number">{String(index + 1).padStart(2, '0')}</span>
+              <span>
+                <strong>{title}</strong>
+                <small>Pronájem se řeší individuálně podle termínu, plochy a délky akce.</small>
+              </span>
+              <span class="circle-arrow" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <div class="event-cta" data-reveal>
+        <div>
+          <p class="eyebrow">Poptávka akce</p>
+          <h2>Pošlete nám typ akce a preferovaný termín</h2>
+          <p>Aréna ověří dostupnost ledu i zázemí a připraví další domluvu. Kontakt pro akce: Martin Altrichter, {site.eventsPhone}.</p>
+        </div>
+        <div class="actions-row">
+          <Button href={site.reservationFormUrl} tone="red">Poslat poptávku</Button>
+          <Button href="/kontakt/" tone="secondary">Kontakt</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="site-shell">
+      <div class="about-split-section" data-reveal>
+        <div class="about-split-section__image">
+          <Image src={castaRinkMain} alt="Ledová plocha COM-SYS Ice Arena" widths={[720, 1080, 1440]} sizes="(max-width: 1080px) 100vw, 50vw" loading="lazy" />
+        </div>
+        <div class="about-split-section__content">
+          <p class="eyebrow">Zázemí pro skupiny</p>
+          <h2>Led, šatny, restaurace i doplňkové prostory</h2>
+          <p>Pro akce se dá kombinovat ledová plocha, šatny, restaurace a suchá příprava. Finální podmínky se potvrzují podle obsazenosti arény.</p>
+          <div class="stat-strip">
+            <div><strong>2</strong><span>ledové plochy</span></div>
+            <div><strong>8</strong><span>šaten</span></div>
+            <div><strong>Říčany</strong><span>u Prahy</span></div>
+          </div>
+          <div class="actions-row">
+            <Button href="/cenik/">Ceník pronájmu</Button>
+            <Button href={site.reservationFormUrl} tone="red">Rezervovat led</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

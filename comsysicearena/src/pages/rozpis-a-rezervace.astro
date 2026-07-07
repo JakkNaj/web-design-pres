@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import PageHero from '../components/site/PageHero.astro';
+import CalendarEmbedPlaceholder from '../components/site/CalendarEmbedPlaceholder.astro';
+import ContactPanel from '../components/site/ContactPanel.astro';
+import SectionHeading from '../components/site/SectionHeading.astro';
+import castaRinkMain from '../assets/arena/casta/casta-rink-main.jpg';
+import { cancellationTerms, documents, site } from '../lib/siteData';
+---
+
+<BaseLayout title="Rozpis ledu a rezervace | COM-SYS Ice Arena" description="Rozpis velké a malé ledové plochy, poptávka rezervace ledu a storno podmínky COM-SYS Ice Arena." active="Rozpis a rezervace">
+  <PageHero title="Rozpis ledu a rezervace" active="Rozpis a rezervace" eyebrow="Pronájem ledu" description="Led si můžete pronajmout pro trénink, zápas, firemní akci nebo skupinové bruslení. Zkontrolujte dostupnost a pošlete poptávku s preferovaným termínem." />
+
+  <section class="section section--ice section--border">
+    <div class="site-shell">
+      <SectionHeading eyebrow="Rozpis ledových ploch" title="Velká plocha a malá říčanská nudle" />
+      <div class="schedule-showcase">
+        <article class="schedule-media-card" data-reveal>
+          <Image src={castaRinkMain} alt="Velká ledová plocha COM-SYS Ice Arena" widths={[640, 960, 1280]} sizes="(max-width: 1080px) 100vw, 35vw" loading="lazy" />
+          <div class="schedule-media-card__body">
+            <span class="info-card__label">Dvě plochy</span>
+            <h3>Pronájem pro trénink, zápas i skupinu</h3>
+            <p>Kalendáře níže jsou připravené pro živé iframe napojení. Do té doby slouží formulář jako poptávka termínu.</p>
+            <a class="text-link" href="/cenik/">Ceník pronájmu ledu</a>
+          </div>
+        </article>
+        <div class="calendar-stack">
+          <CalendarEmbedPlaceholder title="Velká ledová plocha" label="[ iframe velká ledová plocha ]" />
+          <CalendarEmbedPlaceholder title="Malá ledová plocha - říčanská nudle" label="[ iframe malá ledová plocha ]" />
+        </div>
+      </div>
+      <div class="reservation-flow" data-reveal>
+        <div class="reservation-flow__intro">
+          <p class="eyebrow">Jak pokračovat</p>
+          <h2>Po kontrole rozpisu pošlete poptávku</h2>
+        </div>
+        <div class="reservation-stepper">
+          {[
+            'Vyberte si velkou nebo malou plochu a zkontrolujte obsazenost.',
+            'Pošlete poptávku s datem, časem a kontaktem na organizátora.',
+            'Aréna ověří dostupnost, cenu a ozve se zpět s potvrzením.',
+          ].map((text, index) => (
+            <article class="reservation-step">
+              <h3>{['Rozpis', 'Poptávka', 'Potvrzení'][index]}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rezervace" class="section section--white section--border section-anchor">
+    <div class="site-shell contact-grid">
+      <div class="form-panel" data-reveal>
+        <p class="eyebrow eyebrow--red">Poptávka rezervace</p>
+        <h2>Pošlete preferovaný termín</h2>
+        <p class="form-note">Formulář otevře e-mail s vyplněnými údaji. Nejde o závaznou rezervaci; termín potvrzuje aréna.</p>
+        <form class="form-grid" data-mail-form data-mail-recipient={site.email} data-mail-subject="Poptávka rezervace ledu">
+          <label>
+            <span>Plocha</span>
+            <select name="plocha" required>
+              <option value="">Vyberte ledovou plochu</option>
+              <option>Velká ledová plocha</option>
+              <option>Malá ledová plocha</option>
+            </select>
+          </label>
+          <label>
+            <span>Jméno</span>
+            <input name="jmeno" autocomplete="name" required />
+          </label>
+          <label>
+            <span>E-mail</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Telefon</span>
+            <input name="telefon" type="tel" autocomplete="tel" required />
+          </label>
+          <label>
+            <span>Datum rezervace</span>
+            <input name="datum" type="date" required />
+          </label>
+          <label>
+            <span>Čas od-do</span>
+            <input name="cas" placeholder="např. 18:00-19:00" required />
+          </label>
+          <label class="full">
+            <span>Zpráva</span>
+            <textarea name="zprava" placeholder="Typ akce, počet lidí, poznámka k termínu"></textarea>
+          </label>
+          <div class="checkbox-list full">
+            {documents.map((doc) => (
+              <label><input type="checkbox" name="souhlas" value={doc.label} required /><span>Souhlasím: <a href={doc.href}>{doc.label}</a></span></label>
+            ))}
+            <label><input type="checkbox" name="souhlas" value="Storno podmínky" required /><span>Souhlasím se storno podmínkami v případě zrušení rezervace.</span></label>
+          </div>
+          <button class="button-red full" type="submit">Odeslat poptávku</button>
+        </form>
+      </div>
+      <div>
+        <ContactPanel title="Kontakt pro rezervace" text={`Rezervace a akce řeší aréna přes ${site.email}. U firemních akcí můžete volat také ${site.eventsPhone}.`} />
+        <div class="form-side-links">
+          <div class="info-card" data-reveal>
+            <span class="info-card__label">Ceník</span>
+            <h3>Kolik stojí pronájem ledu?</h3>
+            <p>Ceny se liší podle plochy, času a víkendu. Přehled najdete v ceníku.</p>
+            <Button href="/cenik/" tone="outline">Zobrazit ceník</Button>
+          </div>
+          <div class="info-card" data-reveal>
+            <span class="info-card__label">Storno podmínky</span>
+            {cancellationTerms.map((item) => <p>{item}</p>)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

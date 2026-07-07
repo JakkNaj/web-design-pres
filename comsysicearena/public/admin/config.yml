@@ -1,0 +1,33 @@
+local_backend: true
+backend:
+  name: test-repo
+  login: false
+  branch: main
+media_folder: "public/uploads"
+public_folder: "/uploads"
+locale: "cs"
+collections:
+  - name: "news"
+    label: "Aktuality"
+    label_singular: "Aktualita"
+    folder: "src/content/news"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Titulek", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Pouze malá písmena bez diakritiky, čísla a pomlčky." }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Perex", name: "excerpt", widget: "text" }
+      - { label: "Obrázek", name: "image", widget: "image", required: false, default: "/images/news/arena-ledova-plocha.jpg" }
+      - { label: "Typ obrázku", name: "imageStyle", widget: "select", options: ["photo", "logo"], default: "photo" }
+      - label: "Galerie"
+        name: "gallery"
+        widget: "list"
+        required: false
+        summary: "{{fields.image}}"
+        field: { label: "Fotografie", name: "image", widget: "image" }
+      - { label: "Kategorie", name: "category", widget: "string" }
+      - { label: "Publikováno", name: "published", widget: "boolean", default: false }
+      - { label: "Obsah", name: "body", widget: "markdown" }

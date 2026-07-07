@@ -16,14 +16,16 @@
       .eyebrow { color: var(--blue); font-size: 15px; font-weight: 800; letter-spacing: .12em; }
       h1 { font-size: clamp(50px, 8vw, 100px); line-height: .9; margin: 12px 0 20px; }
       h1 em { color: var(--red); font-style: normal; }
-      .designs { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); margin-top: 54px; }
+      .designs { display: grid; gap: 18px; grid-template-columns: repeat(5, 1fr); margin-top: 54px; }
       a { background: #fff; color: var(--ink); display: block; font-size: 30px; font-weight: 800; min-height: 210px; padding: 30px; text-decoration: none; transition: transform .2s, background .2s; }
       a:hover { background: var(--blue); color: #fff; transform: translateY(-5px); }
-      a:nth-child(2) { background: var(--red); color: #fff; }
-      a:nth-child(3) { background: #f4f7fa; }
-      a:nth-child(3):hover { background: var(--blue); color: #fff; }
-      a:nth-child(4) { background: #0f1d2a; border: 1px solid #2f465a; color: #fff; }
-      a:nth-child(4):hover { background: var(--red); border-color: var(--red); }
+      a.card-red { background: var(--red); color: #fff; }
+      a.card-light { background: #f4f7fa; }
+      a.card-light:hover { background: var(--blue); color: #fff; }
+      a.card-dark { background: #0f1d2a; border: 1px solid #2f465a; color: #fff; }
+      a.card-dark:hover { background: var(--red); border-color: var(--red); }
+      a.card-blue { background: var(--blue); color: #fff; }
+      a.card-blue:hover { background: var(--red); color: #fff; }
       small { display: block; font-family: 'DM Sans', Arial, sans-serif; font-size: 14px; font-weight: 400; margin-top: 55px; text-transform: none; }
       .arrow { float: right; font-family: Arial, sans-serif; font-size: 38px; }
       @media (max-width: 1100px) { .designs { grid-template-columns: repeat(2, 1fr); } }
@@ -37,9 +39,10 @@
       <p>Vyberte projekt, který chcete otevřít. Každý odkaz vede na samostatný statický návrh designu.</p>
       <section class="designs" aria-label="Návrhy webů">
         <a href="./golmansketreninky/"><span>Gólmanské<br />tréninky</span><small>Altrichter Goalie Academy <b class="arrow">→</b></small></a>
-        <a href="./hcricany/"><span>HC Říčany</span><small>Klubový webový návrh <b class="arrow">→</b></small></a>
-        <a href="./ceskadopravnistavba/"><span>Česká dopravní<br />stavba</span><small>Design mock k nabídce <b class="arrow">→</b></small></a>
-        <a href="./donb-garage/"><span>DON B<br />Garage</span><small>Autoservis a diagnostika <b class="arrow">→</b></small></a>
+        <a class="card-red" href="./hcricany/"><span>HC Říčany</span><small>Klubový webový návrh <b class="arrow">→</b></small></a>
+        <a class="card-blue" href="./comsysicearena/"><span>COM-SYS<br />Ice Arena</span><small>Web zimního stadionu <b class="arrow">→</b></small></a>
+        <a class="card-light" href="./ceskadopravnistavba/"><span>Česká dopravní<br />stavba</span><small>Design mock k nabídce <b class="arrow">→</b></small></a>
+        <a class="card-dark" href="./donb-garage/"><span>DON B<br />Garage</span><small>Autoservis a diagnostika <b class="arrow">→</b></small></a>
       </section>
     </main>
   </body>

@@ -61,38 +61,134 @@ const {
       });
 
       const contactForm = document.querySelector("[data-contact-form]");
-      const queryParams = new URLSearchParams(window.location.search);
-      const issueType = queryParams.get("typ");
-      const messageField = contactForm?.querySelector('textarea[name="message"]');
 
-      if (issueType && messageField instanceof HTMLTextAreaElement && !messageField.value.trim()) {
-        messageField.value = [
-          `Typ problému: ${issueType}`,
-          "",
-          "Vůz: prosím doplňte",
-          "Rok výroby / motorizace: prosím doplňte",
-          "Najeto kilometrů: prosím doplňte",
-          "Kdy se problém objevuje: prosím doplňte",
-          "Svítí kontrolka nebo hláška: prosím doplňte",
-          "Co už bylo kontrolováno nebo opravováno: prosím doplňte",
-          "Další poznámky: prosím doplňte"
-        ].join("\n");
+      if (contactForm instanceof HTMLFormElement) {
+        const queryParams = new URLSearchParams(window.location.search);
+        const issueType = queryParams.get("typ");
+        const phoneField = contactForm.querySelector("[data-contact-phone]");
+        const emailField = contactForm.querySelector("[data-contact-email]");
+        const messageField = contactForm.querySelector("[data-contact-message]");
+        const honeypotField = contactForm.querySelector("[data-honeypot]");
+        const clean = (value) => String(value || "").trim();
+        const hasValue = (field) => field instanceof HTMLInputElement && clean(field.value);
+        const isValidPhone = (value) => {
+          const trimmed = clean(value);
+
+          if (!trimmed) {
+            return true;
+          }
+
+          const digits = trimmed.replace(/\D/g, "");
+
+          return /^[+\d][\d\s().-]{6,23}$/.test(trimmed) && digits.length >= 9 && digits.length <= 15;
+        };
+
+        if (issueType && messageField instanceof HTMLTextAreaElement && !messageField.value.trim()) {
+          const messageTemplate = [
+            `Typ problému: ${issueType}`,
+            "",
+            "Vůz:",
+            "Rok výroby / motorizace:",
+            "Najeto kilometrů:",
+            "Kdy se problém objevuje:",
+            "Svítí kontrolka nebo hláška:",
+            "Co už bylo kontrolováno nebo opravováno:",
+            "Další poznámky:"
+          ].join("\n");
+
+          messageField.value = messageTemplate;
+          messageField.dataset.prefilledTemplate = messageTemplate;
+        }
+
+        const syncContactValidity = () => {
+          if (phoneField instanceof HTMLInputElement) {
+            phoneField.setCustomValidity("");
+          }
+
+          if (emailField instanceof HTMLInputElement) {
+            emailField.setCustomValidity("");
+          }
+
+          if (messageField instanceof HTMLTextAreaElement) {
+            messageField.setCustomValidity("");
+          }
+
+          if (phoneField instanceof HTMLInputElement && emailField instanceof HTMLInputElement && !hasValue(phoneField) && !hasValue(emailField)) {
+            phoneField.setCustomValidity("Vyplňte telefon nebo e-mail, abychom vás mohli kontaktovat.");
+          }
+
+          if (phoneField instanceof HTMLInputElement && phoneField.value.trim() && !isValidPhone(phoneField.value)) {
+            phoneField.setCustomValidity("Zadejte telefon ve správném formátu, například +420 777 852 398.");
+          }
+
+          if (emailField instanceof HTMLInputElement && emailField.value.trim() && emailField.validity.typeMismatch) {
+            emailField.setCustomValidity("Zadejte platnou e-mailovou adresu.");
+          }
+
+          if (
+            messageField instanceof HTMLTextAreaElement &&
+            messageField.dataset.prefilledTemplate &&
+            clean(messageField.value) === clean(messageField.dataset.prefilledTemplate)
+          ) {
+            messageField.setCustomValidity("Doplňte prosím popis vozu a závady.");
+          }
+        };
+
+        const validateContactForm = () => {
+          syncContactValidity();
+          return contactForm.checkValidity();
+        };
+
+        [phoneField, emailField, messageField].forEach((field) => {
+          field?.addEventListener("input", syncContactValidity);
+          field?.addEventListener("change", syncContactValidity);
+        });
+        contactForm.addEventListener("invalid", syncContactValidity, true);
+
+        contactForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          if (honeypotField instanceof HTMLInputElement && honeypotField.value.trim()) {
+            return;
+          }
+
+          if (!validateContactForm()) {
+            contactForm.reportValidity();
+            return;
+          }
+
+          const formData = new FormData(contactForm);
+          const name = clean(formData.get("name"));
+          const phone = clean(formData.get("phone"));
+          const email = clean(formData.get("email"));
+          const message = clean(formData.get("message"));
+          const submittedAt = new Date().toLocaleString("cs-CZ", {
+            dateStyle: "medium",
+            timeStyle: "short",
+            timeZone: "Europe/Prague"
+          });
+          const body = [
+            "Poptávka z webu DON B Diagnostic Garage",
+            "----------------------------------------",
+            `Odesláno: ${submittedAt}`,
+            `Stránka: ${window.location.href}`,
+            "",
+            "Kontakt",
+            "-------",
+            `Jméno: ${name}`,
+            `Telefon: ${phone || "neuvedeno"}`,
+            `E-mail: ${email || "neuvedeno"}`,
+            "",
+            "Vůz a popis závady",
+            "------------------",
+            message
+          ].join("\n");
+          const subjectSuffix = name ? ` - ${name}` : "";
+          const subject = encodeURIComponent(`Poptávka z webu DON B${subjectSuffix}`);
+
+          window.location.href = `mailto:info@donbgarage.cz?subject=${subject}&body=${encodeURIComponent(body)}`;
+        });
       }
-
-      contactForm?.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const formData = new FormData(contactForm);
-        const body = [
-          `Jméno: ${formData.get("name") || ""}`,
-          `Telefon: ${formData.get("phone") || ""}`,
-          `E-mail: ${formData.get("email") || ""}`,
-          "",
-          `Vůz a popis závady:`,
-          `${formData.get("message") || ""}`
-        ].join("\n");
-        const subject = encodeURIComponent("Poptávka z webu DON B Diagnostic Garage");
-        window.location.href = `mailto:info@donbgarage.cz?subject=${subject}&body=${encodeURIComponent(body)}`;
-      });
     </script>
   </body>
 </html>

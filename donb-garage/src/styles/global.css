@@ -371,8 +371,20 @@ textarea {
   height: 15px;
   background: var(--red);
   flex: none;
-  mask: url("/assets/icons/wrench.svg") center / contain no-repeat;
-  -webkit-mask: url("/assets/icons/wrench.svg") center / contain no-repeat;
+  mask: var(--proof-icon, url("/assets/icons/wrench.svg")) center / contain no-repeat;
+  -webkit-mask: var(--proof-icon, url("/assets/icons/wrench.svg")) center / contain no-repeat;
+}
+
+.proof-list__item--service::before {
+  --proof-icon: url("/assets/icons/wrench.svg");
+}
+
+.proof-list__item--electric::before {
+  --proof-icon: url("/assets/icons/ecu-cip.svg");
+}
+
+.proof-list__item--diagnostics::before {
+  --proof-icon: url("/assets/icons/diagnostika-laptop.svg");
 }
 
 .diagnostic-frame {
@@ -1453,8 +1465,17 @@ textarea {
 }
 
 .contact-form {
+  position: relative;
   display: grid;
   gap: 16px;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -100vw;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .form-grid {

@@ -1,0 +1,9 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getImage } from 'astro:assets';
+import { url } from '../lib/site';
+interface Props { gallery?: CollectionEntry<'galleries'> }
+const video=Astro.props.gallery?.data.video;
+const poster=video?await getImage({src:video.poster,width:848,format:'webp'}):undefined;
+---
+{video&&<section class="section container video-section"><p class="eyebrow">Chvíle v pohybu</p><h3>{video.title}</h3><p>{video.description}</p><video controls playsinline preload="none" poster={poster!.src} aria-label={video.title}><source src={url(video.file)} type="video/mp4"/>Váš prohlížeč nepodporuje video.</video></section>}

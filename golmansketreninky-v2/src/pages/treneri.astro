@@ -1,0 +1,8 @@
+---
+import HockeyAccent from '../components/HockeyAccent.astro';
+import CoachCards from '../components/CoachCards.astro';
+import Layout from '../layouts/Layout.astro';
+import { siteContent, url } from '../lib/site';
+const { coaches }=await siteContent();
+---
+<Layout title="Naši trenéři | Altrichter Goalie Academy"><main id="obsah"><section class="page-intro dark"><div class="container"><HockeyAccent variant="tactics" class="intro-accent" /><p class="eyebrow">Lidé za tréninkem</p><h1>Zkušenosti,<br />které předáváme.</h1><p class="lead">Velké zápasy i každodenní práce s mladými gólmany. Poznejte čtyři trenéry, jejichž příběhy zachycuje archiv akademie.</p></div></section><section class="container section"><CoachCards coaches={coaches} detailed /><p class="source-note">Medailonky vycházejí z doložených zkušeností v archivu. Obsazení konkrétního kempu se uvádí samostatně u jeho termínu.</p></section><section class="container section"><div class="section-heading"><p class="eyebrow">Další jména z příběhu akademie</p><h2>Na práci se podíleli také.</h2></div><p>Další trenéři uvedení ve zdrojích. Jejich podrobné medailonky nemáme k dispozici.</p><ul class="name-list">{coaches.filter(c=>!c.data.portrait).map(c=><li>{c.data.name}</li>)}</ul></section><section class="container section related-block"><h2>Pojďme probrat váš trénink.</h2><a class="button button-dark" href={url('#kontakt')}>Kontaktovat akademii ↗</a></section></main></Layout>

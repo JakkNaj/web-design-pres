@@ -1,0 +1,297 @@
+---
+const poses = {
+  body: { ready: 'translate(0px, 0px)', save: 'translate(0px, 52px)', catch: 'translate(6px, 4px)', block: 'translate(-6px, 3px)' },
+  leftPad: { ready: 'translate(264px, 278px) rotate(16deg)', save: 'translate(282px, 350px) rotate(78deg)', catch: 'translate(266px, 280px) rotate(17deg)', block: 'translate(262px, 280px) rotate(17deg)' },
+  rightPad: { ready: 'translate(336px, 278px) rotate(-16deg)', save: 'translate(318px, 350px) rotate(-78deg)', catch: 'translate(338px, 280px) rotate(-15deg)', block: 'translate(334px, 280px) rotate(-15deg)' },
+  stick: { ready: 'rotate(0deg)', save: 'rotate(-14deg)', catch: 'rotate(1deg)', block: 'translate(-128px, 5.5px) rotate(35deg)' },
+  catchingArm: { ready: 'rotate(0deg)', save: 'rotate(0deg)', catch: 'rotate(-55deg)', block: 'rotate(0deg)' },
+  blockerArm: { ready: 'rotate(0deg)', save: 'rotate(0deg)', catch: 'rotate(0deg)', block: 'rotate(35deg)' },
+};
+---
+
+<div class="approach-art goalie-save" data-goalie-save>
+  <svg class="save-scene" viewBox="0 0 600 520" fill="none" role="img" aria-labelledby="save-title save-description">
+    <title id="save-title">Tři zákroky před hokejovou brankou</title>
+    <desc id="save-description">Brankář střídá záklek do motýlka proti střele po ledě, chycení vysoké střely do lapačky a vyražení puku vyrážečkou do strany.</desc>
+    <defs>
+      <pattern id="goal-net-mesh" width="14" height="14" patternUnits="userSpaceOnUse">
+        <path d="M0 0h14v14" stroke="#6a8c94" stroke-width=".9" opacity=".45" />
+      </pattern>
+    </defs>
+    <g class="rink-lines" stroke-width="1.5">
+      <path d="M130 382c22 89 318 89 340 0" fill="#57c7df" fill-opacity=".08" stroke="#6ab8ca" />
+      <path d="M50 382h500" stroke="#d86979" />
+    </g>
+
+    <g class="hockey-goal" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="300" cy="378" rx="178" ry="13" fill="#087c9b" opacity=".06" />
+      <path d="M177 337V153q0-13 13-13h220q13 0 13 13v184z" fill="white" fill-opacity=".48" />
+      <path d="M177 337V153q0-13 13-13h220q13 0 13 13v184z" fill="url(#goal-net-mesh)" />
+      <path d="m140 172 37-24v189l-41 45zm324 210-41-45V148l37 24zM151 161l39-21h220l39 21z" fill="white" fill-opacity=".3" />
+      <path d="m140 172 37-24v189l-41 45zm324 210-41-45V148l37 24zM151 161l39-21h220l39 21zM136 382l41-45h246l41 45z" fill="url(#goal-net-mesh)" />
+      <path d="M177 337V153q0-13 13-13h220q13 0 13 13v184" stroke="#c8334b" stroke-width="3" opacity=".5" />
+      <path d="m136 382 41-45q123 20 246 0l41 45M151 161l39-21m259 21-39-21" stroke="#c8334b" stroke-width="3.5" opacity=".7" />
+      <path d="M136 382V177q0-16 16-16h296q16 0 16 16v205" stroke="#c8334b" stroke-width="7" />
+      <path d="M134 375V177q0-18 18-18h294" stroke="#ef98a5" stroke-width="1.5" opacity=".75" />
+      <path d="M129 382h14m314 0h14" stroke="#a4253b" stroke-width="5" />
+    </g>
+
+    <ellipse class="goalie-shadow" cx="300" cy="402" rx="115" ry="10" fill="#087c9b" opacity=".09" />
+
+    <g class="goalie-body" data-rig style={`transform: ${poses.body.ready}`} data-ready={poses.body.ready} data-save={poses.body.save} data-catch={poses.body.catch} data-block={poses.body.block} fill="#111">
+      <path d="M258 253h84l14 39-29 28-27-22-27 22-29-28z" />
+      <path d="M277 164c-19 0-41 7-53 19l-8 57 29 20 9-24-4 36c27 12 73 12 100 0l-4-36 9 24 29-20-8-57c-12-12-34-19-53-19z" />
+      <path d="m273 174 27 15 27-15m-71 77c27 8 61 8 88 0" stroke="#e9f7fa" stroke-width="2" opacity=".16" />
+      <path d="M274 129c0-19 10-29 26-29s26 10 26 29l-4 29-12 18h-20l-12-18z" />
+      <path d="m280 129 20-5 20 5-4 27-10 12h-12l-10-12z" stroke="#e9f7fa" stroke-width="2" />
+      <path d="M281 139h38m-36 9h34m-30 9h26m-20-31 2 40m12-40-2 40" stroke="#e9f7fa" stroke-width="1.4" opacity=".8" />
+      <path d="m286 114 5-3m18 0 5 3" stroke="#e9f7fa" stroke-width="2" stroke-linecap="round" opacity=".5" />
+
+      <g class="blocker-arm" data-rig style={`transform: ${poses.blockerArm.ready}`} data-ready={poses.blockerArm.ready} data-save={poses.blockerArm.save} data-catch={poses.blockerArm.catch} data-block={poses.blockerArm.block}>
+        <path d="m231 192-21 15-14 39 24 16 23-44z" />
+        <path d="m196 226 33 8-10 59c-1 5-5 7-9 6l-29-9c-4-1-5-4-4-8l13-50c1-5 3-7 6-6z" />
+        <path d="m198 237 20 5-9 43-20-6z" stroke="#e9f7fa" stroke-width="2" opacity=".25" />
+      </g>
+      <g class="catching-arm" data-rig style={`transform: ${poses.catchingArm.ready}`} data-ready={poses.catchingArm.ready} data-save={poses.catchingArm.save} data-catch={poses.catchingArm.catch} data-block={poses.catchingArm.block}>
+        <path d="m369 191 25 16 7 35-22 18-27-35z" />
+        <g class="catching-glove">
+          <path d="M381 228c-2-19 8-39 24-47 9-5 18-2 23 4 12-1 18 7 17 17 9 10 6 21-1 28-1 13-9 22-21 23l-23 15-21-21z" />
+          <path d="M392 230c3-17 14-29 29-34m-22 40c3-13 14-23 30-30m-32 30 27 7m-29-15 35 4m-31-13 37 1" stroke="#e9f7fa" stroke-width="1.5" opacity=".3" />
+        </g>
+      </g>
+    </g>
+
+    <g class="leg-pad left-pad" data-rig style={`transform: ${poses.leftPad.ready}`} data-ready={poses.leftPad.ready} data-save={poses.leftPad.save} data-catch={poses.leftPad.catch} data-block={poses.leftPad.block}>
+      <path d="M-24-8Q0-17 24-8l3 99-7 15h-40l-7-15z" fill="#111" />
+      <path d="M-17 5h34l2 74-4 15h-30l-4-15zM-18 25h36m-36 27h37m-37 26h37" stroke="#e9f7fa" stroke-width="1.6" opacity=".28" />
+      <path d="M-17 104h34l9 6-2 6h-50l-2-6z" fill="#111" />
+    </g>
+    <g class="leg-pad right-pad" data-rig style={`transform: ${poses.rightPad.ready}`} data-ready={poses.rightPad.ready} data-save={poses.rightPad.save} data-catch={poses.rightPad.catch} data-block={poses.rightPad.block}>
+      <path d="M-24-8Q0-17 24-8l3 99-7 15h-40l-7-15z" fill="#111" />
+      <path d="M-17 5h34l2 74-4 15h-30l-4-15zM-18 25h36m-36 27h37m-37 26h37" stroke="#e9f7fa" stroke-width="1.6" opacity=".28" />
+      <path d="M-17 104h34l9 6-2 6h-50l-2-6z" fill="#111" />
+    </g>
+
+    <g class="goalie-stick" data-rig style={`transform: ${poses.stick.ready}`} data-ready={poses.stick.ready} data-save={poses.stick.save} data-catch={poses.stick.catch} data-block={poses.stick.block}>
+      <path d="m152 142 7-4 111 216-9 5z" fill="#111" />
+      <path d="m254 343 16-8 24 45 54 2c10 0 12 14 2 17h-56c-8 0-13-4-17-11z" fill="#111" />
+      <path d="m276 376 9 14h57" stroke="#e9f7fa" stroke-width="1.5" opacity=".3" />
+      <path d="m151 142 10-5" stroke="#111" stroke-width="7" stroke-linecap="round" />
+    </g>
+
+    <g class="save-impact" transform="translate(275 382)" stroke="#087c9b" stroke-width="2" stroke-linecap="round" opacity="0">
+      <path d="m-23-13-11-7m16 29-13 5m37-33 3-12m14 23 12-3" />
+      <circle r="17" stroke-width="1.5" />
+    </g>
+    <g class="shot-puck" style="transform: translate(94px, 444px) scale(1.15)">
+      <ellipse class="puck-shadow" cy="9" rx="18" ry="5" fill="#087c9b" opacity=".1" />
+      <path d="M-16-3v7c0 9 32 9 32 0v-7" fill="#111" />
+      <ellipse cy="-3" rx="16" ry="6" fill="#252525" />
+      <ellipse cy="-4" rx="11" ry="3" stroke="#707072" stroke-width=".7" />
+    </g>
+  </svg>
+  <span class="art-coordinate" aria-hidden="true">TADY JE TVOJE MÍSTO.</span>
+  <span class="save-stamp" aria-hidden="true">PUK? MÁM.</span>
+  <span class="art-caption" aria-hidden="true">MALÉ DETAILY. VELKÝ ROZDÍL.</span>
+  <button class="save-replay" type="button" hidden>
+    <svg class="pause-icon" width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="3" height="12" rx="1" /><rect x="12" y="4" width="3" height="12" rx="1" /></svg>
+    <svg class="play-icon" width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m6 3 11 7-11 7z" /></svg>
+    <span>Pozastavit</span>
+  </button>
+</div>
+
+<style>
+  .goalie-save { --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1); pointer-events: auto; }
+  .save-scene { display: block; width: 100%; height: 100%; }
+  [data-rig], .shot-puck { transform-origin: 0 0; }
+  .goalie-stick { transform-origin: 300px 390px; }
+  .blocker-arm { transform-origin: 235px 198px; }
+  .catching-arm { transform-origin: 365px 199px; }
+  .catching-glove { transform-origin: 394px 238px; }
+  .shot-puck { opacity: 0; }
+  .goalie-save[data-save-mode='glove'] .puck-shadow, .goalie-save[data-save-mode='blocker'] .puck-shadow { opacity: 0; }
+  .save-stamp { opacity: 0; }
+  .save-replay { position: absolute; left: 22px; bottom: 12px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 3px; border: 0; background: none; color: var(--accent); font-size: 13px; }
+  .play-icon, .save-replay[data-paused] .pause-icon { display: none; }
+  .save-replay[data-paused] .play-icon { display: block; }
+  @media (hover: hover) and (pointer: fine) { .save-replay:not(:disabled):hover { color: var(--ink); } }
+  @media (max-width: 800px) { .save-replay { left: 13px; bottom: 8px; font-size: 12px; gap: 5px; } }
+  @media (max-width: 600px) { .save-replay { left: 18px; } .art-caption { display: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .save-replay { display: none; }
+    .goalie-body { transform: translate(0px, 52px) !important; }
+    .left-pad { transform: translate(282px, 350px) rotate(78deg) !important; }
+    .right-pad { transform: translate(318px, 350px) rotate(-78deg) !important; }
+    .goalie-stick { transform: rotate(-14deg) !important; }
+    .shot-puck { transform: translate(248px, 402px) scale(.85) !important; opacity: 1 !important; }
+    .save-stamp { opacity: 1 !important; }
+  }
+</style>
+
+<script>
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll<HTMLElement>('[data-goalie-save]').forEach(scene => {
+    const button = scene.querySelector<HTMLButtonElement>('.save-replay')!;
+    const label = button.querySelector('span')!;
+    const stamp = scene.querySelector<HTMLElement>('.save-stamp')!;
+    const duration = 1600;
+    const restDuration = 900;
+    const motionStyles = getComputedStyle(scene);
+    const ease = motionStyles.getPropertyValue('--ease-out').trim();
+    const moveEase = motionStyles.getPropertyValue('--ease-in-out').trim();
+    let animations: Animation[] = [];
+    let visible = false;
+    let pausedByUser = false;
+    let nextSave: 'butterfly' | 'glove' | 'blocker' = 'butterfly';
+    let restTimer: number | undefined;
+    let run = 0;
+
+    function clearRest() {
+      window.clearTimeout(restTimer);
+      restTimer = undefined;
+    }
+
+    function canPlay() {
+      return visible && !document.hidden && !motionPreference.matches && !pausedByUser;
+    }
+
+    function reset() {
+      run++;
+      clearRest();
+      animations.forEach(animation => animation.cancel());
+      animations = [];
+      scene.dataset.saveMode = 'butterfly';
+      stamp.textContent = 'PUK? MÁM.';
+    }
+
+    function playRound() {
+      if (!canPlay() || animations.length) return;
+      clearRest();
+      const currentRun = ++run;
+      const saveMode = nextSave;
+      const catches = saveMode === 'glove';
+      const blocks = saveMode === 'blocker';
+      scene.dataset.saveMode = saveMode;
+      stamp.textContent = blocks ? 'DO STRANY.' : catches ? 'V LAPAČCE.' : 'PUK? MÁM.';
+
+      function animate(selector: string, frames: Keyframe[]) {
+        const element = scene.querySelector(selector)!;
+        const animation = element.animate(frames, { duration, fill: 'both' });
+        animations.push(animation);
+      }
+
+      scene.querySelectorAll<SVGElement>('[data-rig]').forEach(part => {
+        const ready = part.dataset.ready!;
+        const save = (blocks ? part.dataset.block : catches ? part.dataset.catch : part.dataset.save)!;
+        let recoil = save;
+        if (catches && part.classList.contains('catching-arm')) recoil = 'rotate(-48deg)';
+        if (blocks && part.classList.contains('blocker-arm')) recoil = 'rotate(43deg)';
+        // The stick follows the blocker hand around its shoulder pivot.
+        if (blocks && part.classList.contains('goalie-stick')) recoil = 'translate(-154.4px, -4.3px) rotate(43deg)';
+        const animation = part.animate([
+          { transform: ready, offset: 0 },
+          { transform: ready, offset: .2, easing: ease },
+          { transform: save, offset: part.classList.contains('goalie-body') ? .34 : .33 },
+          { transform: save, offset: .36, easing: ease },
+          { transform: recoil, offset: .43 },
+          { transform: recoil, offset: .67, easing: moveEase },
+          { transform: ready, offset: .9 },
+          { transform: ready, offset: 1 },
+        ], { duration, fill: 'both' });
+        animations.push(animation);
+      });
+
+      animate('.shot-puck', blocks ? [
+        { transform: 'translate(94px, 427px) scale(1.15)', opacity: 0, offset: 0 },
+        { transform: 'translate(94px, 427px) scale(1.15)', opacity: 1, offset: .1 },
+        { transform: 'translate(94px, 427px) scale(1.15)', opacity: 1, offset: .14, easing: 'linear' },
+        { transform: 'translate(166px, 232px) scale(.78)', opacity: 1, offset: .36, easing: 'linear' },
+        { transform: 'translate(58px, 278px) scale(.92) rotate(-25deg)', opacity: 1, offset: .49, easing: 'linear' },
+        { transform: 'translate(-32px, 322px) scale(1.05) rotate(-50deg)', opacity: 1, offset: .61 },
+        { transform: 'translate(-45px, 329px) scale(1.05) rotate(-55deg)', opacity: 0, offset: .65 },
+        { transform: 'translate(-45px, 329px) scale(1.05) rotate(-55deg)', opacity: 0, offset: 1 },
+      ] : catches ? [
+        { transform: 'translate(505px, 423px) scale(1.15)', opacity: 0, offset: 0 },
+        { transform: 'translate(505px, 423px) scale(1.15)', opacity: 1, offset: .1 },
+        { transform: 'translate(505px, 423px) scale(1.15)', opacity: 1, offset: .14, easing: 'linear' },
+        { transform: 'translate(420px, 174px) scale(.78)', opacity: 1, offset: .36 },
+        { transform: 'translate(426px, 180px) scale(.78)', opacity: 0, offset: .39 },
+        { transform: 'translate(426px, 180px) scale(.78)', opacity: 0, offset: 1 },
+      ] : [
+        { transform: 'translate(94px, 444px) scale(1.15)', opacity: 0, offset: 0 },
+        { transform: 'translate(94px, 444px) scale(1.15)', opacity: 1, offset: .1 },
+        { transform: 'translate(94px, 444px) scale(1.15)', opacity: 1, offset: .14, easing: 'linear' },
+        { transform: 'translate(275px, 382px) scale(.78)', opacity: 1, offset: .36, easing: ease },
+        { transform: 'translate(232px, 414px) scale(.9)', opacity: 1, offset: .49 },
+        { transform: 'translate(232px, 414px) scale(.9)', opacity: 1, offset: .65 },
+        { transform: 'translate(232px, 414px) scale(.9)', opacity: 0, offset: .73 },
+        { transform: 'translate(232px, 414px) scale(.9)', opacity: 0, offset: 1 },
+      ]);
+
+      if (catches) {
+        animate('.catching-glove', [
+          { transform: 'scaleX(1) rotate(0deg)', offset: 0 },
+          { transform: 'scaleX(1) rotate(0deg)', offset: .35, easing: ease },
+          { transform: 'scaleX(.68) rotate(10deg)', offset: .42 },
+          { transform: 'scaleX(.68) rotate(10deg)', offset: .67, easing: moveEase },
+          { transform: 'scaleX(1) rotate(0deg)', offset: .86 },
+          { transform: 'scaleX(1) rotate(0deg)', offset: 1 },
+        ]);
+      }
+      scene.querySelector('.save-impact')!.setAttribute('transform', blocks ? 'translate(166 232)' : catches ? 'translate(420 174)' : 'translate(275 382)');
+      animate('.save-impact', [
+        { opacity: 0, offset: 0 }, { opacity: 0, offset: .35 },
+        { opacity: .8, offset: .37 }, { opacity: 0, offset: .49 }, { opacity: 0, offset: 1 },
+      ]);
+      animate('.save-stamp', [
+        { opacity: 0, transform: 'translateY(5px) rotate(8deg)', offset: 0 },
+        { opacity: 0, transform: 'translateY(5px) rotate(8deg)', offset: .35, easing: ease },
+        { opacity: 1, transform: 'translateY(0px) rotate(8deg)', offset: .41 },
+        { opacity: 1, transform: 'translateY(0px) rotate(8deg)', offset: .65 },
+        { opacity: 0, transform: 'translateY(0px) rotate(8deg)', offset: .73 },
+        { opacity: 0, transform: 'translateY(0px) rotate(8deg)', offset: 1 },
+      ]);
+
+      // One clock keeps the puck's contact frame aligned with every moving body part.
+      const startTime = document.timeline.currentTime;
+      animations.forEach(animation => { animation.startTime = startTime; });
+      Promise.all(animations.map(animation => animation.finished)).then(() => {
+        if (run !== currentRun) return;
+        animations.forEach(animation => animation.cancel());
+        animations = [];
+        nextSave = saveMode === 'butterfly' ? 'glove' : saveMode === 'glove' ? 'blocker' : 'butterfly';
+        if (canPlay()) restTimer = window.setTimeout(playRound, restDuration);
+      }).catch(() => { /* Changing the motion preference cancels the active round. */ });
+    }
+
+    function syncPlayback() {
+      if (!canPlay()) {
+        clearRest();
+        animations.forEach(animation => animation.pause());
+      } else if (animations.length) {
+        animations.forEach(animation => { if (animation.playState === 'paused') animation.play(); });
+      } else if (restTimer === undefined) {
+        playRound();
+      }
+    }
+
+    button.hidden = motionPreference.matches;
+    button.addEventListener('click', () => {
+      pausedByUser = !pausedByUser;
+      button.toggleAttribute('data-paused', pausedByUser);
+      label.textContent = pausedByUser ? 'Pokračovat' : 'Pozastavit';
+      syncPlayback();
+    });
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting && entry.intersectionRatio >= .45;
+      syncPlayback();
+    }, { threshold: .45 });
+    observer.observe(scene);
+    motionPreference.addEventListener('change', () => {
+      reset();
+      button.hidden = motionPreference.matches;
+      syncPlayback();
+    });
+    document.addEventListener('visibilitychange', syncPlayback);
+  });
+</script>

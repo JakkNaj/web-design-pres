@@ -1,0 +1,17 @@
+{
+  "name": "Luboš Horčička",
+  "order": 3,
+  "sources": [
+    "https://www.golmansketreninky.cz/nasi-treneri/"
+  ],
+  "summary": "Dlouhá hráčská cesta extraligou a první ligou.",
+  "intro": "Roky v bráně. Zkušenost pro další zákrok.",
+  "body": [
+    "Začínal v Děčíně a prošel řadou českých i slovenských klubů. Akademie v jeho medailonku uvádí také trenérskou práci u A týmu, U20 a U17 ve Zlíně."
+  ],
+  "credentials": [
+    "Hráčské zkušenosti z české i slovenské extraligy",
+    "Práce s dospělými i mládežnickými brankáři"
+  ],
+  "portrait": "../../assets/editorial/coach-lubos-horcicka.webp"
+}

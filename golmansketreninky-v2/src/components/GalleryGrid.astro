@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { galleryUrl } from '../lib/site';
+import Arrow from './Arrow.astro';
+interface Props { gallery: CollectionEntry<'galleries'>; all?: boolean }
+const { gallery, all = false } = Astro.props;
+const selected = all ? gallery.data.photos : gallery.data.photos.filter(p=>p.featured).slice(0,12);
+---
+<div class="gallery-component" data-gallery><div class="photo-grid">{selected.map((p,i)=><button class="photo-button" type="button" data-photo data-src={p.image.src} data-caption={p.caption} data-alt={p.alt} aria-label={`Otevřít fotografii ${i+1}: ${p.alt}`}><Image src={p.image} alt={p.alt} width={Math.min(420,p.image.width)} loading="lazy" /><span aria-hidden="true">↗</span></button>)}</div>
+  {!all && <a class="button button-outline gallery-all" href={galleryUrl(gallery.id)}>Všechny fotografie ({gallery.data.photos.length}) <Arrow /></a>}
+  <dialog class="lightbox" aria-label={gallery.data.title}><button type="button" class="lightbox-close" data-gallery-close aria-label="Zavřít fotografii">×</button><div class="lightbox-stage"><img data-full-image alt="" /></div><div class="lightbox-toolbar"><button type="button" data-prev aria-label="Předchozí fotografie">←</button><p data-photo-caption aria-live="polite" aria-atomic="true"></p><button type="button" data-next aria-label="Další fotografie">→</button></div></dialog>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach(gallery=>{
+    const buttons=Array.from(gallery.querySelectorAll<HTMLButtonElement>('[data-photo]'));
+    const dialog=gallery.querySelector<HTMLDialogElement>('dialog')!;const image=dialog.querySelector<HTMLImageElement>('[data-full-image]')!;const caption=dialog.querySelector<HTMLElement>('[data-photo-caption]')!;
+    let index=0;let trigger:HTMLButtonElement|undefined;let touchX=0;
+    const show=(next:number)=>{index=(next+buttons.length)%buttons.length;const b=buttons[index];image.src=b.dataset.src!;image.alt=b.dataset.alt!;caption.textContent=`${index+1} / ${buttons.length} · ${b.dataset.caption}`;};
+    buttons.forEach((b,i)=>b.addEventListener('click',()=>{trigger=b;show(i);dialog.showModal();}));
+    dialog.querySelector('[data-gallery-close]')!.addEventListener('click',()=>dialog.close());dialog.querySelector('[data-prev]')!.addEventListener('click',()=>show(index-1));dialog.querySelector('[data-next]')!.addEventListener('click',()=>show(index+1));
+    dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();show(index+(e.key==='ArrowLeft'?-1:1));}});
+    dialog.addEventListener('close',()=>{image.removeAttribute('src');trigger?.focus();});dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+    image.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX;},{passive:true});image.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>60)show(index+(dx<0?1:-1));},{passive:true});
+  });
+</script>

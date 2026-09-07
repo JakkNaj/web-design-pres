@@ -1,0 +1,4618 @@
+[
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130504_172502.jpg",
+    "target": "src/assets/editorial/g5-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130716_105508.jpg",
+    "target": "src/assets/editorial/g5-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130716_105552.jpg",
+    "target": "src/assets/editorial/g5-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130717_184357.jpg",
+    "target": "src/assets/editorial/g5-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130717_190613.jpg",
+    "target": "src/assets/editorial/g5-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130717_190909.jpg",
+    "target": "src/assets/editorial/g5-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130717_193342.jpg",
+    "target": "src/assets/editorial/g5-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130717_200346.jpg",
+    "target": "src/assets/editorial/g5-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130718_172326.jpg",
+    "target": "src/assets/editorial/g5-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130718_175932.jpg",
+    "target": "src/assets/editorial/g5-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130719_180732.jpg",
+    "target": "src/assets/editorial/g5-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130719_185231.jpg",
+    "target": "src/assets/editorial/g5-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130719_185306.jpg",
+    "target": "src/assets/editorial/g5-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130719_185508.jpg",
+    "target": "src/assets/editorial/g5-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130723_175630.jpg",
+    "target": "src/assets/editorial/g5-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130723_175848.jpg",
+    "target": "src/assets/editorial/g5-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130723_180419.jpg",
+    "target": "src/assets/editorial/g5-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130723_182102.jpg",
+    "target": "src/assets/editorial/g5-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/004jihlava2013/20130724_192601.jpg",
+    "target": "src/assets/editorial/g5-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0651.JPG",
+    "target": "src/assets/editorial/g7-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0652.JPG",
+    "target": "src/assets/editorial/g7-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0653.JPG",
+    "target": "src/assets/editorial/g7-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0655.JPG",
+    "target": "src/assets/editorial/g7-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0656.JPG",
+    "target": "src/assets/editorial/g7-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0657.JPG",
+    "target": "src/assets/editorial/g7-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0658.JPG",
+    "target": "src/assets/editorial/g7-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0660.JPG",
+    "target": "src/assets/editorial/g7-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0661.JPG",
+    "target": "src/assets/editorial/g7-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0662.JPG",
+    "target": "src/assets/editorial/g7-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0663.JPG",
+    "target": "src/assets/editorial/g7-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0664.JPG",
+    "target": "src/assets/editorial/g7-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0665.JPG",
+    "target": "src/assets/editorial/g7-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0666.JPG",
+    "target": "src/assets/editorial/g7-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0667.JPG",
+    "target": "src/assets/editorial/g7-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0668.JPG",
+    "target": "src/assets/editorial/g7-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0669.JPG",
+    "target": "src/assets/editorial/g7-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0670.JPG",
+    "target": "src/assets/editorial/g7-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0671.JPG",
+    "target": "src/assets/editorial/g7-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0672.JPG",
+    "target": "src/assets/editorial/g7-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0673.JPG",
+    "target": "src/assets/editorial/g7-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0674.JPG",
+    "target": "src/assets/editorial/g7-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0675.JPG",
+    "target": "src/assets/editorial/g7-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0676.JPG",
+    "target": "src/assets/editorial/g7-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0677.JPG",
+    "target": "src/assets/editorial/g7-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0678.JPG",
+    "target": "src/assets/editorial/g7-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0679.JPG",
+    "target": "src/assets/editorial/g7-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0683.JPG",
+    "target": "src/assets/editorial/g7-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0684.JPG",
+    "target": "src/assets/editorial/g7-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0685.JPG",
+    "target": "src/assets/editorial/g7-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0686.JPG",
+    "target": "src/assets/editorial/g7-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0687.JPG",
+    "target": "src/assets/editorial/g7-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0688.JPG",
+    "target": "src/assets/editorial/g7-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0689.JPG",
+    "target": "src/assets/editorial/g7-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0691.JPG",
+    "target": "src/assets/editorial/g7-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0692.JPG",
+    "target": "src/assets/editorial/g7-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0693.JPG",
+    "target": "src/assets/editorial/g7-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0694.JPG",
+    "target": "src/assets/editorial/g7-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0695.JPG",
+    "target": "src/assets/editorial/g7-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0696.JPG",
+    "target": "src/assets/editorial/g7-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0698.JPG",
+    "target": "src/assets/editorial/g7-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0699.JPG",
+    "target": "src/assets/editorial/g7-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0700.JPG",
+    "target": "src/assets/editorial/g7-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0701.JPG",
+    "target": "src/assets/editorial/g7-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0702.JPG",
+    "target": "src/assets/editorial/g7-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0703.JPG",
+    "target": "src/assets/editorial/g7-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0704.JPG",
+    "target": "src/assets/editorial/g7-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0705.JPG",
+    "target": "src/assets/editorial/g7-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0706.JPG",
+    "target": "src/assets/editorial/g7-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0707.JPG",
+    "target": "src/assets/editorial/g7-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0711.JPG",
+    "target": "src/assets/editorial/g7-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0712.JPG",
+    "target": "src/assets/editorial/g7-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0714.JPG",
+    "target": "src/assets/editorial/g7-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0715.JPG",
+    "target": "src/assets/editorial/g7-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0716.JPG",
+    "target": "src/assets/editorial/g7-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0718.JPG",
+    "target": "src/assets/editorial/g7-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0719.JPG",
+    "target": "src/assets/editorial/g7-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0720.JPG",
+    "target": "src/assets/editorial/g7-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0721.JPG",
+    "target": "src/assets/editorial/g7-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0723.JPG",
+    "target": "src/assets/editorial/g7-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0724.JPG",
+    "target": "src/assets/editorial/g7-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0725.JPG",
+    "target": "src/assets/editorial/g7-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0726.JPG",
+    "target": "src/assets/editorial/g7-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0728.JPG",
+    "target": "src/assets/editorial/g7-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0729.JPG",
+    "target": "src/assets/editorial/g7-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0730.JPG",
+    "target": "src/assets/editorial/g7-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0731.JPG",
+    "target": "src/assets/editorial/g7-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0732.JPG",
+    "target": "src/assets/editorial/g7-0067.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0733.JPG",
+    "target": "src/assets/editorial/g7-0068.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0734.JPG",
+    "target": "src/assets/editorial/g7-0069.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0735.JPG",
+    "target": "src/assets/editorial/g7-0070.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0736.JPG",
+    "target": "src/assets/editorial/g7-0071.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0737.JPG",
+    "target": "src/assets/editorial/g7-0072.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0738.JPG",
+    "target": "src/assets/editorial/g7-0073.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0739.JPG",
+    "target": "src/assets/editorial/g7-0074.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0740.JPG",
+    "target": "src/assets/editorial/g7-0075.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0742.JPG",
+    "target": "src/assets/editorial/g7-0076.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0743.JPG",
+    "target": "src/assets/editorial/g7-0077.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0744.JPG",
+    "target": "src/assets/editorial/g7-0078.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0745.JPG",
+    "target": "src/assets/editorial/g7-0079.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0747.JPG",
+    "target": "src/assets/editorial/g7-0080.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0748.JPG",
+    "target": "src/assets/editorial/g7-0081.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0749.JPG",
+    "target": "src/assets/editorial/g7-0082.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0750.JPG",
+    "target": "src/assets/editorial/g7-0083.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0753.JPG",
+    "target": "src/assets/editorial/g7-0084.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0754.JPG",
+    "target": "src/assets/editorial/g7-0085.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0756.JPG",
+    "target": "src/assets/editorial/g7-0086.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0761.JPG",
+    "target": "src/assets/editorial/g7-0087.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0762.JPG",
+    "target": "src/assets/editorial/g7-0088.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0763.JPG",
+    "target": "src/assets/editorial/g7-0089.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0764.JPG",
+    "target": "src/assets/editorial/g7-0090.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0765.JPG",
+    "target": "src/assets/editorial/g7-0091.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0766.JPG",
+    "target": "src/assets/editorial/g7-0092.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0767.JPG",
+    "target": "src/assets/editorial/g7-0093.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0768.JPG",
+    "target": "src/assets/editorial/g7-0094.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0769.JPG",
+    "target": "src/assets/editorial/g7-0095.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0770.JPG",
+    "target": "src/assets/editorial/g7-0096.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0772.JPG",
+    "target": "src/assets/editorial/g7-0097.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0773.JPG",
+    "target": "src/assets/editorial/g7-0098.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0774.JPG",
+    "target": "src/assets/editorial/g7-0099.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0776.JPG",
+    "target": "src/assets/editorial/g7-0100.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0777.JPG",
+    "target": "src/assets/editorial/g7-0101.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0778.JPG",
+    "target": "src/assets/editorial/g7-0102.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0779.JPG",
+    "target": "src/assets/editorial/g7-0103.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0780.JPG",
+    "target": "src/assets/editorial/g7-0104.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0781.JPG",
+    "target": "src/assets/editorial/g7-0105.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0782.JPG",
+    "target": "src/assets/editorial/g7-0106.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0783.JPG",
+    "target": "src/assets/editorial/g7-0107.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0784.JPG",
+    "target": "src/assets/editorial/g7-0108.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0785.JPG",
+    "target": "src/assets/editorial/g7-0109.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0786.JPG",
+    "target": "src/assets/editorial/g7-0110.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0787.JPG",
+    "target": "src/assets/editorial/g7-0111.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0789.JPG",
+    "target": "src/assets/editorial/g7-0112.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0790.JPG",
+    "target": "src/assets/editorial/g7-0113.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0791.JPG",
+    "target": "src/assets/editorial/g7-0114.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0792.JPG",
+    "target": "src/assets/editorial/g7-0115.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0794.JPG",
+    "target": "src/assets/editorial/g7-0116.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0795.JPG",
+    "target": "src/assets/editorial/g7-0117.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0803.JPG",
+    "target": "src/assets/editorial/g7-0118.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0805.JPG",
+    "target": "src/assets/editorial/g7-0119.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0806.JPG",
+    "target": "src/assets/editorial/g7-0120.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0813.JPG",
+    "target": "src/assets/editorial/g7-0121.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0815.JPG",
+    "target": "src/assets/editorial/g7-0122.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0818.JPG",
+    "target": "src/assets/editorial/g7-0123.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/006trenink20150208/DSC_0824.JPG",
+    "target": "src/assets/editorial/g7-0124.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0467.JPG",
+    "target": "src/assets/editorial/g20-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0468.JPG",
+    "target": "src/assets/editorial/g20-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0470.JPG",
+    "target": "src/assets/editorial/g20-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0473.JPG",
+    "target": "src/assets/editorial/g20-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0474.JPG",
+    "target": "src/assets/editorial/g20-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0475.JPG",
+    "target": "src/assets/editorial/g20-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0476.JPG",
+    "target": "src/assets/editorial/g20-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0482.JPG",
+    "target": "src/assets/editorial/g20-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0483.JPG",
+    "target": "src/assets/editorial/g20-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0484.JPG",
+    "target": "src/assets/editorial/g20-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0487.JPG",
+    "target": "src/assets/editorial/g20-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0488.JPG",
+    "target": "src/assets/editorial/g20-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0494.JPG",
+    "target": "src/assets/editorial/g20-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0497.JPG",
+    "target": "src/assets/editorial/g20-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0498.JPG",
+    "target": "src/assets/editorial/g20-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0499.JPG",
+    "target": "src/assets/editorial/g20-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0504.JPG",
+    "target": "src/assets/editorial/g20-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0505.JPG",
+    "target": "src/assets/editorial/g20-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0506.JPG",
+    "target": "src/assets/editorial/g20-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0507.JPG",
+    "target": "src/assets/editorial/g20-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0508.JPG",
+    "target": "src/assets/editorial/g20-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0509.JPG",
+    "target": "src/assets/editorial/g20-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0510.JPG",
+    "target": "src/assets/editorial/g20-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0511.JPG",
+    "target": "src/assets/editorial/g20-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0512.JPG",
+    "target": "src/assets/editorial/g20-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0513.JPG",
+    "target": "src/assets/editorial/g20-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0514.JPG",
+    "target": "src/assets/editorial/g20-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0515.JPG",
+    "target": "src/assets/editorial/g20-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0516.JPG",
+    "target": "src/assets/editorial/g20-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0517.JPG",
+    "target": "src/assets/editorial/g20-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0518.JPG",
+    "target": "src/assets/editorial/g20-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0519.JPG",
+    "target": "src/assets/editorial/g20-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0520.JPG",
+    "target": "src/assets/editorial/g20-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0521.JPG",
+    "target": "src/assets/editorial/g20-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0522.JPG",
+    "target": "src/assets/editorial/g20-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0523.JPG",
+    "target": "src/assets/editorial/g20-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0524.JPG",
+    "target": "src/assets/editorial/g20-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0525.JPG",
+    "target": "src/assets/editorial/g20-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0526.JPG",
+    "target": "src/assets/editorial/g20-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0527.JPG",
+    "target": "src/assets/editorial/g20-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0528.JPG",
+    "target": "src/assets/editorial/g20-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0529.JPG",
+    "target": "src/assets/editorial/g20-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0530.JPG",
+    "target": "src/assets/editorial/g20-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0532.JPG",
+    "target": "src/assets/editorial/g20-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0533.JPG",
+    "target": "src/assets/editorial/g20-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0534.JPG",
+    "target": "src/assets/editorial/g20-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0535.JPG",
+    "target": "src/assets/editorial/g20-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0536.JPG",
+    "target": "src/assets/editorial/g20-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0537.JPG",
+    "target": "src/assets/editorial/g20-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0538.JPG",
+    "target": "src/assets/editorial/g20-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0539.JPG",
+    "target": "src/assets/editorial/g20-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0540.JPG",
+    "target": "src/assets/editorial/g20-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0541.JPG",
+    "target": "src/assets/editorial/g20-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0542.JPG",
+    "target": "src/assets/editorial/g20-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0544.JPG",
+    "target": "src/assets/editorial/g20-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0547.JPG",
+    "target": "src/assets/editorial/g20-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0548.JPG",
+    "target": "src/assets/editorial/g20-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0549.JPG",
+    "target": "src/assets/editorial/g20-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0550.JPG",
+    "target": "src/assets/editorial/g20-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0551.JPG",
+    "target": "src/assets/editorial/g20-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0552.JPG",
+    "target": "src/assets/editorial/g20-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0553.JPG",
+    "target": "src/assets/editorial/g20-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0554.JPG",
+    "target": "src/assets/editorial/g20-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0555.JPG",
+    "target": "src/assets/editorial/g20-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0556.JPG",
+    "target": "src/assets/editorial/g20-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0557.JPG",
+    "target": "src/assets/editorial/g20-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0585.JPG",
+    "target": "src/assets/editorial/g20-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0586.JPG",
+    "target": "src/assets/editorial/g20-0067.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0587.JPG",
+    "target": "src/assets/editorial/g20-0068.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0588.JPG",
+    "target": "src/assets/editorial/g20-0069.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0589.JPG",
+    "target": "src/assets/editorial/g20-0070.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0590.JPG",
+    "target": "src/assets/editorial/g20-0071.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0591.JPG",
+    "target": "src/assets/editorial/g20-0072.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0592.JPG",
+    "target": "src/assets/editorial/g20-0073.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0593.JPG",
+    "target": "src/assets/editorial/g20-0074.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0594.JPG",
+    "target": "src/assets/editorial/g20-0075.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0595.JPG",
+    "target": "src/assets/editorial/g20-0076.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0596.JPG",
+    "target": "src/assets/editorial/g20-0077.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0597.JPG",
+    "target": "src/assets/editorial/g20-0078.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0598.JPG",
+    "target": "src/assets/editorial/g20-0079.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0599.JPG",
+    "target": "src/assets/editorial/g20-0080.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0600.JPG",
+    "target": "src/assets/editorial/g20-0081.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0601.JPG",
+    "target": "src/assets/editorial/g20-0082.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0602.JPG",
+    "target": "src/assets/editorial/g20-0083.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0603.JPG",
+    "target": "src/assets/editorial/g20-0084.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0604.JPG",
+    "target": "src/assets/editorial/g20-0085.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0605.JPG",
+    "target": "src/assets/editorial/g20-0086.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/IMG_0606.JPG",
+    "target": "src/assets/editorial/g20-0087.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-2d3f4602a24594c9a988b9c74fdee751d16bd04f71eb9c781b8adfefff798170-Picture.jpg",
+    "target": "src/assets/editorial/g20-0088.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-9aa7e3214901ef8d63dad15863b9b28ec791bca1fbe960391b2fd4122150123b-Picture.jpg",
+    "target": "src/assets/editorial/g20-0089.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-16d9376a47006ff051e92f1ba6acc60ff5783b310bc80cda56bc58897e06df5a-Picture.jpg",
+    "target": "src/assets/editorial/g20-0090.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-55dd8258e5b513aa16500950581a69d57a4620783d31883c2434311994dd3ae5-Picture.jpg",
+    "target": "src/assets/editorial/g20-0091.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-b2e65527ac16a30aad4a827c6c871539f9b9886aa18f11f4d5fdac470d619e38-Picture.jpg",
+    "target": "src/assets/editorial/g20-0092.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-d64042480f5e329377aca4f9f3e54bdd82ac5b9adc85f5f8c5de93e1e5a05c39-Picture.jpg",
+    "target": "src/assets/editorial/g20-0093.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-e446f8fa6840225fb97091bc7fbc630eb333616c22e02d86a52b462bc9de56f6-Picture.jpg",
+    "target": "src/assets/editorial/g20-0094.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-04-f27d30e8d29127793021c3fbf6b5bcb53b5379ef57db6c40c7a9220356d63a9e-Picture.jpg",
+    "target": "src/assets/editorial/g20-0095.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-1af701ca5fadb64aab85bb33b3127776eb24f11e3248725ea3efa25286dd2e36-Picture.jpg",
+    "target": "src/assets/editorial/g20-0096.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-3b284610edf6d268a11ba65fce663302eb80fe65c5883df2c0d668f55d8e6949-Picture.jpg",
+    "target": "src/assets/editorial/g20-0097.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-4c04a104f257121dee3242df557095632dd177ada2f6ad711fc8c6e5fd5330bf-Picture.jpg",
+    "target": "src/assets/editorial/g20-0098.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-7a7a13545cba6621e0c2c6169f179d4e51baf9b63cccf35ccaf5df6af0ee31d8-Picture.jpg",
+    "target": "src/assets/editorial/g20-0099.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-8a70cab8f44fdb0b1c1b22ad1a91f66cc67c6286306361502e4d77d6f2be2116-Picture.jpg",
+    "target": "src/assets/editorial/g20-0100.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-721b8918879f2bd410077edbf64added76026cbe75c62ff25b7eb570f4b2a82c-Picture.jpg",
+    "target": "src/assets/editorial/g20-0101.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-582155c63cbb46e75152c535f71e233f63c7c52746dc34555af67eee1df9c103-Picture.jpg",
+    "target": "src/assets/editorial/g20-0102.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-3900215818b6bbd58a9099467d1bbb0b27d837518d4bcf399fbf186f6b938ec4-Picture.jpg",
+    "target": "src/assets/editorial/g20-0103.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-aff86df9b59582c5c9299fa77c8509ebbdea5c15fd456e98aac3c77b0a604a25-Picture.jpg",
+    "target": "src/assets/editorial/g20-0104.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-f1c97e9d583d690b5016628a42436182c2701a39496f269e71c8111f1d799674-Picture.jpg",
+    "target": "src/assets/editorial/g20-0105.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-f3404b45cefbad21f2284fb5a86db283fcd61bb8daa7bf90a2c20ea29eea73ba-Picture.jpg",
+    "target": "src/assets/editorial/g20-0106.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/009kemp2017/media-share-0-02-05-f7368c94af96384b86d9fa177b6cb8bf86239461825dd449478f5f1548bfa181-Picture.jpg",
+    "target": "src/assets/editorial/g20-0107.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/29CD8326-4040-41B4-B886-6B80301D0CCD.jpg",
+    "target": "src/assets/editorial/g21-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/44F6FDB7-81AD-4181-8E41-DB26A28421B4.jpg",
+    "target": "src/assets/editorial/g21-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/1869D4A4-A0AF-4DD3-9877-B9BC9C9006CD.jpg",
+    "target": "src/assets/editorial/g21-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/4107B8BB-8B6C-41E2-A271-7D58741FA973.jpg",
+    "target": "src/assets/editorial/g21-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/5484286C-E7AB-48E8-86C8-BCE6E4E4E1A2.jpg",
+    "target": "src/assets/editorial/g21-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/B06011C6-DA88-4E6C-ACDC-94E17A3D1230.jpg",
+    "target": "src/assets/editorial/g21-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/BDD79324-EABA-44D4-96E9-038C765ED7A3.jpg",
+    "target": "src/assets/editorial/g21-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/BE4D340F-D5D1-40F1-BD0D-57F5DC964735.jpg",
+    "target": "src/assets/editorial/g21-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/CDA791D5-5F16-4155-8CEF-203AAEC84D18.jpg",
+    "target": "src/assets/editorial/g21-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/D737AC57-C569-4A91-A3F5-8AE303C045A3.jpg",
+    "target": "src/assets/editorial/g21-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/DF1A5395-0287-478E-92B9-41FFA71C2252.jpg",
+    "target": "src/assets/editorial/g21-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/F9338CD7-0DDF-4B08-8325-21D9E956427C.jpg",
+    "target": "src/assets/editorial/g21-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/3C6CB745-8FEF-442C-A805-A83202D2E6BB.jpg",
+    "target": "src/assets/editorial/g21-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/3ED4C623-3F18-4456-9CA8-9254B9FFDC88.jpg",
+    "target": "src/assets/editorial/g21-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/8E03A185-6FCD-412A-BE2C-9AD8502A3089.jpg",
+    "target": "src/assets/editorial/g21-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/9DBF2231-89A4-446A-869F-707534699B85.jpg",
+    "target": "src/assets/editorial/g21-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/9E109168-9BFB-4A0D-9512-925485C25795.jpg",
+    "target": "src/assets/editorial/g21-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/9FC3831F-5312-4536-8301-3EA6D7FAA5F5.jpg",
+    "target": "src/assets/editorial/g21-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/41A2EF2F-AF66-4AF9-A1E3-9DDFDDBDC270.jpg",
+    "target": "src/assets/editorial/g21-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/82D4219B-C2DE-40A2-8D49-922A9B94BD27.jpg",
+    "target": "src/assets/editorial/g21-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/551A6845-A6AB-46D9-89C3-EB9D3CC930B2.jpg",
+    "target": "src/assets/editorial/g21-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/2046D869-FB5C-476D-8AA7-C9668663A440.jpg",
+    "target": "src/assets/editorial/g21-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/2268D881-9CE7-420E-BA67-6C217E52583D.jpg",
+    "target": "src/assets/editorial/g21-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/2286BBED-78E9-4ADA-A9FA-3C923942BBCC.jpg",
+    "target": "src/assets/editorial/g21-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/AED29F68-D82E-425E-9293-11CA3CBD04AC.jpg",
+    "target": "src/assets/editorial/g21-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/B9B39537-1346-4080-8340-DC2F2C7E70E6.jpg",
+    "target": "src/assets/editorial/g21-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/B65B1719-AFC3-496B-ABA0-94083B47ED77.jpg",
+    "target": "src/assets/editorial/g21-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/B38533DC-F64D-49AB-A6E2-3ECDC5F67A1E.jpg",
+    "target": "src/assets/editorial/g21-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/BE84557D-76DD-4C84-916C-404AB5CC347D.jpg",
+    "target": "src/assets/editorial/g21-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/CE855155-812A-4E8F-A6F0-2EC3DD5E6560.jpg",
+    "target": "src/assets/editorial/g21-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/D19A2A09-C321-4608-8176-37C0E72146B7.jpg",
+    "target": "src/assets/editorial/g21-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/D5037898-3ADD-4203-8959-60305869B4B4.jpg",
+    "target": "src/assets/editorial/g21-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/E1D550F4-6B61-4F42-948A-9CF99A18C84A.jpg",
+    "target": "src/assets/editorial/g21-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/EDC1BDEE-D5C5-4C07-BE13-A076A83EED02.jpg",
+    "target": "src/assets/editorial/g21-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/0B43C51B-94C6-4FF0-A614-C14D252D76AA.jpg",
+    "target": "src/assets/editorial/g21-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/0D256977-B386-44A5-88C0-9D3091D8D39F.jpg",
+    "target": "src/assets/editorial/g21-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/3CF085AA-F02B-40F7-BE1F-DD14DF8FA41A.jpg",
+    "target": "src/assets/editorial/g21-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/4AFF9D6D-7265-4777-AA25-4B76AF188AA0.jpg",
+    "target": "src/assets/editorial/g21-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/6FC03FC8-4272-43D8-9D48-FAC9B47FC8A8.jpg",
+    "target": "src/assets/editorial/g21-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/83CC275D-751C-4043-8D21-5A7E44ADA952.jpg",
+    "target": "src/assets/editorial/g21-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/126DA193-C1F9-48EC-BC58-DE90B5FFB289.jpg",
+    "target": "src/assets/editorial/g21-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/1187A574-BB57-4BC3-955F-380FCAA0FC89.jpg",
+    "target": "src/assets/editorial/g21-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/793968D7-9934-420C-BBF9-C692E85C0198.jpg",
+    "target": "src/assets/editorial/g21-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/BC4B0C25-68C6-4D92-8A9B-F76FF794CCFC.jpg",
+    "target": "src/assets/editorial/g21-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/D4DD1D2E-D99E-40A4-9AAA-E28929A2D152.jpg",
+    "target": "src/assets/editorial/g21-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/E0F9D46D-8AC9-4E50-BC6B-A13A7724AF9C.jpg",
+    "target": "src/assets/editorial/g21-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/F3AC6DA4-86FB-4C55-97F3-87FF197AF126.jpg",
+    "target": "src/assets/editorial/g21-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/FD3EAF4A-8550-49A6-A58F-2F489AF69444.jpg",
+    "target": "src/assets/editorial/g21-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0001.jpg",
+    "target": "src/assets/editorial/g21-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0002.jpg",
+    "target": "src/assets/editorial/g21-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0003.jpg",
+    "target": "src/assets/editorial/g21-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0004.jpg",
+    "target": "src/assets/editorial/g21-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0005.jpg",
+    "target": "src/assets/editorial/g21-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0006.jpg",
+    "target": "src/assets/editorial/g21-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0007.jpg",
+    "target": "src/assets/editorial/g21-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0008.jpg",
+    "target": "src/assets/editorial/g21-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0009.jpg",
+    "target": "src/assets/editorial/g21-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0010.jpg",
+    "target": "src/assets/editorial/g21-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0012.jpg",
+    "target": "src/assets/editorial/g21-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0013.jpg",
+    "target": "src/assets/editorial/g21-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0014.jpg",
+    "target": "src/assets/editorial/g21-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0015.jpg",
+    "target": "src/assets/editorial/g21-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0016.jpg",
+    "target": "src/assets/editorial/g21-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0017.jpg",
+    "target": "src/assets/editorial/g21-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0018.jpg",
+    "target": "src/assets/editorial/g21-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0019.jpg",
+    "target": "src/assets/editorial/g21-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0020.jpg",
+    "target": "src/assets/editorial/g21-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0021.jpg",
+    "target": "src/assets/editorial/g21-0067.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0022.jpg",
+    "target": "src/assets/editorial/g21-0068.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0024.jpg",
+    "target": "src/assets/editorial/g21-0069.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0025.jpg",
+    "target": "src/assets/editorial/g21-0070.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0026.jpg",
+    "target": "src/assets/editorial/g21-0071.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0027.jpg",
+    "target": "src/assets/editorial/g21-0072.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0028.jpg",
+    "target": "src/assets/editorial/g21-0073.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0029.jpg",
+    "target": "src/assets/editorial/g21-0074.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0030.jpg",
+    "target": "src/assets/editorial/g21-0075.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0031.jpg",
+    "target": "src/assets/editorial/g21-0076.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0032.jpg",
+    "target": "src/assets/editorial/g21-0077.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0033.jpg",
+    "target": "src/assets/editorial/g21-0078.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0034.jpg",
+    "target": "src/assets/editorial/g21-0079.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0035.jpg",
+    "target": "src/assets/editorial/g21-0080.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0037.jpg",
+    "target": "src/assets/editorial/g21-0081.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0038.jpg",
+    "target": "src/assets/editorial/g21-0082.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0039.jpg",
+    "target": "src/assets/editorial/g21-0083.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0040.jpg",
+    "target": "src/assets/editorial/g21-0084.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0041.jpg",
+    "target": "src/assets/editorial/g21-0085.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0042.jpg",
+    "target": "src/assets/editorial/g21-0086.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0043.jpg",
+    "target": "src/assets/editorial/g21-0087.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0045.jpg",
+    "target": "src/assets/editorial/g21-0088.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0046.jpg",
+    "target": "src/assets/editorial/g21-0089.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0047.jpg",
+    "target": "src/assets/editorial/g21-0090.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0048.jpg",
+    "target": "src/assets/editorial/g21-0091.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0049.jpg",
+    "target": "src/assets/editorial/g21-0092.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0050.jpg",
+    "target": "src/assets/editorial/g21-0093.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0051.jpg",
+    "target": "src/assets/editorial/g21-0094.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0052.jpg",
+    "target": "src/assets/editorial/g21-0095.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0053.jpg",
+    "target": "src/assets/editorial/g21-0096.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0054.jpg",
+    "target": "src/assets/editorial/g21-0097.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0055.jpg",
+    "target": "src/assets/editorial/g21-0098.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0056.jpg",
+    "target": "src/assets/editorial/g21-0099.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0057.jpg",
+    "target": "src/assets/editorial/g21-0100.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0058.jpg",
+    "target": "src/assets/editorial/g21-0101.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0059.jpg",
+    "target": "src/assets/editorial/g21-0102.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0060.jpg",
+    "target": "src/assets/editorial/g21-0103.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0061.jpg",
+    "target": "src/assets/editorial/g21-0104.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0062.jpg",
+    "target": "src/assets/editorial/g21-0105.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0063.jpg",
+    "target": "src/assets/editorial/g21-0106.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0064.jpg",
+    "target": "src/assets/editorial/g21-0107.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0065.jpg",
+    "target": "src/assets/editorial/g21-0108.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0066.jpg",
+    "target": "src/assets/editorial/g21-0109.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0067.jpg",
+    "target": "src/assets/editorial/g21-0110.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0068.jpg",
+    "target": "src/assets/editorial/g21-0111.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0069.jpg",
+    "target": "src/assets/editorial/g21-0112.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0070.jpg",
+    "target": "src/assets/editorial/g21-0113.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0071.jpg",
+    "target": "src/assets/editorial/g21-0114.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0072.jpg",
+    "target": "src/assets/editorial/g21-0115.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0073.jpg",
+    "target": "src/assets/editorial/g21-0116.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0074.jpg",
+    "target": "src/assets/editorial/g21-0117.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/010kemp2018/IMG-20180727-WA0075.jpg",
+    "target": "src/assets/editorial/g21-0118.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0000.jpg",
+    "target": "src/assets/editorial/g22-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0001.jpg",
+    "target": "src/assets/editorial/g22-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0002.jpg",
+    "target": "src/assets/editorial/g22-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0003.jpg",
+    "target": "src/assets/editorial/g22-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0004.jpg",
+    "target": "src/assets/editorial/g22-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0005.jpg",
+    "target": "src/assets/editorial/g22-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0006.jpg",
+    "target": "src/assets/editorial/g22-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0007.jpg",
+    "target": "src/assets/editorial/g22-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0008.jpg",
+    "target": "src/assets/editorial/g22-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0009.jpg",
+    "target": "src/assets/editorial/g22-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0010.jpg",
+    "target": "src/assets/editorial/g22-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0011.jpg",
+    "target": "src/assets/editorial/g22-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0012.jpg",
+    "target": "src/assets/editorial/g22-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0013.jpg",
+    "target": "src/assets/editorial/g22-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0014.jpg",
+    "target": "src/assets/editorial/g22-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0015.jpg",
+    "target": "src/assets/editorial/g22-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0016.jpg",
+    "target": "src/assets/editorial/g22-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0017.jpg",
+    "target": "src/assets/editorial/g22-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0018.jpg",
+    "target": "src/assets/editorial/g22-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0019.jpg",
+    "target": "src/assets/editorial/g22-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0020.jpg",
+    "target": "src/assets/editorial/g22-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0021.jpg",
+    "target": "src/assets/editorial/g22-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0022.jpg",
+    "target": "src/assets/editorial/g22-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0023.jpg",
+    "target": "src/assets/editorial/g22-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0024.jpg",
+    "target": "src/assets/editorial/g22-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0025.jpg",
+    "target": "src/assets/editorial/g22-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0026.jpg",
+    "target": "src/assets/editorial/g22-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0027.jpg",
+    "target": "src/assets/editorial/g22-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0028.jpg",
+    "target": "src/assets/editorial/g22-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0029.jpg",
+    "target": "src/assets/editorial/g22-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0030.jpg",
+    "target": "src/assets/editorial/g22-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0031.jpg",
+    "target": "src/assets/editorial/g22-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0032.jpg",
+    "target": "src/assets/editorial/g22-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0033.jpg",
+    "target": "src/assets/editorial/g22-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0034.jpg",
+    "target": "src/assets/editorial/g22-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0035.jpg",
+    "target": "src/assets/editorial/g22-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0036.jpg",
+    "target": "src/assets/editorial/g22-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0037.jpg",
+    "target": "src/assets/editorial/g22-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0038.jpg",
+    "target": "src/assets/editorial/g22-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0039.jpg",
+    "target": "src/assets/editorial/g22-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0040.jpg",
+    "target": "src/assets/editorial/g22-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0041.jpg",
+    "target": "src/assets/editorial/g22-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0042.jpg",
+    "target": "src/assets/editorial/g22-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0043.jpg",
+    "target": "src/assets/editorial/g22-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0044.jpg",
+    "target": "src/assets/editorial/g22-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0045.jpg",
+    "target": "src/assets/editorial/g22-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0046.jpg",
+    "target": "src/assets/editorial/g22-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0047.jpg",
+    "target": "src/assets/editorial/g22-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0048.jpg",
+    "target": "src/assets/editorial/g22-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0049.jpg",
+    "target": "src/assets/editorial/g22-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0050.jpg",
+    "target": "src/assets/editorial/g22-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0051.jpg",
+    "target": "src/assets/editorial/g22-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0052.jpg",
+    "target": "src/assets/editorial/g22-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0053.jpg",
+    "target": "src/assets/editorial/g22-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0054.jpg",
+    "target": "src/assets/editorial/g22-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0055.jpg",
+    "target": "src/assets/editorial/g22-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0056.jpg",
+    "target": "src/assets/editorial/g22-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0057.jpg",
+    "target": "src/assets/editorial/g22-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0058.jpg",
+    "target": "src/assets/editorial/g22-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0059.jpg",
+    "target": "src/assets/editorial/g22-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200717-WA0060.jpg",
+    "target": "src/assets/editorial/g22-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200720-WA0000.jpg",
+    "target": "src/assets/editorial/g22-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200720-WA0001.jpg",
+    "target": "src/assets/editorial/g22-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200720-WA0002.jpg",
+    "target": "src/assets/editorial/g22-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200720-WA0003.jpg",
+    "target": "src/assets/editorial/g22-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200720-WA0004.jpg",
+    "target": "src/assets/editorial/g22-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/011kemp2020/IMG-20200720-WA0005.jpg",
+    "target": "src/assets/editorial/g22-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/01.jpg",
+    "target": "src/assets/editorial/g1-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/02.jpg",
+    "target": "src/assets/editorial/g1-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/03.jpg",
+    "target": "src/assets/editorial/g1-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/04.jpg",
+    "target": "src/assets/editorial/g1-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/05.jpg",
+    "target": "src/assets/editorial/g1-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/06.jpg",
+    "target": "src/assets/editorial/g1-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/07.jpg",
+    "target": "src/assets/editorial/g1-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/08.jpg",
+    "target": "src/assets/editorial/g1-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/001zakladni/09.jpg",
+    "target": "src/assets/editorial/g1-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00002.jpg",
+    "target": "src/assets/editorial/g2-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00003.jpg",
+    "target": "src/assets/editorial/g2-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00004.jpg",
+    "target": "src/assets/editorial/g2-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00005.jpg",
+    "target": "src/assets/editorial/g2-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00006.jpg",
+    "target": "src/assets/editorial/g2-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00007.jpg",
+    "target": "src/assets/editorial/g2-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00008.jpg",
+    "target": "src/assets/editorial/g2-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00009.jpg",
+    "target": "src/assets/editorial/g2-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00010.jpg",
+    "target": "src/assets/editorial/g2-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00011.jpg",
+    "target": "src/assets/editorial/g2-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00012.jpg",
+    "target": "src/assets/editorial/g2-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00013.jpg",
+    "target": "src/assets/editorial/g2-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00014.jpg",
+    "target": "src/assets/editorial/g2-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00015.jpg",
+    "target": "src/assets/editorial/g2-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00016.jpg",
+    "target": "src/assets/editorial/g2-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00017.jpg",
+    "target": "src/assets/editorial/g2-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00018.jpg",
+    "target": "src/assets/editorial/g2-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00019.jpg",
+    "target": "src/assets/editorial/g2-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00020.jpg",
+    "target": "src/assets/editorial/g2-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00021.jpg",
+    "target": "src/assets/editorial/g2-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00022.jpg",
+    "target": "src/assets/editorial/g2-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00023.jpg",
+    "target": "src/assets/editorial/g2-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00024.jpg",
+    "target": "src/assets/editorial/g2-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00025.jpg",
+    "target": "src/assets/editorial/g2-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00026.jpg",
+    "target": "src/assets/editorial/g2-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00027.jpg",
+    "target": "src/assets/editorial/g2-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00028.jpg",
+    "target": "src/assets/editorial/g2-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00029.jpg",
+    "target": "src/assets/editorial/g2-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00030.jpg",
+    "target": "src/assets/editorial/g2-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00031.jpg",
+    "target": "src/assets/editorial/g2-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00032.jpg",
+    "target": "src/assets/editorial/g2-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00033.jpg",
+    "target": "src/assets/editorial/g2-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00034.jpg",
+    "target": "src/assets/editorial/g2-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00035.jpg",
+    "target": "src/assets/editorial/g2-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00036.jpg",
+    "target": "src/assets/editorial/g2-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00037.jpg",
+    "target": "src/assets/editorial/g2-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00038.jpg",
+    "target": "src/assets/editorial/g2-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00039.jpg",
+    "target": "src/assets/editorial/g2-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00040.jpg",
+    "target": "src/assets/editorial/g2-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00041.jpg",
+    "target": "src/assets/editorial/g2-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00042.jpg",
+    "target": "src/assets/editorial/g2-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00043.jpg",
+    "target": "src/assets/editorial/g2-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00044.jpg",
+    "target": "src/assets/editorial/g2-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00045.jpg",
+    "target": "src/assets/editorial/g2-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00046.jpg",
+    "target": "src/assets/editorial/g2-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00047.jpg",
+    "target": "src/assets/editorial/g2-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00048.jpg",
+    "target": "src/assets/editorial/g2-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00049.jpg",
+    "target": "src/assets/editorial/g2-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00050.jpg",
+    "target": "src/assets/editorial/g2-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00051.jpg",
+    "target": "src/assets/editorial/g2-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00052.jpg",
+    "target": "src/assets/editorial/g2-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00053.jpg",
+    "target": "src/assets/editorial/g2-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00054.jpg",
+    "target": "src/assets/editorial/g2-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00055.jpg",
+    "target": "src/assets/editorial/g2-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00056.jpg",
+    "target": "src/assets/editorial/g2-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00057.jpg",
+    "target": "src/assets/editorial/g2-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00058.jpg",
+    "target": "src/assets/editorial/g2-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00059.jpg",
+    "target": "src/assets/editorial/g2-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00060.jpg",
+    "target": "src/assets/editorial/g2-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00061.jpg",
+    "target": "src/assets/editorial/g2-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00062.jpg",
+    "target": "src/assets/editorial/g2-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00063.jpg",
+    "target": "src/assets/editorial/g2-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00064.jpg",
+    "target": "src/assets/editorial/g2-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00065.jpg",
+    "target": "src/assets/editorial/g2-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00066.jpg",
+    "target": "src/assets/editorial/g2-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00067.jpg",
+    "target": "src/assets/editorial/g2-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00068.jpg",
+    "target": "src/assets/editorial/g2-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00076.jpg",
+    "target": "src/assets/editorial/g2-0067.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/002trenink20120122/dsc00077.jpg",
+    "target": "src/assets/editorial/g2-0068.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100521.jpg",
+    "target": "src/assets/editorial/g6-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100645.jpg",
+    "target": "src/assets/editorial/g6-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100651.jpg",
+    "target": "src/assets/editorial/g6-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100659.jpg",
+    "target": "src/assets/editorial/g6-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100710.jpg",
+    "target": "src/assets/editorial/g6-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100807.jpg",
+    "target": "src/assets/editorial/g6-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140716_100823.jpg",
+    "target": "src/assets/editorial/g6-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140718_165211.jpg",
+    "target": "src/assets/editorial/g6-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-20140718_172546.jpg",
+    "target": "src/assets/editorial/g6-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0639.jpg",
+    "target": "src/assets/editorial/g6-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0641.jpg",
+    "target": "src/assets/editorial/g6-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0655.jpg",
+    "target": "src/assets/editorial/g6-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0664.jpg",
+    "target": "src/assets/editorial/g6-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0668.jpg",
+    "target": "src/assets/editorial/g6-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0670.jpg",
+    "target": "src/assets/editorial/g6-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0671.jpg",
+    "target": "src/assets/editorial/g6-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0690.jpg",
+    "target": "src/assets/editorial/g6-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0691.jpg",
+    "target": "src/assets/editorial/g6-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0696.jpg",
+    "target": "src/assets/editorial/g6-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0699.jpg",
+    "target": "src/assets/editorial/g6-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0700.jpg",
+    "target": "src/assets/editorial/g6-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0701.jpg",
+    "target": "src/assets/editorial/g6-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0705.jpg",
+    "target": "src/assets/editorial/g6-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0711.jpg",
+    "target": "src/assets/editorial/g6-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0723.jpg",
+    "target": "src/assets/editorial/g6-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0725.jpg",
+    "target": "src/assets/editorial/g6-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0729.jpg",
+    "target": "src/assets/editorial/g6-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/005havlbrod2014/2014-GS-IMAG0730.jpg",
+    "target": "src/assets/editorial/g6-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0018.jpg",
+    "target": "src/assets/editorial/g23-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0019.jpg",
+    "target": "src/assets/editorial/g23-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0023.jpg",
+    "target": "src/assets/editorial/g23-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0024.jpg",
+    "target": "src/assets/editorial/g23-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0025.jpg",
+    "target": "src/assets/editorial/g23-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0027.jpg",
+    "target": "src/assets/editorial/g23-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0028.jpg",
+    "target": "src/assets/editorial/g23-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0029.jpg",
+    "target": "src/assets/editorial/g23-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0030.jpg",
+    "target": "src/assets/editorial/g23-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0031.jpg",
+    "target": "src/assets/editorial/g23-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0032.jpg",
+    "target": "src/assets/editorial/g23-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0033.jpg",
+    "target": "src/assets/editorial/g23-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0034.jpg",
+    "target": "src/assets/editorial/g23-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0035.jpg",
+    "target": "src/assets/editorial/g23-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0036.jpg",
+    "target": "src/assets/editorial/g23-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0037.jpg",
+    "target": "src/assets/editorial/g23-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0038.jpg",
+    "target": "src/assets/editorial/g23-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0039.jpg",
+    "target": "src/assets/editorial/g23-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0040.jpg",
+    "target": "src/assets/editorial/g23-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0041.jpg",
+    "target": "src/assets/editorial/g23-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0042.jpg",
+    "target": "src/assets/editorial/g23-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0043.jpg",
+    "target": "src/assets/editorial/g23-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0044.jpg",
+    "target": "src/assets/editorial/g23-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0045.jpg",
+    "target": "src/assets/editorial/g23-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0046.jpg",
+    "target": "src/assets/editorial/g23-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0047.jpg",
+    "target": "src/assets/editorial/g23-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0048.jpg",
+    "target": "src/assets/editorial/g23-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0049.jpg",
+    "target": "src/assets/editorial/g23-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0055.jpg",
+    "target": "src/assets/editorial/g23-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0056.jpg",
+    "target": "src/assets/editorial/g23-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0057.jpg",
+    "target": "src/assets/editorial/g23-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0058.jpg",
+    "target": "src/assets/editorial/g23-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0059.jpg",
+    "target": "src/assets/editorial/g23-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0060.jpg",
+    "target": "src/assets/editorial/g23-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0061.jpg",
+    "target": "src/assets/editorial/g23-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0062.jpg",
+    "target": "src/assets/editorial/g23-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0063.jpg",
+    "target": "src/assets/editorial/g23-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0064.jpg",
+    "target": "src/assets/editorial/g23-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0065.jpg",
+    "target": "src/assets/editorial/g23-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0066.jpg",
+    "target": "src/assets/editorial/g23-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0067.jpg",
+    "target": "src/assets/editorial/g23-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0068.jpg",
+    "target": "src/assets/editorial/g23-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0069.jpg",
+    "target": "src/assets/editorial/g23-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0070.jpg",
+    "target": "src/assets/editorial/g23-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0071.jpg",
+    "target": "src/assets/editorial/g23-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0072.jpg",
+    "target": "src/assets/editorial/g23-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0073.jpg",
+    "target": "src/assets/editorial/g23-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0074.jpg",
+    "target": "src/assets/editorial/g23-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0075.jpg",
+    "target": "src/assets/editorial/g23-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0076.jpg",
+    "target": "src/assets/editorial/g23-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0077.jpg",
+    "target": "src/assets/editorial/g23-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0078.jpg",
+    "target": "src/assets/editorial/g23-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0079.jpg",
+    "target": "src/assets/editorial/g23-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0080.jpg",
+    "target": "src/assets/editorial/g23-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0081.jpg",
+    "target": "src/assets/editorial/g23-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0082.jpg",
+    "target": "src/assets/editorial/g23-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0083.jpg",
+    "target": "src/assets/editorial/g23-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0084.jpg",
+    "target": "src/assets/editorial/g23-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0085.jpg",
+    "target": "src/assets/editorial/g23-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0086.jpg",
+    "target": "src/assets/editorial/g23-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0087.jpg",
+    "target": "src/assets/editorial/g23-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0088.jpg",
+    "target": "src/assets/editorial/g23-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0089.jpg",
+    "target": "src/assets/editorial/g23-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0090.jpg",
+    "target": "src/assets/editorial/g23-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0091.jpg",
+    "target": "src/assets/editorial/g23-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0092.jpg",
+    "target": "src/assets/editorial/g23-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0093.jpg",
+    "target": "src/assets/editorial/g23-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0094.jpg",
+    "target": "src/assets/editorial/g23-0067.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0095.jpg",
+    "target": "src/assets/editorial/g23-0068.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0096.jpg",
+    "target": "src/assets/editorial/g23-0069.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0097.jpg",
+    "target": "src/assets/editorial/g23-0070.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0098.jpg",
+    "target": "src/assets/editorial/g23-0071.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0099.jpg",
+    "target": "src/assets/editorial/g23-0072.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0100.jpg",
+    "target": "src/assets/editorial/g23-0073.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0101.jpg",
+    "target": "src/assets/editorial/g23-0074.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0102.jpg",
+    "target": "src/assets/editorial/g23-0075.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0103.jpg",
+    "target": "src/assets/editorial/g23-0076.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0104.jpg",
+    "target": "src/assets/editorial/g23-0077.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0105.jpg",
+    "target": "src/assets/editorial/g23-0078.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0106.jpg",
+    "target": "src/assets/editorial/g23-0079.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0107.jpg",
+    "target": "src/assets/editorial/g23-0080.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0108.jpg",
+    "target": "src/assets/editorial/g23-0081.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0109.jpg",
+    "target": "src/assets/editorial/g23-0082.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0110.jpg",
+    "target": "src/assets/editorial/g23-0083.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0111.jpg",
+    "target": "src/assets/editorial/g23-0084.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0112.jpg",
+    "target": "src/assets/editorial/g23-0085.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0113.jpg",
+    "target": "src/assets/editorial/g23-0086.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0114.jpg",
+    "target": "src/assets/editorial/g23-0087.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0115.jpg",
+    "target": "src/assets/editorial/g23-0088.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0116.jpg",
+    "target": "src/assets/editorial/g23-0089.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0117.jpg",
+    "target": "src/assets/editorial/g23-0090.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0118.jpg",
+    "target": "src/assets/editorial/g23-0091.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0119.jpg",
+    "target": "src/assets/editorial/g23-0092.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0120.jpg",
+    "target": "src/assets/editorial/g23-0093.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0121.jpg",
+    "target": "src/assets/editorial/g23-0094.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0122.jpg",
+    "target": "src/assets/editorial/g23-0095.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0123.jpg",
+    "target": "src/assets/editorial/g23-0096.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0124.jpg",
+    "target": "src/assets/editorial/g23-0097.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0125.jpg",
+    "target": "src/assets/editorial/g23-0098.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0126.jpg",
+    "target": "src/assets/editorial/g23-0099.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0127.jpg",
+    "target": "src/assets/editorial/g23-0100.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0128.jpg",
+    "target": "src/assets/editorial/g23-0101.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0129.jpg",
+    "target": "src/assets/editorial/g23-0102.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0130.jpg",
+    "target": "src/assets/editorial/g23-0103.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0131.jpg",
+    "target": "src/assets/editorial/g23-0104.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0132.jpg",
+    "target": "src/assets/editorial/g23-0105.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0133.jpg",
+    "target": "src/assets/editorial/g23-0106.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0134.jpg",
+    "target": "src/assets/editorial/g23-0107.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0135.jpg",
+    "target": "src/assets/editorial/g23-0108.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0136.jpg",
+    "target": "src/assets/editorial/g23-0109.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0137.jpg",
+    "target": "src/assets/editorial/g23-0110.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0138.jpg",
+    "target": "src/assets/editorial/g23-0111.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0139.jpg",
+    "target": "src/assets/editorial/g23-0112.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0140.jpg",
+    "target": "src/assets/editorial/g23-0113.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0141.jpg",
+    "target": "src/assets/editorial/g23-0114.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0142.jpg",
+    "target": "src/assets/editorial/g23-0115.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0143.jpg",
+    "target": "src/assets/editorial/g23-0116.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0144.jpg",
+    "target": "src/assets/editorial/g23-0117.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0145.jpg",
+    "target": "src/assets/editorial/g23-0118.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0146.jpg",
+    "target": "src/assets/editorial/g23-0119.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0147.jpg",
+    "target": "src/assets/editorial/g23-0120.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0148.jpg",
+    "target": "src/assets/editorial/g23-0121.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0149.jpg",
+    "target": "src/assets/editorial/g23-0122.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0150.jpg",
+    "target": "src/assets/editorial/g23-0123.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0151.jpg",
+    "target": "src/assets/editorial/g23-0124.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0152.jpg",
+    "target": "src/assets/editorial/g23-0125.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0153.jpg",
+    "target": "src/assets/editorial/g23-0126.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0154.jpg",
+    "target": "src/assets/editorial/g23-0127.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0155.jpg",
+    "target": "src/assets/editorial/g23-0128.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0156.jpg",
+    "target": "src/assets/editorial/g23-0129.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0157.jpg",
+    "target": "src/assets/editorial/g23-0130.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0158.jpg",
+    "target": "src/assets/editorial/g23-0131.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0159.jpg",
+    "target": "src/assets/editorial/g23-0132.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0160.jpg",
+    "target": "src/assets/editorial/g23-0133.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0161.jpg",
+    "target": "src/assets/editorial/g23-0134.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0162.jpg",
+    "target": "src/assets/editorial/g23-0135.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0163.jpg",
+    "target": "src/assets/editorial/g23-0136.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0164.jpg",
+    "target": "src/assets/editorial/g23-0137.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0172.jpg",
+    "target": "src/assets/editorial/g23-0138.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0173.jpg",
+    "target": "src/assets/editorial/g23-0139.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0174.jpg",
+    "target": "src/assets/editorial/g23-0140.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0175.jpg",
+    "target": "src/assets/editorial/g23-0141.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0176.jpg",
+    "target": "src/assets/editorial/g23-0142.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0177.jpg",
+    "target": "src/assets/editorial/g23-0143.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0178.jpg",
+    "target": "src/assets/editorial/g23-0144.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0179.jpg",
+    "target": "src/assets/editorial/g23-0145.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0180.jpg",
+    "target": "src/assets/editorial/g23-0146.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0181.jpg",
+    "target": "src/assets/editorial/g23-0147.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0182.jpg",
+    "target": "src/assets/editorial/g23-0148.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0183.jpg",
+    "target": "src/assets/editorial/g23-0149.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0184.jpg",
+    "target": "src/assets/editorial/g23-0150.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0185.jpg",
+    "target": "src/assets/editorial/g23-0151.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0186.jpg",
+    "target": "src/assets/editorial/g23-0152.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0187.jpg",
+    "target": "src/assets/editorial/g23-0153.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0188.jpg",
+    "target": "src/assets/editorial/g23-0154.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0189.jpg",
+    "target": "src/assets/editorial/g23-0155.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0190.jpg",
+    "target": "src/assets/editorial/g23-0156.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0191.jpg",
+    "target": "src/assets/editorial/g23-0157.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0192.jpg",
+    "target": "src/assets/editorial/g23-0158.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0193.jpg",
+    "target": "src/assets/editorial/g23-0159.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0194.jpg",
+    "target": "src/assets/editorial/g23-0160.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0195.jpg",
+    "target": "src/assets/editorial/g23-0161.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0196.jpg",
+    "target": "src/assets/editorial/g23-0162.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0197.jpg",
+    "target": "src/assets/editorial/g23-0163.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0198.jpg",
+    "target": "src/assets/editorial/g23-0164.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0199.jpg",
+    "target": "src/assets/editorial/g23-0165.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0200.jpg",
+    "target": "src/assets/editorial/g23-0166.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0201.jpg",
+    "target": "src/assets/editorial/g23-0167.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0202.jpg",
+    "target": "src/assets/editorial/g23-0168.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0203.jpg",
+    "target": "src/assets/editorial/g23-0169.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0204.jpg",
+    "target": "src/assets/editorial/g23-0170.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0205.jpg",
+    "target": "src/assets/editorial/g23-0171.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0206.jpg",
+    "target": "src/assets/editorial/g23-0172.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0207.jpg",
+    "target": "src/assets/editorial/g23-0173.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0208.jpg",
+    "target": "src/assets/editorial/g23-0174.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0209.jpg",
+    "target": "src/assets/editorial/g23-0175.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0210.jpg",
+    "target": "src/assets/editorial/g23-0176.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0211.jpg",
+    "target": "src/assets/editorial/g23-0177.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0212.jpg",
+    "target": "src/assets/editorial/g23-0178.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0213.jpg",
+    "target": "src/assets/editorial/g23-0179.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0214.jpg",
+    "target": "src/assets/editorial/g23-0180.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0215.jpg",
+    "target": "src/assets/editorial/g23-0181.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0216.jpg",
+    "target": "src/assets/editorial/g23-0182.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0217.jpg",
+    "target": "src/assets/editorial/g23-0183.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0218.jpg",
+    "target": "src/assets/editorial/g23-0184.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0220.jpg",
+    "target": "src/assets/editorial/g23-0185.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0221.jpg",
+    "target": "src/assets/editorial/g23-0186.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0224.jpg",
+    "target": "src/assets/editorial/g23-0187.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0225.jpg",
+    "target": "src/assets/editorial/g23-0188.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0226.jpg",
+    "target": "src/assets/editorial/g23-0189.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0227.jpg",
+    "target": "src/assets/editorial/g23-0190.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0228.jpg",
+    "target": "src/assets/editorial/g23-0191.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0229.jpg",
+    "target": "src/assets/editorial/g23-0192.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0230.jpg",
+    "target": "src/assets/editorial/g23-0193.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0231.jpg",
+    "target": "src/assets/editorial/g23-0194.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0232.jpg",
+    "target": "src/assets/editorial/g23-0195.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0233.jpg",
+    "target": "src/assets/editorial/g23-0196.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0234.jpg",
+    "target": "src/assets/editorial/g23-0197.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0235.jpg",
+    "target": "src/assets/editorial/g23-0198.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0236.jpg",
+    "target": "src/assets/editorial/g23-0199.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0237.jpg",
+    "target": "src/assets/editorial/g23-0200.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0238.jpg",
+    "target": "src/assets/editorial/g23-0201.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0239.jpg",
+    "target": "src/assets/editorial/g23-0202.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0242.jpg",
+    "target": "src/assets/editorial/g23-0203.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0243.jpg",
+    "target": "src/assets/editorial/g23-0204.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0244.jpg",
+    "target": "src/assets/editorial/g23-0205.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0245.jpg",
+    "target": "src/assets/editorial/g23-0206.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0246.jpg",
+    "target": "src/assets/editorial/g23-0207.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0247.jpg",
+    "target": "src/assets/editorial/g23-0208.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0248.jpg",
+    "target": "src/assets/editorial/g23-0209.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0249.jpg",
+    "target": "src/assets/editorial/g23-0210.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0250.jpg",
+    "target": "src/assets/editorial/g23-0211.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0251.jpg",
+    "target": "src/assets/editorial/g23-0212.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0252.jpg",
+    "target": "src/assets/editorial/g23-0213.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0253.jpg",
+    "target": "src/assets/editorial/g23-0214.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0254.jpg",
+    "target": "src/assets/editorial/g23-0215.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0255.jpg",
+    "target": "src/assets/editorial/g23-0216.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0256.jpg",
+    "target": "src/assets/editorial/g23-0217.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0258.jpg",
+    "target": "src/assets/editorial/g23-0218.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0259.jpg",
+    "target": "src/assets/editorial/g23-0219.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0260.jpg",
+    "target": "src/assets/editorial/g23-0220.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0261.jpg",
+    "target": "src/assets/editorial/g23-0221.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0262.jpg",
+    "target": "src/assets/editorial/g23-0222.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0263.jpg",
+    "target": "src/assets/editorial/g23-0223.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0264.jpg",
+    "target": "src/assets/editorial/g23-0224.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0265.jpg",
+    "target": "src/assets/editorial/g23-0225.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0266.jpg",
+    "target": "src/assets/editorial/g23-0226.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0267.jpg",
+    "target": "src/assets/editorial/g23-0227.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0268.jpg",
+    "target": "src/assets/editorial/g23-0228.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0269.jpg",
+    "target": "src/assets/editorial/g23-0229.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0270.jpg",
+    "target": "src/assets/editorial/g23-0230.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0271.jpg",
+    "target": "src/assets/editorial/g23-0231.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0272.jpg",
+    "target": "src/assets/editorial/g23-0232.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0273.jpg",
+    "target": "src/assets/editorial/g23-0233.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0274.jpg",
+    "target": "src/assets/editorial/g23-0234.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0275.jpg",
+    "target": "src/assets/editorial/g23-0235.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0276.jpg",
+    "target": "src/assets/editorial/g23-0236.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0277.jpg",
+    "target": "src/assets/editorial/g23-0237.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0278.jpg",
+    "target": "src/assets/editorial/g23-0238.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0279.jpg",
+    "target": "src/assets/editorial/g23-0239.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0280.jpg",
+    "target": "src/assets/editorial/g23-0240.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0282.jpg",
+    "target": "src/assets/editorial/g23-0241.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0283.jpg",
+    "target": "src/assets/editorial/g23-0242.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0285.jpg",
+    "target": "src/assets/editorial/g23-0243.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0286.jpg",
+    "target": "src/assets/editorial/g23-0244.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0288.jpg",
+    "target": "src/assets/editorial/g23-0245.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0289.jpg",
+    "target": "src/assets/editorial/g23-0246.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0290.jpg",
+    "target": "src/assets/editorial/g23-0247.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0291.jpg",
+    "target": "src/assets/editorial/g23-0248.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0292.jpg",
+    "target": "src/assets/editorial/g23-0249.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0293.jpg",
+    "target": "src/assets/editorial/g23-0250.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0294.jpg",
+    "target": "src/assets/editorial/g23-0251.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0295.jpg",
+    "target": "src/assets/editorial/g23-0252.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0298.jpg",
+    "target": "src/assets/editorial/g23-0253.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0299.jpg",
+    "target": "src/assets/editorial/g23-0254.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0300.jpg",
+    "target": "src/assets/editorial/g23-0255.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0301.jpg",
+    "target": "src/assets/editorial/g23-0256.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0302.jpg",
+    "target": "src/assets/editorial/g23-0257.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0303.jpg",
+    "target": "src/assets/editorial/g23-0258.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0304.jpg",
+    "target": "src/assets/editorial/g23-0259.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0305.jpg",
+    "target": "src/assets/editorial/g23-0260.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0306.jpg",
+    "target": "src/assets/editorial/g23-0261.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0307.jpg",
+    "target": "src/assets/editorial/g23-0262.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0308.jpg",
+    "target": "src/assets/editorial/g23-0263.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0309.jpg",
+    "target": "src/assets/editorial/g23-0264.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0310.jpg",
+    "target": "src/assets/editorial/g23-0265.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0311.jpg",
+    "target": "src/assets/editorial/g23-0266.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0312.jpg",
+    "target": "src/assets/editorial/g23-0267.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0313.jpg",
+    "target": "src/assets/editorial/g23-0268.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0314.jpg",
+    "target": "src/assets/editorial/g23-0269.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0315.jpg",
+    "target": "src/assets/editorial/g23-0270.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0316.jpg",
+    "target": "src/assets/editorial/g23-0271.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0317.jpg",
+    "target": "src/assets/editorial/g23-0272.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0318.jpg",
+    "target": "src/assets/editorial/g23-0273.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0319.jpg",
+    "target": "src/assets/editorial/g23-0274.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0320.jpg",
+    "target": "src/assets/editorial/g23-0275.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0321.jpg",
+    "target": "src/assets/editorial/g23-0276.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0322.jpg",
+    "target": "src/assets/editorial/g23-0277.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0323.jpg",
+    "target": "src/assets/editorial/g23-0278.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0324.jpg",
+    "target": "src/assets/editorial/g23-0279.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0325.jpg",
+    "target": "src/assets/editorial/g23-0280.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0326.jpg",
+    "target": "src/assets/editorial/g23-0281.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0327.jpg",
+    "target": "src/assets/editorial/g23-0282.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0328.jpg",
+    "target": "src/assets/editorial/g23-0283.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0329.jpg",
+    "target": "src/assets/editorial/g23-0284.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0330.jpg",
+    "target": "src/assets/editorial/g23-0285.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0331.jpg",
+    "target": "src/assets/editorial/g23-0286.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0332.jpg",
+    "target": "src/assets/editorial/g23-0287.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0333.jpg",
+    "target": "src/assets/editorial/g23-0288.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0334.jpg",
+    "target": "src/assets/editorial/g23-0289.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0335.jpg",
+    "target": "src/assets/editorial/g23-0290.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0336.jpg",
+    "target": "src/assets/editorial/g23-0291.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0337.jpg",
+    "target": "src/assets/editorial/g23-0292.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0338.jpg",
+    "target": "src/assets/editorial/g23-0293.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0339.jpg",
+    "target": "src/assets/editorial/g23-0294.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0340.jpg",
+    "target": "src/assets/editorial/g23-0295.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0341.jpg",
+    "target": "src/assets/editorial/g23-0296.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0342.jpg",
+    "target": "src/assets/editorial/g23-0297.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0343.jpg",
+    "target": "src/assets/editorial/g23-0298.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0344.jpg",
+    "target": "src/assets/editorial/g23-0299.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0345.jpg",
+    "target": "src/assets/editorial/g23-0300.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0346.jpg",
+    "target": "src/assets/editorial/g23-0301.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0347.jpg",
+    "target": "src/assets/editorial/g23-0302.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0348.jpg",
+    "target": "src/assets/editorial/g23-0303.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0349.jpg",
+    "target": "src/assets/editorial/g23-0304.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0350.jpg",
+    "target": "src/assets/editorial/g23-0305.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0351.jpg",
+    "target": "src/assets/editorial/g23-0306.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0352.jpg",
+    "target": "src/assets/editorial/g23-0307.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0353.jpg",
+    "target": "src/assets/editorial/g23-0308.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0354.jpg",
+    "target": "src/assets/editorial/g23-0309.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0355.jpg",
+    "target": "src/assets/editorial/g23-0310.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0356.jpg",
+    "target": "src/assets/editorial/g23-0311.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0357.jpg",
+    "target": "src/assets/editorial/g23-0312.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0358.jpg",
+    "target": "src/assets/editorial/g23-0313.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0359.jpg",
+    "target": "src/assets/editorial/g23-0314.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0360.jpg",
+    "target": "src/assets/editorial/g23-0315.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0362.jpg",
+    "target": "src/assets/editorial/g23-0316.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0363.jpg",
+    "target": "src/assets/editorial/g23-0317.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0365.jpg",
+    "target": "src/assets/editorial/g23-0318.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0366.jpg",
+    "target": "src/assets/editorial/g23-0319.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0367.jpg",
+    "target": "src/assets/editorial/g23-0320.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0368.jpg",
+    "target": "src/assets/editorial/g23-0321.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0369.jpg",
+    "target": "src/assets/editorial/g23-0322.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0370.jpg",
+    "target": "src/assets/editorial/g23-0323.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0371.jpg",
+    "target": "src/assets/editorial/g23-0324.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0373.jpg",
+    "target": "src/assets/editorial/g23-0325.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0374.jpg",
+    "target": "src/assets/editorial/g23-0326.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0375.jpg",
+    "target": "src/assets/editorial/g23-0327.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0376.jpg",
+    "target": "src/assets/editorial/g23-0328.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0377.jpg",
+    "target": "src/assets/editorial/g23-0329.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0378.jpg",
+    "target": "src/assets/editorial/g23-0330.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0379.jpg",
+    "target": "src/assets/editorial/g23-0331.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0380.jpg",
+    "target": "src/assets/editorial/g23-0332.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0381.jpg",
+    "target": "src/assets/editorial/g23-0333.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0382.jpg",
+    "target": "src/assets/editorial/g23-0334.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0385.jpg",
+    "target": "src/assets/editorial/g23-0335.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0386.jpg",
+    "target": "src/assets/editorial/g23-0336.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0387.jpg",
+    "target": "src/assets/editorial/g23-0337.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0388.jpg",
+    "target": "src/assets/editorial/g23-0338.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0389.jpg",
+    "target": "src/assets/editorial/g23-0339.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0390.jpg",
+    "target": "src/assets/editorial/g23-0340.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0391.jpg",
+    "target": "src/assets/editorial/g23-0341.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0392.jpg",
+    "target": "src/assets/editorial/g23-0342.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0393.jpg",
+    "target": "src/assets/editorial/g23-0343.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0394.jpg",
+    "target": "src/assets/editorial/g23-0344.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0395.jpg",
+    "target": "src/assets/editorial/g23-0345.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0396.jpg",
+    "target": "src/assets/editorial/g23-0346.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0397.jpg",
+    "target": "src/assets/editorial/g23-0347.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0398.jpg",
+    "target": "src/assets/editorial/g23-0348.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0400.jpg",
+    "target": "src/assets/editorial/g23-0349.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0401.jpg",
+    "target": "src/assets/editorial/g23-0350.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0402.jpg",
+    "target": "src/assets/editorial/g23-0351.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0403.jpg",
+    "target": "src/assets/editorial/g23-0352.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0404.jpg",
+    "target": "src/assets/editorial/g23-0353.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0406.jpg",
+    "target": "src/assets/editorial/g23-0354.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0407.jpg",
+    "target": "src/assets/editorial/g23-0355.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0408.jpg",
+    "target": "src/assets/editorial/g23-0356.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0409.jpg",
+    "target": "src/assets/editorial/g23-0357.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0410.jpg",
+    "target": "src/assets/editorial/g23-0358.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0411.jpg",
+    "target": "src/assets/editorial/g23-0359.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0412.jpg",
+    "target": "src/assets/editorial/g23-0360.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0413.jpg",
+    "target": "src/assets/editorial/g23-0361.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0415.jpg",
+    "target": "src/assets/editorial/g23-0362.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0416.jpg",
+    "target": "src/assets/editorial/g23-0363.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0421.jpg",
+    "target": "src/assets/editorial/g23-0364.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0422.jpg",
+    "target": "src/assets/editorial/g23-0365.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/012kemp2021/DSC_0425.jpg",
+    "target": "src/assets/editorial/g23-0366.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3671-komplet.jpg",
+    "target": "src/assets/editorial/g24-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3689-.jpg",
+    "target": "src/assets/editorial/g24-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3690-.jpg",
+    "target": "src/assets/editorial/g24-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3688-.jpg",
+    "target": "src/assets/editorial/g24-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3687-.jpg",
+    "target": "src/assets/editorial/g24-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3692-.jpg",
+    "target": "src/assets/editorial/g24-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3686.jpg",
+    "target": "src/assets/editorial/g24-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3691-.jpg",
+    "target": "src/assets/editorial/g24-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3693.jpg",
+    "target": "src/assets/editorial/g24-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3695.jpg",
+    "target": "src/assets/editorial/g24-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3696.jpg",
+    "target": "src/assets/editorial/g24-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3694.jpg",
+    "target": "src/assets/editorial/g24-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3697.jpg",
+    "target": "src/assets/editorial/g24-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3698.jpg",
+    "target": "src/assets/editorial/g24-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3699.jpg",
+    "target": "src/assets/editorial/g24-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3700.jpg",
+    "target": "src/assets/editorial/g24-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3701.jpg",
+    "target": "src/assets/editorial/g24-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3702.jpg",
+    "target": "src/assets/editorial/g24-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3703.jpg",
+    "target": "src/assets/editorial/g24-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3704.jpg",
+    "target": "src/assets/editorial/g24-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3705.jpg",
+    "target": "src/assets/editorial/g24-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/014kemp2023/DSC_3708.jpg",
+    "target": "src/assets/editorial/g24-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9729.jpg",
+    "target": "src/assets/editorial/g25-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9730.jpg",
+    "target": "src/assets/editorial/g25-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9731.jpg",
+    "target": "src/assets/editorial/g25-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9732.jpg",
+    "target": "src/assets/editorial/g25-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9733.jpg",
+    "target": "src/assets/editorial/g25-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9734.jpg",
+    "target": "src/assets/editorial/g25-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9735.jpg",
+    "target": "src/assets/editorial/g25-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9736.jpg",
+    "target": "src/assets/editorial/g25-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9737.jpg",
+    "target": "src/assets/editorial/g25-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9738.jpg",
+    "target": "src/assets/editorial/g25-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9739.jpg",
+    "target": "src/assets/editorial/g25-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9740.jpg",
+    "target": "src/assets/editorial/g25-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9741.jpg",
+    "target": "src/assets/editorial/g25-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9742.jpg",
+    "target": "src/assets/editorial/g25-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9743.jpg",
+    "target": "src/assets/editorial/g25-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9744.jpg",
+    "target": "src/assets/editorial/g25-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9745.jpg",
+    "target": "src/assets/editorial/g25-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9746.jpg",
+    "target": "src/assets/editorial/g25-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9747.jpg",
+    "target": "src/assets/editorial/g25-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9748.jpg",
+    "target": "src/assets/editorial/g25-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9749.jpg",
+    "target": "src/assets/editorial/g25-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/IMG_9750.jpg",
+    "target": "src/assets/editorial/g25-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/0594dce3-33d3-4784-98e7-9454b1b9fded.jpg",
+    "target": "src/assets/editorial/g25-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/15227765-ef82-4425-8dd8-c8c7292acb46.jpg",
+    "target": "src/assets/editorial/g25-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/1c371b7f-3050-4a31-88f9-bff02a83f099.jpg",
+    "target": "src/assets/editorial/g25-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/309f79f0-4fa3-4a74-bdb7-e635c65c4271.jpg",
+    "target": "src/assets/editorial/g25-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/332c719e-0cc1-4670-974e-374658d38d19.jpg",
+    "target": "src/assets/editorial/g25-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/39cdbc05-6134-49fc-88a8-54d4b5b0bdb8.jpg",
+    "target": "src/assets/editorial/g25-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/3cf7d415-ec9e-4cda-bb04-da3b989e6fd5.jpg",
+    "target": "src/assets/editorial/g25-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/4862b6f3-75fc-4eef-9eb8-14ddf0ca9381.jpg",
+    "target": "src/assets/editorial/g25-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/4994499e-915b-44d9-866e-6d97eba3e5ac.jpg",
+    "target": "src/assets/editorial/g25-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/528e621a-fa58-414d-b2a7-dd3f29c7f24d.jpg",
+    "target": "src/assets/editorial/g25-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/57c55f46-9899-4e23-a293-b1a789979504.jpg",
+    "target": "src/assets/editorial/g25-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/825f56c5-ccd7-4e91-bf6f-842d35687dab.jpg",
+    "target": "src/assets/editorial/g25-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/890ed266-3527-471b-95d6-26387943d46f.jpg",
+    "target": "src/assets/editorial/g25-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/8a91cee2-cd20-417a-9b46-20662a65cb4b.jpg",
+    "target": "src/assets/editorial/g25-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/99849a45-1e99-46f7-a15a-2f378bfbe3a1.jpg",
+    "target": "src/assets/editorial/g25-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/b54b0f1b-3b60-4f5d-90ed-58b3298c73b4.jpg",
+    "target": "src/assets/editorial/g25-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/b7bbf2ea-98a7-4a2c-b189-80342a01ce9c.jpg",
+    "target": "src/assets/editorial/g25-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/be11e43c-f8b0-4376-8565-9b5d2ccc6bd0.jpg",
+    "target": "src/assets/editorial/g25-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/de67fb18-bbe6-4d4e-bb08-38429863c4ae.jpg",
+    "target": "src/assets/editorial/g25-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/f65a5ef5-bacb-4c70-aa83-2cdf37d69c56.jpg",
+    "target": "src/assets/editorial/g25-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/020kemp2026/f841889f-8252-4063-b575-819be371f487.jpg",
+    "target": "src/assets/editorial/g25-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00270.jpg",
+    "target": "src/assets/editorial/g3-0000.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00273.jpg",
+    "target": "src/assets/editorial/g3-0001.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00281.jpg",
+    "target": "src/assets/editorial/g3-0002.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00290.jpg",
+    "target": "src/assets/editorial/g3-0003.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00294.jpg",
+    "target": "src/assets/editorial/g3-0004.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00297.jpg",
+    "target": "src/assets/editorial/g3-0005.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00298.jpg",
+    "target": "src/assets/editorial/g3-0006.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00299.jpg",
+    "target": "src/assets/editorial/g3-0007.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00300.jpg",
+    "target": "src/assets/editorial/g3-0008.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00303.jpg",
+    "target": "src/assets/editorial/g3-0009.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00305.jpg",
+    "target": "src/assets/editorial/g3-0010.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00308.jpg",
+    "target": "src/assets/editorial/g3-0011.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00312.jpg",
+    "target": "src/assets/editorial/g3-0012.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00313.jpg",
+    "target": "src/assets/editorial/g3-0013.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00315.jpg",
+    "target": "src/assets/editorial/g3-0014.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00316.jpg",
+    "target": "src/assets/editorial/g3-0015.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00318.jpg",
+    "target": "src/assets/editorial/g3-0016.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00322.jpg",
+    "target": "src/assets/editorial/g3-0017.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00324.jpg",
+    "target": "src/assets/editorial/g3-0018.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00327.jpg",
+    "target": "src/assets/editorial/g3-0019.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00329.jpg",
+    "target": "src/assets/editorial/g3-0020.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00331.jpg",
+    "target": "src/assets/editorial/g3-0021.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00333.jpg",
+    "target": "src/assets/editorial/g3-0022.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00336.jpg",
+    "target": "src/assets/editorial/g3-0023.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00339.jpg",
+    "target": "src/assets/editorial/g3-0024.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00340.jpg",
+    "target": "src/assets/editorial/g3-0025.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00348.jpg",
+    "target": "src/assets/editorial/g3-0026.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00351.jpg",
+    "target": "src/assets/editorial/g3-0027.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00359.jpg",
+    "target": "src/assets/editorial/g3-0028.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00360.jpg",
+    "target": "src/assets/editorial/g3-0029.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00361.jpg",
+    "target": "src/assets/editorial/g3-0030.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00362.jpg",
+    "target": "src/assets/editorial/g3-0031.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00363.jpg",
+    "target": "src/assets/editorial/g3-0032.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00365.jpg",
+    "target": "src/assets/editorial/g3-0033.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00367.jpg",
+    "target": "src/assets/editorial/g3-0034.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00370.jpg",
+    "target": "src/assets/editorial/g3-0035.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00371.jpg",
+    "target": "src/assets/editorial/g3-0036.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00372.jpg",
+    "target": "src/assets/editorial/g3-0037.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00373.jpg",
+    "target": "src/assets/editorial/g3-0038.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00377.jpg",
+    "target": "src/assets/editorial/g3-0039.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00383.jpg",
+    "target": "src/assets/editorial/g3-0040.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00393.jpg",
+    "target": "src/assets/editorial/g3-0041.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00396.jpg",
+    "target": "src/assets/editorial/g3-0042.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00398.jpg",
+    "target": "src/assets/editorial/g3-0043.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00400.jpg",
+    "target": "src/assets/editorial/g3-0044.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00401.jpg",
+    "target": "src/assets/editorial/g3-0045.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00402.jpg",
+    "target": "src/assets/editorial/g3-0046.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00407.jpg",
+    "target": "src/assets/editorial/g3-0047.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00410.jpg",
+    "target": "src/assets/editorial/g3-0048.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00413.jpg",
+    "target": "src/assets/editorial/g3-0049.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00418.jpg",
+    "target": "src/assets/editorial/g3-0050.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00419.jpg",
+    "target": "src/assets/editorial/g3-0051.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00421.jpg",
+    "target": "src/assets/editorial/g3-0052.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00422.jpg",
+    "target": "src/assets/editorial/g3-0053.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00424.jpg",
+    "target": "src/assets/editorial/g3-0054.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00427.jpg",
+    "target": "src/assets/editorial/g3-0055.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00428.jpg",
+    "target": "src/assets/editorial/g3-0056.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00429.jpg",
+    "target": "src/assets/editorial/g3-0057.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00431.jpg",
+    "target": "src/assets/editorial/g3-0058.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00432.jpg",
+    "target": "src/assets/editorial/g3-0059.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00434.jpg",
+    "target": "src/assets/editorial/g3-0060.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00436.jpg",
+    "target": "src/assets/editorial/g3-0061.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00439.jpg",
+    "target": "src/assets/editorial/g3-0062.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00442.jpg",
+    "target": "src/assets/editorial/g3-0063.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00443.jpg",
+    "target": "src/assets/editorial/g3-0064.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00444.jpg",
+    "target": "src/assets/editorial/g3-0065.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00446.jpg",
+    "target": "src/assets/editorial/g3-0066.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00448.jpg",
+    "target": "src/assets/editorial/g3-0067.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00449.jpg",
+    "target": "src/assets/editorial/g3-0068.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00451.jpg",
+    "target": "src/assets/editorial/g3-0069.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00453.jpg",
+    "target": "src/assets/editorial/g3-0070.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00456.jpg",
+    "target": "src/assets/editorial/g3-0071.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00457.jpg",
+    "target": "src/assets/editorial/g3-0072.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00459.jpg",
+    "target": "src/assets/editorial/g3-0073.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00460.jpg",
+    "target": "src/assets/editorial/g3-0074.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00468.jpg",
+    "target": "src/assets/editorial/g3-0075.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00472.jpg",
+    "target": "src/assets/editorial/g3-0076.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00473.jpg",
+    "target": "src/assets/editorial/g3-0077.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00474.jpg",
+    "target": "src/assets/editorial/g3-0078.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00475.jpg",
+    "target": "src/assets/editorial/g3-0079.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00476.jpg",
+    "target": "src/assets/editorial/g3-0080.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00477.jpg",
+    "target": "src/assets/editorial/g3-0081.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00478.jpg",
+    "target": "src/assets/editorial/g3-0082.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00479.jpg",
+    "target": "src/assets/editorial/g3-0083.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00480.jpg",
+    "target": "src/assets/editorial/g3-0084.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00482.jpg",
+    "target": "src/assets/editorial/g3-0085.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00483.jpg",
+    "target": "src/assets/editorial/g3-0086.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00484.jpg",
+    "target": "src/assets/editorial/g3-0087.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00486.jpg",
+    "target": "src/assets/editorial/g3-0088.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00487.jpg",
+    "target": "src/assets/editorial/g3-0089.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00488.jpg",
+    "target": "src/assets/editorial/g3-0090.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00490.jpg",
+    "target": "src/assets/editorial/g3-0091.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00491.jpg",
+    "target": "src/assets/editorial/g3-0092.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00492.jpg",
+    "target": "src/assets/editorial/g3-0093.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00493.jpg",
+    "target": "src/assets/editorial/g3-0094.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00494.jpg",
+    "target": "src/assets/editorial/g3-0095.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00495.jpg",
+    "target": "src/assets/editorial/g3-0096.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00496.jpg",
+    "target": "src/assets/editorial/g3-0097.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00497.jpg",
+    "target": "src/assets/editorial/g3-0098.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00498.jpg",
+    "target": "src/assets/editorial/g3-0099.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00513.jpg",
+    "target": "src/assets/editorial/g3-0100.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00514.jpg",
+    "target": "src/assets/editorial/g3-0101.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00532.jpg",
+    "target": "src/assets/editorial/g3-0102.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00533.jpg",
+    "target": "src/assets/editorial/g3-0103.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00535.jpg",
+    "target": "src/assets/editorial/g3-0104.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00536.jpg",
+    "target": "src/assets/editorial/g3-0105.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/dsc00537.jpg",
+    "target": "src/assets/editorial/g3-0106.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0248.jpg",
+    "target": "src/assets/editorial/g3-0107.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0249.jpg",
+    "target": "src/assets/editorial/g3-0108.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0250.jpg",
+    "target": "src/assets/editorial/g3-0109.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0264.jpg",
+    "target": "src/assets/editorial/g3-0110.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0268.jpg",
+    "target": "src/assets/editorial/g3-0111.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0272.jpg",
+    "target": "src/assets/editorial/g3-0112.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0277.jpg",
+    "target": "src/assets/editorial/g3-0113.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0293.jpg",
+    "target": "src/assets/editorial/g3-0114.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0298.jpg",
+    "target": "src/assets/editorial/g3-0115.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0300.jpg",
+    "target": "src/assets/editorial/g3-0116.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0305.jpg",
+    "target": "src/assets/editorial/g3-0117.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0306.jpg",
+    "target": "src/assets/editorial/g3-0118.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0309.jpg",
+    "target": "src/assets/editorial/g3-0119.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0310.jpg",
+    "target": "src/assets/editorial/g3-0120.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0312.jpg",
+    "target": "src/assets/editorial/g3-0121.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0315.jpg",
+    "target": "src/assets/editorial/g3-0122.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0317.jpg",
+    "target": "src/assets/editorial/g3-0123.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0324.jpg",
+    "target": "src/assets/editorial/g3-0124.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0330.jpg",
+    "target": "src/assets/editorial/g3-0125.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0332.jpg",
+    "target": "src/assets/editorial/g3-0126.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0333.jpg",
+    "target": "src/assets/editorial/g3-0127.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/imag0338.jpg",
+    "target": "src/assets/editorial/g3-0128.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0492.jpg",
+    "target": "src/assets/editorial/g3-0129.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0498.jpg",
+    "target": "src/assets/editorial/g3-0130.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0499.jpg",
+    "target": "src/assets/editorial/g3-0131.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0501.jpg",
+    "target": "src/assets/editorial/g3-0132.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0506.jpg",
+    "target": "src/assets/editorial/g3-0133.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0507.jpg",
+    "target": "src/assets/editorial/g3-0134.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0514.jpg",
+    "target": "src/assets/editorial/g3-0135.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0515.jpg",
+    "target": "src/assets/editorial/g3-0136.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0516.jpg",
+    "target": "src/assets/editorial/g3-0137.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0517.jpg",
+    "target": "src/assets/editorial/g3-0138.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0522.jpg",
+    "target": "src/assets/editorial/g3-0139.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0523.jpg",
+    "target": "src/assets/editorial/g3-0140.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0526.jpg",
+    "target": "src/assets/editorial/g3-0141.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0527.jpg",
+    "target": "src/assets/editorial/g3-0142.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0536.jpg",
+    "target": "src/assets/editorial/g3-0143.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0546.jpg",
+    "target": "src/assets/editorial/g3-0144.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0547.jpg",
+    "target": "src/assets/editorial/g3-0145.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0549.jpg",
+    "target": "src/assets/editorial/g3-0146.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0554.jpg",
+    "target": "src/assets/editorial/g3-0147.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0557.jpg",
+    "target": "src/assets/editorial/g3-0148.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0564.jpg",
+    "target": "src/assets/editorial/g3-0149.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0567.jpg",
+    "target": "src/assets/editorial/g3-0150.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0568.jpg",
+    "target": "src/assets/editorial/g3-0151.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0569.jpg",
+    "target": "src/assets/editorial/g3-0152.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0570.jpg",
+    "target": "src/assets/editorial/g3-0153.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0571.jpg",
+    "target": "src/assets/editorial/g3-0154.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0572.jpg",
+    "target": "src/assets/editorial/g3-0155.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0573.jpg",
+    "target": "src/assets/editorial/g3-0156.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0575.jpg",
+    "target": "src/assets/editorial/g3-0157.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0578.jpg",
+    "target": "src/assets/editorial/g3-0158.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0616.jpg",
+    "target": "src/assets/editorial/g3-0159.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0619.jpg",
+    "target": "src/assets/editorial/g3-0160.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0624.jpg",
+    "target": "src/assets/editorial/g3-0161.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0625.jpg",
+    "target": "src/assets/editorial/g3-0162.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0628.jpg",
+    "target": "src/assets/editorial/g3-0163.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0631.jpg",
+    "target": "src/assets/editorial/g3-0164.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_0632.jpg",
+    "target": "src/assets/editorial/g3-0165.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_001.jpg",
+    "target": "src/assets/editorial/g3-0166.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_002.jpg",
+    "target": "src/assets/editorial/g3-0167.webp"
+  },
+  {
+    "source": "content/wordpress/media/gallery/003beroun2012/img_003.jpg",
+    "target": "src/assets/editorial/g3-0168.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2012/01/altrichter_martin.jpg",
+    "target": "src/assets/editorial/coach-martin-altrichter.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2012/01/zapletal_marek.jpg",
+    "target": "src/assets/editorial/coach-mgr-marek-zapletal.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2012/05/zelenka_dan.jpg",
+    "target": "src/assets/editorial/coach-daniel-zelenka.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2025/05/Horca.jpg",
+    "target": "src/assets/editorial/coach-lubos-horcicka.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2022/03/logo_comsysicearena.jpg",
+    "target": "src/assets/editorial/partner-0.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2017/05/logo_merkur.jpg",
+    "target": "src/assets/editorial/partner-1.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2017/09/logo_stridasport250.jpg",
+    "target": "src/assets/editorial/partner-2.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2015/04/logo_ribanadresy.jpg",
+    "target": "src/assets/editorial/partner-3.webp"
+  },
+  {
+    "source": "content/wordpress/media/uploads/2013/07/logo_ht.jpg",
+    "target": "src/assets/editorial/partner-4.webp"
+  }
+]

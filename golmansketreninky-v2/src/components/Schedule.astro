@@ -1,0 +1,19 @@
+---
+import { siteContent, contact, url } from '../lib/site';
+import { canRegister, eventState, timeLabel } from '../lib/events';
+import CampCard from './CampCard.astro';
+import Arrow from './Arrow.astro';
+const { camps,sessions,galleryMap } = await siteContent();
+const upcoming=camps.filter(c=>eventState(c.data)!=='completed');
+const training=sessions.filter(s=>eventState(s.data)!=='completed');
+---
+<section class="section schedule" id="terminy"><div class="section-heading"><div><p class="eyebrow">DALŠÍ KROK JE NA TOBĚ</p><h2>Vidíme se na ledě.</h2></div><a class="text-link" href={url('kempy/')}>Vše o kempech <Arrow diagonal /></a></div>
+<div class="camp-grid" data-upcoming-group>{upcoming.map(c=><CampCard camp={c} gallery={c.data.gallery?galleryMap.get(c.data.gallery.id):undefined} upcoming />)}<p class="empty-state" data-empty-events hidden={upcoming.length>0}>Nové kempy právě připravujeme. Ozvi se nám a domluvíme další krok.</p></div>
+<div class="training-heading"><h3>Pravidelně na led.</h3><p>Individuálně, nebo v malé skupině.</p></div><div class="filters" role="group" aria-label="Filtrovat tréninky"><button data-training-filter="all" aria-pressed="true">Všechny</button><button data-training-filter="individual" aria-pressed="false">Individuální</button><button data-training-filter="group" aria-pressed="false">Skupinové</button></div>
+<div class="session-list" data-upcoming-group>{training.map(s=><article class="session" data-type={s.data.kind} data-upcoming data-start={s.data.start}><div class="session-date"><time datetime={s.data.start}>{new Date(s.data.start).getUTCDate()}</time><span>{new Intl.DateTimeFormat('cs-CZ',{month:'short',year:'numeric',timeZone:'Europe/Prague'}).format(new Date(s.data.start))}</span></div><div class="session-name"><span>{s.data.kind==='individual'?'Individuální trénink':'Skupinový trénink'}{s.data.demo&&' · ukázkový termín'}</span><h3>{s.data.title}</h3><p>{s.data.summary}</p></div><div class="session-meta"><span>{timeLabel(s.data.start)}–{timeLabel(s.data.end)}</span><span>{s.data.capacity}</span></div>{canRegister(s.data)?<button class="button button-outline" data-register={`session:${s.id}`}>Chci na trénink <Arrow diagonal /></button>:<span class="eyebrow">{s.data.availability==='full'?'Obsazeno':'Přihlašování skončilo'}</span>}</article>)}<p class="empty-state" data-empty-events hidden={training.length>0}>Nové termíny připravujeme. Individuální trénink domluvíme telefonicky.</p></div>
+<p class="filter-result sr-only" aria-live="polite"></p><div class="schedule-note"><span>Ukázkový rozpis · přihláška nerezervuje místo</span><a href={`mailto:${contact.email}`}>Pomůžeme s výběrem <Arrow diagonal /></a></div></section>
+<script>
+  const filters=document.querySelectorAll<HTMLButtonElement>('[data-training-filter]');
+  function filter(value:string){filters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.trainingFilter===value)));let count=0;document.querySelectorAll<HTMLElement>('.session[data-type]').forEach(row=>{const expired=Date.parse(row.dataset.start!)<=Date.now();row.hidden=expired||(value!=='all'&&row.dataset.type!==value);if(!row.hidden)count++;});const status=document.querySelector('.filter-result');const empty=document.querySelector<HTMLElement>('.session-list [data-empty-events]');if(empty)empty.hidden=count>0;if(status)status.textContent=`Počet zobrazených tréninků: ${count}.`;}
+  filters.forEach(b=>b.addEventListener('click',()=>filter(b.dataset.trainingFilter!)));document.querySelectorAll<HTMLElement>('[data-program]').forEach(a=>a.addEventListener('click',()=>filter(a.dataset.program!)));
+</script>

@@ -1,0 +1,13 @@
+---
+import HockeyAccent from '../../components/HockeyAccent.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import GalleryGrid from '../../components/GalleryGrid.astro';
+import ArchiveVideo from '../../components/ArchiveVideo.astro';
+import { siteContent, url, campUrl } from '../../lib/site';
+import { dateLabel } from '../../lib/events';
+export async function getStaticPaths(){return (await getCollection('articles',a=>!a.data.draft)).map(article=>({params:{id:article.id},props:{article}}));}
+const { article }=Astro.props;const { galleryMap, camps }=await siteContent();const gallery=article.data.gallery?galleryMap.get(article.data.gallery.id):undefined;const cover=article.data.cover??gallery?.data.photos[gallery.data.coverIndex].image;const coverAlt=article.data.coverAlt??gallery?.data.photos[gallery.data.coverIndex].alt??article.data.title;const camp=camps.find(c=>c.id===article.data.camp?.id);
+---
+<Layout title={`${article.data.title} | Altrichter Goalie Academy`} description={article.data.summary}><main id="obsah"><section class="page-intro"><div class="container"><HockeyAccent variant="tactics" class="intro-accent" /><a class="breadcrumb" href={url('aktuality/')}>← Ze života akademie</a><p class="eyebrow">{article.data.category} · <time datetime={article.data.date}>{dateLabel(article.data.date)}</time></p><h1>{article.data.title}</h1><p class="lead">{article.data.summary}</p></div></section><div class="container detail-hero">{cover&&<Image src={cover} alt={coverAlt} width={1400}/>}<p class="photo-caption">{gallery?.data.title}</p></div><article class="container section article-body prose">{article.data.body.map(p=><p>{p}</p>)}{camp&&<p><a class="text-link" href={campUrl(camp.id)}>Program a příběh: {camp.data.title} ↗</a></p>}<p class="source-note">Ohlédnutí z archivu akademie. Datum odpovídá původní publikaci; text je redakčně upravený.</p></article>{gallery&&<section class="container section"><div class="section-heading"><p class="eyebrow">Fotoreportáž</p><h2>Podívejte se blíž.</h2></div><GalleryGrid gallery={gallery}/></section>}<ArchiveVideo gallery={gallery}/></main></Layout>

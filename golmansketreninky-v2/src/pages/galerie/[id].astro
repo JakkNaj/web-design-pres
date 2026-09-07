@@ -1,0 +1,11 @@
+---
+import HockeyAccent from '../../components/HockeyAccent.astro';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import GalleryGrid from '../../components/GalleryGrid.astro';
+import ArchiveVideo from '../../components/ArchiveVideo.astro';
+import { url, campUrl } from '../../lib/site';
+export async function getStaticPaths(){return (await getCollection('galleries',g=>!g.data.draft)).map(gallery=>({params:{id:gallery.id},props:{gallery}}));}
+const { gallery }=Astro.props;
+---
+<Layout title={`${gallery.data.title} – fotografie | Altrichter Goalie Academy`}><main id="obsah"><section class="page-intro"><div class="container"><HockeyAccent variant="puck" class="intro-accent" /><a class="breadcrumb" href={gallery.data.camp?campUrl(gallery.data.camp.id):url('historie/')}>← {gallery.data.camp?'Zpět na ročník':'Naše historie'}</a><p class="eyebrow">{gallery.data.year??'Z archivu'} · {gallery.data.photos.length} fotografií</p><h1>{gallery.data.title}</h1><p class="lead">Chvíle z ledu i mimo něj. Otevřete fotografii a procházejte šipkami nebo tahem prstu.</p></div></section><section class="container section"><GalleryGrid gallery={gallery} all/></section><ArchiveVideo gallery={gallery}/></main></Layout>

@@ -1,0 +1,13 @@
+---
+import Brand from './Brand.astro';
+import Arrow from './Arrow.astro';
+import { url, contact } from '../lib/site';
+---
+<footer class="footer" id="kontakt">
+  <div class="footer-top"><a class="brand" href={url()} aria-label="Altrichter Goalie Academy — úvod"><Brand /></a>
+    <div><span class="footer-label">DOMLUVÍME SE.</span><a href={`mailto:${contact.email}`}>{contact.email} <Arrow diagonal /></a>{contact.people.map(p => <a href={`tel:${p.tel}`}><span>{p.name}<br />{p.phone}</span></a>)}</div>
+    <div><span class="footer-label">TADY JSME DOMA</span><p>{contact.venue}<br />{contact.address}</p><a href={url('historie/')}>Příběh akademie <Arrow diagonal /></a><a href={url('kempy/')}>Vypsané kempy <Arrow diagonal /></a></div>
+    <a class="back-top" href="#nahoru" aria-label="Zpět nahoru"><Arrow /></a>
+  </div>
+  <div class="footer-bottom"><span>© {new Date().getFullYear()} Altrichter Goalie Academy</span><span>Gólmanem. Po svém.</span><span>Design koncept 02 · ukázková prezentace</span></div>
+</footer>

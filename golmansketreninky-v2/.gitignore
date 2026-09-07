@@ -1,0 +1,4 @@
+# Original WordPress scrape stays local; curated content/assets live in src/.
+content/wordpress/
+__pycache__/
+*.pyc

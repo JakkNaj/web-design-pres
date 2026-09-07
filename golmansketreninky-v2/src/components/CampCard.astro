@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { campUrl } from '../lib/site';
+import { dateRange, eventState, stateLabels } from '../lib/events';
+import Arrow from './Arrow.astro';
+interface Props { camp: CollectionEntry<'camps'>; gallery?: CollectionEntry<'galleries'>; upcoming?: boolean }
+const { camp, gallery, upcoming = false } = Astro.props;
+const state = eventState(camp.data);
+const photo = gallery?.data.photos[gallery.data.coverIndex];
+---
+<article class:list={['camp-card', { 'camp-card-plain': !photo }]} data-upcoming={upcoming || undefined} data-start={camp.data.start}>
+  <a href={campUrl(camp.id)} class="camp-cover" aria-label={`Detail: ${camp.data.title}`}>
+    {photo ? <Image src={photo.image} alt={photo.alt} width={680} loading="lazy" /> : <div class="camp-typography" aria-hidden="true"><span>{camp.data.year}</span><strong>{camp.data.location}</strong><svg viewBox="0 0 300 160" fill="none"><path d="M40 160V65a20 20 0 0 1 20-20h180a20 20 0 0 1 20 20v95M80 160V85h140v75M40 65l40 20m180-20-40 20" stroke="currentColor" stroke-width="2"/><ellipse cx="150" cy="157" rx="110" ry="32" stroke="currentColor"/></svg></div>}
+    <span class="status-pill" data-state={state} data-event-state data-end={camp.data.end}>{stateLabels[state]}</span>{camp.data.demo && <span class="demo-tag">Ukázkový termín</span>}
+  </a>
+  <div class="camp-card-copy"><p class="eyebrow">{dateRange(camp.data.start,camp.data.end)} · {camp.data.location}</p><h3><a href={campUrl(camp.id)}>{camp.data.title}</a></h3><p>{camp.data.summary}</p><a href={campUrl(camp.id)} class="text-link">{state === 'completed' ? 'Příběh ročníku' : 'Prohlédnout kemp'} <Arrow diagonal /></a></div>
+</article>

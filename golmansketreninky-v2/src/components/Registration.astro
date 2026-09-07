@@ -1,0 +1,46 @@
+---
+import Arrow from './Arrow.astro';
+import { siteContent, contact } from '../lib/site';
+import { canRegister, dateRange } from '../lib/events';
+const { camps, sessions } = await siteContent();
+const items = [...camps.map(c => ({ id: `camp:${c.id}`, label: `${c.data.title} · ${dateRange(c.data.start, c.data.end)}`, ...c.data })), ...sessions.map(s => ({ id: `session:${s.id}`, label: `${s.data.title} · ${dateRange(s.data.start)}`, ...s.data }))].filter(item => canRegister(item));
+---
+<dialog id="registration" aria-labelledby="registration-title" aria-describedby="registration-description">
+  <button type="button" class="dialog-close" data-close aria-label="Zavřít přihlášku">×</button>
+  <div class="registration-content"><p class="eyebrow">PRVNÍ KROK DO BRANKOVIŠTĚ</p><h2 id="registration-title">Pojď na led.</h2><p class="dialog-intro" id="registration-description">Ukázka přihlášky. Údaje se nikam neodesílají a místo se nerezervuje.</p>
+    <form class="registration-form"><label>Vybraný termín<select name="session" required>{items.map(item => <option value={item.id} data-start={item.start} data-end={item.end}>{item.label}</option>)}</select></label>
+      <label>Tvoje jméno<input name="name" autocomplete="name" required maxlength="100" placeholder="Jméno a příjmení" /></label><label>E-mail<input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="tvuj@email.cz" /></label>
+      <p class="form-note" data-registration-error role="status" hidden>Termín už není otevřený. Vyber jiný nebo nám napiš.</p><button class="button" type="submit">Vyzkoušet přihlášku <Arrow /></button><p class="form-note">Pouze návrh. Skutečný trénink domluv na {contact.email}.</p>
+    </form>
+  </div>
+  <div class="registration-success" hidden tabindex="-1"><span class="success-mark" aria-hidden="true">✓</span><p class="eyebrow">UKÁZKA JE HOTOVÁ</p><h2 id="success-title">Další krok?<br />Domluvíme se.</h2><p>Žádné údaje jsme neodeslali a místo není rezervované. Pro skutečnou domluvu napiš na <a href={`mailto:${contact.email}`}>{contact.email}</a>.</p><button class="button" type="button" data-close>Zpátky na web <Arrow /></button></div>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#registration')!;
+  const form = dialog.querySelector<HTMLFormElement>('form')!;
+  const select = form.elements.namedItem('session') as HTMLSelectElement;
+  const content = dialog.querySelector<HTMLElement>('.registration-content')!;
+  const success = dialog.querySelector<HTMLElement>('.registration-success')!;
+  const error = dialog.querySelector<HTMLElement>('[data-registration-error]')!;
+  let trigger: HTMLButtonElement | null = null;
+  const valid = (option: HTMLOptionElement | undefined) => !!option?.dataset.start && Date.parse(option.dataset.start) > Date.now() && Date.parse(option.dataset.end ?? '') > Date.now();
+  function refreshEvents() {
+    Array.from(select.options).forEach(option => { option.disabled = !valid(option); });
+    document.querySelectorAll<HTMLButtonElement>('[data-register]').forEach(button => {
+      const option = Array.from(select.options).find(o => o.value === button.dataset.register);
+      if (!valid(option)) { button.disabled = true; button.textContent = 'Přihlašování skončilo'; }
+    });
+    document.querySelectorAll<HTMLElement>('[data-upcoming][data-start]').forEach(el => { if (Date.parse(el.dataset.start!) <= Date.now()) el.hidden = true; });
+    document.querySelectorAll<HTMLElement>('[data-upcoming-group]').forEach(group => { const empty=group.querySelector<HTMLElement>('[data-empty-events]'); if(empty)empty.hidden=!!group.querySelector('[data-upcoming]:not([hidden])'); });
+    document.querySelectorAll<HTMLElement>('[data-event-state][data-end]').forEach(el => { if(Date.parse(el.dataset.end!)<Date.now()){el.textContent='Proběhlo';el.dataset.state='completed';} });
+  }
+  refreshEvents(); window.addEventListener('pageshow',refreshEvents); document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshEvents();});
+  document.querySelectorAll<HTMLButtonElement>('[data-register]').forEach(button=>button.addEventListener('click',()=>{
+    refreshEvents();if(button.disabled)return;trigger=button;form.reset();select.value=button.dataset.register!;content.hidden=false;success.hidden=true;error.hidden=true;
+    dialog.setAttribute('aria-labelledby','registration-title');dialog.setAttribute('aria-describedby','registration-description');dialog.showModal();
+  }));
+  dialog.querySelectorAll('[data-close]').forEach(button=>button.addEventListener('click',()=>dialog.close()));
+  dialog.addEventListener('click',e=>{if(e.target===dialog){const b=dialog.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)dialog.close();}});
+  dialog.addEventListener('close',()=>{form.reset();trigger?.focus();});
+  form.addEventListener('submit',e=>{e.preventDefault();refreshEvents();if(!valid(select.selectedOptions[0])){error.hidden=false;return;}if(!form.reportValidity())return;content.hidden=true;success.hidden=false;dialog.setAttribute('aria-labelledby','success-title');dialog.removeAttribute('aria-describedby');success.focus();form.reset();});
+</script>

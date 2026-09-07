@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import '../styles/editorial.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Registration from '../components/Registration.astro';
+import ScrollReveal from '../components/ScrollReveal.astro';
+import { url } from '../lib/site';
+interface Props { title?: string; description?: string }
+const { title = 'Každý puk. Tvůj moment.', description = 'Gólmanské tréninky, kempy a lidé Altrichter Goalie Academy. Skutečná práce na ledě, příběh doložený od roku 2012.' } = Astro.props;
+---
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <link rel="preload" href={url('fonts/InterVariable.woff2')} as="font" type="font/woff2" crossorigin />
+    <style is:inline set:html={`@font-face{font-family:Inter;src:url('${url('fonts/InterVariable.woff2')}') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}`} />
+    <title>{title.includes('Altrichter Goalie Academy') ? title : `${title} — Altrichter Goalie Academy`}</title>
+  </head>
+  <body id="nahoru">
+    <a class="skip-link" href="#obsah">Přejít na obsah</a>
+    <SiteHeader />
+    <slot />
+    <SiteFooter />
+    <Registration />
+    <ScrollReveal />
+  </body>
+</html>

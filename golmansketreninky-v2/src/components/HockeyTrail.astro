@@ -1,0 +1,14 @@
+---
+interface Props { class?: string; }
+const { class: className = '' } = Astro.props;
+---
+<svg class={`hockey-trail ${className}`} viewBox="0 0 220 180" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path class="trail-pass" d="M33 143c78 5 51-77 120-85" stroke-dasharray="5 9" />
+    <path d="m139 49 18 7-11 17" />
+    <path class="trail-cross" d="m23 42 18 17m-1-19L23 60" />
+    <path class="trail-cross" d="m133 119 17 17m0-18-18 18" />
+    <ellipse cx="179" cy="40" rx="18" ry="17" transform="rotate(-16 179 40)" />
+    <circle cx="31" cy="143" r="6" fill="currentColor" stroke="none" />
+  </g>
+</svg>

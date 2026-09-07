@@ -25,6 +25,7 @@ jobs:
           cache: npm
           cache-dependency-path: |
             golmansketreninky/package-lock.json
+            golmansketreninky-v2/package-lock.json
             hcricany/package-lock.json
             comsysicearena/package-lock.json
             ceskadopravnistavba/package-lock.json
@@ -39,6 +40,15 @@ jobs:
           npm ci
           npm run build
           node ../scripts/prepare-pages.mjs dist /web-design-pres/golmansketreninky
+      - name: Build Gólmanské tréninky — koncept 02
+        working-directory: golmansketreninky-v2
+        env:
+          ASTRO_BASE: /web-design-pres/golmansketreninky-v2
+        run: |
+          npm ci
+          npm test
+          npm run build
+          python3 scripts/check-built-site.py dist "$ASTRO_BASE/"
       - name: Build HC Říčany
         working-directory: hcricany
         env:
@@ -73,9 +83,10 @@ jobs:
           node ../scripts/prepare-pages.mjs dist /web-design-pres/donb-garage
       - name: Assemble Pages artifact
         run: |
-          mkdir -p _site/golmansketreninky _site/hcricany _site/comsysicearena _site/ceskadopravnistavba _site/donb-garage
+          mkdir -p _site/golmansketreninky _site/golmansketreninky-v2 _site/hcricany _site/comsysicearena _site/ceskadopravnistavba _site/donb-garage
           cp index.html _site/index.html
           cp -R golmansketreninky/dist/. _site/golmansketreninky/
+          cp -R golmansketreninky-v2/dist/. _site/golmansketreninky-v2/
           cp -R hcricany/dist/. _site/hcricany/
           cp -R comsysicearena/dist/. _site/comsysicearena/
           cp -R ceskadopravnistavba/dist/. _site/ceskadopravnistavba/

@@ -1,0 +1,2581 @@
+{
+  "title": "Gólmanský speciál v Říčanech 2021",
+  "year": 2021,
+  "kind": "camp",
+  "coverIndex": 32,
+  "photos": [
+    {
+      "image": "../../assets/editorial/g23-0000.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 1",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 1",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0018.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0001.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 2",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 2",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0019.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0002.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 3",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 3",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0023.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0003.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 4",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 4",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0024.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0004.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 5",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 5",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0025.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0005.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 6",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 6",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0027.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0006.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 7",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 7",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0028.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0007.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 8",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 8",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0029.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0008.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 9",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 9",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0030.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0009.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 10",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 10",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0031.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0010.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 11",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 11",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0032.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0011.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 12",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 12",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0033.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0012.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 13",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 13",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0034.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0013.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 14",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 14",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0035.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0014.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 15",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 15",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0036.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0015.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 16",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 16",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0037.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0016.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 17",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 17",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0038.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0017.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 18",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 18",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0039.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0018.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 19",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 19",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0040.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0019.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 20",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 20",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0041.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0020.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 21",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 21",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0042.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0021.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 22",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 22",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0043.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0022.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 23",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 23",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0044.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0023.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 24",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 24",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0045.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0024.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 25",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 25",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0046.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0025.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 26",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 26",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0047.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0026.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 27",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 27",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0048.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0027.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 28",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 28",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0049.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0028.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 29",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 29",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0055.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0029.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 30",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 30",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0056.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0030.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 31",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 31",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0057.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0031.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 32",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 32",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0058.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0032.webp",
+      "alt": "Společná fotografie brankářů v oranžových dresech, Říčany 2021",
+      "caption": "Společná fotografie brankářů v oranžových dresech, Říčany 2021",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0059.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0033.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 34",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 34",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0060.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0034.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 35",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 35",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0061.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0035.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 36",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 36",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0062.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0036.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 37",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 37",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0063.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0037.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 38",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 38",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0064.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0038.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 39",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 39",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0065.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0039.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 40",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 40",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0066.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0040.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 41",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 41",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0067.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0041.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 42",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 42",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0068.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0042.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 43",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 43",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0069.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0043.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 44",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 44",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0070.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0044.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 45",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 45",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0071.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0045.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 46",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 46",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0072.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0046.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 47",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 47",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0073.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0047.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 48",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 48",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0074.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0048.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 49",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 49",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0075.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0049.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 50",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 50",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0076.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0050.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 51",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 51",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0077.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0051.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 52",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 52",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0078.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0052.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 53",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 53",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0079.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0053.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 54",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 54",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0080.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0054.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 55",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 55",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0081.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0055.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 56",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 56",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0082.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0056.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 57",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 57",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0083.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0057.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 58",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 58",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0084.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0058.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 59",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 59",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0085.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0059.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 60",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 60",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0086.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0060.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 61",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 61",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0087.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0061.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 62",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 62",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0088.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0062.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 63",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 63",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0089.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0063.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 64",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 64",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0090.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0064.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 65",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 65",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0091.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0065.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 66",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 66",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0092.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0066.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 67",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 67",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0093.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0067.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 68",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 68",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0094.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0068.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 69",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 69",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0095.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0069.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 70",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 70",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0096.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0070.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 71",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 71",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0097.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0071.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 72",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 72",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0098.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0072.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 73",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 73",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0099.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0073.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 74",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 74",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0100.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0074.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 75",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 75",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0101.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0075.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 76",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 76",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0102.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0076.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 77",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 77",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0103.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0077.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 78",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 78",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0104.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0078.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 79",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 79",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0105.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0079.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 80",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 80",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0106.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0080.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 81",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 81",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0107.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0081.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 82",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 82",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0108.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0082.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 83",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 83",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0109.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0083.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 84",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 84",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0110.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0084.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 85",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 85",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0111.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0085.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 86",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 86",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0112.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0086.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 87",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 87",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0113.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0087.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 88",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 88",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0114.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0088.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 89",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 89",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0115.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0089.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 90",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 90",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0116.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0090.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 91",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 91",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0117.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0091.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 92",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 92",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0118.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0092.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 93",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 93",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0119.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0093.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 94",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 94",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0120.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0094.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 95",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 95",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0121.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0095.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 96",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 96",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0122.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0096.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 97",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 97",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0123.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0097.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 98",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 98",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0124.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0098.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 99",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 99",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0125.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0099.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 100",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 100",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0126.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0100.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 101",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 101",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0127.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0101.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 102",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 102",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0128.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0102.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 103",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 103",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0129.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0103.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 104",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 104",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0130.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0104.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 105",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 105",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0131.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0105.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 106",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 106",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0132.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0106.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 107",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 107",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0133.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0107.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 108",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 108",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0134.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0108.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 109",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 109",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0135.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0109.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 110",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 110",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0136.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0110.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 111",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 111",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0137.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0111.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 112",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 112",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0138.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0112.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 113",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 113",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0139.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0113.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 114",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 114",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0140.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0114.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 115",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 115",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0141.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0115.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 116",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 116",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0142.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0116.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 117",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 117",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0143.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0117.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 118",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 118",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0144.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0118.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 119",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 119",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0145.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0119.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 120",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 120",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0146.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0120.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 121",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 121",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0147.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0121.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 122",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 122",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0148.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0122.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 123",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 123",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0149.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0123.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 124",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 124",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0150.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0124.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 125",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 125",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0151.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0125.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 126",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 126",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0152.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0126.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 127",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 127",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0153.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0127.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 128",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 128",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0154.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0128.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 129",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 129",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0155.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0129.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 130",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 130",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0156.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0130.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 131",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 131",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0157.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0131.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 132",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 132",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0158.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0132.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 133",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 133",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0159.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0133.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 134",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 134",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0160.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0134.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 135",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 135",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0161.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0135.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 136",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 136",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0162.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0136.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 137",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 137",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0163.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0137.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 138",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 138",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0164.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0138.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 139",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 139",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0172.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0139.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 140",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 140",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0173.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0140.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 141",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 141",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0174.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0141.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 142",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 142",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0175.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0142.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 143",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 143",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0176.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0143.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 144",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 144",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0177.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0144.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 145",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 145",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0178.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0145.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 146",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 146",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0179.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0146.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 147",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 147",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0180.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0147.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 148",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 148",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0181.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0148.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 149",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 149",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0182.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0149.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 150",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 150",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0183.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0150.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 151",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 151",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0184.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0151.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 152",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 152",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0185.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0152.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 153",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 153",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0186.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0153.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 154",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 154",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0187.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0154.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 155",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 155",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0188.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0155.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 156",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 156",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0189.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0156.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 157",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 157",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0190.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0157.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 158",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 158",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0191.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0158.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 159",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 159",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0192.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0159.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 160",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 160",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0193.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0160.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 161",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 161",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0194.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0161.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 162",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 162",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0195.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0162.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 163",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 163",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0196.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0163.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 164",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 164",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0197.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0164.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 165",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 165",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0198.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0165.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 166",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 166",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0199.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0166.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 167",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 167",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0200.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0167.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 168",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 168",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0201.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0168.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 169",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 169",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0202.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0169.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 170",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 170",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0203.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0170.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 171",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 171",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0204.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0171.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 172",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 172",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0205.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0172.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 173",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 173",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0206.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0173.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 174",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 174",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0207.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0174.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 175",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 175",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0208.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0175.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 176",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 176",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0209.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0176.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 177",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 177",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0210.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0177.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 178",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 178",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0211.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0178.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 179",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 179",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0212.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0179.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 180",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 180",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0213.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0180.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 181",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 181",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0214.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0181.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 182",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 182",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0215.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0182.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 183",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 183",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0216.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0183.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 184",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 184",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0217.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0184.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 185",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 185",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0218.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0185.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 186",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 186",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0220.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0186.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 187",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 187",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0221.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0187.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 188",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 188",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0224.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0188.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 189",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 189",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0225.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0189.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 190",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 190",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0226.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0190.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 191",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 191",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0227.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0191.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 192",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 192",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0228.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0192.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 193",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 193",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0229.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0193.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 194",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 194",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0230.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0194.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 195",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 195",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0231.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0195.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 196",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 196",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0232.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0196.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 197",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 197",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0233.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0197.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 198",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 198",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0234.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0198.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 199",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 199",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0235.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0199.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 200",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 200",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0236.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0200.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 201",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 201",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0237.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0201.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 202",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 202",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0238.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0202.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 203",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 203",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0239.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0203.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 204",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 204",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0242.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0204.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 205",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 205",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0243.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0205.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 206",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 206",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0244.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0206.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 207",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 207",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0245.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0207.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 208",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 208",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0246.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0208.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 209",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 209",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0247.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0209.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 210",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 210",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0248.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0210.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 211",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 211",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0249.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0211.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 212",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 212",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0250.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0212.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 213",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 213",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0251.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0213.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 214",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 214",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0252.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0214.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 215",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 215",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0253.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0215.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 216",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 216",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0254.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0216.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 217",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 217",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0255.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0217.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 218",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 218",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0256.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0218.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 219",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 219",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0258.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0219.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 220",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 220",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0259.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0220.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 221",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 221",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0260.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0221.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 222",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 222",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0261.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0222.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 223",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 223",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0262.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0223.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 224",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 224",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0263.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0224.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 225",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 225",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0264.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0225.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 226",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 226",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0265.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0226.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 227",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 227",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0266.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0227.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 228",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 228",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0267.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0228.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 229",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 229",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0268.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0229.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 230",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 230",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0269.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0230.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 231",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 231",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0270.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0231.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 232",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 232",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0271.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0232.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 233",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 233",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0272.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0233.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 234",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 234",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0273.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0234.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 235",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 235",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0274.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0235.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 236",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 236",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0275.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0236.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 237",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 237",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0276.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0237.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 238",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 238",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0277.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0238.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 239",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 239",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0278.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0239.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 240",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 240",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0279.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0240.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 241",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 241",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0280.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0241.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 242",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 242",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0282.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0242.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 243",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 243",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0283.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0243.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 244",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 244",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0285.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0244.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 245",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 245",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0286.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0245.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 246",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 246",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0288.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0246.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 247",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 247",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0289.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0247.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 248",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 248",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0290.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0248.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 249",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 249",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0291.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0249.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 250",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 250",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0292.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0250.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 251",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 251",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0293.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0251.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 252",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 252",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0294.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0252.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 253",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 253",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0295.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0253.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 254",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 254",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0298.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0254.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 255",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 255",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0299.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0255.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 256",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 256",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0300.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0256.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 257",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 257",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0301.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0257.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 258",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 258",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0302.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0258.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 259",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 259",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0303.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0259.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 260",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 260",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0304.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0260.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 261",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 261",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0305.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0261.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 262",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 262",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0306.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0262.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 263",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 263",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0307.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0263.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 264",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 264",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0308.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0264.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 265",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 265",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0309.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0265.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 266",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 266",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0310.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0266.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 267",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 267",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0311.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0267.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 268",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 268",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0312.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0268.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 269",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 269",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0313.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0269.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 270",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 270",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0314.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0270.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 271",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 271",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0315.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0271.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 272",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 272",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0316.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0272.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 273",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 273",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0317.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0273.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 274",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 274",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0318.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0274.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 275",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 275",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0319.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0275.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 276",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 276",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0320.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0276.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 277",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 277",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0321.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0277.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 278",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 278",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0322.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0278.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 279",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 279",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0323.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0279.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 280",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 280",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0324.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0280.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 281",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 281",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0325.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0281.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 282",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 282",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0326.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0282.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 283",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 283",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0327.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0283.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 284",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 284",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0328.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0284.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 285",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 285",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0329.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0285.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 286",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 286",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0330.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0286.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 287",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 287",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0331.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0287.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 288",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 288",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0332.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0288.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 289",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 289",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0333.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0289.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 290",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 290",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0334.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0290.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 291",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 291",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0335.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0291.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 292",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 292",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0336.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0292.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 293",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 293",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0337.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0293.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 294",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 294",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0338.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0294.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 295",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 295",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0339.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0295.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 296",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 296",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0340.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0296.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 297",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 297",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0341.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0297.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 298",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 298",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0342.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0298.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 299",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 299",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0343.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0299.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 300",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 300",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0344.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0300.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 301",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 301",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0345.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0301.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 302",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 302",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0346.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0302.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 303",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 303",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0347.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0303.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 304",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 304",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0348.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0304.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 305",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 305",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0349.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0305.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 306",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 306",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0350.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0306.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 307",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 307",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0351.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0307.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 308",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 308",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0352.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0308.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 309",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 309",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0353.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0309.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 310",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 310",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0354.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0310.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 311",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 311",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0355.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0311.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 312",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 312",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0356.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0312.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 313",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 313",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0357.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0313.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 314",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 314",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0358.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0314.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 315",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 315",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0359.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0315.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 316",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 316",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0360.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0316.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 317",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 317",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0362.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0317.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 318",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 318",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0363.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0318.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 319",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 319",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0365.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0319.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 320",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 320",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0366.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0320.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 321",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 321",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0367.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0321.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 322",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 322",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0368.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0322.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 323",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 323",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0369.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0323.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 324",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 324",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0370.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0324.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 325",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 325",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0371.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0325.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 326",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 326",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0373.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0326.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 327",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 327",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0374.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0327.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 328",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 328",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0375.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0328.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 329",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 329",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0376.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0329.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 330",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 330",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0377.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0330.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 331",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 331",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0378.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0331.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 332",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 332",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0379.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0332.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 333",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 333",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0380.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0333.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 334",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 334",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0381.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0334.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 335",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 335",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0382.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0335.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 336",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 336",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0385.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0336.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 337",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 337",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0386.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0337.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 338",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 338",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0387.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0338.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 339",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 339",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0388.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0339.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 340",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 340",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0389.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0340.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 341",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 341",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0390.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0341.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 342",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 342",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0391.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0342.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 343",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 343",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0392.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0343.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 344",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 344",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0393.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0344.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 345",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 345",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0394.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0345.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 346",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 346",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0395.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0346.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 347",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 347",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0396.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0347.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 348",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 348",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0397.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0348.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 349",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 349",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0398.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0349.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 350",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 350",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0400.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0350.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 351",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 351",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0401.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0351.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 352",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 352",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0402.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0352.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 353",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 353",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0403.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0353.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 354",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 354",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0404.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0354.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 355",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 355",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0406.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0355.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 356",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 356",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0407.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0356.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 357",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 357",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0408.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0357.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 358",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 358",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0409.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0358.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 359",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 359",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0410.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0359.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 360",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 360",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0411.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0360.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 361",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 361",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0412.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0361.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 362",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 362",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0413.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0362.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 363",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 363",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0415.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0363.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 364",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 364",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0416.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0364.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 365",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 365",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0421.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0365.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 366",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 366",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0422.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g23-0366.webp",
+      "alt": "Gólmanský speciál v Říčanech 2021 · fotografie 367",
+      "caption": "Gólmanský speciál v Říčanech 2021 · fotografie 367",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/012kemp2021/DSC_0425.jpg"
+    }
+  ],
+  "sources": [
+    "https://www.golmansketreninky.cz/foto/golmansky-special-v-ricanech-2021-foto/nggallery/page/1"
+  ],
+  "camp": "letni-special-2021"
+}

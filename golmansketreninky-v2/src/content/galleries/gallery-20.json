@@ -1,0 +1,768 @@
+{
+  "title": "Gólmanský speciál v Říčanech 2017",
+  "year": 2017,
+  "kind": "camp",
+  "coverIndex": 98,
+  "photos": [
+    {
+      "image": "../../assets/editorial/g20-0000.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 1",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 1",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0467.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0001.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 2",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 2",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0468.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0002.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 3",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 3",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0470.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0003.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 4",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 4",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0473.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0004.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 5",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 5",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0474.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0005.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 6",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 6",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0475.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0006.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 7",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 7",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0476.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0007.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 8",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 8",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0482.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0008.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 9",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 9",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0483.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0009.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 10",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 10",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0484.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0010.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 11",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 11",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0487.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0011.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 12",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 12",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0488.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0012.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 13",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 13",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0494.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0013.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 14",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 14",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0497.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0014.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 15",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 15",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0498.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0015.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 16",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 16",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0499.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0016.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 17",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 17",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0504.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0017.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 18",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 18",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0505.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0018.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 19",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 19",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0506.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0019.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 20",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 20",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0507.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0020.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 21",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 21",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0508.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0021.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 22",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 22",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0509.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0022.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 23",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 23",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0510.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0023.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 24",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 24",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0511.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0024.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 25",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 25",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0512.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0025.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 26",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 26",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0513.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0026.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 27",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 27",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0514.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0027.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 28",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 28",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0515.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0028.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 29",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 29",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0516.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0029.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 30",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 30",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0517.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0030.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 31",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 31",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0518.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0031.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 32",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 32",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0519.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0032.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 33",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 33",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0520.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0033.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 34",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 34",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0521.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0034.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 35",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 35",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0522.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0035.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 36",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 36",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0523.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0036.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 37",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 37",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0524.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0037.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 38",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 38",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0525.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0038.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 39",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 39",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0526.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0039.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 40",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 40",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0527.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0040.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 41",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 41",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0528.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0041.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 42",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 42",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0529.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0042.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 43",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 43",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0530.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0043.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 44",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 44",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0532.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0044.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 45",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 45",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0533.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0045.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 46",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 46",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0534.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0046.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 47",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 47",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0535.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0047.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 48",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 48",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0536.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0048.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 49",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 49",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0537.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0049.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 50",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 50",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0538.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0050.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 51",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 51",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0539.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0051.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 52",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 52",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0540.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0052.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 53",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 53",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0541.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0053.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 54",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 54",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0542.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0054.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 55",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 55",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0544.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0055.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 56",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 56",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0547.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0056.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 57",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 57",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0548.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0057.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 58",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 58",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0549.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0058.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 59",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 59",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0550.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0059.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 60",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 60",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0551.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0060.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 61",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 61",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0552.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0061.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 62",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 62",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0553.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0062.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 63",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 63",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0554.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0063.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 64",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 64",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0555.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0064.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 65",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 65",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0556.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0065.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 66",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 66",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0557.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0066.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 67",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 67",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0585.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0067.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 68",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 68",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0586.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0068.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 69",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 69",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0587.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0069.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 70",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 70",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0588.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0070.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 71",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 71",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0589.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0071.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 72",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 72",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0590.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0072.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 73",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 73",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0591.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0073.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 74",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 74",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0592.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0074.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 75",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 75",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0593.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0075.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 76",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 76",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0594.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0076.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 77",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 77",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0595.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0077.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 78",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 78",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0596.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0078.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 79",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 79",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0597.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0079.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 80",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 80",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0598.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0080.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 81",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 81",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0599.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0081.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 82",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 82",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0600.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0082.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 83",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 83",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0601.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0083.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 84",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 84",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0602.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0084.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 85",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 85",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0603.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0085.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 86",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 86",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0604.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0086.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 87",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 87",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0605.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0087.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 88",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 88",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/IMG_0606.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g20-0088.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 89",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 89",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-2d3f4602a24594c9a988b9c74fdee751d16bd04f71eb9c781b8adfefff798170-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0089.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 90",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 90",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-9aa7e3214901ef8d63dad15863b9b28ec791bca1fbe960391b2fd4122150123b-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0090.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 91",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 91",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-16d9376a47006ff051e92f1ba6acc60ff5783b310bc80cda56bc58897e06df5a-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0091.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 92",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 92",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-55dd8258e5b513aa16500950581a69d57a4620783d31883c2434311994dd3ae5-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0092.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 93",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 93",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-b2e65527ac16a30aad4a827c6c871539f9b9886aa18f11f4d5fdac470d619e38-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0093.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 94",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 94",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-d64042480f5e329377aca4f9f3e54bdd82ac5b9adc85f5f8c5de93e1e5a05c39-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0094.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 95",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 95",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-e446f8fa6840225fb97091bc7fbc630eb333616c22e02d86a52b462bc9de56f6-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0095.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 96",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 96",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-04-f27d30e8d29127793021c3fbf6b5bcb53b5379ef57db6c40c7a9220356d63a9e-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0096.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 97",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 97",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-1af701ca5fadb64aab85bb33b3127776eb24f11e3248725ea3efa25286dd2e36-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0097.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 98",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 98",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-3b284610edf6d268a11ba65fce663302eb80fe65c5883df2c0d668f55d8e6949-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0098.webp",
+      "alt": "Trenér vysvětluje práci s betonem u tyče, Říčany 2017",
+      "caption": "Trenér vysvětluje práci s betonem u tyče, Říčany 2017",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-4c04a104f257121dee3242df557095632dd177ada2f6ad711fc8c6e5fd5330bf-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0099.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 100",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 100",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-7a7a13545cba6621e0c2c6169f179d4e51baf9b63cccf35ccaf5df6af0ee31d8-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0100.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 101",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 101",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-8a70cab8f44fdb0b1c1b22ad1a91f66cc67c6286306361502e4d77d6f2be2116-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0101.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 102",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 102",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-721b8918879f2bd410077edbf64added76026cbe75c62ff25b7eb570f4b2a82c-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0102.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 103",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 103",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-582155c63cbb46e75152c535f71e233f63c7c52746dc34555af67eee1df9c103-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0103.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 104",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 104",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-3900215818b6bbd58a9099467d1bbb0b27d837518d4bcf399fbf186f6b938ec4-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0104.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 105",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 105",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-aff86df9b59582c5c9299fa77c8509ebbdea5c15fd456e98aac3c77b0a604a25-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0105.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 106",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 106",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-f1c97e9d583d690b5016628a42436182c2701a39496f269e71c8111f1d799674-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0106.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 107",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 107",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-f3404b45cefbad21f2284fb5a86db283fcd61bb8daa7bf90a2c20ea29eea73ba-Picture.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g20-0107.webp",
+      "alt": "Gólmanský speciál v Říčanech 2017 · fotografie 108",
+      "caption": "Gólmanský speciál v Říčanech 2017 · fotografie 108",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/009kemp2017/media-share-0-02-05-f7368c94af96384b86d9fa177b6cb8bf86239461825dd449478f5f1548bfa181-Picture.jpg"
+    }
+  ],
+  "sources": [
+    "https://www.golmansketreninky.cz/2017/07/foto-z-golmanskeho-specialu-2017/nggallery/page/1"
+  ],
+  "camp": "letni-special-2017"
+}

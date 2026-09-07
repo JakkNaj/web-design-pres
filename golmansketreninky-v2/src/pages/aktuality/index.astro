@@ -1,0 +1,10 @@
+---
+import HockeyAccent from '../../components/HockeyAccent.astro';
+import Layout from '../../layouts/Layout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { siteContent } from '../../lib/site';
+const { articles, galleryMap }=await siteContent();
+const categories=['Vše','Z kempů','Z tréninku','Informace'];
+---
+<Layout title="Ze života akademie | Altrichter Goalie Academy"><main id="obsah"><section class="page-intro"><div class="container"><HockeyAccent variant="puck" class="intro-accent" /><p class="eyebrow">Aktuality a ohlédnutí</p><h1>Ze života<br />akademie.</h1><p class="lead">Tréninky, soustředění a chvíle mezi nimi. Skutečné příběhy s původními daty publikace.</p></div></section><section class="container section" data-news><div class="filters news-filters" role="group" aria-label="Kategorie aktualit">{categories.map((c,i)=><button class:list={['filter-button',{'is-active':i===0}]} data-news-filter={c} aria-pressed={i===0}>{c}</button>)}</div><div class="article-grid">{articles.map(a=><div data-article-category={a.data.category}><ArticleCard article={a} gallery={a.data.gallery?galleryMap.get(a.data.gallery.id):undefined}/></div>)}</div><p data-news-empty class="empty-state" hidden>V této kategorii zatím nejsou žádné články.</p><p class="sr-only" data-news-count aria-live="polite"></p></section></main></Layout>
+<script>document.querySelectorAll<HTMLButtonElement>('[data-news-filter]').forEach(button=>button.addEventListener('click',()=>{const category=button.dataset.newsFilter;document.querySelectorAll<HTMLButtonElement>('[data-news-filter]').forEach(b=>{b.setAttribute('aria-pressed',String(b===button));b.classList.toggle('is-active',b===button);});let count=0;document.querySelectorAll<HTMLElement>('[data-article-category]').forEach(card=>{card.hidden=category!=='Vše'&&card.dataset.articleCategory!==category;if(!card.hidden)count++;});document.querySelector<HTMLElement>('[data-news-empty]')!.hidden=count>0;document.querySelector<HTMLElement>('[data-news-count]')!.textContent=`Zobrazeno článků: ${count}`;}));</script>

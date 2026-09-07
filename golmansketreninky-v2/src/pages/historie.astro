@@ -1,0 +1,14 @@
+---
+import HockeyAccent from '../components/HockeyAccent.astro';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { siteContent, campUrl, galleryUrl } from '../lib/site';
+import { eventState } from '../lib/events';
+const { camps, galleryMap, galleries }=await siteContent();
+const history=camps.filter(c=>!c.data.demo&&eventState(c.data)==='completed').reverse();
+const training=galleries.filter(g=>g.data.kind==='training').sort((a,b)=>(b.data.year??0)-(a.data.year??0));
+---
+<Layout title="Naše historie od roku 2012 | Altrichter Goalie Academy"><main id="obsah"><section class="page-intro dark"><div class="container"><HockeyAccent variant="rink" class="intro-accent" /><p class="eyebrow">Roky práce na ledě</p><h1>Příběh píšeme<br />každým tréninkem.</h1><p class="lead">Beroun, Jihlava, Havlíčkův Brod, Říčany. Doložené letní ročníky od roku 2012. Za každým z nich jsou lidé, soustředění a společně odvedená práce.</p><p>Rok 2012 je nejstarší zde doložený ročník, nikoli tvrzení o založení akademie.</p></div></section>
+<section class="section container history-list">{history.map(c=>{const g=c.data.gallery?galleryMap.get(c.data.gallery.id):undefined;return <a class="history-row" href={campUrl(c.id)}><strong class="year">{c.data.year}</strong>{g?<Image src={g.data.photos[g.data.coverIndex].image} alt={g.data.photos[g.data.coverIndex].alt} width={400} loading="lazy"/>:<div class="history-no-photo" aria-label="Ročník bez dochované galerie">Na ledě<br />{c.data.year}</div>}<div class="history-copy"><p class="eyebrow">{c.data.location}</p><h2>{c.data.title}</h2><p>{c.data.summary}</p><span>{g?`${g.data.photos.length} fotografií`:'Doložené informace o ročníku'}</span></div><span class="text-link" aria-hidden="true">↗</span></a>})}</section>
+<section class="section container"><div class="section-heading"><p class="eyebrow">I mezi kempy</p><h2>Každodenní práce.</h2></div><div class="article-grid training-galleries">{training.map(g=><a class="article-card" href={galleryUrl(g.id)}><Image src={g.data.photos[g.data.coverIndex].image} alt={g.data.photos[g.data.coverIndex].alt} width={600} loading="lazy"/><p class="eyebrow">{g.data.year??'Z archivu'} · Z tréninku</p><h3>{g.data.title}</h3><p>{g.data.photos.length} fotografií ↗</p></a>)}</div></section>
+</main></Layout>

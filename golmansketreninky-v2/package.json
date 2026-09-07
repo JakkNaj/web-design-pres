@@ -1,0 +1,20 @@
+{
+  "name": "golmansketreninky-design-v2",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "test": "node --test tests/*.test.mjs",
+    "prepare:media": "node scripts/prepare-editorial-images.mjs",
+    "check:links": "python3 scripts/check-built-site.py dist"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.7.10",
+    "typescript": "^5.8.3",
+    "sharp": "0.34.5"
+  }
+}

@@ -1,0 +1,55 @@
+---
+import Brand from './Brand.astro';
+import Arrow from './Arrow.astro';
+import { url } from '../lib/site';
+const links = [['Tréninky', url('#treninky')], ['Kempy', url('kempy/')], ['Trenéři', url('treneri/')], ['Náš příběh', url('historie/')], ['Aktuality', url('aktuality/')]];
+---
+<header class="header">
+  <a class="brand" href={url()} aria-label="Altrichter Goalie Academy — úvod"><Brand /></a>
+  <nav class="desktop-nav" aria-label="Hlavní navigace">{links.map(([name,href]) => <a href={href}>{name}</a>)}</nav>
+  <a class="button header-cta" href={url('#terminy')}>Jdu na led <Arrow /></a>
+  <details class="mobile-menu"><summary aria-label="Otevřít navigaci"><span></span><span></span></summary><nav aria-label="Mobilní navigace">{links.map(([name,href]) => <a href={href}>{name}</a>)}<a href={url('#kontakt')}>Kontakt</a></nav></details>
+</header>
+<script>
+  const header = document.querySelector<HTMLElement>('.header');
+  if (header) {
+    const updateScrolled = () => header.toggleAttribute('data-scrolled', window.scrollY > 16);
+    updateScrolled();
+    window.addEventListener('scroll', updateScrolled, { passive: true });
+    window.addEventListener('pageshow', updateScrolled);
+    // Anchor navigation must clear the sticky menu at every responsive size.
+    const updateHeight = () => document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+    updateHeight();
+    new ResizeObserver(updateHeight).observe(header);
+  }
+  const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu?.open) { menu.open = false; menu.querySelector('summary')?.focus(); } });
+  document.addEventListener('click', e => { if (menu?.open && e.target instanceof Node && !menu.contains(e.target)) menu.open = false; });
+</script>
+
+<style>
+  .header { position:sticky; top:0; z-index:10; isolation:isolate; }
+  .header::before,.header::after { content:''; position:absolute; inset:0; z-index:-1; pointer-events:none; }
+  .header::before {
+    background:rgb(255 255 255 / 96%);
+    box-shadow:inset 0 1px 0 rgb(255 255 255 / 85%), 0 1px 0 rgb(17 17 17 / 5%), 0 8px 28px rgb(17 17 17 / 5%);
+  }
+  @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+    .header::before {
+      background:rgb(255 255 255 / 80%);
+      -webkit-backdrop-filter:blur(20px) saturate(120%);
+      backdrop-filter:blur(20px) saturate(120%);
+    }
+  }
+  .header::after { background:white; opacity:1; transition:opacity 220ms var(--ease-out); }
+  .header[data-scrolled]::after { opacity:0; }
+  .header:has(.mobile-menu[open])::after { opacity:1; }
+  .mobile-menu nav { max-height:calc(100dvh - var(--header-height, 90px)); overflow-y:auto; overscroll-behavior:contain; }
+  @media(prefers-reduced-motion:reduce) { .header::after { transition:none; } }
+  @media print {
+    .header { position:static; }
+    .header::before { display:none; }
+    .header[data-scrolled]::after { opacity:1; }
+  }
+</style>

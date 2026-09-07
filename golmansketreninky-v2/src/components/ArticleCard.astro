@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { articleUrl } from '../lib/site';
+import { dateLabel } from '../lib/events';
+import Arrow from './Arrow.astro';
+interface Props { article: CollectionEntry<'articles'>; gallery?: CollectionEntry<'galleries'> }
+const { article, gallery } = Astro.props;
+const photo = gallery?.data.photos[gallery.data.coverIndex];
+const cover = article.data.cover ?? photo?.image;
+const alt = article.data.coverAlt ?? photo?.alt ?? article.data.title;
+---
+<article class="article-card" data-category={article.data.category}><a class="article-cover" href={articleUrl(article.id)} aria-label={article.data.title}>{cover?<Image src={cover} alt={alt} width={680} loading="lazy" />:<div class="article-placeholder" aria-hidden="true">AGA<span>Ze života akademie</span></div>}<span>{article.data.category}</span></a><div class="article-meta"><time datetime={article.data.date}>{dateLabel(article.data.date)}</time><span>{gallery?.data.year}</span></div><h3><a href={articleUrl(article.id)}>{article.data.title}</a></h3><p>{article.data.summary}</p><a class="text-link" href={articleUrl(article.id)}>Podívat se blíž <Arrow diagonal /></a></article>

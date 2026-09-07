@@ -1,0 +1,101 @@
+<script>
+  // Progressive enhancement: HTML stays visible without JS. Only content below
+  // the initial viewport is staged, and each block enters once per page visit.
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const selector = [
+    '.section-heading', '.program', '.trainer-card', '.milestone',
+    '.camp-card', '.article-grid > *', '.history-row', '.photo-button',
+    '.detail-hero', '.story-layout > *', '.article-body > *',
+    '.approach > *', '.partner-grid > a', '.faq > div',
+    '.next-camp', '.experience-line', '.training-heading', '.session',
+    '.history-signoff', '.related-block', '.video-section',
+    '.final-cta > :not(svg)',
+  ].join(',');
+
+  function setupReveals() {
+    if (preference.matches || !('IntersectionObserver' in window)) return;
+
+    const pending = new Set<HTMLElement>();
+    const active = new Map<HTMLElement, Animation>();
+    const easing = getComputedStyle(document.documentElement).getPropertyValue('--ease-out').trim();
+    const observer = new IntersectionObserver(entries => {
+      const groups = new Map<Element | null, number>();
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const element = entry.target as HTMLElement;
+        const index = groups.get(element.parentElement) ?? 0;
+        groups.set(element.parentElement, index + 1);
+        observer.unobserve(element);
+        pending.delete(element);
+        delete element.dataset.scrollReveal;
+        if (preference.matches || element.contains(document.activeElement)) continue;
+
+        // No permanent transform/layer: the existing hover and goalie motion
+        // keep their own transforms after this short entrance finishes.
+        const animation = element.animate([
+          { opacity: 0, transform: 'translate3d(0, 16px, 0)' },
+          { opacity: 1, transform: 'none' },
+        ], { duration: 600, delay: Math.min(index, 3) * 50, easing, fill: 'backwards' });
+        active.set(element, animation);
+        animation.finished.then(() => active.delete(element), () => active.delete(element));
+      }
+    }, { rootMargin: '0px 0px 32px 0px', threshold: 0 });
+
+    const candidates = Array.from(document.querySelectorAll<HTMLElement>(`main :is(${selector})`))
+      .filter(element => !element.parentElement?.closest(selector))
+      .filter(element => !element.closest('dialog, [hidden]'))
+      .filter(element => element.getBoundingClientRect().top >= window.innerHeight);
+
+    for (const element of candidates) {
+      element.dataset.scrollReveal = 'pending';
+      pending.add(element);
+      observer.observe(element);
+    }
+
+    function show(element: HTMLElement) {
+      observer.unobserve(element);
+      pending.delete(element);
+      delete element.dataset.scrollReveal;
+      active.get(element)?.cancel();
+      active.delete(element);
+    }
+
+    function showAll() {
+      observer.disconnect();
+      for (const element of [...pending, ...active.keys()]) show(element);
+    }
+
+    // Keyboard navigation and anchor jumps must never wait for decoration.
+    document.addEventListener('focusin', event => {
+      if (!(event.target instanceof Element)) return;
+      for (const element of [...pending, ...active.keys()]) {
+        if (element.contains(event.target)) show(element);
+      }
+    });
+    function showAnchor() {
+      let id: string;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      const target = document.getElementById(id);
+      if (!target) return;
+      for (const element of [...pending, ...active.keys()]) {
+        if (target.contains(element) || element.contains(target)) show(element);
+      }
+    }
+    showAnchor();
+    window.addEventListener('hashchange', showAnchor);
+    window.addEventListener('beforeprint', showAll);
+    window.addEventListener('pageshow', event => { if (event.persisted) showAll(); });
+    preference.addEventListener('change', () => { if (preference.matches) showAll(); });
+  }
+
+  setupReveals();
+</script>
+
+<style is:global>
+  @media (prefers-reduced-motion: no-preference) {
+    [data-scroll-reveal='pending'] { opacity: 0; }
+  }
+  @media print {
+    [data-scroll-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+</style>

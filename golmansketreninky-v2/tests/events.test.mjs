@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { canRegister, eventState, dateRange, timeLabel } from '../src/lib/events.ts';
+const now=Date.parse('2026-09-07T12:00:00Z');
+const future={start:'2026-09-26T09:00:00+02:00',end:'2026-09-27T18:00:00+02:00',availability:'open'};
+test('Pouze budoucí otevřený termín lze přihlásit',()=>{assert.equal(canRegister(future,now),true);for(const availability of ['announced','full','completed'])assert.equal(canRegister({...future,availability},now),false);});
+test('Zapomenutý otevřený termín po skončení je historie',()=>{const later=Date.parse('2026-09-28');assert.equal(eventState(future,later),'completed');assert.equal(canRegister(future,later),false);});
+test('Začínající ani probíhající termín nelze přihlásit',()=>{assert.equal(canRegister(future,Date.parse(future.start)),false);assert.equal(canRegister(future,Date.parse('2026-09-26T15:00:00Z')),false);});
+test('Připravovaný kemp nevyžaduje vymyšlený termín',()=>{const preparing={availability:'announced'};assert.equal(eventState(preparing,now),'announced');assert.equal(canRegister(preparing,now),false);assert.equal(dateRange(),'Termín připravujeme');});
+test('Prázdná budoucí nabídka po skončení posledního kempu',()=>{assert.equal([future].filter(e=>eventState(e,Date.parse('2026-09-28'))!=='completed').length,0);});
+test('Čas je český, nezávisí na serveru',()=>assert.equal(timeLabel(future.start),'09:00'));

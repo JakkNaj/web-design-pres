@@ -1,0 +1,9 @@
+{
+  "name": "Střída Sport",
+  "order": 2,
+  "url": "http://www.stridasport.cz/",
+  "logo": "../../assets/editorial/partner-2.webp",
+  "sources": [
+    "https://www.golmansketreninky.cz/"
+  ]
+}

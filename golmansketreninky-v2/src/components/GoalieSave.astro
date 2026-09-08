@@ -7,12 +7,18 @@ const poses = {
   catchingArm: { ready: 'rotate(0deg)', save: 'rotate(0deg)', catch: 'rotate(-55deg)', block: 'rotate(0deg)' },
   blockerArm: { ready: 'rotate(0deg)', save: 'rotate(0deg)', catch: 'rotate(0deg)', block: 'rotate(35deg)' },
 };
+const confetti = [
+  [65, 115, -35], [120, 62, 45], [190, 125, -70], [440, 78, 60],
+  [515, 125, -25], [553, 206, 70], [48, 245, -55], [94, 340, 30],
+  [156, 415, 85], [470, 401, -55], [542, 320, 35], [510, 245, -70],
+  [210, 460, 45], [397, 456, -35], [41, 395, 65], [567, 424, -45],
+];
 ---
 
 <div class="approach-art goalie-save" data-goalie-save>
   <svg class="save-scene" viewBox="0 0 600 520" fill="none" role="img" aria-labelledby="save-title save-description">
-    <title id="save-title">Tři zákroky před hokejovou brankou</title>
-    <desc id="save-description">Brankář střídá záklek do motýlka proti střele po ledě, chycení vysoké střely do lapačky a vyražení puku vyrážečkou do strany.</desc>
+    <title id="save-title">Zkus překonat našeho gólmana</title>
+    <desc id="save-description">Brankář střídá záklek, lapačku a vyrážečku. Kliknutím na led vystřelíš. Čtyři rychlé střely za sebou znamenají gól a naštvanou reakci brankáře.</desc>
     <defs>
       <pattern id="goal-net-mesh" width="14" height="14" patternUnits="userSpaceOnUse">
         <path d="M0 0h14v14" stroke="#6a8c94" stroke-width=".9" opacity=".45" />
@@ -36,16 +42,26 @@ const poses = {
       <path d="M129 382h14m314 0h14" stroke="#a4253b" stroke-width="5" />
     </g>
 
+    <g class="goal-ripple" opacity="0" stroke="#c8334b" stroke-width="2"><circle cx="405" cy="192" r="19"/><path d="m383 171-9-9m53 9 9-9m-53 51-9 9m53-9 9 9"/></g>
+    <circle class="goal-light" cx="450" cy="137" r="8" fill="#c8334b" opacity="0" />
     <ellipse class="goalie-shadow" cx="300" cy="402" rx="115" ry="10" fill="#087c9b" opacity=".09" />
 
     <g class="goalie-body" data-rig style={`transform: ${poses.body.ready}`} data-ready={poses.body.ready} data-save={poses.body.save} data-catch={poses.body.catch} data-block={poses.body.block} fill="#111">
       <path d="M258 253h84l14 39-29 28-27-22-27 22-29-28z" />
       <path d="M277 164c-19 0-41 7-53 19l-8 57 29 20 9-24-4 36c27 12 73 12 100 0l-4-36 9 24 29-20-8-57c-12-12-34-19-53-19z" />
       <path d="m273 174 27 15 27-15m-71 77c27 8 61 8 88 0" stroke="#e9f7fa" stroke-width="2" opacity=".16" />
+      <g class="goalie-head">
       <path d="M274 129c0-19 10-29 26-29s26 10 26 29l-4 29-12 18h-20l-12-18z" />
       <path d="m280 129 20-5 20 5-4 27-10 12h-12l-10-12z" stroke="#e9f7fa" stroke-width="2" />
       <path d="M281 139h38m-36 9h34m-30 9h26m-20-31 2 40m12-40-2 40" stroke="#e9f7fa" stroke-width="1.4" opacity=".8" />
       <path d="m286 114 5-3m18 0 5 3" stroke="#e9f7fa" stroke-width="2" stroke-linecap="round" opacity=".5" />
+
+      </g>
+      <g class="anger-mark" opacity="0">
+        <path d="m258 58-20 32h16l-8 28 32-40h-18l12-20z" fill="#c8334b" stroke="white" stroke-width="2" stroke-linejoin="round" />
+        <g transform="rotate(12 353 87)"><path d="M348 61h12l-3 35h-7z" fill="#c8334b"/><circle cx="353" cy="107" r="6" fill="#c8334b"/></g>
+        <path d="m329 117 9 5m-9-5 3-9m-3 9-8-2m8 2-2 9" stroke="#c8334b" stroke-width="3" stroke-linecap="round" />
+      </g>
 
       <g class="blocker-arm" data-rig style={`transform: ${poses.blockerArm.ready}`} data-ready={poses.blockerArm.ready} data-save={poses.blockerArm.save} data-catch={poses.blockerArm.catch} data-block={poses.blockerArm.block}>
         <path d="m231 192-21 15-14 39 24 16 23-44z" />
@@ -89,10 +105,22 @@ const poses = {
       <ellipse cy="-3" rx="16" ry="6" fill="#252525" />
       <ellipse cy="-4" rx="11" ry="3" stroke="#707072" stroke-width=".7" />
     </g>
+    <g class="goal-confetti" opacity="0" aria-hidden="true">
+      {confetti.map(([x,y,turn],i) => <g data-goal-confetti data-x={x} data-y={y} data-turn={turn}><rect x="-4" y="-7" width="8" height="14" rx="2" fill={['#57c7df','#c8334b','#7254a5'][i%3]} /></g>)}
+    </g>
+    <g class="goal-celebration" opacity="0" aria-hidden="true">
+      <path d="m165 435 287 7-8 59-290-7z" fill="#c8334b" />
+      <text x="300" y="485" text-anchor="middle" fill="white" font-size="60" font-weight="750" letter-spacing="-3">GÓÓÓL!</text>
+    </g>
   </svg>
   <span class="art-coordinate" aria-hidden="true">TADY JE TVOJE MÍSTO.</span>
   <span class="save-stamp" aria-hidden="true">PUK? MÁM.</span>
-  <span class="art-caption" aria-hidden="true">MALÉ DETAILY. VELKÝ ROZDÍL.</span>
+  <button class="shot-trigger" type="button" aria-label="Vystřelit puk na branku" aria-describedby="shot-instructions" hidden><span>Vystřelit puk ↗</span></button>
+  <div class="shot-feedback" hidden>
+    <p id="shot-instructions">Klikni na led. Čtyři rychlé střely ho zaskočí.</p>
+    <div class="shot-meter" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <p class="shot-result" role="status" aria-live="polite" aria-atomic="true">Troufneš si na něj?</p>
+  </div>
   <button class="save-replay" type="button" hidden>
     <svg class="pause-icon" width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><rect x="5" y="4" width="3" height="12" rx="1" /><rect x="12" y="4" width="3" height="12" rx="1" /></svg>
     <svg class="play-icon" width="15" height="15" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m6 3 11 7-11 7z" /></svg>
@@ -102,6 +130,30 @@ const poses = {
 
 <style>
   .goalie-save { --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1); pointer-events: auto; }
+  .goalie-save[data-game-ready] { aspect-ratio:auto; padding-bottom:132px; }
+  .goalie-save[data-game-ready] .save-scene { height:auto; aspect-ratio:600 / 520; }
+  .goalie-head { transform-origin:300px 139px; }
+  .goal-celebration { transform-origin:300px 469px; }
+  .anger-mark { transform-origin:300px 100px; }
+  [data-goal-confetti] { transform-origin:0 0; }
+  .goalie-save[data-game-result=goal] .art-coordinate { opacity:0; }
+  .goalie-save[data-game-result=goal] .save-stamp { top:45%; right:5%; font-size:12px; }
+  .shot-trigger { position:absolute; inset:0 0 132px; width:100%; border:0; padding:0; background:transparent; cursor:crosshair; touch-action:manipulation; }
+  .shot-trigger:focus-visible { outline:2px solid var(--accent); outline-offset:-6px; }
+  .shot-trigger>span { position:absolute; right:20px; bottom:-120px; min-height:44px; display:flex; align-items:center; padding:10px 16px; border:1px solid #087c9b30; border-radius:24px; background:white; color:var(--accent); font-size:14px; font-weight:500; }
+  .shot-trigger[aria-disabled=true] { cursor:default; }
+  .shot-trigger[aria-disabled=true]>span { color:var(--red); }
+  .shot-feedback { position:absolute; left:22px; right:22px; bottom:66px; pointer-events:none; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:5px 10px; }
+  .shot-feedback>p:first-child { grid-column:1 / -1; }
+  .shot-feedback p { font-size:12px; line-height:1.45; color:var(--steel); }
+  .shot-feedback .shot-result { font-size:13px; color:var(--accent); min-height:19px; grid-column:1; grid-row:2; }
+  .shot-meter { display:flex; gap:5px; grid-column:2; grid-row:2; align-self:center; }
+  .shot-meter i { width:6px; height:6px; border-radius:50%; background:#087c9b24; }
+  .shot-meter i[data-lit] { background:var(--accent); }
+  [data-game-result=goal] .shot-meter i[data-lit] { background:var(--red); }
+  [data-game-result=goal] .shot-result { color:var(--red); }
+  .goalie-save[data-interactive] .save-stamp { opacity:1; }
+  .save-replay { z-index:2; }
   .save-scene { display: block; width: 100%; height: 100%; }
   [data-rig], .shot-puck { transform-origin: 0 0; }
   .goalie-stick { transform-origin: 300px 390px; }
@@ -114,7 +166,7 @@ const poses = {
   .save-replay { position: absolute; left: 22px; bottom: 12px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 3px; border: 0; background: none; color: var(--accent); font-size: 13px; }
   .play-icon, .save-replay[data-paused] .pause-icon { display: none; }
   .save-replay[data-paused] .play-icon { display: block; }
-  @media (hover: hover) and (pointer: fine) { .save-replay:not(:disabled):hover { color: var(--ink); } }
+  @media (hover: hover) and (pointer: fine) { .save-replay:not(:disabled):hover { color: var(--ink); } .shot-trigger:not([aria-disabled=true]):hover>span { background:var(--cyan); color:var(--ink); } }
   @media (max-width: 800px) { .save-replay { left: 13px; bottom: 8px; font-size: 12px; gap: 5px; } }
   @media (max-width: 600px) { .save-replay { left: 18px; } .art-caption { display: none; } }
   @media (prefers-reduced-motion: reduce) {
@@ -129,6 +181,7 @@ const poses = {
 </style>
 
 <script>
+  import { setupGoalieGame } from '../lib/goalie-game';
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   document.querySelectorAll<HTMLElement>('[data-goalie-save]').forEach(scene => {
     const button = scene.querySelector<HTMLButtonElement>('.save-replay')!;
@@ -142,6 +195,7 @@ const poses = {
     let animations: Animation[] = [];
     let visible = false;
     let pausedByUser = false;
+    let interactive = false;
     let nextSave: 'butterfly' | 'glove' | 'blocker' = 'butterfly';
     let restTimer: number | undefined;
     let run = 0;
@@ -152,7 +206,7 @@ const poses = {
     }
 
     function canPlay() {
-      return visible && !document.hidden && !motionPreference.matches && !pausedByUser;
+      return visible && !document.hidden && !motionPreference.matches && !pausedByUser && !interactive;
     }
 
     function reset() {
@@ -275,8 +329,13 @@ const poses = {
       }
     }
 
+    const game = setupGoalieGame(scene, {
+      onStart() { interactive = true; reset(); },
+      onFinish() { interactive = false; syncPlayback(); },
+    });
     button.hidden = motionPreference.matches;
     button.addEventListener('click', () => {
+      game.stop();
       pausedByUser = !pausedByUser;
       button.toggleAttribute('data-paused', pausedByUser);
       label.textContent = pausedByUser ? 'Pokračovat' : 'Pozastavit';
@@ -284,14 +343,16 @@ const poses = {
     });
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting && entry.intersectionRatio >= .45;
+      if (!visible) game.stop();
       syncPlayback();
     }, { threshold: .45 });
     observer.observe(scene);
     motionPreference.addEventListener('change', () => {
+      game.stop();
       reset();
       button.hidden = motionPreference.matches;
       syncPlayback();
     });
-    document.addEventListener('visibilitychange', syncPlayback);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) game.stop(); syncPlayback(); });
   });
 </script>

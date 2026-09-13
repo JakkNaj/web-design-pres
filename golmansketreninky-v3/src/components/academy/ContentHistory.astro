@@ -1,0 +1,48 @@
+---
+import { Section, Grid, Heading, Paragraph, Eyebrow, Img } from '@/ui';
+import ContentSectionHeading from './ContentSectionHeading.astro';
+import HockeyAccent from './HockeyAccent.astro';
+import Arrow from './Arrow.astro';
+import { siteContent, campUrl, galleryUrl } from '@/lib/site';
+import { eventState } from '@/lib/events';
+interface Props { render?:boolean }
+const { render=true }=Astro.props;
+const { camps,galleryMap,galleries }=await siteContent();
+const history=camps.filter(c=>!c.data.demo&&eventState(c.data)==='completed').reverse();
+const training=galleries.filter(g=>g.data.kind==='training').sort((a,b)=>(b.data.year??0)-(a.data.year??0));
+---
+{render && <>
+<Section class="history-intro_wrap"><HockeyAccent variant="rink" class="history-intro_accent"/><Eyebrow>Roky práce na ledě</Eyebrow><Heading tag="h1">Příběh píšeme<br/>každým tréninkem.</Heading><Paragraph>Beroun, Jihlava, Havlíčkův Brod, Říčany. Letní ročníky od roku 2012. Za každým z nich jsou lidé, soustředění a společně odvedená práce.</Paragraph></Section>
+<Section class="history-list_wrap"><div class="history-list_layout">{history.map(c=>{const g=c.data.gallery?galleryMap.get(c.data.gallery.id):undefined;const photo=g?.data.photos[g.data.coverIndex];return <a class="history-list_row" href={campUrl(c.id)}><strong class="history-list_year">{c.data.year}</strong>{photo?<Img src={photo.image} alt={photo.alt}/>:<div class="history-list_placeholder">Na ledě<br/>{c.data.year}</div>}<div class="history-list_copy"><Eyebrow>{c.data.location}</Eyebrow><Heading>{c.data.title}</Heading><Paragraph>{c.data.summary}</Paragraph><span>{g?`${g.data.photos.length} fotografií`:'Informace o ročníku'}</span></div><Arrow diagonal/></a>})}</div></Section>
+<Section paddingTop="none" class="history-training_wrap"><ContentSectionHeading eyebrow="I mezi kempy" title="Každodenní práce."/><Grid class="history-training_list">{training.map(g=>{const p=g.data.photos[g.data.coverIndex];return <a class="history-training_card" href={galleryUrl(g.id)}><Img src={p.image} alt={p.alt}/><Eyebrow>{g.data.year??'Z archivu'} · Z tréninku</Eyebrow><Heading tag="h3">{g.data.title}</Heading><Paragraph>{g.data.photos.length} fotografií ↗</Paragraph></a>})}</Grid></Section>
+</>}
+
+<style is:global>
+@layer components {
+
+.history-intro_wrap { background:#0d1821; padding-block:3.4375rem 4rem; }
+.history-intro_wrap>.container { gap:0; padding-right:14.375rem; }
+.history-intro_wrap .eyebrow_text { color:var(--blue); margin-bottom:1.25rem; }
+.history-intro_wrap .heading { font-size:clamp(2.8125rem,6.5vw,5.875rem); line-height:1.02; letter-spacing:-.06em; margin:0; max-width:65.625rem; }
+.history-intro_wrap .text { max-width:42.5rem; margin-top:1.5625rem; color:var(--text-2); font-size:1.0625rem; }
+.history-intro_accent { position:absolute; width:11.875rem; right:0; top:50%; transform:translateY(-50%); }
+.history-list_layout { width:100%; }
+.history-list_row { display:grid; grid-template-columns:6.875rem 11.25rem 1fr auto; gap:2rem; align-items:center; padding:1.75rem 0; border-top:.0625rem solid var(--border); }
+.history-list_row:last-child { border-bottom:.0625rem solid var(--border); }
+.history-list_year { font-size:3rem; font-weight:700; letter-spacing:-.065em; color:var(--blue); }
+.history-list_row>.image { aspect-ratio:1.5; width:100%; object-fit:cover; }
+.history-list_placeholder { background:var(--ice-dark); aspect-ratio:1.5; display:grid; place-items:center; font-size:.75rem; letter-spacing:.08em; color:var(--blue); }
+.history-list_copy .heading { font-size:1.5625rem; line-height:1.3; letter-spacing:-.04em; margin:.3125rem 0 .625rem; }
+.history-list_copy .text { font-size:.875rem; line-height:1.7; color:var(--text-2); max-width:31.25rem; margin:0; }
+.history-list_copy .eyebrow_text { font-size:.75rem; color:var(--blue); }
+.history-list_copy>span { font-size:.8125rem; color:var(--blue); }
+.history-training_list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+.history-training_card>.image { aspect-ratio:1.5; width:100%; object-fit:cover; }
+.history-training_card .eyebrow_wrap { margin-top:1.125rem; }
+.history-training_card .heading { font-size:1.5625rem; letter-spacing:-.04em; line-height:1.2; margin:.8125rem 0; }
+.history-training_card .text { font-size:1rem; color:var(--text-2); margin:0; }
+@media(width <= 68.75rem) { .history-intro_wrap>.container { padding-right:0; } .history-intro_accent { display:none; } .history-list_row { grid-template-columns:5.3125rem 9.0625rem 1fr; gap:1.5rem; } .history-list_row>.academy-arrow { grid-column:3; margin-top:-.9375rem; } }
+@media(width <= 37.5rem) { .history-intro_wrap { padding-block:2.25rem 2.8125rem; } .history-intro_wrap .heading { font-size:3rem; } .history-intro_wrap .text { font-size:1rem; } .history-list_row { grid-template-columns:4.0625rem 1fr; gap:.75rem 1.125rem; padding-block:1.5rem; } .history-list_year { font-size:2rem; align-self:start; grid-column:1; grid-row:1; } .history-list_row>.image,.history-list_placeholder { grid-column:2; grid-row:1; max-height:13.125rem; } .history-list_copy { grid-column:2; grid-row:2; } .history-list_copy .heading { font-size:1.375rem; } .history-list_row>.academy-arrow { grid-column:2; grid-row:3; margin:0; } .history-training_list { grid-template-columns:1fr; gap:1.875rem; } }
+
+}
+</style>

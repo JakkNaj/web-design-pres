@@ -1,0 +1,886 @@
+{
+  "title": "Ukázka tréninku 08.02.2015",
+  "year": 2015,
+  "kind": "training",
+  "coverIndex": 6,
+  "photos": [
+    {
+      "image": "../../assets/editorial/g7-0000.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 1",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 1",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0651.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0001.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 2",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 2",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0652.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0002.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 3",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 3",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0653.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0003.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 4",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 4",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0655.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0004.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 5",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 5",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0656.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0005.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 6",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 6",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0657.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0006.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 7",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 7",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0658.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0007.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 8",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 8",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0660.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0008.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 9",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 9",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0661.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0009.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 10",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 10",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0662.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0010.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 11",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 11",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0663.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0011.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 12",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 12",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0664.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0012.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 13",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 13",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0665.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0013.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 14",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 14",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0666.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0014.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 15",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 15",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0667.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0015.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 16",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 16",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0668.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0016.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 17",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 17",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0669.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0017.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 18",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 18",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0670.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0018.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 19",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 19",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0671.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0019.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 20",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 20",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0672.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0020.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 21",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 21",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0673.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0021.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 22",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 22",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0674.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0022.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 23",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 23",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0675.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0023.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 24",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 24",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0676.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0024.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 25",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 25",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0677.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0025.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 26",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 26",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0678.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0026.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 27",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 27",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0679.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0027.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 28",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 28",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0683.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0028.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 29",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 29",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0684.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0029.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 30",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 30",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0685.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0030.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 31",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 31",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0686.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0031.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 32",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 32",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0687.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0032.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 33",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 33",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0688.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0033.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 34",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 34",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0689.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0034.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 35",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 35",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0691.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0035.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 36",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 36",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0692.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0036.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 37",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 37",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0693.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0037.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 38",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 38",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0694.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0038.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 39",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 39",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0695.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0039.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 40",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 40",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0696.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0040.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 41",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 41",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0698.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0041.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 42",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 42",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0699.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0042.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 43",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 43",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0700.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0043.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 44",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 44",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0701.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0044.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 45",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 45",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0702.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0045.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 46",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 46",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0703.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0046.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 47",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 47",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0704.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0047.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 48",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 48",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0705.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0048.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 49",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 49",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0706.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0049.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 50",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 50",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0707.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0050.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 51",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 51",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0711.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0051.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 52",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 52",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0712.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0052.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 53",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 53",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0714.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0053.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 54",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 54",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0715.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0054.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 55",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 55",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0716.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0055.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 56",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 56",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0718.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0056.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 57",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 57",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0719.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0057.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 58",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 58",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0720.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0058.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 59",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 59",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0721.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0059.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 60",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 60",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0723.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0060.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 61",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 61",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0724.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0061.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 62",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 62",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0725.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0062.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 63",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 63",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0726.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0063.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 64",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 64",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0728.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0064.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 65",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 65",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0729.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0065.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 66",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 66",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0730.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0066.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 67",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 67",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0731.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0067.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 68",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 68",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0732.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0068.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 69",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 69",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0733.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0069.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 70",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 70",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0734.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0070.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 71",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 71",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0735.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0071.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 72",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 72",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0736.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0072.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 73",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 73",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0737.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0073.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 74",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 74",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0738.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0074.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 75",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 75",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0739.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0075.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 76",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 76",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0740.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0076.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 77",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 77",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0742.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0077.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 78",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 78",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0743.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0078.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 79",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 79",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0744.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0079.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 80",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 80",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0745.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0080.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 81",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 81",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0747.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0081.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 82",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 82",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0748.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0082.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 83",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 83",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0749.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0083.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 84",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 84",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0750.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0084.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 85",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 85",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0753.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0085.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 86",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 86",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0754.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0086.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 87",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 87",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0756.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0087.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 88",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 88",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0761.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0088.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 89",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 89",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0762.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0089.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 90",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 90",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0763.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0090.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 91",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 91",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0764.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0091.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 92",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 92",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0765.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0092.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 93",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 93",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0766.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0093.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 94",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 94",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0767.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0094.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 95",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 95",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0768.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0095.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 96",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 96",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0769.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0096.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 97",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 97",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0770.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0097.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 98",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 98",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0772.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0098.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 99",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 99",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0773.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0099.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 100",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 100",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0774.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0100.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 101",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 101",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0776.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0101.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 102",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 102",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0777.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0102.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 103",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 103",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0778.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0103.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 104",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 104",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0779.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0104.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 105",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 105",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0780.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0105.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 106",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 106",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0781.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0106.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 107",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 107",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0782.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0107.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 108",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 108",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0783.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0108.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 109",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 109",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0784.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0109.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 110",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 110",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0785.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0110.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 111",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 111",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0786.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0111.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 112",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 112",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0787.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0112.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 113",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 113",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0789.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0113.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 114",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 114",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0790.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0114.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 115",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 115",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0791.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0115.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 116",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 116",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0792.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0116.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 117",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 117",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0794.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0117.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 118",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 118",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0795.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0118.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 119",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 119",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0803.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0119.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 120",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 120",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0805.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0120.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 121",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 121",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0806.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0121.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 122",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 122",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0813.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0122.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 123",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 123",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0815.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0123.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 124",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 124",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0818.JPG"
+    },
+    {
+      "image": "../../assets/editorial/g7-0124.webp",
+      "alt": "Ukázka tréninku 08.02.2015 · fotografie 125",
+      "caption": "Ukázka tréninku 08.02.2015 · fotografie 125",
+      "featured": false,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/006trenink20150208/DSC_0824.JPG"
+    }
+  ],
+  "sources": [
+    "https://www.golmansketreninky.cz/2015/02/ukazka-golmanskeho-treninku-8-2-2015/nggallery/page/1"
+  ]
+}

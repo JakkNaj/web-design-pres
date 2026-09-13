@@ -1,0 +1,264 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { galleryUrl } from "@/lib/site";
+import { Button } from "@/ui";
+import ControlIcon from "./ControlIcon.astro";
+import Slider from "@/components/Interactive/Slider.astro";
+interface Props {
+  gallery: CollectionEntry<"galleries">;
+  all?: boolean;
+  slider?: boolean;
+}
+const { gallery, all = false, slider = true } = Astro.props;
+const selected = all
+  ? gallery.data.photos
+  : gallery.data.photos.filter((p) => p.featured).slice(0, slider ? 6 : 12);
+const PhotoList = slider && !all ? Slider : "div";
+---
+
+<div class="gallery-component" data-gallery>
+  <PhotoList
+    class={slider && !all ? "camp-photo-slider" : "photo-grid"}
+    {...slider && !all
+      ? {
+          variant: "contained" as const,
+          xsmall: 1.12,
+          small: 2,
+          large: 3,
+          label: gallery.data.title,
+        }
+      : {}}
+    >{
+      selected.map((p, i) => (
+        <button
+          class="photo-button"
+          type="button"
+          data-photo
+          data-src={p.image.src}
+          data-caption={p.caption}
+          data-alt={p.alt}
+          aria-label={`Otevřít fotografii ${i + 1}: ${p.alt}`}
+        >
+          <>
+            <Image
+              src={p.image}
+              alt={p.alt}
+              width={Math.min(slider ? 720 : 420, p.image.width)}
+              loading="lazy"
+            />
+            <span aria-hidden="true">
+              <ControlIcon name="expand" />
+            </span>
+          </>
+        </button>
+      ))
+    }</PhotoList
+  >
+  {
+    !all && (
+      <Button
+        element="link"
+        emphasis="secondary"
+        class="gallery-all"
+        href={galleryUrl(gallery.id)}
+      >
+        Všechny fotografie ({gallery.data.photos.length}) ↗
+      </Button>
+    )
+  }
+  <dialog class="lightbox" aria-label={gallery.data.title}>
+    <Button
+      variant="close"
+      emphasis="secondary"
+      class="lightbox-close"
+      data-gallery-close
+      label="Zavřít fotografii"
+    /><div class="lightbox-stage"><img data-full-image alt="" /></div><div
+      class="lightbox-toolbar"
+    >
+      <Button
+        variant="arrow"
+        direction="back"
+        emphasis="secondary"
+        data-prev
+        label="Předchozí fotografie"
+      /><p data-photo-caption aria-live="polite" aria-atomic="true"></p><Button
+        variant="arrow"
+        emphasis="secondary"
+        data-next
+        label="Další fotografie"
+      />
+    </div>
+  </dialog>
+</div>
+<script>
+  document
+    .querySelectorAll<HTMLElement>("[data-gallery]")
+    .forEach((gallery) => {
+      const buttons = Array.from(
+        gallery.querySelectorAll<HTMLButtonElement>("[data-photo]"),
+      );
+      const dialog = gallery.querySelector<HTMLDialogElement>("dialog")!;
+      const image =
+        dialog.querySelector<HTMLImageElement>("[data-full-image]")!;
+      const caption = dialog.querySelector<HTMLElement>(
+        "[data-photo-caption]",
+      )!;
+      let index = 0;
+      let trigger: HTMLButtonElement | undefined;
+      let touchX = 0;
+      const show = (next: number) => {
+        index = (next + buttons.length) % buttons.length;
+        const b = buttons[index];
+        image.src = b.dataset.src!;
+        image.alt = b.dataset.alt!;
+        caption.textContent = `${index + 1} / ${buttons.length} · ${b.dataset.caption}`;
+      };
+      buttons.forEach((b, i) =>
+        b.addEventListener("click", () => {
+          trigger = b;
+          show(i);
+          dialog.showModal();
+        }),
+      );
+      dialog
+        .querySelector("[data-gallery-close]")!
+        .addEventListener("click", () => dialog.close());
+      dialog
+        .querySelector("[data-prev]")!
+        .addEventListener("click", () => show(index - 1));
+      dialog
+        .querySelector("[data-next]")!
+        .addEventListener("click", () => show(index + 1));
+      dialog.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+          e.preventDefault();
+          show(index + (e.key === "ArrowLeft" ? -1 : 1));
+        }
+      });
+      dialog.addEventListener("close", () => {
+        image.removeAttribute("src");
+        trigger?.focus();
+      });
+      dialog.addEventListener("click", (e) => {
+        if (e.target === dialog) dialog.close();
+      });
+      image.addEventListener(
+        "touchstart",
+        (e) => {
+          touchX = e.changedTouches[0].clientX;
+        },
+        { passive: true },
+      );
+      image.addEventListener(
+        "touchend",
+        (e) => {
+          const dx = e.changedTouches[0].clientX - touchX;
+          if (Math.abs(dx) > 60) show(index + (dx < 0 ? 1 : -1));
+        },
+        { passive: true },
+      );
+    });
+</script>
+
+<style is:global>
+  @layer components {
+    .gallery-component {
+      width: 100%;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--site-gutter);
+    }
+    .photo-button {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--background-2);
+      color: var(--text);
+      padding: 0;
+      border: 0;
+    }
+    .photo-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo-button > span {
+      position: absolute;
+      bottom: 0.8rem;
+      right: 0.8rem;
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      background: var(--dark-900);
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+    }
+    .gallery-all {
+      margin-top: var(--space-5);
+    }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      margin: 0;
+      padding: 4.5rem 1.5rem 1rem;
+      background: #080e14;
+      color: var(--text);
+      border: 0;
+      overflow: hidden;
+    }
+    .lightbox-stage {
+      height: calc(100% - 5rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-stage img {
+      max-height: 100%;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+    .lightbox-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      height: 5rem;
+      max-width: 70rem;
+      margin: auto;
+    }
+    .lightbox-toolbar p {
+      font-size: 1rem;
+      color: var(--text-2);
+      text-align: center;
+    }
+    .lightbox img {
+      touch-action: pan-y pinch-zoom;
+    }
+    @media (width < 48rem) {
+      .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .lightbox {
+        padding-inline: 0.5rem;
+      }
+      .lightbox-toolbar p {
+        font-size: .85rem;
+      }
+    }
+  }
+</style>

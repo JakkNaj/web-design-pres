@@ -1,0 +1,76 @@
+---
+import { Card, Grid, Img } from "@/ui";
+import type { CollectionEntry } from "astro:content";
+import { campUrl } from "@/lib/site";
+import { dateRange, eventState, stateLabels } from "@/lib/events";
+interface Props {
+  render?: boolean;
+  camps: CollectionEntry<"camps">[];
+  galleryMap: Map<string, CollectionEntry<"galleries">>;
+}
+const { render = true, camps, galleryMap } = Astro.props;
+---
+<Grid render={render} medium={2} class="camp-cards_wrap">
+  {camps.map(c => {
+    const gallery = c.data.gallery ? galleryMap.get(c.data.gallery.id) : undefined;
+    const photo = gallery?.data.photos[gallery.data.coverIndex];
+    const state = eventState(c.data);
+    return <Card variant="stacked" class="academy-camp" eyebrow={`${dateRange(c.data.start,c.data.end)} · ${c.data.location}`} heading={c.data.title} text={c.data.summary} buttonLabel={state === 'completed' ? 'Příběh ročníku ↗' : 'Prohlédnout kemp ↗'} buttonHref={campUrl(c.id)}>
+      <Fragment slot="visual">
+        <a class="academy-camp_cover" href={campUrl(c.id)} aria-label={`Detail: ${c.data.title}`}>
+          {photo ? <Img src={photo.image} alt={photo.alt} /> : <div class="academy-camp_art" aria-hidden="true">
+            <span class="academy-camp_year">{c.data.year}</span><span class="academy-camp_location">{c.data.location}</span>
+            <svg viewBox="0 0 300 180" fill="none"><path d="M40 180V65a20 20 0 0 1 20-20h180a20 20 0 0 1 20 20v115M80 180V85h140v95M40 65l40 20m180-20-40 20" stroke="currentColor" stroke-width="2"/><path d="M80 105h140M80 125h140M80 145h140M100 85v95m20-95v95m20-95v95m20-95v95m20-95v95m20-95v95" stroke="currentColor" opacity=".25"/><ellipse cx="150" cy="167" rx="110" ry="32" stroke="currentColor" stroke-width="2"/></svg>
+          </div>}
+          <div class="academy-camp_badges"><span class="academy-camp_status" data-event-state data-state={state} data-end={c.data.end}>{stateLabels[state]}</span></div>
+        </a>
+      </Fragment>
+    </Card>;
+  })}
+</Grid>
+<style is:global>
+@layer components {
+  .camp-cards_wrap .academy-camp { gap:0; background:var(--dark-800); border:var(--border-width) solid var(--border); overflow:hidden; }
+  .camp-cards_wrap .card_content { padding:clamp(1.5rem,3vw,2.75rem); }
+  .camp-cards_wrap .eyebrow_text { font-size:.85rem; color:var(--blue); }
+  .camp-cards_wrap .heading { font-size:var(--h4); }
+  .camp-cards_wrap .card_visual { aspect-ratio:1.7; border-radius:0; }
+  .camp-cards_wrap .text { color:var(--text-2); }
+  .academy-camp_cover { position:relative; display:block; width:100%; height:100%; overflow:hidden; }
+  .academy-camp_cover > .image { width:100%; height:100%; object-fit:cover; }
+  .academy-camp_art { position:relative; display:flex; flex-direction:column; justify-content:end; height:100%; padding:2.25rem; isolation:isolate; color:var(--blue); background:linear-gradient(135deg,#1d3b4d,#152735); }
+  .academy-camp_year { font-size:clamp(4.5rem,7vw,7.5rem); line-height:1; letter-spacing:-.06em; font-variant-numeric:tabular-nums; }
+  .academy-camp_location { margin-top:.65rem; font-size:1.1rem; }
+  .academy-camp_art svg { position:absolute; right:-10%; bottom:0; width:75%; color:var(--blue); opacity:.28; transform:rotate(-12deg); z-index:-1; }
+  .academy-camp_badges { position:absolute; inset:1.25rem 1.25rem auto; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:space-between; }
+  .academy-camp_status,.academy-camp_demo { padding:.45rem .75rem; font-size:.8rem; line-height:1.3; border-radius:2rem; background:var(--dark-900); color:var(--text); }
+  .academy-camp_status[data-state=open] { background:var(--blue); color:var(--dark-900); }
+  .academy-camp_demo { background:#36242e; color:#ffadb5; }
+  .schedule_wrap .camp-cards_wrap:has(> .academy-camp:only-child) { grid-template-columns:1fr; }
+  .schedule_wrap .academy-camp:only-child { display:grid; grid-template-columns:.9fr 1.1fr; }
+  .schedule_wrap .academy-camp:only-child .card_visual { aspect-ratio:auto; min-height:22rem; height:100%; }
+  .schedule_wrap .academy-camp:only-child .card_content { justify-content:center; }
+  .schedule_wrap .academy-camp:only-child .button-wrapper { margin-top:0; }
+  @media(width < 48rem) {
+    .schedule_wrap .academy-camp:only-child { grid-template-columns:1fr; }
+    .schedule_wrap .academy-camp:only-child .card_visual { min-height:17rem; }
+    .academy-camp_art { padding:1.5rem; }
+    .academy-camp_badges { inset:1rem 1rem auto; }
+  }
+.camp-cards_wrap { gap:1.875rem; }
+.camp-cards_wrap .academy-camp { border:0; border-radius:0; }
+.camp-cards_wrap .card_content { padding:1.625rem 1.875rem 1.75rem; }
+.camp-cards_wrap .eyebrow_text { font-size:.75rem; color:var(--blue); letter-spacing:.07em; }
+.camp-cards_wrap .heading { font-size:1.75rem; line-height:1.2; letter-spacing:-.04em; margin:.875rem 0; }
+.camp-cards_wrap .text { font-size:1rem; margin:0; max-width:31.25rem; }
+.camp-cards_wrap .card_content>.button-wrapper { padding-top:.75rem; }
+.academy-camp_art { padding:2.5rem; }
+.academy-camp_year { font-size:clamp(3.75rem,7vw,6.875rem); letter-spacing:-.07em; }
+.academy-camp_location { font-size:1.25rem; }
+.academy-camp_status { font-size:.75rem; padding:.5rem .875rem; }
+.schedule_wrap .academy-camp:only-child .card_visual { min-height:18rem; }
+.schedule_wrap .academy-camp:only-child .card_content { padding:2.1875rem 2.8125rem; }
+@media(width <= 37.5rem) { .camp-cards_wrap { grid-template-columns:1fr; } .camp-cards_wrap .card_content { padding:1.5rem; } .schedule_wrap .academy-camp:only-child .card_content { padding:1.5625rem; } .academy-camp_art { padding:1.875rem; } }
+
+}
+</style>

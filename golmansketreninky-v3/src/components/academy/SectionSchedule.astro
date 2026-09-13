@@ -1,0 +1,161 @@
+---
+import {
+  Section,
+  Heading,
+  Eyebrow,
+  Paragraph,
+  Button,
+  ButtonWrapper,
+} from "@/ui";
+import Arrow from "./Arrow.astro";
+import ContentSectionHeading from "./ContentSectionHeading.astro";
+import ContentCampCards from "./ContentCampCards.astro";
+import { siteContent, contact, url } from "@/lib/site";
+import { eventState, canRegister, timeLabel } from "@/lib/events";
+const { camps, sessions, galleryMap } = await siteContent();
+const upcoming = camps.filter((c) => eventState(c.data) !== "completed");
+const training = sessions.filter((s) => eventState(s.data) !== "completed");
+---
+
+<Section id="terminy" class="schedule_wrap" gap="7"
+  ><ContentSectionHeading
+    eyebrow="Další krok je na tobě"
+    title="Vidíme se na ledě."
+    ><Button element="link" variant="link" href={url('kempy/')}>Vše o kempech <Arrow diagonal/></Button>
+    </ContentSectionHeading
+  ><ContentCampCards
+    render={upcoming.length > 0}
+    camps={upcoming}
+    galleryMap={galleryMap}
+  /><div class="schedule_training"><div class="schedule_training-heading"><Heading tag="h3" variant="h4">Pravidelně na led.</Heading><Paragraph variant="small">Individuálně, nebo v malé skupině.</Paragraph></div><div class="schedule_filters" role="group" aria-label="Filtrovat tréninky">
+    {
+      [
+        ["all", "Všechny"],
+        ["individual", "Individuální"],
+        ["group", "Skupinové"],
+      ].map(([value, text]) => (
+        <Button
+          emphasis="secondary"
+          data-training-filter={value}
+          aria-pressed={value === "all"}
+        >
+          {text}
+        </Button>
+      ))
+    }
+  </div><div class="schedule_list">
+    {
+      training.map((s) => (
+        <article
+          class="schedule_session"
+          data-type={s.data.kind}
+          data-start={s.data.start}
+        >
+          <div class="schedule_date"><time datetime={s.data.start}>{new Intl.DateTimeFormat('cs-CZ',{day:'numeric',timeZone:'Europe/Prague'}).format(new Date(s.data.start)).replace('.', '')}</time><span>{new Intl.DateTimeFormat('cs-CZ',{month:'short',year:'numeric',timeZone:'Europe/Prague'}).format(new Date(s.data.start))}</span></div>
+          <div class="schedule_name">
+            <Eyebrow>{s.data.kind === 'individual' ? 'Individuální trénink' : 'Skupinový trénink'}</Eyebrow>
+            <Heading tag="h3" variant="h5">
+              {s.data.title}
+            </Heading>
+            <Paragraph>{s.data.summary}</Paragraph>
+          </div>
+          <div class="schedule_meta"><span>{timeLabel(s.data.start)}–{timeLabel(s.data.end)}</span><span>{s.data.capacity}</span></div>
+          {canRegister(s.data) ? (
+            <Button emphasis="secondary" data-register={`session:${s.id}`}>Chci na trénink <Arrow diagonal/></Button>
+          ) : (
+            <span>Obsazeno</span>
+          )}
+        </article>
+      ))
+    }<div class="schedule_empty" data-empty-events hidden={training.length > 0}>
+      <span class="schedule_number" aria-hidden="true">↗</span><div>
+        <Heading tag="h3" variant="h4">Tvůj trénink začíná domluvou.</Heading
+        ><Paragraph
+          >Nové termíny právě připravujeme. Napiš nám, co chceš posunout.<br
+          />Společně najdeme správný trénink.</Paragraph
+        ><ButtonWrapper
+          ><Button element="link" href={`mailto:${contact.email}`}
+            >Domluvit trénink ↗</Button
+          ><Button element="link" href={url("kempy/")} emphasis="secondary"
+            >Prohlédnout kempy</Button
+          ></ButtonWrapper
+        >
+      </div>
+    </div>
+  </div></div><p class="sr-only" data-filter-result aria-live="polite"></p></Section
+>
+<script>
+  const filters = document.querySelectorAll<HTMLButtonElement>(
+    "[data-training-filter]",
+  );
+  function filter(value: string) {
+    filters.forEach((b) =>
+      b.setAttribute(
+        "aria-pressed",
+        String(b.dataset.trainingFilter === value),
+      ),
+    );
+    let count = 0;
+    document
+      .querySelectorAll<HTMLElement>(".schedule_session")
+      .forEach((row) => {
+        row.hidden =
+          Date.parse(row.dataset.start!) <= Date.now() ||
+          (value !== "all" && row.dataset.type !== value);
+        if (!row.hidden) count++;
+      });
+    const empty = document.querySelector<HTMLElement>(".schedule_empty");
+    if (empty) empty.hidden = count > 0;
+    const status = document.querySelector("[data-filter-result]");
+    if (status) status.textContent = `Počet tréninků: ${count}.`;
+  }
+  filters.forEach((b) =>
+    b.addEventListener("click", () => filter(b.dataset.trainingFilter!)),
+  );
+  const refresh = () =>
+    filter(
+      Array.from(filters).find((b) => b.getAttribute("aria-pressed") === "true")
+        ?.dataset.trainingFilter ?? "all",
+    );
+  document.querySelectorAll<HTMLElement>('[data-program]').forEach(a=>a.addEventListener('click',()=>filter(a.dataset.program!)));
+  refresh();
+  window.addEventListener("pageshow", refresh);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) refresh();
+  });
+</script>
+
+
+<style is:global>
+@layer components {
+
+.schedule_wrap { background:var(--dark-900); padding-bottom:4.6875rem; }
+.schedule_training { width:100%; margin-top:.75rem!important; }
+.schedule_training-heading { display:flex; align-items:baseline; justify-content:space-between; gap:1.25rem; margin:0 0 1.5625rem; }
+.schedule_training-heading .heading { font-size:1.5625rem; letter-spacing:-.04em; margin:0; }
+.schedule_training-heading .text { font-size:.875rem; color:var(--text-2); margin:0; }
+.schedule_filters { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.875rem; }
+.schedule_filters .button_wrap { min-height:2.75rem; padding:.625rem 1.25rem; font-size:.875rem; }
+.schedule_filters [aria-pressed=true] { background:var(--blue); color:var(--dark-900); border-color:var(--blue); }
+.schedule_list { width:100%; }
+.schedule_session { display:grid; grid-template-columns:7.1875rem minmax(13.75rem,1fr) minmax(11.5625rem,.65fr) auto; align-items:center; gap:1.75rem; border-top:.0625rem solid var(--border); padding:1.625rem 0; }
+.schedule_session:last-of-type { border-bottom:.0625rem solid var(--border); }
+.schedule_date { display:flex; flex-direction:column; gap:.25rem; font-variant-numeric:tabular-nums; }
+.schedule_date time { font-size:2.3125rem; line-height:1.2; letter-spacing:-.07em; color:var(--blue); }
+.schedule_session[data-type=group] .schedule_date time { color:var(--grapefruit); }
+.schedule_date>span { font-size:.75rem; letter-spacing:.08em; color:var(--text-2); }
+.schedule_name .eyebrow_text { font-size:.75rem; color:var(--text-2); text-transform:none; letter-spacing:0; }
+.schedule_name .heading { font-size:1.1875rem; letter-spacing:-.035em; margin:.375rem 0; }
+.schedule_name .text { font-size:.8125rem; color:var(--text-2); margin:0; }
+.schedule_meta { display:flex; flex-direction:column; gap:.5625rem; font-size:.875rem; }
+.schedule_meta>span:last-child { color:var(--text-2); font-size:.8125rem; }
+.schedule_session>.button_wrap { font-size:.8125rem; padding:.75rem 1.1875rem; }
+.schedule_empty { padding:1.875rem; background:var(--ice-dark); display:flex; gap:2rem; }
+.schedule_empty .heading { font-size:1.5625rem; margin-top:0; }
+.schedule_empty .text { font-size:1rem; color:var(--text-2); }
+.schedule_number { color:var(--blue); font-size:3rem; }
+@media(width <= 68.75rem) { .schedule_session { grid-template-columns:5.9375rem 1fr auto; gap:1.125rem; } .schedule_meta { grid-column:2; margin-top:-.625rem; } .schedule_session>.button_wrap { grid-column:3; grid-row:1/3; } .schedule_date { grid-row:1/3; } .schedule_meta>span { font-size:.8125rem; } .schedule_meta>span:last-child { display:none; } }
+@media(width <= 37.5rem) { .schedule_training-heading { display:block; } .schedule_training-heading .text { margin-top:.5rem; } .schedule_filters { gap:.4375rem; margin-bottom:1.5rem; } .schedule_filters .button_wrap { padding:.625rem .9375rem; font-size:.8125rem; } .schedule_session { grid-template-columns:4.625rem 1fr; gap:.75rem .9375rem; padding:1.4375rem 0; } .schedule_date { align-self:start; } .schedule_date time { font-size:1.9375rem; } .schedule_name .heading { font-size:1.125rem; } .schedule_name .text { font-size:.75rem; } .schedule_meta { margin:0; } .schedule_session>.button_wrap { grid-column:2; grid-row:auto; justify-self:start; padding:.625rem 1rem; min-height:2.75rem; margin-top:.25rem; } .schedule_empty { padding:1.5rem; } .schedule_number { display:none; } }
+
+}
+</style>

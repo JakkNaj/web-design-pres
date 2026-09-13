@@ -1,0 +1,309 @@
+---
+import {
+  Section,
+  Grid,
+  ContentWrapper,
+  Heading,
+  Paragraph,
+  Eyebrow,
+  Button,
+  Card,
+  Img,
+  Accordion,
+  AccordionItem,
+} from "@/ui";
+import SectionHeroMain from "./SectionHeroMain.astro";
+import ContentSectionHeading from "./ContentSectionHeading.astro";
+import ContentCoaches from "./ContentCoaches.astro";
+import Arrow from "./Arrow.astro";
+import SectionSchedule from "./SectionSchedule.astro";
+import GoalieSave from "./GoalieSave.astro";
+import HockeyAccent from './HockeyAccent.astro';
+import maskIllustration from '@/assets/mask-illustration.png';
+import { eventState, dateRange, dateLabel } from '@/lib/events';
+import { siteContent, url, campUrl, articleUrl } from "@/lib/site";
+import { questions } from "@/data/training";
+import goalieReady from "@/assets/goalie-ready.jpg";
+const { camps, galleryMap, coaches, articles, partners } = await siteContent();
+const nextCamp = camps.find(c => eventState(c.data) !== 'completed');
+const team = galleryMap.get("gallery-24")!;
+const camp = galleryMap.get("gallery-20")!;
+const programs = [
+  {
+    heading: "Jen ty a tvůj posun.",
+    eyebrow: "01 / Individuální trénink",
+    text: "Práce na konkrétním detailu. Technika, pohyb a okamžitá zpětná vazba.",
+    image: goalieReady,
+    alt: "Brankář připravený na střelu",
+    href: "#terminy",
+  },
+  {
+    heading: "Lepší ve hře. Společně.",
+    eyebrow: "02 / Malé skupiny",
+    text: "Herní situace, soustředění a prostor pro otázky. Každý gólman má svůj úkol.",
+    image: team.data.photos[19].image,
+    alt: team.data.photos[19].alt,
+    href: "#terminy",
+  },
+  {
+    heading: "Ponoř se do toho.",
+    eyebrow: "03 / Gólmanské kempy",
+    text: "Led, suchá příprava i video. Několik dní, které patří brankářskému řemeslu.",
+    image: camp.data.photos[98].image,
+    alt: camp.data.photos[98].alt,
+    href: url("kempy/"),
+  },
+];
+const years = [2012, 2013, 2014, 2017, 2026].map((y) =>
+  camps.find((c) => c.id === `letni-special-${y}`)!,
+);
+---
+
+<SectionHeroMain />
+<Section paddingTop="none" paddingBottom="none" class="home-trust_wrap"><ul class="home-trust_list" aria-label="Naše zkušenosti a přístup" role="list"><li>Trénink se zkušenými profesionály</li><li>Roky práce s brankáři</li><li>Osobní přístup. Trénink na míru.</li><li>Péče o každý detail</li></ul></Section>
+{nextCamp && <Section paddingTop="none" paddingBottom="none" class="home-next_wrap"><aside class="home-next_panel" data-upcoming data-start={nextCamp.data.start}><div><Eyebrow>Další společný led</Eyebrow><strong>{dateRange(nextCamp.data.start,nextCamp.data.end)}</strong></div><div><Heading tag="h2" variant="h5">{nextCamp.data.title}</Heading><Paragraph variant="small">{nextCamp.data.venue} · {nextCamp.data.location}</Paragraph></div><Button element="link" class="academy-white" href={campUrl(nextCamp.id)}>Prohlédnout kemp <Arrow diagonal/></Button></aside></Section>}
+<Section id="treninky"
+  ><ContentSectionHeading
+    eyebrow="01 / Najdi svou cestu"
+    title="Tvoje brána. Tvoje pravidla."
+    ><Paragraph
+      >Každý gólman je jiný.<br />Tvůj trénink by měl být taky.</Paragraph
+    ></ContentSectionHeading
+  ><Grid medium={3} class="home-programs_wrap"
+    >{
+      programs.map((p,i) => (
+        <Card
+          class="program"
+          variant="stacked"
+          heading={p.heading}
+                    text={p.text}
+
+        ><Fragment slot="visual"><a class="home-programs_photo" href={p.href} data-program={i===0?"individual":i===1?"group":undefined} aria-label={p.eyebrow}><Img src={p.image} alt={p.alt}/><span class="home-programs_label" aria-hidden="true">{p.eyebrow.split(' / ')[1]}</span><span class="home-programs_number" aria-hidden="true">0{i+1}</span><span class="home-programs_arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m6 18 12-12M6 6h12v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></Fragment></Card>
+      ))
+    }</Grid
+  ></Section
+>
+<Section id="pristup" class="home-approach_wrap"
+  ><ContentWrapper
+    variant="columns"
+    column1Class="home-approach_content"
+    column2Class="home-approach_visual"
+    ><Eyebrow>02 / Víc než jen zákrok</Eyebrow><Heading
+      >Rychlé ruce.<br />Pevný základ.<br /><em>Klidná hlava.</em></Heading
+    ><Paragraph
+      >Technika bruslení a zákroků, čtení hry i práce s videem. Na ledě hledáme
+      souvislosti. Mimo něj rozvíjíme pohyb a soustředění.</Paragraph
+    ><ol class="home-approach_list">
+      <li><span>01</span> Bruslení, zákroky a hra holí.</li><li>
+        <span>02</span> Čtení hry a zpětná vazba ve videu.
+      </li><li><span>03</span> Suchá a mentální příprava.</li>
+    </ol><Fragment slot="column2"><GoalieSave /></Fragment></ContentWrapper
+  ></Section
+>
+<Section id="akademie"
+  ><ContentSectionHeading
+    eyebrow="03 / Lidé za tréninkem"
+    title="Zkušenost, kterou<br/>předáváme dál." accent="tactics"
+    ><Paragraph>Roky v bráně. Pozornost k detailu.<br/>A čas na tvé otázky.</Paragraph></ContentSectionHeading>
+  <ContentCoaches coaches={coaches}/><Button element="link" variant="link" href={url('treneri/')}>Poznej trenéry akademie <Arrow diagonal/></Button></Section>
+<Section id="pribeh" class="home-history_wrap"
+  ><ContentSectionHeading
+    eyebrow="04 / Roky práce na ledě"
+    title="SEZONA ZA SEZONOU.<br/><em>POŘÁD DÁL.</em>"
+    ><Paragraph
+      >Od Berouna přes Jihlavu a Havlíčkův Brod<br/>až k dnešním Říčanům. Tohle je naše cesta.</Paragraph
+    ></ContentSectionHeading
+  ><Grid class="home-history_list"
+    >{
+      years.map((c) => {
+        const g = galleryMap.get(c.data.gallery!.id)!;
+        const p = g.data.photos[g.data.coverIndex];
+        return (
+          <a class="home-history_item" href={campUrl(c.id)}>
+            <>
+              <span class="home-history_year">{c.data.year}</span>
+              <Img src={p.image} alt={p.alt} />
+              <span class="home-history_place">
+                {c.data.location}
+                <span aria-hidden="true">↗</span>
+              </span>
+            </>
+          </a>
+        );
+      })
+    }</Grid
+  ><div class="home-history_signoff"><Button element="link" class="academy-white" href={url("historie/")}>Celý příběh akademie <Arrow/></Button><HockeyAccent variant="rink" class="home-history_accent" /></div></Section
+>
+<SectionSchedule />
+<Section id="ze-zivota-akademie" paddingTop="small" class="home-news_wrap"
+  ><ContentSectionHeading
+    eyebrow="Ze života akademie"
+    title="Práce, která je vidět." accent="puck"
+    ><Button element="link" variant="link" href={url("aktuality/")}
+      >Všechny příběhy <Arrow diagonal/></Button
+    ></ContentSectionHeading
+  ><Grid medium={3}
+    >{
+      articles.slice(0, 3).map((a) => {
+        const g = a.data.gallery
+          ? galleryMap.get(a.data.gallery.id)
+          : undefined;
+        const p = g?.data.photos[g.data.coverIndex];
+        return (
+          <Card variant="stacked" class="home-article" heading={a.data.title} text={a.data.summary} buttonLabel="Podívat se blíž ↗" buttonHref={articleUrl(a.id)}>
+            <Fragment slot="visual"><a class="home-article_cover" href={articleUrl(a.id)} aria-label={a.data.title}><Img src={a.data.cover ?? p!.image} alt={a.data.coverAlt ?? p?.alt}/><span>{a.data.category}</span></a></Fragment>
+            <Fragment slot="meta"><div class="home-article_meta"><time datetime={a.data.date}>{dateLabel(a.data.date)}</time><span>{g?.data.year}</span></div></Fragment>
+          </Card>
+        );
+      })
+    }</Grid
+  ></Section
+>
+<Section paddingTop="small" paddingBottom="small" class="home-partners_wrap"
+  ><ContentSectionHeading eyebrow="Společně za lepší hrou" title="Partneři akademie."/><div class="home-partners_list">
+    {
+      partners.map((p) => (
+        <a
+          href={p.data.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${p.data.name} — web partnera`}
+        >
+          <Img
+            src={p.data.logo}
+            alt={p.data.name}
+            transparent
+            variant="densities"
+            width={200}
+          />
+        </a>
+      ))
+    }
+  </div></Section
+>
+<Section id="otazky" class="home-faq_wrap"
+  ><ContentWrapper variant="columns" column1Class="home-faq_intro"
+    ><Eyebrow>Ještě než vyrazíš</Eyebrow><Heading>Dobré vědět.</Heading
+    ><Paragraph
+      >Na led s čistou hlavou.<br />A se vším, co potřebuješ.</Paragraph>
+    <div class="home-faq_art" data-decor-motion aria-hidden="true"><Img src={maskIllustration} alt="" transparent variant="densities" width={160}/><span>HLAVU<br/>V KLIDU.</span></div>
+    <Fragment slot="column2"
+      ><Accordion
+        >{
+          questions.map(([q, a]) => (
+            <AccordionItem heading={q}>
+              <Paragraph>{a}</Paragraph>
+            </AccordionItem>
+          ))
+        }</Accordion
+      ></Fragment
+    ></ContentWrapper
+  ></Section
+>
+
+
+<style is:global>
+@layer components {
+
+.home-trust_wrap { border-bottom:.0625rem solid var(--border); background:var(--dark-800); }
+.home-trust_list { display:flex; align-items:center; justify-content:space-between; gap:1rem 2rem; width:100%; padding:1.125rem 0; list-style:none; }
+.home-trust_list li { display:flex; align-items:center; gap:.75rem; font-size:1rem; font-weight:500; line-height:1.5; }
+.home-trust_list li::before { content:''; width:.5rem; height:.5rem; flex:none; border-radius:50%; background:var(--blue); }
+.home-trust_list li:nth-child(2)::before { background:var(--grapefruit); }
+.home-trust_list li:nth-child(3)::before { background:var(--violet); }
+.home-next_wrap { margin-top:2rem; }
+.home-next_panel { width:100%; display:flex; align-items:center; gap:2.5rem; padding:1.75rem 2.125rem; border-left:.25rem solid var(--blue); background:var(--ice-dark); }
+.home-next_panel .eyebrow_text { color:var(--blue); font-size:.75rem; margin-bottom:.625rem; }
+.home-next_panel strong { display:block; font-weight:500; font-size:1.1875rem; letter-spacing:-.025em; }
+.home-next_panel .heading { margin:0; font-size:1.375rem; letter-spacing:-.035em; line-height:1.3; }
+.home-next_panel .text { margin:.375rem 0 0; font-size:.875rem; color:var(--text-2); }
+.home-next_panel>.button_wrap { margin-left:auto; flex:none; }
+.home-programs_wrap { gap:1.25rem; }
+.home-programs_wrap .card_wrap { gap:0; --_visual-ratio:1; }
+.home-programs_wrap .card_content { padding:0; }
+.home-programs_wrap .heading { font-size:1.375rem; line-height:1.3; letter-spacing:-.035em; margin:1.3125rem 0 .5rem; }
+.home-programs_wrap .text { font-size:1rem; line-height:1.75; max-width:38ch; color:var(--text-2); margin:0; }
+.home-programs_photo { display:block; position:relative; height:100%; width:100%; color:var(--text); overflow:hidden; --program-color:var(--blue); --program-wash:var(--ice-dark); }
+.home-programs_wrap .card_wrap:nth-child(2) .home-programs_photo { --program-color:var(--grapefruit); --program-wash:var(--rose-dark); }
+.home-programs_wrap .card_wrap:nth-child(3) .home-programs_photo { --program-color:var(--violet); --program-wash:#2b273b; }
+.home-programs_photo>.image { width:100%; height:100%; object-fit:cover; transition:transform .55s var(--ease-out); }
+.home-programs_label { position:absolute; top:1.125rem; left:1.125rem; padding:.5625rem .875rem; border-radius:.3125rem; transform:rotate(-3deg); background:var(--program-wash); color:var(--program-color); font-size:.8125rem; font-weight:500; }
+.home-programs_wrap .card_wrap:nth-child(2) .home-programs_label { transform:rotate(2deg); }
+.home-programs_number { position:absolute; bottom:1.4375rem; left:1.375rem; color:white; font-size:.8125rem; letter-spacing:.08em; text-shadow:0 .0625rem .25rem #111; }
+.home-programs_arrow { position:absolute; bottom:1.125rem; right:1.125rem; width:2.75rem; height:2.75rem; border-radius:50%; display:grid; place-items:center; background:var(--program-wash); color:var(--program-color); }
+.home-programs_arrow svg { width:1.125rem; height:1.125rem; }
+.home-approach_wrap { background:var(--dark-800); }
+.home-approach_content { max-width:28.4375rem; }
+.home-approach_content .heading { font-size:clamp(2.1875rem,4vw,3.5rem); line-height:1.09; letter-spacing:-.05em; margin:1.5rem 0 1.625rem; }
+.home-approach_content .heading em { color:var(--blue); font-style:normal; }
+.home-approach_content>.text { font-size:1rem; color:var(--text-2); max-width:22.1875rem; margin:0; }
+.home-approach_list { width:100%; margin-top:1.5625rem; }
+.home-approach_list li { display:flex; align-items:center; gap:1.5rem; padding:.8125rem 0; border-bottom:.0625rem solid var(--border); font-size:1rem; }
+.home-approach_list span { display:grid; place-items:center; flex:none; width:1.6875rem; height:1.6875rem; border-radius:50%; background:var(--ice-dark); color:var(--blue); font-size:.75rem; }
+.home-approach_list li:nth-child(2) span { color:var(--grapefruit); background:var(--rose-dark); }
+.home-approach_list li:nth-child(3) span { color:var(--violet); background:#2b273b; }
+.home-approach_visual { min-width:0; }
+.home-history_wrap { background:#0d1821; padding-block:4.6875rem 4.0625rem; }
+.home-history_wrap>.container { gap:0; }
+.home-history_wrap .section-heading_wrap .heading { font-size:clamp(2.3125rem,4.6vw,4.25rem); line-height:1.04; }
+.home-history_wrap .heading em { font-style:normal; color:var(--blue); }
+.home-history_wrap .eyebrow_text { color:var(--blue); }
+.home-history_list { grid-template-columns:repeat(5,minmax(0,1fr)); gap:1.375rem; margin:3rem 0!important; }
+.home-history_year { display:block; color:var(--blue); font-size:2.875rem; font-weight:400; letter-spacing:-.07em; line-height:1.2; border-bottom:.0625rem solid var(--border); padding-bottom:1.25rem; margin-bottom:1.25rem; }
+.home-history_item:nth-child(even) .home-history_year { color:var(--grapefruit); }
+.home-history_item .image { aspect-ratio:1.2; object-fit:cover; }
+.home-history_place { display:flex; justify-content:space-between; gap:.5rem; margin-top:.9375rem; font-size:1rem; }
+.home-history_signoff { display:flex; align-items:center; justify-content:space-between; gap:1.5rem; width:100%; }
+.home-history_accent { width:7.25rem; margin-block:-1.125rem; }
+.home-news_wrap { padding-top:1.5625rem; }
+.home-news_wrap .grid { gap:1.75rem; }
+.home-article.card_wrap { gap:0; }
+.home-article .card_visual { aspect-ratio:1.4; }
+.home-article_cover { display:block; position:relative; width:100%; height:100%; }
+.home-article_cover>.image { width:100%; height:100%; object-fit:cover; }
+.home-article_cover>span { position:absolute; bottom:1rem; left:1rem; border-radius:.1875rem; padding:.4375rem .75rem; background:var(--blue); color:var(--dark-900); font-size:.75rem; transform:rotate(-3deg); }
+.home-article:nth-child(even) .home-article_cover>span { background:var(--grapefruit); transform:rotate(2deg); }
+.home-article .card_content { padding:0; }
+.home-article_meta { display:flex; width:100%; justify-content:space-between; margin-top:1.125rem; color:var(--text-2); font-size:.75rem; }
+.home-article .heading { font-size:1.5625rem; letter-spacing:-.04em; line-height:1.2; margin:.8125rem 0; }
+.home-article .text { font-size:1rem; color:var(--text-2); margin:0; }
+.home-article .card_content>.button-wrapper { padding-top:.75rem; }
+.home-partners_wrap { padding-block:1.5625rem 4.6875rem; }
+.home-partners_wrap .heading { font-size:1.75rem; }
+.home-partners_list { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:center; gap:2.1875rem; width:100%; padding:1.875rem 0; border-block:.0625rem solid var(--border); }
+.home-partners_list a { padding:.625rem; min-height:5.625rem; display:flex; align-items:center; justify-content:center; }
+.home-partners_list .image { max-height:4.6875rem; object-fit:contain; filter:grayscale(1) invert(1); opacity:.85; mix-blend-mode:screen; }
+.home-faq_wrap { padding-block:0 6.25rem; }
+.home-faq_wrap .layout { display:grid; grid-template-columns:.7fr 1.3fr; gap:5rem; }
+.home-faq_intro { align-self:start!important; }
+.home-faq_intro .heading { font-size:2.125rem; letter-spacing:-.04em; margin:1rem 0; }
+.home-faq_intro>.text { font-size:1rem; color:var(--text-2); margin:0; }
+.home-faq_intro .eyebrow_text { color:var(--text-2); font-size:.75rem; }
+.home-faq_art { position:relative; isolation:isolate; display:flex; align-items:center; gap:1.875rem; width:16.875rem; margin:1.875rem 0 -.9375rem .5rem; }
+.home-faq_art::before { content:''; position:absolute; width:9.375rem; height:9.375rem; border-radius:50%; left:-.9375rem; top:.9375rem; background:var(--ice-dark); z-index:-1; }
+.home-faq_art .image { width:5.9375rem; height:10.125rem; object-fit:contain; transform:rotate(-12deg); }
+.home-faq_art>span { color:var(--grapefruit); font-size:1.0625rem; font-weight:700; line-height:1.2; letter-spacing:-.02em; transform:rotate(5deg); }
+.home-faq_wrap .accordion_wrap { width:100%; }
+.home-faq_wrap .accordion_item:first-child { border-top:.0625rem solid var(--border); }
+.home-faq_wrap .accordion_toggle { min-height:4rem; padding:1rem 0; gap:1.25rem; }
+.home-faq_wrap .accordion_title { font-size:1rem; line-height:1.5; letter-spacing:0; font-weight:400; }
+.home-faq_wrap .accordion_icon { display:none; }
+.home-faq_wrap .accordion_toggle::after { content:''; width:1rem; height:1rem; flex:none; background:linear-gradient(currentColor,currentColor) center / .75rem .0625rem no-repeat,linear-gradient(currentColor,currentColor) center / .0625rem .75rem no-repeat; }
+.home-faq_wrap [open]>.accordion_toggle::after { color:var(--grapefruit); background:linear-gradient(currentColor,currentColor) center / .75rem .0625rem no-repeat; }
+.home-faq_wrap .accordion_body { padding-bottom:1.375rem; }
+.home-faq_wrap .accordion_body .text { max-width:34.375rem; font-size:1rem; color:var(--text-2); line-height:1.7; margin:0; }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) { .home-programs_photo:hover>.image { transform:scale(1.025); } }
+@media(width <= 68.75rem) { .home-trust_list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem 1.75rem; } .home-next_panel { flex-wrap:wrap; gap:1.5rem; padding:1.625rem; } .home-next_panel>.button_wrap { margin-left:0; } .home-next_panel .button_wrap { font-size:.875rem; } .home-faq_wrap .layout { gap:2.8125rem; } }
+@media(width <= 48rem) { .home-history_list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.875rem 1.25rem; } .home-programs_wrap { gap:.875rem; } .home-programs_wrap .heading { font-size:1.1875rem; } .home-programs_label { font-size:.75rem; padding:.5rem .625rem; left:.625rem; top:.625rem; } }
+@media(width <= 37.5rem) { .home-trust_list { grid-template-columns:1fr; gap:.5rem; padding-block:1rem; } .home-next_wrap { margin-top:1.25rem; } .home-next_panel { display:grid; padding:1.5rem 1.25rem; gap:1.125rem; } .home-next_panel .heading { font-size:1.375rem; } .home-next_panel>.button_wrap { justify-self:start; } .home-programs_wrap { grid-template-columns:1fr; gap:2rem; } .home-programs_wrap .card_wrap { --_visual-ratio:1.12; } .home-programs_wrap .heading { font-size:1.4375rem; margin-top:1.125rem; } .home-programs_label { left:1rem; top:1rem; font-size:.8125rem; padding:.5625rem .875rem; } .home-approach_content .heading { font-size:2.6875rem; } .home-approach_content>.text { max-width:none; } .home-history_wrap { padding-block:3.125rem; } .home-history_wrap .section-heading_wrap .heading { font-size:2.4375rem; } .home-history_list { grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.75rem 1.125rem; margin:1.875rem 0!important; } .home-history_year { font-size:2.625rem; padding-bottom:.75rem; margin-bottom:.875rem; } .home-history_item:last-child { grid-column:1/-1; display:grid; grid-template-columns:1fr 1fr; column-gap:1.125rem; align-items:center; } .home-history_item:last-child>.image { grid-column:2; grid-row:1/3; } .home-history_item:last-child>.home-history_year { grid-column:1; grid-row:1; } .home-history_item:last-child>.home-history_place { grid-column:1; grid-row:2; } .home-history_accent { width:4.75rem; margin:0; } .home-history_signoff { gap:1rem; } .home-history_signoff>.button_wrap { font-size:.875rem; } .home-news_wrap { padding-top:0; } .home-news_wrap .grid { grid-template-columns:1fr; gap:2.375rem; } .home-article .card_visual { aspect-ratio:1.45; } .home-article .heading { font-size:1.6875rem; } .home-partners_wrap { padding-top:0; } .home-partners_list { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.875rem 1.75rem; padding-block:1.375rem; } .home-partners_list a:last-child { grid-column:1/-1; width:50%; justify-self:center; } .home-faq_wrap .layout { grid-template-columns:1fr; gap:1.5rem; } .home-faq_intro { position:relative; padding-right:4.75rem; } .home-faq_intro .heading { font-size:1.9375rem; } .home-faq_intro>.text { display:none; } .home-faq_art { position:absolute; width:3.4375rem; height:5.3125rem; right:.3125rem; top:-.375rem; margin:0; } .home-faq_art .image { width:3rem; height:5.125rem; } .home-faq_art::before { width:4.5rem; height:4.5rem; left:-.875rem; top:.625rem; } .home-faq_art>span { display:none; } }
+
+@media(prefers-reduced-motion:no-preference) {
+  .home-faq_art[data-motion-visible] .image { animation:academy-mask-sway var(--motion-decoration-duration) var(--ease-in-out); transform-origin:50% 70%; }
+}
+@keyframes academy-mask-sway {
+  0%,100% { transform:translateY(0) rotate(-12deg); }
+  25%,65% { transform:translateY(-.25rem) rotate(-9deg); }
+  45%,85% { transform:translateY(-.0625rem) rotate(-13deg); }
+}
+}
+</style>

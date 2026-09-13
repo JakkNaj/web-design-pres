@@ -1,0 +1,25 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionPageIntro from "@/components/academy/SectionPageIntro.astro";
+import ContentCoaches from "@/components/academy/ContentCoaches.astro";
+import { Section, Heading, Paragraph } from "@/ui";
+import { siteContent } from "@/lib/site";
+const { coaches } = await siteContent();
+---
+
+<BaseLayout title="Naši trenéři"
+  ><SectionPageIntro
+    title="Zkušenosti, které předáváme."
+    eyebrow="Lidé za tréninkem"
+    description="Velké zápasy i každodenní práce s mladými gólmany. Poznejte čtyři trenéry naší akademie."
+  /><Section
+    ><ContentCoaches coaches={coaches} detailed /><Heading variant="h3">Na práci se podíleli také.</Heading><Paragraph
+      >{
+        coaches
+          .filter((c) => !c.data.portrait)
+          .map((c) => c.data.name)
+          .join(" · ")
+      }</Paragraph
+    ></Section
+  ></BaseLayout
+>

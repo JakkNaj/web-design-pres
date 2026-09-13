@@ -1,0 +1,182 @@
+---
+import Brand from "./Brand.astro";
+import { Button } from "@/ui";
+import { url } from "@/lib/site";
+const nav = [
+  ["Tréninky", "#treninky"],
+  ["Kempy", "kempy/"],
+  ["Trenéři", "treneri/"],
+  ["Náš příběh", "historie/"],
+  ["Aktuality", "aktuality/"],
+];
+---
+
+<header class="academy-nav_wrap">
+  <div class="academy-nav_layout">
+    <a
+      class="academy-nav_brand"
+      href={url()}
+      aria-label="Altrichter Goalie Academy — úvod"><Brand /></a
+    ><nav class="academy-nav_links" aria-label="Hlavní navigace">
+      {
+        nav.map(([text, href]) => (
+          <a
+            href={url(href)}
+            aria-current={
+              Astro.url.pathname.endsWith("/" + href) ? "page" : undefined
+            }
+          >
+            {text}
+          </a>
+        ))
+      }
+    </nav><div class="academy-nav_actions">
+      <Button element="link" href={url("#terminy")}
+        >Jdu na led <span aria-hidden="true">↗</span></Button
+      ><button
+        class="academy-nav_toggle"
+        aria-label="Otevřít navigaci"
+        aria-expanded="false"
+        aria-controls="mobile-nav"><span></span><span></span></button>
+    </div>
+  </div><nav
+    id="mobile-nav"
+    class="academy-nav_mobile"
+    aria-label="Mobilní navigace"
+    hidden
+  >
+    {nav.map(([text, href]) => <a href={url(href)}>{text}</a>)}
+  </nav>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(
+    ".academy-nav_toggle",
+  )!;
+  const menu = document.querySelector<HTMLElement>("#mobile-nav")!;
+  const close = () => {
+    menu.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Otevřít navigaci");
+  };
+  toggle.addEventListener("click", () => {
+    const open = menu.hidden;
+    menu.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute(
+      "aria-label",
+      open ? "Zavřít navigaci" : "Otevřít navigaci",
+    );
+  });
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !menu.hidden) {
+      close();
+      toggle.focus();
+    }
+  });
+  matchMedia("(min-width: 64rem)").addEventListener("change", (e) => {
+    if (e.matches) close();
+  });
+</script>
+<style is:global>
+  @layer components {
+    .academy-nav_wrap {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgb(10 17 24 / 93%);
+      backdrop-filter: blur(1rem);
+      border-bottom: var(--border-width) solid var(--border);
+    }
+    .academy-nav_layout {
+      width: var(--site-width);
+      max-width: var(--max-width-main);
+      margin: auto;
+      min-height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .academy-nav_brand {
+      flex: none;
+      display: flex;
+    }
+    .academy-nav_links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1rem;
+      color: var(--light-200);
+    }
+    .academy-nav_links a {
+      display: flex;
+      align-items: center;
+      min-height: 2.75rem;
+      text-decoration: none;
+    }
+    .academy-nav_links a[aria-current],
+    .academy-nav_links a:hover {
+      color: var(--blue);
+    }
+    .academy-nav_actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .academy-nav_toggle {
+      display: none;
+      width: 2.75rem;
+      height: 2.75rem;
+      color: var(--text);
+      position: relative;
+    }
+    .academy-nav_toggle span {
+      position: absolute;
+      height: 0.0625rem;
+      width: 1.25rem;
+      top: calc(50% - 0.22rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: currentColor;
+    }
+    .academy-nav_toggle span + span {
+      top: calc(50% + 0.22rem);
+    }
+    .academy-nav_toggle[aria-expanded="true"] span {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .academy-nav_toggle[aria-expanded="true"] span + span {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    .academy-nav_mobile {
+      position: absolute;
+      width: 100%;
+      background: var(--dark-800);
+      padding: var(--space-5) var(--site-margin);
+      border-bottom: var(--border-width) solid var(--border);
+    }
+    .academy-nav_mobile a {
+      display: block;
+      padding: 0.8rem 0;
+      text-decoration: none;
+    }
+    @media (width < 64rem) {
+      .academy-nav_links {
+        display: none;
+      }
+      .academy-nav_toggle {
+        display: block;
+      }
+      .academy-nav_layout {
+        gap: 1rem;
+      }
+    }
+    @media (width < 30rem) {
+      .academy-nav_actions > .button_wrap {
+        display: none;
+      }
+    }
+  }
+</style>

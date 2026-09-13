@@ -1,0 +1,24 @@
+---
+import { Img } from '@/ui';
+import { url } from '@/lib/site';
+interface Props { render?: boolean }
+const { render = true } = Astro.props;
+---
+{render && <span class="academy-brand_wrap">
+  <Img class="academy-brand_emblem" src={url('brand/aga-emblem.svg')} alt="" width={616} height={304} transparent loading="eager"/>
+  <span class="academy-brand_name">ALTRICHTER<span>GOALIE ACADEMY</span></span>
+</span>}
+<style is:global>
+@layer components {
+  .academy-brand_wrap { display:inline-flex; align-items:center; gap:.6875rem; }
+  .academy-brand_emblem.image { width:6.75rem; height:auto; flex:none; }
+  .academy-brand_name { font-size:1.125rem; font-weight:800; letter-spacing:.015em; line-height:1.15; }
+  .academy-brand_name>span { display:block; font-size:.5rem; font-weight:600; letter-spacing:.28em; margin-top:.375rem; }
+  @media(width <= 37.5rem) {
+    .academy-brand_emblem.image { width:5.75rem; }
+    .academy-brand_wrap { gap:.5625rem; }
+    .academy-brand_name { font-size:1rem; }
+    .academy-brand_name>span { font-size:.4375rem; }
+  }
+}
+</style>

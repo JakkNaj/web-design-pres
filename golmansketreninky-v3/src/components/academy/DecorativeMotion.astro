@@ -1,0 +1,20 @@
+<script>
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const decorations = document.querySelectorAll<HTMLElement | SVGElement>('[data-decor-motion]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(({ target, isIntersecting }) => {
+      target.toggleAttribute('data-motion-visible', isIntersecting && !preference.matches && !document.hidden);
+    });
+  }, { threshold: .35 });
+
+  const observe = () => {
+    observer.disconnect();
+    decorations.forEach(element => {
+      element.removeAttribute('data-motion-visible');
+      if (!preference.matches && !document.hidden) observer.observe(element);
+    });
+  };
+  observe();
+  preference.addEventListener('change', observe);
+  document.addEventListener('visibilitychange', observe);
+</script>

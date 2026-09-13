@@ -1,0 +1,17 @@
+{
+  "name": "Mgr. Marek Zapletal",
+  "order": 1,
+  "sources": [
+    "https://www.golmansketreninky.cz/nasi-treneri/"
+  ],
+  "summary": "Zkušenosti s rozvojem brankářů napříč kategoriemi.",
+  "intro": "Gólmanské řemeslo v souvislostech.",
+  "body": [
+    "Vyrostl v HK Kroměříž. Jeho trenérská cesta zahrnuje mládežnické i klubové brankáře; působil například ve Vsetíně, Havlíčkově Brodě, Šumperku a Karlových Varech."
+  ],
+  "credentials": [
+    "Hráčská zkušenost z Kroměříže a Kobry Praha",
+    "Trenérská práce s mládeží i celými kluby"
+  ],
+  "portrait": "../../assets/editorial/coach-mgr-marek-zapletal.webp"
+}

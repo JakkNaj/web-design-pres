@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionPageIntro from "@/components/academy/SectionPageIntro.astro";
+import ContentGallery from "@/components/academy/ContentGallery.astro";
+import ArchiveVideo from "@/components/academy/ArchiveVideo.astro";
+import { Section } from "@/ui";
+import { campUrl, url } from "@/lib/site";
+export async function getStaticPaths() {
+  return (await getCollection("galleries", (g) => !g.data.draft)).map(
+    (gallery) => ({ params: { id: gallery.id }, props: { gallery } }),
+  );
+}
+const { gallery } = Astro.props;
+---
+
+<BaseLayout title={gallery.data.title}
+  ><SectionPageIntro
+    title={gallery.data.title}
+    eyebrow={`${gallery.data.year ?? "Z archivu"} / ${gallery.data.photos.length} fotografií`}
+    description="Chvíle z ledu i mimo něj. Otevřete fotografii a procházejte šipkami nebo tahem prstu."
+    back={gallery.data.camp ? campUrl(gallery.data.camp.id) : url("historie/")}
+    backLabel="Zpět na příběh"
+  /><Section><ContentGallery gallery={gallery} all /></Section><ArchiveVideo
+    gallery={gallery}
+  /></BaseLayout
+>

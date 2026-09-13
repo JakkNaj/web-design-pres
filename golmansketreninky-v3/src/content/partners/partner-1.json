@@ -1,0 +1,9 @@
+{
+  "name": "MERKUR",
+  "order": 1,
+  "url": "https://cz.merkur-lifestyle.com/",
+  "logo": "../../assets/editorial/partner-1.webp",
+  "sources": [
+    "https://www.golmansketreninky.cz/"
+  ]
+}

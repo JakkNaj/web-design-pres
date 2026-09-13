@@ -1,0 +1,219 @@
+---
+import type { CollectionEntry } from "astro:content";
+import {
+  Section,
+  ContentWrapper,
+  Heading,
+  Paragraph,
+  Eyebrow,
+  Img,
+  Button,
+  ButtonWrapper,
+  Accordion,
+  AccordionItem,
+  Grid,
+  Card,
+} from "@/ui";
+import SectionPageIntro from "./SectionPageIntro.astro";
+import ContentGallery from "./ContentGallery.astro";
+import ContentCoaches from "./ContentCoaches.astro";
+import ArchiveVideo from "./ArchiveVideo.astro";
+import { siteContent, url, contact, articleUrl } from "@/lib/site";
+import { eventState, canRegister, dateRange, stateLabels } from "@/lib/events";
+interface Props {
+  render?: boolean;
+  camp: CollectionEntry<"camps">;
+}
+const { render = true, camp } = Astro.props;
+const d = camp.data;
+const { galleryMap, coaches, articles } = await siteContent();
+const gallery = d.gallery ? galleryMap.get(d.gallery.id) : undefined;
+const photo = gallery?.data.photos[gallery.data.coverIndex];
+const completed = eventState(d) === "completed";
+const team = coaches.filter((c) => d.coaches.some((ref) => ref.id === c.id));
+const related = articles.filter((a) => a.data.camp?.id === camp.id);
+---
+
+{
+  render && (
+    <>
+      <SectionPageIntro
+        title={d.title}
+        eyebrow={`${d.location} / ${d.year} / ${stateLabels[eventState(d)]}`}
+        description={d.summary}
+        back={url(completed ? "historie/" : "kempy/")}
+        backLabel={completed ? "Naše historie" : "Všechny kempy"}
+      >
+        <Paragraph variant="small">{dateRange(d.start, d.end)}</Paragraph>
+
+      </SectionPageIntro>
+      {photo && (
+        <Section paddingTop="small" paddingBottom="none">
+          <Img class="camp-detail_cover" src={photo.image} alt={photo.alt} />
+
+        </Section>
+      )}
+      <Section>
+        <ContentWrapper
+          variant="columns"
+          column1Class="camp-detail_story"
+          column2Class="camp-detail_facts"
+        >
+          <Eyebrow>{completed ? "Příběh ročníku" : "Na co se těšit"}</Eyebrow>
+          <Heading variant="h3">
+            {completed ? "Práce, která zůstává." : "Prostor pro váš posun."}
+          </Heading>
+          {d.body.map((p) => (
+            <Paragraph>{p}</Paragraph>
+          ))}
+          <Fragment slot="column2">
+            <>
+              <Eyebrow>
+                {completed ? "Údaje o proběhlém ročníku" : "Přehled kempu"}
+              </Eyebrow>
+              <dl>
+                <dt>Termín</dt>
+                <dd>{dateRange(d.start, d.end)}</dd>
+                <dt>Místo</dt>
+                <dd>
+                  {d.venue} · {d.location}
+                </dd>
+                {d.age && (
+                  <>
+                    <dt>Pro koho</dt>
+                    <dd>{d.age}</dd>
+                  </>
+                )}
+                {d.capacity && (
+                  <>
+                    <dt>Kapacita</dt>
+                    <dd>{d.capacity}</dd>
+                  </>
+                )}
+                <dt>{completed ? "Tehdejší cena" : "Cena"}</dt>
+                <dd>
+                  {d.price ??
+                    (completed
+                      ? "Cena neuvedena"
+                      : "Bude upřesněna")}
+                </dd>
+              </dl>
+              <ButtonWrapper>
+                {canRegister(d) ? (
+                  <Button data-register={`camp:${camp.id}`}>
+                    Chci na kemp ↗
+                  </Button>
+                ) : (
+                  <Paragraph variant="small">
+                    {completed
+                      ? "Tento ročník už proběhl."
+                      : "Podrobnosti a možnosti přihlášení potvrdí akademie."}
+                  </Paragraph>
+                )}
+                <Button
+                  element="link"
+                  emphasis="secondary"
+                  href={`mailto:${contact.email}`}
+                >
+                  Kontaktovat akademii
+                </Button>
+              </ButtonWrapper>
+            </>
+          </Fragment>
+        </ContentWrapper>
+      </Section>
+      {gallery && (
+        <Section paddingTop="none" id="fotografie">
+          <Eyebrow>
+            {d.year} / {gallery.data.photos.length} fotografií
+          </Eyebrow>
+          <Heading>Takový byl náš kemp.</Heading>
+          <ContentGallery gallery={gallery} />
+        </Section>
+      )}
+      {(d.program.length > 0 || d.practical.length > 0) && (
+        <Section paddingTop="none">
+          <Accordion>
+            <AccordionItem
+              heading={
+                completed
+                  ? `Původní program ročníku ${d.year}`
+                  : "Program a praktické informace"
+              }
+              headingTag="h2"
+            >
+
+              <Heading tag="h3" variant="h5">
+                Program
+              </Heading>
+              {d.program.map((p) => (
+                <Paragraph>{p}</Paragraph>
+              ))}
+              <Heading tag="h3" variant="h5">
+                Praktické informace
+              </Heading>
+              {d.practical.map((p) => (
+                <Paragraph>{p}</Paragraph>
+              ))}
+            </AccordionItem>
+          </Accordion>
+        </Section>
+      )}
+      {team.length > 0 && (
+        <Section paddingTop="none">
+          <Heading>Trenéři tohoto kempu.</Heading>
+          <ContentCoaches coaches={team} />
+        </Section>
+      )}
+      {related.length > 0 && (
+        <Section paddingTop="none">
+          <Heading>Více z tohoto ročníku.</Heading>
+          <Grid medium={3}>
+            {related.map((a) => (
+              <Card
+                heading={a.data.title}
+                text={a.data.summary}
+                buttonLabel="Přečíst příběh ↗"
+                buttonHref={articleUrl(a.id)}
+              />
+            ))}
+          </Grid>
+        </Section>
+      )}
+      <ArchiveVideo gallery={gallery} />
+    </>
+  )
+}
+<style is:global>
+  @layer components {
+    .camp-detail_cover {
+      aspect-ratio: 2;
+      max-height: 38rem;
+      object-fit: cover;
+    }
+    .camp-detail_story .text {
+      color: var(--text-2);
+    }
+    .camp-detail_facts {
+      background: var(--dark-800);
+      padding: var(--space-6);
+      border-top: 0.15rem solid var(--blue);
+      align-self: start !important;
+    }
+    .camp-detail_facts dl {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+    .camp-detail_facts dt {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-top: 1.2rem;
+    }
+    .camp-detail_facts dd {
+      margin: 0.4rem 0 0;
+      font-size: 1.0625rem;
+    }
+  }
+</style>

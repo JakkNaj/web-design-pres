@@ -1,0 +1,9 @@
+{
+  "name": "Hokejové tréninky",
+  "order": 4,
+  "url": "http://www.hokejovetreninky.cz/",
+  "logo": "../../assets/editorial/partner-4.webp",
+  "sources": [
+    "https://www.golmansketreninky.cz/"
+  ]
+}

@@ -1,0 +1,59 @@
+---
+import { Section, Heading, Eyebrow, Paragraph, Button } from "@/ui";
+interface Props {
+  render?: boolean;
+  title: string;
+  eyebrow: string;
+  description?: string;
+  back?: string;
+  backLabel?: string;
+}
+const {
+  render = true,
+  title,
+  eyebrow,
+  description,
+  back,
+  backLabel = "Zpět",
+} = Astro.props;
+---
+
+{
+  render && (
+    <Section class="page-intro_wrap" gap="5">
+      <>
+        <Button render={!!back} element="link" href={back} variant="link">
+          ← {backLabel}
+        </Button>
+        <Eyebrow>{eyebrow}</Eyebrow>
+        <Heading tag="h1">{title}</Heading>
+        <Paragraph render={!!description} variant="large" maxWidth={55}>
+          {description}
+        </Paragraph>
+        <slot />
+      </>
+    </Section>
+  )
+}
+<style is:global>
+  @layer components {
+    .page-intro_wrap {
+      background:
+        radial-gradient(ellipse at 95% 0%, #153141, transparent 60%),
+        var(--dark-900);
+      border-bottom: var(--border-width) solid var(--border);
+    }
+    .page-intro_wrap .eyebrow_text {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: .8125rem;
+      letter-spacing: 0.12em;
+    }
+    .page-intro_wrap .heading {
+      max-width: 17ch; font-size:clamp(2.8125rem,6.5vw,5.875rem); line-height:1.02; letter-spacing:-.06em;
+    }
+    .page-intro_wrap .text {
+      color: var(--text-2); font-size:1.0625rem; line-height:1.7;
+    }
+  }
+</style>

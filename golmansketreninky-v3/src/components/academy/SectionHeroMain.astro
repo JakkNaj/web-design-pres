@@ -1,0 +1,52 @@
+---
+import { Section, Heading, Eyebrow, Paragraph, Button, Img } from '@/ui';
+import Arrow from './Arrow.astro';
+import mask from '@/assets/mask.jpg';
+---
+<Section class="hero-main_wrap" paddingTop="none" paddingBottom="none" containerClass="hero-main_layout" aria-labelledby="hero-title">
+  <div class="hero-main_visual" slot="background"><Img src={mask} alt="Soustředěný hokejový brankář v bílé masce před zákrokem" loading="eager" fetchPriority="high" /></div>
+  <div class="hero-main_content">
+    <Eyebrow>ALTRICHTER GOALIE ACADEMY</Eyebrow>
+    <Heading tag="h1" variant="display" id="hero-title">KAŽDÝ PUK.<br/>TVŮJ <br/><em>MOMENT.</em></Heading>
+    <Paragraph>Klid v hlavě. Jistota v bráně.<br/>Trénink, který tě připraví na obojí.</Paragraph>
+    <Button element="link" class="academy-blue" href="#treninky">Najít svůj trénink <Arrow/></Button>
+  </div>
+  <div class="hero-main_stamp" aria-hidden="true"><span>ODVAHA</span><strong>SE TRÉNUJE.</strong><svg data-decor-motion viewBox="0 0 70 65" fill="none"><path d="M8 11c35-12 54 15 30 40m-8-14 6 17 19-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="hero-main_baseline"><span>GÓLMANEM TĚ DĚLÁ VÍC NEŽ VÝSTROJ.</span><a href="#treninky" aria-label="Objevit tréninky"><svg width="18" height="23" viewBox="0 0 18 23" fill="none" aria-hidden="true"><path d="M9 1v20m-7-7 7 7 7-7" stroke="currentColor" stroke-width="1.5"/></svg></a></div>
+</Section>
+
+<style is:global>
+@layer components {
+
+.hero-main_wrap { min-height:38.75rem; height:min(44.375rem,calc(100svh - 7.875rem)); background:#080f16; isolation:isolate; overflow:hidden; justify-content:start; }
+.hero-main_wrap::after { content:''; position:absolute; bottom:0; inset-inline:0; height:.25rem; background:linear-gradient(90deg,var(--blue) 0 62%,var(--grapefruit) 62% 88%,var(--violet) 88%); }
+.hero-main_visual { left:34%!important; width:66%!important; z-index:-1; }
+.hero-main_visual>.image { width:100%; height:100%; object-fit:cover; object-position:45% center; filter:grayscale(1); mask-image:linear-gradient(90deg,transparent,#000 28%); }
+.hero-main_visual::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,#080f16 0%,rgb(8 15 22 / 65%) 9%,transparent 40%); }
+.hero-main_layout { min-height:100%; justify-content:start!important; }
+.hero-main_content { width:45%; padding:4.375rem 0 6.875rem; }
+.hero-main_content .eyebrow_text { color:var(--blue); font-size:.8125rem; }
+.hero-main_content h1 { font-size:clamp(3.25rem,5.55vw,5rem); letter-spacing:-.06em; line-height:.99; margin:1.625rem 0 1.5625rem; }
+.hero-main_content h1 em { color:var(--blue); font-style:normal; }
+.hero-main_content>.text { font-size:1.0625rem; line-height:1.6; color:#e5e5e5; margin:0; }
+.hero-main_content>.button_wrap { margin-top:1.75rem; }
+.hero-main_stamp { position:absolute; right:7%; bottom:6.75rem; background:var(--blue); color:var(--dark-900); transform:rotate(7deg); padding:.875rem 1.375rem; border-radius:.1875rem; }
+.hero-main_stamp>span,.hero-main_stamp>strong { display:block; font-size:1rem; font-weight:700; line-height:1.3; letter-spacing:.03em; }
+.hero-main_stamp>strong { font-size:1.1875rem; letter-spacing:-.03em; }
+.hero-main_stamp svg { position:absolute; width:4.375rem; height:4.0625rem; left:-5.0625rem; top:-1.375rem; transform:rotate(15deg); color:white; }
+.hero-main_baseline { position:absolute; bottom:1.5625rem; left:0; right:0; display:flex; justify-content:space-between; align-items:center; font-size:.75rem; letter-spacing:.12em; }
+.hero-main_baseline>span { padding:.625rem .875rem; border-radius:.25rem; color:white; background:rgb(0 0 0 / 78%); font-weight:500; line-height:1.5; max-width:calc(100% - 3.75rem); }
+.hero-main_baseline a { width:2.75rem; height:2.75rem; display:grid; place-items:center; border:.0625rem solid #ffffff55; border-radius:50%; background:#1116; }
+@media(width <= 68.75rem) { .hero-main_wrap { min-height:37.1875rem; } .hero-main_content { width:47%; padding-top:4.6875rem; } .hero-main_content h1 { font-size:clamp(3.25rem,6.2vw,4.375rem); } }
+@media(width <= 37.5rem) { .hero-main_wrap { height:auto; min-height:44.0625rem; } .hero-main_visual { left:0!important; width:100%!important; height:19.6875rem!important; } .hero-main_visual>.image { object-position:40% top; mask-image:none; } .hero-main_visual::after { background:#000; opacity:.04; } .hero-main_content { width:100%; padding:20.875rem 0 5.5rem; } .hero-main_content .eyebrow_text { font-size:.75rem; } .hero-main_content h1 { font-size:clamp(2.5rem,10.5vw,3.75rem); line-height:.98; letter-spacing:-.055em; margin:1.1875rem 0 1.125rem; } .hero-main_content h1 br:nth-child(2) { display:none; } .hero-main_content>.text { font-size:1rem; } .hero-main_content>.button_wrap { margin-top:1.25rem; font-size:.875rem; min-height:2.75rem; } .hero-main_stamp { display:none; } .hero-main_baseline { bottom:1.0625rem; } .hero-main_baseline>span { max-width:13.125rem; font-size:.75rem; padding:0; background:none; } }
+
+@media(prefers-reduced-motion:no-preference) {
+  .hero-main_stamp svg[data-motion-visible] { animation:hero-arrow-wave var(--motion-decoration-duration) var(--ease-in-out); }
+}
+@keyframes hero-arrow-wave {
+  0%,100% { transform:translate(0,0) rotate(15deg); }
+  25%,65% { transform:translate(.1875rem,-.25rem) rotate(19deg); }
+  45%,85% { transform:translate(-.0625rem,.0625rem) rotate(13deg); }
+}
+}
+</style>

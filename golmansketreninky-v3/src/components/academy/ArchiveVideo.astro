@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getImage } from "astro:assets";
+import { Section, Heading, Paragraph, Eyebrow } from "@/ui";
+import { url } from "@/lib/site";
+interface Props {
+  render?: boolean;
+  gallery?: CollectionEntry<"galleries">;
+}
+const { render = true, gallery } = Astro.props;
+const video = gallery?.data.video;
+const poster = video
+  ? await getImage({ src: video.poster, width: 848, format: "webp" })
+  : undefined;
+---
+
+{
+  render && video && (
+    <Section>
+      <>
+        <Eyebrow>Chvíle v pohybu</Eyebrow>
+        <Heading variant="h3">{video.title}</Heading>
+        <Paragraph>{video.description}</Paragraph>
+        <video
+          controls
+          playsinline
+          preload="none"
+          poster={poster!.src}
+          aria-label={video.title}
+        >
+          <source src={url(video.file)} type="video/mp4" />
+          Váš prohlížeč nepodporuje video.
+        </video>
+      </>
+    </Section>
+  )
+}

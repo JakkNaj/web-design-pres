@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Section, Heading, Paragraph, Button } from "@/ui";
+import { url } from "@/lib/site";
+---
+
+<BaseLayout title="Stránka nenalezena"
+  ><Section
+    ><Heading tag="h1">Tenhle puk minul bránu.</Heading><Paragraph
+      >Stránku jsme nenašli. Vrať se na led a najdi svůj trénink.</Paragraph
+    ><Button element="link" href={url()}>Zpátky na úvod ↗</Button></Section
+  ></BaseLayout
+>

@@ -1,0 +1,266 @@
+---
+import { Button, Heading, Eyebrow, Input, Select } from "@/ui";
+
+import { siteContent, contact } from "@/lib/site";
+import { canRegister, dateRange } from "@/lib/events";
+const { camps, sessions } = await siteContent();
+const items = [
+  ...camps.map((c) => ({
+    id: `camp:${c.id}`,
+    label: `${c.data.title} · ${dateRange(c.data.start, c.data.end)}`,
+    ...c.data,
+  })),
+  ...sessions.map((s) => ({
+    id: `session:${s.id}`,
+    label: `${s.data.title} · ${dateRange(s.data.start)}`,
+    ...s.data,
+  })),
+].filter((item) => canRegister(item));
+const options = items.length
+  ? items.map((item) => ({
+      value: item.id,
+      label: item.label,
+      attributes: { "data-start": item.start, "data-end": item.end },
+    }))
+  : [
+      {
+        value: "",
+        label: "Nové termíny připravujeme",
+        attributes: { disabled: true },
+      },
+    ];
+---
+
+<dialog
+  id="registration"
+  aria-labelledby="registration-title"
+  aria-describedby="registration-description"
+>
+  <Button
+    variant="close"
+    emphasis="secondary"
+    class="dialog-close"
+    data-close
+    label="Zavřít přihlášku"
+  />
+  <div class="registration-content">
+    <Eyebrow>PRVNÍ KROK DO BRANKOVIŠTĚ</Eyebrow><Heading id="registration-title"
+      >Pojď na led.</Heading
+    ><p class="dialog-intro" id="registration-description">
+      Vyber si termín a pokračuj k domluvě s akademií.
+    </p>
+    <form class="registration-form">
+      <Select
+        label="Vybraný termín"
+        name="session"
+        required
+        placeholder="Vyber termín"
+        options={options}
+      />
+      <Input
+        label="Tvoje jméno"
+        name="name"
+        autocomplete="name"
+        required
+        maxlength="100"
+        placeholder="Jméno a příjmení"
+      /><Input
+        label="E-mail"
+        variant="email"
+        name="email"
+        required
+        maxlength="254"
+        placeholder="tvuj@email.cz"
+      />
+      <p class="form-note" data-registration-error role="status" hidden>
+        Termín už není otevřený. Vyber jiný nebo nám napiš.
+      </p><Button type="submit">Pokračovat ↗</Button>
+    </form>
+  </div>
+  <div class="registration-success" hidden tabindex="-1">
+    <span class="success-mark" aria-hidden="true">↗</span><Eyebrow
+      >DOMLUVÍME DALŠÍ KROK</Eyebrow
+    ><Heading id="success-title">Další krok?<br />Domluvíme se.</Heading><p>
+      Pro potvrzení termínu napiš na <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+    </p><Button data-close>Zpátky na web</Button>
+  </div>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>("#registration")!;
+  const form = dialog.querySelector<HTMLFormElement>("form")!;
+  const select = form.elements.namedItem("session") as HTMLSelectElement;
+  const content = dialog.querySelector<HTMLElement>(".registration-content")!;
+  const success = dialog.querySelector<HTMLElement>(".registration-success")!;
+  const error = dialog.querySelector<HTMLElement>("[data-registration-error]")!;
+  let trigger: HTMLButtonElement | null = null;
+  const valid = (option: HTMLOptionElement | undefined) =>
+    !!option?.dataset.start &&
+    Date.parse(option.dataset.start) > Date.now() &&
+    Date.parse(option.dataset.end ?? "") > Date.now();
+  function refreshEvents() {
+    Array.from(select.options).forEach((option) => {
+      option.disabled = !valid(option);
+    });
+    document
+      .querySelectorAll<HTMLButtonElement>("[data-register]")
+      .forEach((button) => {
+        const option = Array.from(select.options).find(
+          (o) => o.value === button.dataset.register,
+        );
+        if (!valid(option)) {
+          button.disabled = true;
+          button.textContent = "Přihlašování skončilo";
+        }
+      });
+    document
+      .querySelectorAll<HTMLElement>("[data-upcoming][data-start]")
+      .forEach((el) => {
+        if (Date.parse(el.dataset.start!) <= Date.now()) el.hidden = true;
+      });
+    document
+      .querySelectorAll<HTMLElement>("[data-upcoming-group]")
+      .forEach((group) => {
+        const empty = group.querySelector<HTMLElement>("[data-empty-events]");
+        if (empty)
+          empty.hidden = !!group.querySelector("[data-upcoming]:not([hidden])");
+      });
+    document
+      .querySelectorAll<HTMLElement>("[data-event-state][data-end]")
+      .forEach((el) => {
+        if (Date.parse(el.dataset.end!) < Date.now()) {
+          el.textContent = "Proběhlo";
+          el.dataset.state = "completed";
+        }
+      });
+  }
+  refreshEvents();
+  window.addEventListener("pageshow", refreshEvents);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) refreshEvents();
+  });
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-register]")
+    .forEach((button) =>
+      button.addEventListener("click", () => {
+        refreshEvents();
+        if (button.disabled) return;
+        trigger = button;
+        form.reset();
+        select.value = button.dataset.register!;
+        content.hidden = false;
+        success.hidden = true;
+        error.hidden = true;
+        dialog.setAttribute("aria-labelledby", "registration-title");
+        dialog.setAttribute("aria-describedby", "registration-description");
+        dialog.showModal();
+      }),
+    );
+  dialog
+    .querySelectorAll("[data-close]")
+    .forEach((button) =>
+      button.addEventListener("click", () => dialog.close()),
+    );
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) {
+      const b = dialog.getBoundingClientRect();
+      if (
+        e.clientX < b.left ||
+        e.clientX > b.right ||
+        e.clientY < b.top ||
+        e.clientY > b.bottom
+      )
+        dialog.close();
+    }
+  });
+  dialog.addEventListener("close", () => {
+    form.reset();
+    trigger?.focus();
+  });
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    refreshEvents();
+    if (!valid(select.selectedOptions[0])) {
+      error.hidden = false;
+      return;
+    }
+    if (!form.reportValidity()) return;
+    content.hidden = true;
+    success.hidden = false;
+    dialog.setAttribute("aria-labelledby", "success-title");
+    dialog.removeAttribute("aria-describedby");
+    success.focus();
+    form.reset();
+  });
+</script>
+
+<style is:global>
+  @layer components {
+    #registration {
+      color: var(--text);
+      background: var(--dark-800);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-main);
+      padding: var(--space-7);
+      width: min(36rem, calc(100% - 2rem));
+      max-height: 90svh;
+      overflow: auto;
+      margin: auto;
+    }
+    #registration::backdrop {
+      background: rgb(0 0 0 / 80%);
+      backdrop-filter: blur(0.3rem);
+    }
+    #registration .dialog-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    #registration .heading {
+      font-size: var(--h3);
+      padding-right: 1rem;
+    }
+    #registration .eyebrow_wrap {
+      color: var(--blue);
+      padding-right: 2.5rem;
+    }
+    #registration .dialog-intro,
+    #registration .form-note {
+      font-size: 1rem;
+      color: var(--text-2);
+      margin-block: 1rem;
+    }
+    #registration form {
+      display: grid;
+      gap: 1.25rem;
+    }
+    #registration label {
+      display: grid;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+    #registration input,
+    #registration select {
+      width: 100%;
+      background: var(--dark-900);
+      color: var(--text);
+      border: var(--border-width) solid var(--border);
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 0.2rem;
+    }
+    #registration select {
+      padding-inline-end: 2.5rem;
+    }
+    #registration .field-label {
+      font-size: 1rem;
+    }
+    #registration .registration-success {
+      display: grid;
+      gap: 1rem;
+    }
+    #registration .success-mark {
+      color: var(--blue);
+      font-size: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,28 @@
+{
+  "title": "Víkend v brankovišti.",
+  "series": "vikendovy-kemp",
+  "year": 2026,
+  "location": "Říčany",
+  "venue": "COM-SYS Ice Arena",
+  "start": "2026-09-26T09:00:00+02:00",
+  "end": "2026-09-27T18:00:00+02:00",
+  "availability": "open",
+  "demo": true,
+  "summary": "Dva dny, které patří tvé hře. Led, suchá příprava a společný rozbor.",
+  "body": [
+    "Víkend zaměřený na techniku, pohyb v brankovišti a čtení hry. Prostor pro otázky i konkrétní zpětnou vazbu."
+  ],
+  "program": [
+    "Technika a pohyb na ledě",
+    "Herní situace a práce s pukem",
+    "Suchá příprava a zpětná vazba"
+  ],
+  "practical": [
+    "Kompletní brankářská výstroj a nabroušené brusle.",
+    "Sportovní oblečení, boty a láhev s pitím."
+  ],
+  "age": "Věkové skupiny upřesníme",
+  "capacity": "Malé skupiny · kapacitu upřesníme",
+  "coaches": [],
+  "sources": []
+}

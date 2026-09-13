@@ -1,0 +1,35 @@
+---
+import { ContentWrapper, Heading, Eyebrow } from "@/ui";
+import HockeyAccent from './HockeyAccent.astro';
+interface Props {
+  render?: boolean;
+  eyebrow: string;
+  title: string;
+  accent?: 'puck' | 'rink' | 'tactics';
+}
+const { render = true, eyebrow, title, accent } = Astro.props;
+---
+
+<ContentWrapper render={render} variant="auto-width" class="section-heading_wrap" column1Class="section-heading_main" column2Class="section-heading_aside">
+  <Eyebrow>{eyebrow}</Eyebrow>
+  <div class="section-heading_title"><Heading><Fragment set:html={title}/></Heading>{accent && <HockeyAccent variant={accent} class="section-heading_accent" />}</div>
+  <Fragment slot="column2"><slot /></Fragment>
+</ContentWrapper>
+
+
+<style is:global>
+@layer components {
+
+.section-heading_wrap { align-items:end; column-gap:1.75rem; row-gap:1rem; }
+.section-heading_main { flex:1 1 auto; gap:1rem; }
+.section-heading_title { display:flex; align-items:center; gap:1.5rem; }
+.section-heading_accent { width:5.5rem; }
+.section-heading_wrap .heading { margin:0; max-width:none; font-size:clamp(1.8125rem,3vw,2.625rem); line-height:1.15; letter-spacing:-.045em; }
+.section-heading_aside { flex:0 1 auto; padding-bottom:0; }
+.section-heading_wrap .eyebrow_text { font-size:.8125rem; letter-spacing:.11em; text-transform:uppercase; color:var(--text-2); }
+.section-heading_wrap .text { max-width:28ch; font-size:1rem; line-height:1.7; color:var(--text-2); margin:0; }
+.section-heading_wrap .button_wrap { margin:0; }
+@media(width <= 37.5rem) { .section-heading_main,.section-heading_aside { flex-basis:100%; } .section-heading_accent { width:3.75rem; } .section-heading_title { gap:1rem; } .section-heading_wrap .heading { font-size:1.875rem; } .section-heading_wrap .eyebrow_text { font-size:.75rem; } .section-heading_wrap .text { font-size:.875rem; } }
+
+}
+</style>

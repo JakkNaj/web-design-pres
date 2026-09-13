@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContentCampDetail from "@/components/academy/ContentCampDetail.astro";
+export async function getStaticPaths() {
+  return (await getCollection("camps", (c) => !c.data.draft)).map((camp) => ({
+    params: { id: camp.id },
+    props: { camp },
+  }));
+}
+const { camp } = Astro.props;
+---
+
+<BaseLayout title={camp.data.title} description={camp.data.summary}
+  ><ContentCampDetail camp={camp} /></BaseLayout
+>

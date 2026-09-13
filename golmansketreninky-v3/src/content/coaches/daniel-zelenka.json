@@ -1,0 +1,17 @@
+{
+  "name": "Daniel Zelenka",
+  "order": 2,
+  "sources": [
+    "https://www.golmansketreninky.cz/nasi-treneri/"
+  ],
+  "summary": "Hráčské zkušenosti z juniorských i mužských soutěží.",
+  "intro": "Od vlastního brankoviště k práci s další generací.",
+  "body": [
+    "S hokejem začínal v Kroměříži. Dorosteneckou a juniorskou zkušenost získal v Šumperku, Havířově a Kometě Brno. V mužském hokeji prošel Břeclaví, Třebíčí a Šumperkem."
+  ],
+  "credentials": [
+    "Zkušenosti z první a druhé ligy",
+    "Trenérská práce s mládeží HC Kralupy podle zdrojového medailonku"
+  ],
+  "portrait": "../../assets/editorial/coach-daniel-zelenka.webp"
+}

@@ -1,0 +1,42 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionPageIntro from "@/components/academy/SectionPageIntro.astro";
+import ContentCampCards from "@/components/academy/ContentCampCards.astro";
+import { Section, Heading, Paragraph, Button } from "@/ui";
+import { siteContent, contact } from "@/lib/site";
+import { eventState } from "@/lib/events";
+const { camps, galleryMap } = await siteContent();
+const upcoming = camps.filter((c) => eventState(c.data) !== "completed");
+const past = camps.filter((c) => eventState(c.data) === "completed").reverse();
+---
+
+<BaseLayout title="Gólmanské kempy"
+  ><SectionPageIntro
+    title="Několik dní. Velký posun."
+    eyebrow="Gólmanské kempy"
+    description="Led, suchá příprava i video. Prostor soustředit se na svoje řemeslo a zažít práci v partě."
+  /><Section
+    ><Heading>Co nás čeká.</Heading><ContentCampCards
+      camps={upcoming}
+      galleryMap={galleryMap}
+    />{
+      !upcoming.length && (
+        <>
+          <>
+            <Paragraph>
+              Nové kempy právě připravujeme. Napiš nám pro aktuální informace.
+            </Paragraph>
+            <Button element="link" href={`mailto:${contact.email}`}>
+              Zeptat se na kemp ↗
+            </Button>
+          </>
+        </>
+      )
+    }</Section
+  ><Section paddingTop="none"
+    ><Heading>Tohle už máme za sebou.</Heading><ContentCampCards
+      camps={past}
+      galleryMap={galleryMap}
+    /></Section
+  ></BaseLayout
+>

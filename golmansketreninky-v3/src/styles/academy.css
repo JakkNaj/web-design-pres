@@ -1,0 +1,75 @@
+:root {
+  --dark-900: #0a1118;
+  --dark-800: #101e29;
+  --dark-700: #192c39;
+  --light-100: #eef4f5;
+  --light-200: #c7d3d9;
+  --light-300: #a6b8c3;
+  --brand-500: #e87780;
+  --brand-text: #181018;
+  --blue: #77cce3;
+  --grapefruit: #e87780;
+  --primary-family: var(--font-inter, sans-serif);
+  --primary-medium: 500;
+  --display-min: 54;
+  --display-max: 112;
+  --display-line-height: 0.96;
+  --display-letter-spacing: -0.045em;
+  --h1-min: 45;
+  --h1-max: 94;
+  --h2-min: 29;
+  --h2-max: 42;
+  --h3-min: 23;
+  --h3-max: 28;
+  --text-main-min: 17;
+  --text-main-max: 17;
+  --text-main-line-height: 1.7;
+  --text-small-min: 14;
+  --text-small-max: 14;
+  --letter-spacing-tight: -0.03em;
+  --radius-small: 0.15rem;
+  --radius-main: 0.25rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --site-margin-min: 24;
+  --site-margin-max: 64;
+  --site-gutter-max: 28;
+  --section-space-medium-min: 65;
+  --section-space-medium-max: 94;
+  --nav-height: 5.5rem;
+  --max-width-main: 82rem;
+}
+.theme-dark {
+  --text-2: #9fb0bd;
+  --border: #293844;
+  --heading-accent: var(--blue);
+  --link-text-hover: var(--blue);
+  --button-background-hover: #f3999d;
+  --button-text-hover: #181018;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+body {
+  margin: 0;
+}
+[hidden] {
+  display: none !important;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+:root { --violet:#b19ada; --ice-dark:#182f3c; --rose-dark:#34242f; --gutter:clamp(1.5rem,4.4vw,4.5rem); --site-margin:var(--gutter); --site-width:calc(100% - var(--gutter)*2); --max-width-main:96.875rem; }
+
+:root { --ease-in-out:cubic-bezier(.77,0,.175,1); --motion-decoration-duration:3.6s; }

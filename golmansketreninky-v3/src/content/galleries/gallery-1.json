@@ -1,0 +1,73 @@
+{
+  "title": "Ukázka tréninku / základní galerie",
+  "kind": "training",
+  "coverIndex": 0,
+  "photos": [
+    {
+      "image": "../../assets/editorial/g1-0000.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 1",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 1",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/01.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0001.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 2",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 2",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/02.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0002.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 3",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 3",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/03.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0003.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 4",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 4",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/04.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0004.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 5",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 5",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/05.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0005.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 6",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 6",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/06.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0006.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 7",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 7",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/07.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0007.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 8",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 8",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/08.jpg"
+    },
+    {
+      "image": "../../assets/editorial/g1-0008.webp",
+      "alt": "Ukázka tréninku / základní galerie · fotografie 9",
+      "caption": "Ukázka tréninku / základní galerie · fotografie 9",
+      "featured": true,
+      "source": "https://www.golmansketreninky.cz/wp-content/gallery/001zakladni/09.jpg"
+    }
+  ],
+  "sources": [
+    "https://www.golmansketreninky.cz/foto/"
+  ]
+}

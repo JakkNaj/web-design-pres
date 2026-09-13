@@ -1,0 +1,67 @@
+---
+import { Img, Heading, Button } from '@/ui';
+import type { CollectionEntry } from 'astro:content';
+import { url } from '@/lib/site';
+import Arrow from './Arrow.astro';
+interface Props { coaches: CollectionEntry<'coaches'>[]; detailed?: boolean }
+const { coaches, detailed = false } = Astro.props;
+const headingTag = detailed ? 'h2' : 'h3';
+---
+<div class:list={['coaches_wrap', { 'coaches_wrap-detailed': detailed }]}>
+  {coaches.filter(c => c.data.portrait).map(c => {
+    const words = c.data.name.split(' ');
+    const surname = words.pop();
+    return (
+      <article class="coaches_profile" id={detailed ? c.id : undefined}>
+        <div class="coaches_profile-header">
+          <div class="coaches_profile-photo">
+            <Img src={c.data.portrait!} alt={c.data.name}  loading="lazy" />
+          </div>
+          <div class="coaches_profile-heading">
+            <Heading tag={headingTag} variant="h3"><span>{words.join(' ')}</span>{' '}{surname}</Heading>
+            <p class="coaches_profile-summary">{c.data.summary}</p>
+          </div>
+        </div>
+        <div class="coaches_profile-description">
+          {detailed && <p class="coaches_profile-intro">{c.data.intro}</p>}
+          {(detailed ? c.data.body : c.data.body.slice(0, 1)).map(p => <p>{p}</p>)}
+        </div>
+        {detailed ? (
+          <ul class="coaches_profile-experience">{c.data.credentials.map(p => <li>{p}</li>)}</ul>
+        ) : (
+          <Button element="link" variant="link" class="coaches_profile-link" href={url(`treneri/#${c.id}`)} aria-label={`Více o trenérovi: ${c.data.name}`}>Celý medailonek <Arrow diagonal /></Button>
+        )}
+      </article>
+    );
+  })}
+</div>
+
+<style is:global>
+@layer components {
+  .coaches_wrap { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; }
+  .coaches_profile { --trainer-accent:var(--blue); --trainer-tint:var(--ice-dark); display:flex; flex-direction:column; padding:1.875rem; background:var(--dark-800); border:0.0625rem solid var(--border); min-width:0; scroll-margin-top:2.1875rem; }
+  .coaches_profile:nth-child(even) { --trainer-accent:var(--grapefruit); --trainer-tint:var(--rose-dark); }
+  .coaches_profile-header { display:grid; grid-template-columns:8.25rem minmax(0,1fr); align-items:start; gap:1.75rem; }
+  .coaches_profile-photo { width:8.25rem; aspect-ratio:4 / 5; overflow:hidden; background:var(--trainer-tint); }
+  .coaches_profile-photo img { width:100%; height:100%; object-fit:cover; object-position:50% 18%; }
+  .coaches_profile-heading { padding-top:0.75rem; }
+  .coaches_profile-heading::before { content:''; display:block; width:1.75rem; height:0.25rem; background:var(--trainer-accent); margin-bottom:1rem; }
+  .coaches_profile h2,.coaches_profile h3 { font-size:clamp(1.6875rem,2.3vw,2.1875rem); line-height:1.08; letter-spacing:-.045em; margin:0; text-wrap:initial; }
+  .coaches_profile h2 span,.coaches_profile h3 span { display:block; }
+  .coaches_profile-summary { color:var(--trainer-accent); font-size: 0.875rem; line-height:1.55; margin-top:0.875rem; max-width:16.5625rem; }
+  .coaches_profile-description { margin-top:1.5625rem; }
+  .coaches_profile-description p { font-size: 1rem; line-height:1.8; color:var(--text-2); max-width:37.5rem; }
+  .coaches_profile-description p+p { margin-top:0.75rem; }
+  .coaches_profile-description .coaches_profile-intro { color:var(--text); font-size: 1.0625rem; line-height:1.5; font-weight:500; }
+  .coaches_profile-link.button_wrap { display:flex; align-items:center; justify-content:space-between; gap:1.25rem; min-height:2.75rem; padding-top:1rem; margin-top:auto; font-size: 0.875rem; color:var(--trainer-accent); width:fit-content; border:0; background:none; --button-text:var(--trainer-accent); }
+  .coaches_profile-link .arrow { width:1rem; }
+  .coaches_profile-experience { list-style:none; padding:1.25rem 0 0; margin:1.5rem 0 0; border-top:0.0625rem solid var(--border); display:grid; gap:0.75rem; }
+  .coaches_profile-experience li { display:flex; gap:0.75rem; font-size: 0.875rem; line-height:1.6; color:var(--text-2); }
+  .coaches_profile-experience li::before { content:''; flex:0 0 0.4375rem; height:0.4375rem; margin-top:0.375rem; border-radius:50%; background:var(--trainer-accent); }
+  @media (hover:hover) and (pointer:fine) { .coaches_profile-link:hover { text-decoration:underline; text-underline-offset:0.3125rem; } }
+  @media (max-width:65.625rem) { .coaches_profile { padding:1.5rem; } .coaches_profile-header { grid-template-columns:6.875rem minmax(0,1fr); gap:1.375rem; } .coaches_profile-photo { width:6.875rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 1.6875rem; } }
+  @media (max-width:47.5rem) { .coaches_wrap { grid-template-columns:1fr; gap:1.25rem; } .coaches_profile-header { grid-template-columns:7.5rem minmax(0,1fr); gap:1.5rem; } .coaches_profile-photo { width:7.5rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 2rem; } }
+  @media (max-width:26.25rem) { .coaches_profile-heading { padding-top:0; } .coaches_profile { padding:1.25rem; } .coaches_profile-header { grid-template-columns:6rem minmax(0,1fr); gap:1.25rem; } .coaches_profile-photo { width:6rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 1.6875rem; } .coaches_profile-heading::before { margin-bottom:0.75rem; } .coaches_profile-summary { font-size: 0.8125rem; margin-top:0.625rem; } .coaches_profile-description { margin-top:1.375rem; } .coaches_profile-description p { font-size: 1rem; } }
+  @media (max-width:22.5rem) { .coaches_profile-header { grid-template-columns:5.125rem minmax(0,1fr); gap:0.875rem; } .coaches_profile-photo { width:5.125rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 1.4375rem; } .coaches_profile { padding:1.125rem; } }
+}
+</style>

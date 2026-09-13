@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionPageIntro from "@/components/academy/SectionPageIntro.astro";
+import ContentGallery from "@/components/academy/ContentGallery.astro";
+import ArchiveVideo from "@/components/academy/ArchiveVideo.astro";
+import { Section, Heading, Paragraph, Img, Button } from "@/ui";
+import { siteContent, url, campUrl } from "@/lib/site";
+import { dateLabel } from "@/lib/events";
+export async function getStaticPaths() {
+  return (await getCollection("articles", (a) => !a.data.draft)).map(
+    (article) => ({ params: { id: article.id }, props: { article } }),
+  );
+}
+const { article } = Astro.props;
+const a = article.data;
+const { galleryMap } = await siteContent();
+const g = a.gallery ? galleryMap.get(a.gallery.id) : undefined;
+const p = g?.data.photos[g.data.coverIndex];
+const image = a.cover ?? p?.image;
+---
+
+<BaseLayout title={a.title} description={a.summary} type="article"
+  ><SectionPageIntro
+    title={a.title}
+    eyebrow={`${a.category} / ${dateLabel(a.date)}`}
+    description={a.summary}
+    back={url("aktuality/")}
+    backLabel="Ze života akademie"
+  /><Section
+    >{image && <Img src={image} alt={a.coverAlt ?? p?.alt} />}<article>
+      {
+        a.body.map((p) => (
+          <Paragraph variant="large" maxWidth={65}>
+            {p}
+          </Paragraph>
+        ))
+      }
+    </article>{
+      a.camp && (
+        <Button element="link" emphasis="secondary" href={campUrl(a.camp.id)}>
+          Program a příběh ročníku ↗
+        </Button>
+      )
+    }</Section
+  >{
+    g && (
+      <Section paddingTop="none">
+        <>
+          <Heading>Podívejte se blíž.</Heading>
+          <ContentGallery gallery={g} />
+        </>
+      </Section>
+    )
+  }<ArchiveVideo gallery={g} /></BaseLayout
+>

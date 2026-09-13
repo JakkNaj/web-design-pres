@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import BaseHead from "@/components/Utility/BaseHead.astro";
+import SkipLink from "@/components/Global/SkipLink.astro";
+import Header from "@/components/academy/Header.astro";
+import Footer from "@/components/academy/Footer.astro";
+import DecorativeMotion from "@/components/academy/DecorativeMotion.astro";
+import Registration from "@/components/academy/Registration.astro";
+import type { SeoProps } from "@/types";
+type Props = SeoProps;
+---
+
+<!doctype html>
+<html lang="cs" class="theme-dark">
+  <head
+    ><BaseHead {...Astro.props} noindex /><meta
+      name="theme-color"
+      content="#0a1118"
+    /></head
+  ><body id="nahoru"
+    ><SkipLink target="obsah" label="Přejít na obsah" /><Header /><main
+      id="obsah"
+    >
+      <slot />
+    </main><Footer /><Registration /><DecorativeMotion /></body>
+</html>
+
+<style is:global>
+@layer components {
+  .eyebrow_marker { display:none; }
+  .eyebrow_text { font-size:.8125rem; font-weight:500; letter-spacing:.11em; line-height:1.5; text-transform:uppercase; }
+  .heading,.text,.button_text { text-box-trim:none; }
+  .heading::before,.heading::after,.text::before,.text::after,.button_text::before,.button_text::after,.eyebrow_text::before,.eyebrow_text::after { content:none; }
+  :where(.section)>.container { gap:2.375rem; }
+  .button_wrap:not(.close,.arrow,.play) { min-height:3rem; font-weight:500; }
+  .button_wrap.link { min-height:2.75rem; }
+  .button_text:has(svg) { display:flex; align-items:center; justify-content:center; gap:1.5rem; }
+  .button_wrap.academy-white { --button-background:var(--light-100); --button-text:var(--dark-900); --button-border:var(--light-100); --button-background-hover:#fff; --button-text-hover:var(--dark-900); --button-border-hover:#fff; }
+  .button_wrap.academy-blue { --button-background:var(--blue); --button-text:var(--dark-900); --button-border:var(--blue); --button-background-hover:#9bddeb; --button-text-hover:var(--dark-900); --button-border-hover:#9bddeb; }
+  @media(width <= 37.5rem) { :where(.section)>.container { gap:1.75rem; } }
+}
+</style>

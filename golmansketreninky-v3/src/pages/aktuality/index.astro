@@ -1,0 +1,38 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionPageIntro from "@/components/academy/SectionPageIntro.astro";
+import { Section, Grid, Card } from "@/ui";
+import { siteContent, articleUrl } from "@/lib/site";
+const { articles, galleryMap } = await siteContent();
+---
+
+<BaseLayout title="Ze života akademie"
+  ><SectionPageIntro
+    title="Práce, která je vidět."
+    eyebrow="Ze života akademie"
+    description="Příběhy z kempů, společné tréninky a momenty, které stojí za to si připomenout."
+  /><Section
+    ><Grid medium={2} large={3}
+      >{
+        articles.map((a) => {
+          const g = a.data.gallery
+            ? galleryMap.get(a.data.gallery.id)
+            : undefined;
+          const p = g?.data.photos[g.data.coverIndex];
+          return (
+            <Card
+              variant="stacked"
+              image={a.data.cover ?? p?.image}
+              imageAlt={a.data.coverAlt ?? p?.alt}
+              heading={a.data.title}
+              eyebrow={`${a.data.category} / ${a.data.date}`}
+              text={a.data.summary}
+              buttonHref={articleUrl(a.id)}
+              buttonLabel="Přečíst příběh ↗"
+            />
+          );
+        })
+      }</Grid
+    ></Section
+  ></BaseLayout
+>

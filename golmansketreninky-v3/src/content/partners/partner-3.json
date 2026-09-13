@@ -1,0 +1,9 @@
+{
+  "name": "Ribana dresy",
+  "order": 3,
+  "url": "http://www.ribanadresy.cz/",
+  "logo": "../../assets/editorial/partner-3.webp",
+  "sources": [
+    "https://www.golmansketreninky.cz/"
+  ]
+}

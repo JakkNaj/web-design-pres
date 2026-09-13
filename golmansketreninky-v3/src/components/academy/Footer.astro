@@ -1,0 +1,59 @@
+---
+import { Section, Heading, Paragraph, Eyebrow, Button } from '@/ui';
+import Brand from './Brand.astro';
+import Arrow from './Arrow.astro';
+import HockeyTrail from './HockeyTrail.astro';
+import { contact, url } from '@/lib/site';
+---
+<Section class="academy-footer_cta" id="dalsi-krok" aria-labelledby="contact-title">
+  <div slot="background" class="academy-footer_art" aria-hidden="true"><HockeyTrail class="academy-footer_trail"/><svg data-decor-motion class="academy-footer_puck" viewBox="0 0 64 35" fill="none"><path d="M3 11v12c0 14 58 14 58 0V11" stroke="currentColor" stroke-width=".5"/><ellipse cx="32" cy="11" rx="29" ry="10" stroke="currentColor" stroke-width=".5"/><ellipse cx="32" cy="11" rx="23" ry="7" stroke="currentColor" stroke-width=".3"/></svg></div>
+  <Eyebrow>TVŮJ DALŠÍ ZÁKROK ZAČÍNÁ TADY.</Eyebrow>
+  <Heading id="contact-title">POSTAV SE DO TOHO.</Heading>
+  <Paragraph>Zbytek společně odchytáme.</Paragraph>
+  <Button element="link" class="academy-blue" href={url('#terminy')}>Najít svůj trénink <Arrow/></Button>
+</Section>
+<footer class="academy-footer_wrap" id="kontakt">
+  <div class="academy-footer_top">
+    <a class="academy-footer_brand" href={url()} aria-label="Altrichter Goalie Academy — úvod"><Brand/></a>
+    <div><span class="academy-footer_label">DOMLUVÍME SE.</span><a href={`mailto:${contact.email}`}>{contact.email}<Arrow diagonal/></a>{contact.people.map(p=><a href={`tel:${p.tel}`}><span>{p.name}<br/>{p.phone}</span></a>)}</div>
+    <div><span class="academy-footer_label">TADY JSME DOMA</span><p>{contact.venue}<br/>{contact.address}</p><a href={url('historie/')}>Příběh akademie <Arrow diagonal/></a><a href={url('kempy/')}>Vypsané kempy <Arrow diagonal/></a></div>
+    <a class="academy-footer_back" href="#nahoru" aria-label="Zpět nahoru"><Arrow/></a>
+  </div>
+  <div class="academy-footer_legal"><span>© {new Date().getFullYear()} Altrichter Goalie Academy</span><span>Gólmanem. Po svém.</span></div>
+</footer>
+
+<style is:global>
+@layer components {
+
+.academy-footer_cta { background:#080f16; text-align:center; padding:4.75rem 1.5rem 5rem; position:relative; overflow:hidden; isolation:isolate; }
+.academy-footer_cta>.container { align-items:center; gap:0; width:100%; }
+.academy-footer_cta .eyebrow_text { font-size:.75rem; color:var(--blue); }
+.academy-footer_cta .heading { font-size:clamp(2.25rem,5.5vw,4.75rem); letter-spacing:-.055em; line-height:1.05; margin:1.375rem 0 1rem; }
+.academy-footer_cta .text { color:var(--text-2); font-size:1rem; margin:0; }
+.academy-footer_cta .button_wrap { margin-top:1.6875rem; }
+.academy-footer_art { position:absolute; inset:0; z-index:-1; pointer-events:none; }
+.academy-footer_trail { position:absolute; left:4%; bottom:2.1875rem; width:10.9375rem; height:9.6875rem; color:var(--blue); }
+.academy-footer_puck { position:absolute; bottom:3.4375rem; right:7%; width:10.625rem; height:5.6875rem; transform:rotate(-25deg); color:var(--blue); }
+.academy-footer_wrap { padding:3.25rem max(var(--gutter),calc((100vw - 96.875rem)/2)) 0; background:var(--dark-900); }
+.academy-footer_top { display:flex; justify-content:space-between; align-items:start; gap:1.875rem; padding-bottom:2.8125rem; position:relative; }
+.academy-footer_label { display:block; color:var(--text-2); font-size:.75rem; letter-spacing:.07em; margin-bottom:.625rem; }
+.academy-footer_top>div>a { font-size:.875rem; display:flex; align-items:center; gap:1.25rem; min-height:2.75rem; line-height:1.7; color:var(--text); text-decoration:none; }
+.academy-footer_top p { font-size:.875rem; line-height:1.7; margin:0; }
+.academy-footer_back { border:.0625rem solid var(--border); border-radius:50%; width:2.75rem; height:2.75rem; flex:none; display:grid; place-items:center; }
+.academy-footer_back svg { transform:rotate(-90deg); }
+.academy-footer_legal { display:flex; justify-content:space-between; align-items:center; gap:1.25rem; min-height:3.75rem; border-top:.0625rem solid var(--border); font-size:.75rem; color:var(--text-2); }
+.academy-footer_legal>span:nth-child(2) { color:var(--text); }
+@media(width <= 68.75rem) { .academy-footer_puck { right:2%; width:6.25rem; bottom:2.5rem; } .academy-footer_trail { width:8.4375rem; left:2%; bottom:1.25rem; } }
+@media(width <= 48rem) { .academy-footer_top { flex-wrap:wrap; } .academy-footer_top>.academy-footer_brand { width:calc(100% - 4.625rem); } .academy-footer_back { position:absolute; right:0; } .academy-footer_top>div { flex:1; } }
+@media(width <= 37.5rem) { .academy-footer_cta { padding:3.75rem 1.625rem 4.125rem; } .academy-footer_cta .heading { max-width:21.875rem; font-size:2.6875rem; } .academy-footer_cta .text { font-size:.875rem; } .academy-footer_puck { width:4.8125rem; right:-.75rem; bottom:.25rem; opacity:.5; } .academy-footer_trail { display:none; } .academy-footer_wrap { padding-top:2.25rem; } .academy-footer_top { gap:1.5625rem; padding-bottom:1.875rem; } .academy-footer_top>div { flex-basis:100%; } .academy-footer_top>div>a { font-size:1rem; } .academy-footer_label { margin-bottom:.3125rem; } .academy-footer_legal { flex-wrap:wrap; justify-content:start; gap:.625rem 1.5rem; padding-block:1.3125rem; } }
+
+@media(prefers-reduced-motion:no-preference) {
+  .academy-footer_puck[data-motion-visible] { animation:academy-footer-puck-drift var(--motion-decoration-duration) var(--ease-in-out); }
+}
+@keyframes academy-footer-puck-drift {
+  0%,100% { transform:translateY(0) rotate(-25deg); }
+  25%,65% { transform:translateY(-.3125rem) rotate(-22deg); }
+  45%,85% { transform:translateY(-.0625rem) rotate(-26deg); }
+}
+}
+</style>

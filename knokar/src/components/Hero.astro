@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import heroPorscheLake from '../assets/hero-porsche-lake.jpg';
+---
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-media">
+<Image src={heroPorscheLake} alt="Šedý kabriolet na nábřeží horského jezera pod zataženou oblohou." widths={[640, 960, 1440, 1920]} sizes="100vw" loading="eager" fetchpriority="high" format="webp" />
+<div class="hero-shade"></div>
+<div class="hero-top">
+<div class="wrap">
+<h1 class="h-display hero-title" id="hero-title">Klid <span class="br"></span>v&nbsp;pohybu.</h1>
+<p class="hero-sub">Privátní mobilita. Osobní servis.</p>
+</div>
+</div>
+</div>
+<div class="hero-bottom on-photo">
+<div class="wrap hero-bottom-in">
+<p>Krátkodobý i dlouhodobý pronájem luxusních vozů a osobní servis pro soukromé i firemní klienty.</p>
+<div class="hero-ctas">
+<a class="btn btn-light on-photo-btn" href="#vozy">Prohlédnout vozy <span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-ghost-light on-photo-btn" href="#kontakt">Poslat poptávku</a>
+<a class="btn btn-primary on-light" href="#vozy">Prohlédnout vozy <span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-secondary on-light" href="#kontakt">Poslat poptávku</a>
+</div>
+</div>
+</div>
+</section>

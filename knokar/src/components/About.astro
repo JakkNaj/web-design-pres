@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import porscheRainDetail from '../assets/porsche-rain-detail.jpg';
+import emblemChampagne from '../assets/emblem-champagne.svg';
+---
+<section class="about" id="onas" aria-labelledby="about-h">
+<div class="lrow about-r1">
+<div class="wrap lgrid">
+<div class="lcell c3 first a-meta">
+<p class="label"><i>01</i> O nás</p>
+<div class="stat"><b>19</b><span>let na trhu</span></div>
+</div>
+<div class="lcell c6 a-head">
+<h2 class="h-display" id="about-h">Vztah, který drží věci <em>v&nbsp;pohybu.</em></h2>
+</div>
+<figure class="lcell c3 l-img a-img bleed-r">
+<Image src={porscheRainDetail} alt="Detail stříbrného sportovního vozu v dešti, zpětné zrcátko a boční okno pokryté kapkami." widths={[480, 800, 1200, 1600]} sizes="(max-width: 760px) 100vw, 66vw" loading="lazy" format="webp" />
+</figure>
+</div>
+</div>
+<div class="lrow last about-r2">
+<div class="wrap lgrid">
+<div class="lcell c3 first stat"><b>800<sup>+</sup></b><span>klientů</span></div>
+<div class="lcell c6 a-text">
+<p>Zajišťujeme krátkodobý i&nbsp;dlouhodobý pronájem luxusních vozů a&nbsp;osobní servis pro klienty, kteří chtějí svou mobilitu řešit jako komplexní službu bez zbytečných starostí.</p>
+</div>
+<div class="lcell c3 bur-cell bleed-r">
+<p>Spolupracujeme se soukromými i&nbsp;firemními klienty.</p>
+<Image class="emb" src={emblemChampagne} alt="" aria-hidden="true" />
+<a href="#kontakt">Poslat poptávku <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</div>
+</div>
+</section>

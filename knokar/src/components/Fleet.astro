@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import VehicleCard from './VehicleCard.astro';
+const vehicles = (await getCollection('vehicles')).sort((a,b) => a.data.order - b.data.order);
+import fleetAmgGt63s from '../assets/fleet-amg-gt63s.jpg';
+import detailAmgCockpit from '../assets/detail-amg-cockpit.jpg';
+---
+<section class="fleet" id="vozy" aria-labelledby="fleet-h">
+<div class="lrow sec-head">
+<div class="wrap lgrid">
+<div class="lcell c3 first"><p class="label"><i>03</i> Vozy</p></div>
+<div class="lcell c9 lastc fleet-headc">
+<h2 class="h-1" id="fleet-h">Vybrané vozy</h2>
+<div class="fleet-intro">
+<p>Prohlédněte si vybrané vozy z&nbsp;naší nabídky. Dostupnost a&nbsp;podmínky konkrétního vozu s&nbsp;vámi rádi projdeme osobně.</p>
+<a class="btn btn-secondary" href="#kontakt">Poslat poptávku</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lrow">
+<div class="wrap lgrid">
+<figure class="lcell c8 first l-img f-main"><Image src={fleetAmgGt63s} alt="Mercedes-Benz AMG GT 63 S+ 4MATIC v matně šedém laku, pohled zepředu ze strany." widths={[480, 800, 1200, 1600]} sizes="(max-width: 760px) 100vw, 66vw" loading="lazy" format="webp" /></figure>
+<article class="lcell c4 lastc f-side" aria-labelledby="car-amg">
+<figure class="f-detail"><Image src={detailAmgCockpit} alt="Interiér vozu Mercedes-Benz AMG GT 63 S+, volant a přístrojová deska." widths={[480, 800, 1200, 1600]} sizes="(max-width: 760px) 100vw, 66vw" loading="lazy" format="webp" /></figure>
+<h3 class="feat-name" id="car-amg">Mercedes-Benz AMG GT 63&nbsp;S+ 4MATIC</h3>
+<ul class="tags" aria-label="Hlavní parametry">
+<li>470 kW</li><li>benzín</li><li>4×4</li><li>4 místa</li>
+</ul>
+<dl class="specs">
+<div><dt>Obsah motoru</dt><dd>3982 ccm</dd></div>
+<div><dt>Převodovka</dt><dd>automatická</dd></div>
+</dl>
+<a class="btn btn-primary" href="#kontakt" data-vehicle="Mercedes-Benz AMG GT 63 S+ 4MATIC">Poptat tento vůz <span class="arrow" aria-hidden="true">→</span></a>
+</article>
+</div>
+</div>
+<div class="lrow last">
+<div class="wrap lgrid">
+{vehicles.map((vehicle, index) => <VehicleCard vehicle={vehicle.data} first={index === 0} last={index === vehicles.length - 1} />)}
+
+
+</div>
+</div>
+</section>

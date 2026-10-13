@@ -1,0 +1,13 @@
+{
+  "order": 2,
+  "name": "Mercedes V250 Brabus",
+  "photo": "../../assets/fleet-v250-brabus.jpg",
+  "alt": "Stříbrný Mercedes V250 Brabus s logem KNOKAR na polní cestě.",
+  "position": "45% 62%",
+  "specs": [
+    "140 kW",
+    "nafta",
+    "4×4",
+    "4–7 míst"
+  ]
+}

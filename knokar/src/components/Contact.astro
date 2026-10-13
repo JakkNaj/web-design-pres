@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import emblemBurgundy from '../assets/emblem-burgundy.svg';
+---
+<section class="contact" id="kontakt" aria-labelledby="contact-h">
+<div class="lrow last">
+<div class="wrap lgrid">
+<div class="lcell c5 first contact-l">
+<p class="label"><i>06</i> Kontakt</p>
+<h2 class="h-2" id="contact-h">Máte zájem o&nbsp;konkrétní vůz, nebo naopak individuální požadavek?</h2>
+<p class="lead">Napište nám. Ozveme se vám a&nbsp;osobně s&nbsp;vámi projdeme dostupné možnosti.</p>
+<Image class="emb" src={emblemBurgundy} alt="" aria-hidden="true" />
+<div class="call">
+<span>Raději voláte?</span>
+<a class="tel" href="tel:+420725949494">+420 725 94 94 94</a><br>
+<a class="mail" href="mailto:obchod@knokar.cz">obchod@knokar.cz</a>
+</div>
+</div>
+<form class="lcell c7 lastc form" aria-label="Poptávkový formulář" id="inquiry-form">
+<div class="field">
+<label for="b-name">Jméno a příjmení *</label>
+<input id="b-name" name="name" type="text" autocomplete="name" required="required">
+</div>
+<div class="field half">
+<label for="b-tel">Telefon *</label>
+<input id="b-tel" name="tel" type="tel" autocomplete="tel" required="required">
+</div>
+<div class="field half">
+<label for="b-mail">E-mail *</label>
+<input id="b-mail" name="email" type="email" autocomplete="email" required="required">
+</div>
+<div class="field">
+<label for="b-msg">Text zprávy</label>
+<textarea id="b-msg" name="message" placeholder="O jakou službu máte zájem? Na co se potřebujete zeptat?"></textarea>
+</div>
+<label class="check" for="b-gdpr"><input id="b-gdpr" name="gdpr" type="checkbox" required="required"><span>Souhlasím se zpracováním osobních údajů. *</span></label>
+<p class="notice" id="form-note">Online formulář zatím není dostupný. Kontaktujte nás prosím <a href="mailto:obchod@knokar.cz">e-mailem</a> nebo telefonicky.</p>
+<div class="form-foot">
+<span class="req">* povinné údaje</span>
+<button class="btn btn-primary" type="submit" disabled aria-describedby="form-note">Odeslat poptávku</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#inquiry-form');
+  const message = document.querySelector<HTMLTextAreaElement>('#b-msg');
+  let previousOpening = '';
+  form?.addEventListener('submit', (event) => event.preventDefault());
+  document.querySelectorAll<HTMLAnchorElement>('[data-vehicle]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (!message) return;
+      const opening = `Dobrý den, mám zájem o vůz ${link.dataset.vehicle}.`;
+      const existing = (previousOpening && message.value.startsWith(previousOpening)
+        ? message.value.slice(previousOpening.length)
+        : message.value).trim();
+      previousOpening = opening;
+      message.value = existing ? `${opening}\n\n${existing}` : `${opening} `;
+      requestAnimationFrame(() => message.focus({ preventScroll: true }));
+    });
+  });
+</script>

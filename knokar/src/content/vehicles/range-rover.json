@@ -1,0 +1,13 @@
+{
+  "order": 1,
+  "name": "Range Rover Autobiography",
+  "photo": "../../assets/fleet-rr-autobiography.jpg",
+  "alt": "Černý Range Rover Autobiography před prodejnou, pohled zepředu ze strany.",
+  "position": "60% 65%",
+  "specs": [
+    "250 kW",
+    "nafta",
+    "4×4",
+    "5 míst"
+  ]
+}

@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+interface Props { vehicle: CollectionEntry<'vehicles'>['data']; first?: boolean; last?: boolean; }
+const { vehicle, first, last } = Astro.props;
+---
+<article class:list={['lcell', 'c4', 'car', { first, lastc: last }]}>
+  <figure>
+    <Image src={vehicle.photo} alt={vehicle.alt} widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, 33vw" format="webp" loading="lazy" style={`object-position: ${vehicle.position}`} />
+    <ul class="tags" aria-label="Hlavní parametry">{vehicle.specs.map(spec => <li>{spec}</li>)}</ul>
+  </figure>
+  <h3>{vehicle.name}</h3>
+  <a class="tlink" href="#kontakt" data-vehicle={vehicle.name} aria-label={`Poptat vůz ${vehicle.name}`}>Poptat vůz <span class="arrow" aria-hidden="true">→</span></a>
+</article>

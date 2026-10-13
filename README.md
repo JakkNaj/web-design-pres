@@ -19,3 +19,7 @@ https://jakknaj.github.io/web-design-pres/
 ## Gólmanské tréninky — koncept 03
 
 Tmavá varianta v Lumos pro Astro, dostupná z přehledu návrhů: https://jakknaj.github.io/web-design-pres/golmansketreninky-v3/. Workflow ji sestavuje se správnou vnořenou cestou a ověřuje místní odkazy i média.
+
+## KNOKAR — první pracovní verze
+
+Astro homepage based on variant D, copied from `knokar/web02` on 2026-10-13. Preview: https://jakknaj.github.io/web-design-pres/knokar/. The workflow builds with `ASTRO_BASE=/web-design-pres/knokar`. Contact submission remains disabled pending integration; telephone/email links work.

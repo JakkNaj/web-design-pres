@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import rollsEmblem from '../assets/rolls-emblem.jpg';
+---
+<section class="svc" id="sluzby" aria-labelledby="svc-h">
+<header class="wrap svc-heading">
+  <p class="label"><i>02</i> Služby</p>
+  <h2 class="h-1" id="svc-h">Vůz je jen část služby.</h2>
+  <p class="lead">Zajistíme také vše potřebné kolem jeho výběru a&nbsp;servisu. Administrativu a&nbsp;jakékoliv složitosti necháváme vždy na naší straně.</p>
+</header>
+<div class="svc-body">
+<div class="wrap lgrid">
+<figure class="lcell c3 first l-img bleed-l">
+<Image src={rollsEmblem} alt="Detail sošky a chladičové mřížky klasického luxusního vozu." widths={[480, 800, 1200, 1600]} sizes="(max-width: 760px) 100vw, 66vw" loading="lazy" format="webp" />
+</figure>
+<ol class="lcell c9 lastc svc-list" style="padding: 0">
+<li class="svc-item">
+<span class="svc-num">01</span>
+<div><h3>Dlouhodobý pronájem</h3><p>Full service plus spojuje dlouhodobý pronájem vozidla s&nbsp;komplexním servisem.</p></div>
+<a class="tlink" href="#kontakt">Poptat <span class="arrow" aria-hidden="true">→</span></a>
+</li>
+<li class="svc-item">
+<span class="svc-num">02</span>
+<div><h3>Krátkodobý pronájem</h3><p>Vůz luxusní značky pro dobu, kdy ho potřebujete. Pomůžeme vybrat vhodný model, ověříme jeho dostupnost a&nbsp;domluvíme podmínky.</p></div>
+<a class="tlink" href="#kontakt">Poptat <span class="arrow" aria-hidden="true">→</span></a>
+</li>
+<li class="svc-item">
+<span class="svc-num">03</span>
+<div><h3>Pronájem vozů s&nbsp;řidičem</h3></div>
+<a class="tlink" href="#kontakt">Poptat <span class="arrow" aria-hidden="true">→</span></a>
+</li>
+<li class="svc-item">
+<span class="svc-num">04</span>
+<div><h3>Individuální řešení</h3><p>Potřebujete zařídit něco mimo běžnou nabídku? Vždy rádi probereme vaše potřeby a&nbsp;možnosti řešení.</p></div>
+<a class="tlink" href="#kontakt">Probrat <span class="arrow" aria-hidden="true">→</span></a>
+</li>
+</ol>
+</div>
+</div>
+</section>

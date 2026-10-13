@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "name": "Mercedes-Benz S 400d 4MATIC",
+  "photo": "../../assets/fleet-s400d.jpg",
+  "alt": "Mercedes-Benz S 400d 4MATIC v matném laku v showroomu.",
+  "position": "50% 58%",
+  "specs": [
+    "243 kW",
+    "nafta",
+    "4×4",
+    "5 míst"
+  ]
+}

@@ -176,7 +176,7 @@ a:hover .arrow{transform:translateX(4px)}
 @media (min-width:1101px){.phil-media{max-height:720px}}
 .phil-media img{width:100%;height:100%;object-fit:cover;object-position:70% 55%}
 .phil-media::after{content:"";position:absolute;left:0;right:0;bottom:0;height:28%;background:linear-gradient(to bottom,rgba(23,23,23,0),#171717);pointer-events:none}
-.phil-over{position:absolute;inset:0;display:flex;align-items:center;z-index:1}
+.phil-over{position:absolute;inset:0;display:flex;align-items:center;z-index:1;padding-block:clamp(32px,5vw,64px)}
 .phil-h{font-size:clamp(40px,4.8vw,72px);max-width:11.5em;color:#F3F0E9}
 .phil-h span{color:var(--champ);display:block}
 .phil-h-wrap{max-width:44%}

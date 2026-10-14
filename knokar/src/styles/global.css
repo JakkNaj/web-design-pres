@@ -349,6 +349,15 @@ html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 /* Mobile breathing room and a shared baseline for the experience figures. */
 .stat-years-mobile { display: none; }
 @media (max-width: 760px) {
+  .phil-over { padding-top: 24px; padding-bottom: 20px; }
+  .dark .lcell { padding-block: 32px; }
+  .about-r1 .a-img,
+  .svc-body .l-img,
+  .mission .m-img {
+    width: calc(100% + var(--pad) + var(--pad));
+    margin-left: calc(var(--pad) * -1);
+    margin-right: calc(var(--pad) * -1);
+  }
   .about-r1 .a-meta .stat { display: none; }
   .stat-years-mobile { display: block; }
   .about-r2 .lgrid {

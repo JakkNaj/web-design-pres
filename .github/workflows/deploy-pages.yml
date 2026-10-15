@@ -32,6 +32,7 @@ jobs:
             ceskadopravnistavba/package-lock.json
             donb-garage/package-lock.json
             knokar/package-lock.json
+            knokar-v2/package-lock.json
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
       - name: Build Gólmanské tréninky
@@ -100,9 +101,17 @@ jobs:
           npm ci
           npm run check
           npm run build
+      - name: Build KNOKAR v2 — final design
+        working-directory: knokar-v2
+        env:
+          ASTRO_BASE: /web-design-pres/knokar-v2
+        run: |
+          npm ci
+          npm run check
+          npm run build
       - name: Assemble Pages artifact
         run: |
-          mkdir -p _site/golmansketreninky _site/golmansketreninky-v2 _site/golmansketreninky-v3 _site/hcricany _site/comsysicearena _site/ceskadopravnistavba _site/donb-garage _site/knokar
+          mkdir -p _site/golmansketreninky _site/golmansketreninky-v2 _site/golmansketreninky-v3 _site/hcricany _site/comsysicearena _site/ceskadopravnistavba _site/donb-garage _site/knokar _site/knokar-v2
           cp index.html _site/index.html
           cp -R golmansketreninky/dist/. _site/golmansketreninky/
           cp -R golmansketreninky-v2/dist/. _site/golmansketreninky-v2/
@@ -112,6 +121,7 @@ jobs:
           cp -R ceskadopravnistavba/dist/. _site/ceskadopravnistavba/
           cp -R donb-garage/dist/. _site/donb-garage/
           cp -R knokar/dist/. _site/knokar/
+          cp -R knokar-v2/dist/. _site/knokar-v2/
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site

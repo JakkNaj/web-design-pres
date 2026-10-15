@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import rolls_emblem_jpg from '../assets/rolls-emblem.jpg';
+
+---
+<section class="sec" id="sluzby" aria-labelledby="svc-h" style="padding-top: 0">
+<div class="wrap">
+<div class="sec-head"><h2 class="h-1" id="svc-h">Naše služby</h2></div>
+<div class="svc3">
+<div class="svc3-grid">
+<article class="s3"><svg class="s3-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"></rect><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3"></path></svg><h3>Dlouhodobý pronájem</h3><p>Full service plus spojuje dlouhodobý pronájem vozidla s&nbsp;komplexním servisem.</p></article>
+<article class="s3"><svg class="s3-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="8" cy="15.5" r="4.5"></circle><path d="M11.3 12.2 20 3.5M16.5 7l2.5 2.5M14 9.5l2 2"></path></svg><h3>Krátkodobý pronájem</h3><p>Vůz luxusní značky pro dobu, kdy ho potřebujete.</p></article>
+<article class="s3"><svg class="s3-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12.5" r="2.4"></circle><path d="M3.8 11.2c2.6-.9 5.4-1.2 8.2-1.2s5.6.3 8.2 1.2M10.2 14.4 7 19.6M13.8 14.4l3.2 5.2"></path></svg><h3>Pronájem vozů s&nbsp;řidičem</h3><p>Užijte si skutečný luxus bezstarostnosti.</p></article>
+<article class="s3"><svg class="s3-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.5l1.9 5.6 5.6 1.9-5.6 1.9L12 18.5l-1.9-5.6-5.6-1.9 5.6-1.9z"></path><path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"></path></svg><h3>Individuální řešení</h3><p>Potřebujete zařídit něco mimo běžnou nabídku? Vždy rádi probereme vaše potřeby a&nbsp;možnosti řešení.</p></article>
+</div>
+<div class="sf-card">
+<figure class="sf-photo"><Image src={rolls_emblem_jpg} alt="Soška Spirit of Ecstasy a chromovaná maska Rolls-Royce v teplém světle." widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<div class="sf-text">
+<h3>Vůz je jen <span>část služby.</span></h3>
+<p>Zajistíme také vše potřebné kolem jeho výběru a&nbsp;servisu. Administrativu a&nbsp;jakékoliv složitosti necháváme vždy na naší straně.</p>
+<a class="btn btn-light btn-sm" href="#kontakt">Poptat službu <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>

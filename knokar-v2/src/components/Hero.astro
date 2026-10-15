@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import hero_tjeerd_jpg from '../assets/hero-tjeerd.jpg';
+
+---
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-media">
+<Image src={hero_tjeerd_jpg} alt="Přední část tmavého Rolls-Royce se soškou Spirit of Ecstasy za soumraku." widths={[640, 960, 1440, 1920]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
+<div class="hero-shade"></div>
+<div class="hero-content">
+<div class="wrap">
+<div class="hero-text">
+<h1 class="h-display hero-title" id="hero-title" lang="en">Luxury in Motion</h1>
+<p class="hero-sub">Pronájem luxusních vozů a&nbsp;osobní servis</p>
+<div class="hero-ctas">
+<a class="btn btn-light" href="#vozy">Prohlédnout vozy <span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-ghost-light" href="#kontakt">Poslat poptávku</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>

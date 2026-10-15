@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import emblem_champagne_svg from '../assets/emblem-champagne.svg';
+
+---
+<section class="sec about" id="onas" aria-labelledby="about-h">
+<div class="wrap about-grid">
+<div class="about-text">
+<p class="label">O nás</p>
+<h2 class="h-display" id="about-h">Vztah, který drží věci <em>v&nbsp;pohybu.</em></h2>
+<p class="lead">Zajišťujeme krátkodobý i&nbsp;dlouhodobý pronájem luxusních vozů a&nbsp;osobní servis pro klienty, kteří chtějí svou mobilitu řešit jako komplexní službu bez zbytečných starostí.</p>
+<p class="clients">Spolupracujeme se soukromými i&nbsp;firemními klienty.</p>
+<a class="btn btn-primary" href="#kontakt">Poslat poptávku <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+<div class="about-side">
+<div class="stat-box"><b>19</b><span>let na trhu</span></div>
+<div class="stat-box"><b>800<sup>+</sup></b><span>klientů</span></div>
+<div class="mission">
+<h3 class="label">Naše mise</h3>
+<p>Vytváříme privátní servis pro lidi, jejichž čas, soukromí a&nbsp;komfort mají hodnotu. Nasloucháme, předvídáme a&nbsp;zařizujeme – od každodenní mobility po situace, které se do běžného ceníku nevejdou.</p>
+<Image class="emb" src={emblem_champagne_svg} alt="" aria-hidden="true" loading="lazy" />
+</div>
+</div>
+</div>
+</section>

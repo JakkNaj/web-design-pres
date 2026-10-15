@@ -1,0 +1,10 @@
+import fleet_amg_gt63s_jpg from '../assets/fleet-amg-gt63s.jpg';
+import fleet_s400d_jpg from '../assets/fleet-s400d.jpg';
+import fleet_rr_autobiography_jpg from '../assets/fleet-rr-autobiography.jpg';
+import fleet_v250_brabus_jpg from '../assets/fleet-v250-brabus.jpg';
+export const vehicles = [
+      { id: 'amg', name: 'Mercedes-Benz AMG GT 63 S+ 4MATIC', img: fleet_amg_gt63s_jpg, pos: '50% 62%', alt: 'Mercedes-Benz AMG GT 63 S+ 4MATIC v matně šedém laku, pohled zepředu ze strany.', kw: '470 kW', fuel: 'benzín', seats: '4 místa', specs: [['Obsah motoru', '3982 ccm'], ['Výkon', '470 kW'], ['Palivo', 'benzín'], ['Převodovka', 'automatická'], ['Pohon', '4×4'], ['Počet míst', '4'], ['Denní kilometrový limit', '200 km'], ['Cena', 'na vyžádání']] },
+      { id: 's', name: 'Mercedes-Benz S 400d 4MATIC', img: fleet_s400d_jpg, pos: '50% 58%', alt: 'Mercedes-Benz S 400d 4MATIC v matném laku v showroomu.', kw: '243 kW', fuel: 'nafta', seats: '5 míst', specs: [['Obsah motoru', '2925 ccm'], ['Výkon', '243 kW'], ['Palivo', 'nafta'], ['Převodovka', 'automatická'], ['Pohon', '4×4'], ['Počet míst', '5'], ['Denní kilometrový limit', '200 km'], ['Cena', 'na vyžádání']] },
+      { id: 'rr', name: 'Range Rover Autobiography', img: fleet_rr_autobiography_jpg, pos: '60% 65%', alt: 'Černý Range Rover Autobiography před prodejnou, pohled zepředu ze strany.', kw: '250 kW', fuel: 'nafta', seats: '5 míst', specs: [['Obsah motoru', '4367 ccm'], ['Výkon', '250 kW'], ['Palivo', 'nafta'], ['Převodovka', 'automatická'], ['Pohon', '4×4'], ['Počet míst', '5'], ['Denní kilometrový limit', '200 km'], ['Cena', 'na vyžádání']] },
+      { id: 'v', name: 'Mercedes V250 Brabus', img: fleet_v250_brabus_jpg, pos: '45% 62%', alt: 'Stříbrný Mercedes V250 Brabus s logem KNOKAR na polní cestě.', kw: '140 kW', fuel: 'nafta', seats: '4–7 míst', specs: [['Obsah motoru', '2143 ccm'], ['Výkon', '140 kW'], ['Palivo', 'nafta'], ['Převodovka', 'automatická'], ['Pohon', '4×4'], ['Počet míst', '4–7'], ['Denní kilometrový limit', '300 km'], ['Cena', 'na vyžádání']] }
+    ];

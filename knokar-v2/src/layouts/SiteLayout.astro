@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import '@fontsource/hanken-grotesk/latin-300.css';
+import '@fontsource/hanken-grotesk/latin-ext-300.css';
+import '@fontsource/hanken-grotesk/latin-400.css';
+import '@fontsource/hanken-grotesk/latin-ext-400.css';
+import '@fontsource/hanken-grotesk/latin-500.css';
+import '@fontsource/hanken-grotesk/latin-ext-500.css';
+import favicon from '../assets/emblem-burgundy.svg';
+interface Props { title?: string; description?: string; }
+const { title = 'KNOKAR — Luxury in Motion', description = 'Privátní mobilita. Osobní servis. Krátkodobý i dlouhodobý pronájem luxusních vozů pro soukromé i firemní klienty.' } = Astro.props;
+---
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#F3F0E9" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href={favicon.src} />
+<title>{title}</title>
+</head>
+<body><div class="kn"><a class="skip-link" href="#top">Přejít na obsah</a><slot /></div></body>
+</html>

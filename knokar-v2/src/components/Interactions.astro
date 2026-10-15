@@ -1,0 +1,124 @@
+<script>
+  import { testimonials } from '../data/testimonials';
+
+  const menuButton = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.querySelector<HTMLElement>('#mobilni-menu');
+  const servicesButton = document.querySelector<HTMLButtonElement>('[data-services-toggle]');
+  const services = document.querySelector<HTMLElement>('#dd-sluzby');
+  const servicesGroup = servicesButton?.closest('.nav-dd');
+
+  function setMenu(open: boolean, returnFocus = false) {
+    if (!menu || !menuButton) return;
+    menu.hidden = !open;
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.textContent = open ? 'Zavřít' : 'Menu';
+    if (returnFocus) menuButton.focus();
+  }
+
+  function setServices(open: boolean, returnFocus = false) {
+    if (!services || !servicesButton) return;
+    services.hidden = !open;
+    servicesButton.setAttribute('aria-expanded', String(open));
+    servicesGroup?.classList.toggle('open', open);
+    if (returnFocus) servicesButton.focus();
+  }
+
+  menuButton?.addEventListener('click', () => setMenu(Boolean(menu?.hidden)));
+  servicesButton?.addEventListener('click', () => setServices(Boolean(services?.hidden)));
+  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+  services?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setServices(false)));
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Node)) return;
+    if (!servicesGroup?.contains(event.target)) setServices(false);
+    if (!menu?.contains(event.target) && !menuButton?.contains(event.target)) setMenu(false);
+  });
+  document.querySelector('.hdr')?.addEventListener('focusout', () => {
+    requestAnimationFrame(() => {
+      if (!servicesGroup?.contains(document.activeElement)) setServices(false);
+      if (!menu?.contains(document.activeElement) && document.activeElement !== menuButton) setMenu(false);
+    });
+  });
+  window.matchMedia('(min-width: 861px)').addEventListener('change', (event) => {
+    if (event.matches) setMenu(false);
+    else setServices(false);
+  });
+
+  const panels = [...document.querySelectorAll<HTMLElement>('[data-car-detail]')];
+  let activePanel: HTMLElement | undefined;
+  let detailTrigger: HTMLElement | undefined;
+  function closeCar(returnFocus = false) {
+    panels.forEach((panel) => { panel.hidden = true; });
+    activePanel = undefined;
+    document.querySelectorAll('[data-open-car]').forEach((link) => link.setAttribute('aria-expanded', 'false'));
+    if (returnFocus) detailTrigger?.focus({ preventScroll: true });
+    if (location.hash.startsWith('#detail-')) history.replaceState(null, '', location.pathname + location.search);
+  }
+  function openCar(id: string, trigger?: HTMLElement) {
+    const panel = panels.find((item) => item.dataset.carDetail === id);
+    if (!panel) return;
+    closeCar();
+    panel.hidden = false;
+    activePanel = panel;
+    detailTrigger = trigger;
+    document.querySelectorAll<HTMLElement>('[data-open-car]').forEach((link) => {
+      link.setAttribute('aria-expanded', String(link.dataset.openCar === id));
+    });
+    history.replaceState(null, '', `#${panel.id}`);
+    panel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+    panel.focus({ preventScroll: true });
+  }
+  document.querySelectorAll<HTMLElement>('[data-open-car]').forEach((link) => {
+    link.setAttribute('aria-controls', `detail-${link.dataset.openCar}`);
+    link.setAttribute('aria-expanded', 'false');
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      openCar(link.dataset.openCar!, link);
+    });
+  });
+  document.querySelectorAll('[data-close-car]').forEach((button) => button.addEventListener('click', () => closeCar(true)));
+  if (location.hash.startsWith('#detail-')) openCar(location.hash.slice('#detail-'.length));
+  window.addEventListener('hashchange', () => {
+    if (location.hash.startsWith('#detail-')) openCar(location.hash.slice('#detail-'.length));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    if (menu && !menu.hidden) setMenu(false, true);
+    else if (services && !services.hidden) setServices(false, true);
+    else if (activePanel) closeCar(true);
+  });
+
+  const message = document.querySelector<HTMLTextAreaElement>('#d-msg');
+  let previousOpening = '';
+  document.querySelectorAll<HTMLElement>('[data-vehicle]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (!message) return;
+      event.preventDefault();
+      const opening = `Dobrý den, mám zájem o vůz ${link.dataset.vehicle}.`;
+      const existing = (previousOpening && message.value.startsWith(previousOpening)
+        ? message.value.slice(previousOpening.length) : message.value).trim();
+      previousOpening = opening;
+      message.value = existing ? `${opening}\n\n${existing}` : `${opening} `;
+      closeCar();
+      location.hash = '#kontakt';
+      requestAnimationFrame(() => message.focus({ preventScroll: true }));
+    });
+  });
+
+  let referenceIndex = 0;
+  document.querySelectorAll<HTMLElement>('[data-ref-step]').forEach((button) => {
+    button.addEventListener('click', () => {
+      referenceIndex = (referenceIndex + Number(button.dataset.refStep) + testimonials.length) % testimonials.length;
+      const [quote, name, role] = testimonials[referenceIndex];
+      for (const [selector, text] of [
+        ['[data-ref-quote]', quote], ['[data-ref-name]', name], ['[data-ref-role]', role],
+        ['[data-ref-count]', `${String(referenceIndex + 1).padStart(2, '0')} / ${String(testimonials.length).padStart(2, '0')}`],
+      ]) {
+        const element = document.querySelector(selector);
+        if (element) element.textContent = text;
+      }
+    });
+  });
+
+  // No submission endpoint exists for the client preview.
+  document.querySelectorAll('form').forEach((form) => form.addEventListener('submit', (event) => event.preventDefault()));
+</script>

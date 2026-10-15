@@ -1,0 +1,2 @@
+// Explicit design placeholders, not customer endorsements.
+export const testimonials = [["Místo pro citaci klienta. Dvě až tři věty o tom, jak mu KNOKAR ušetřil starosti s mobilitou.", "Jméno klienta", "Soukromý klient"], ["Místo pro citaci firemního klienta. Krátká zkušenost s dlouhodobým pronájmem a správou vozového parku.", "Jméno a funkce", "Firemní klient"], ["Místo pro citaci klienta. Konkrétní situace, kterou KNOKAR vyřešil rychle, osobně a diskrétně.", "Jméno klienta", "Pronájem vozu s řidičem"]];

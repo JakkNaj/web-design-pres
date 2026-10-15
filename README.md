@@ -23,3 +23,7 @@ Tmavá varianta v Lumos pro Astro, dostupná z přehledu návrhů: https://jakkn
 ## KNOKAR — první pracovní verze
 
 Astro homepage based on variant D, copied from `knokar/web02` on 2026-10-13. Preview: https://jakknaj.github.io/web-design-pres/knokar/. The workflow builds with `ASTRO_BASE=/web-design-pres/knokar`. Contact submission remains disabled pending integration; telephone/email links work.
+
+## KNOKAR v2 — finální design
+
+Astro implementation of `knokar/design-prototype/Final.dc.html`, source in `knokar/web03`, copied 2026-10-15. Preview: https://jakknaj.github.io/web-design-pres/knokar-v2/. Workflow builds with `ASTRO_BASE=/web-design-pres/knokar-v2`. Includes responsive optimized images, self-hosted fonts, mobile navigation, inline vehicle details, inquiry prefill and an explicitly illustrative reference carousel. Contact/newsletter integrations and English translation remain pending.

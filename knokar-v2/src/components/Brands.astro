@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import logo_rollsroyce_png from '../assets/logo-rollsroyce.png';
+import logo_bentley_png from '../assets/logo-bentley.png';
+import logo_porsche_png from '../assets/logo-porsche.png';
+import logo_mercedes_png from '../assets/logo-mercedes.png';
+import logo_bmw_png from '../assets/logo-bmw.png';
+import logo_audi_png from '../assets/logo-audi.png';
+import logo_landrover_png from '../assets/logo-landrover.png';
+import logo_volvo_png from '../assets/logo-volvo.png';
+
+---
+<section class="brands" aria-labelledby="brands-h">
+<div class="wrap brands-in">
+<h2 class="label" id="brands-h">Portfolio značek</h2>
+<ul class="brand-row">
+<li><Image src={logo_rollsroyce_png} alt="Rolls-Royce" loading="lazy" /></li>
+<li><Image src={logo_bentley_png} alt="Bentley" loading="lazy" /></li>
+<li><Image src={logo_porsche_png} alt="Porsche" loading="lazy" /></li>
+<li><Image src={logo_mercedes_png} alt="Mercedes-Benz" loading="lazy" /></li>
+<li><Image src={logo_bmw_png} alt="BMW" loading="lazy" /></li>
+<li><Image src={logo_audi_png} alt="Audi" loading="lazy" /></li>
+<li><Image src={logo_landrover_png} alt="Land Rover" loading="lazy" /></li>
+<li><Image src={logo_volvo_png} alt="Volvo" loading="lazy" /></li>
+</ul>
+</div>
+</section>

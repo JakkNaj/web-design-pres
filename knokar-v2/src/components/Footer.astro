@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import knokar_logo_negativ_svg from '../assets/knokar-logo-negativ.svg';
+
+---
+<footer class="ftr dark">
+<div class="wrap">
+<div class="ftr-top">
+<div class="ftr-brand">
+<Image src={knokar_logo_negativ_svg} alt="KNOKAR.cz — Pronájem luxusních vozidel" loading="lazy" />
+<p class="ftr-claim" lang="en">Luxury <span>in Motion</span></p>
+</div>
+<form class="nl" aria-labelledby="nl-h">
+<h2 id="nl-h">Novinky od KNOKAR do e-mailu</h2>
+<p>Chcete dostávat informace o&nbsp;nových vozech a&nbsp;dalších novinkách? Přihlaste se k&nbsp;odběru našeho newsletteru.</p>
+<div class="nl-row">
+<div class="field"><label for="d-nl">E-mailová adresa</label><input id="d-nl" name="nl-email" type="email" autocomplete="email" placeholder="E-mailová adresa" required="required"></div>
+<button class="btn btn-light" type="submit" disabled aria-describedby="newsletter-note">Přihlásit k odběru</button>
+</div>
+<label class="check" for="d-nl-gdpr"><input id="d-nl-gdpr" name="nl-gdpr" type="checkbox" required="required"><span>Souhlasím se zasíláním newsletteru a&nbsp;zpracováním osobních údajů.</span></label>
+
+<div class="notice" id="newsletter-note"><strong>Ukázka návrhu:</strong> odběr zatím není napojený a&nbsp;e-mail nebyl uložen.</div>
+
+</form>
+</div>
+<div class="ftr-cols">
+<div class="ftr-col">
+<h3>Navigace</h3>
+<ul>
+<li><a href="#onas">O nás</a></li>
+<li><a href="#sluzby">Naše služby</a></li>
+<li><a href="#vozy">Vozový park</a></li>
+<li><a href="#aktuality">Aktuality</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+</ul>
+</div>
+<div class="ftr-col">
+<h3>Naše služby</h3>
+<ul>
+<li>Krátkodobý pronájem vozů</li>
+<li>Dlouhodobý pronájem vozů</li>
+<li>Finanční servis</li>
+<li>Pronájem vozů s&nbsp;řidičem</li>
+</ul>
+</div>
+<div class="ftr-col">
+<h3>KNOKAR Showroom</h3>
+<p>Knokar, s.r.o.<br>Kašperská 965/2<br>104 00 Praha 10 – Uhříněves</p>
+</div>
+<div class="ftr-col">
+<h3>Kontakt</h3>
+<ul>
+<li><a href="mailto:obchod@knokar.cz">obchod@knokar.cz</a></li>
+<li><a href="tel:+420725949494">+420 725 94 94 94</a></li>
+</ul>
+</div>
+</div>
+<div class="ftr-bot">
+<span>© 2026 Knokar, s.r.o., IČO 28219228</span>
+<span>Pronájem luxusních vozů a osobní servis</span>
+</div>
+</div>
+</footer>

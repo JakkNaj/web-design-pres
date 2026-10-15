@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import bentley_dark_jpg from '../assets/bentley-dark.jpg';
+import emblem_champagne_svg from '../assets/emblem-champagne.svg';
+
+---
+<section class="dark" id="pristup" aria-labelledby="phil-h">
+<div class="phil-media">
+<Image src={bentley_dark_jpg} alt="Přední část tmavého luxusního sedanu ve tmě, detail světlometu a kola." widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" />
+<div class="phil-over">
+<div class="wrap" style="width: 100%">
+<div class="phil-h-wrap">
+<h2 class="h-display phil-h" id="phil-h">Nejvyšší formou komfortu není mít všechno. <span>Je to nemuset všechno řešit.</span></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="quote">
+<div class="wrap quote-grid">
+<div class="q-meta">
+<p class="label">Filozofie KNOKAR</p>
+<Image class="emb" src={emblem_champagne_svg} alt="" aria-hidden="true" loading="lazy" />
+</div>
+<blockquote>
+<p>„Věříme, že skutečný komfort začíná tam, kde končí potřeba se o&nbsp;věci starat. Proto pro nás předání vozu není středobodem služby. Tou podstatnou je důvěra mezi lidmi – jistota, že na druhé straně je někdo, kdo zná vaše zvyklosti, rozumí situaci a&nbsp;dokáže reagovat dřív, než se z&nbsp;požadavku stane problém. To je hlavní filozofií KNOKAR“</p>
+<footer>Jiří Knotek, zakladatel KNOKAR</footer>
+</blockquote>
+</div>
+</div>
+</section>

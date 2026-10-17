@@ -26,4 +26,4 @@ Astro homepage based on variant D, copied from `knokar/web02` on 2026-10-13. Pre
 
 ## KNOKAR v2 — finální design
 
-Astro implementation of `knokar/design-prototype/Final.dc.html`, source in `knokar/web03`, copied 2026-10-15. Preview: https://jakknaj.github.io/web-design-pres/knokar-v2/. Workflow builds with `ASTRO_BASE=/web-design-pres/knokar-v2`. Includes responsive optimized images, self-hosted fonts, mobile navigation, inline vehicle details, inquiry prefill and an explicitly illustrative reference carousel. Contact/newsletter integrations and English translation remain pending.
+Current approved version from `knokar/web03`, synchronized 2026-10-17. Czech preview: https://jakknaj.github.io/web-design-pres/knokar-v2/; English: https://jakknaj.github.io/web-design-pres/knokar-v2/en/. Workflow builds with `ASTRO_BASE=/web-design-pres/knokar-v2`. Includes the seven-photo hero comparison, expanded generated scenes, compact laptop hero, full CZ/EN copy and language switching, responsive images, self-hosted fonts, mobile navigation, inline vehicle details, inquiry prefill and illustrative references. Contact/newsletter integrations remain pending.

@@ -1,23 +1,21 @@
-# KNOKAR — web03
+# KNOKAR v2 — client preview
 
-Static Astro implementation of `../design-prototype/Final.dc.html` (2026-10-15). The selected final design supersedes the earlier homepage layout: Hanken Grotesk, Rolls-Royce dusk hero, glass navigation, service tiles and emblem card, brand portfolio, four vehicles with inline details, historical news, illustrative reference carousel, philosophy, contact/showroom and footer.
+Approved source: `../../knokar/web03`, synchronized 2026-10-17. Replaces the existing v2 preview.
+
+- Czech: https://jakknaj.github.io/web-design-pres/knokar-v2/
+- English: https://jakknaj.github.io/web-design-pres/knokar-v2/en/
+- Deployment: `.github/workflows/deploy-pages.yml`, push to `main`.
 
 ```sh
 npm ci
-npm run dev
 npm run check
-npm run build
+ASTRO_BASE=/web-design-pres/knokar-v2 npm run build
 ```
 
-Images are imported and optimized with responsive WebP variants. Fonts include Czech glyphs and are self-hosted. Native TypeScript handles navigation, Escape/focus return, vehicle details, inquiry prefill and reference cycling. No framework hydration or backend required.
+Seven full-bleed hero photos with manual review arrows and shareable `?hero=` selection. Five generated scenes have expanded surroundings; the original Rolls-Royce is included with a lighter overlay. The desktop hero follows viewport height, the compact photo picker stays inside it, and the lower Bentley photo is preserved.
 
-Client presentation copy lives in `../../web-design-pres/knokar-v2/`, labeled **KNOKAR v2**. Build with `ASTRO_BASE=/web-design-pres/knokar-v2`. Public URL: https://jakknaj.github.io/web-design-pres/knokar-v2/ . The preview requests no search indexing.
+Static Czech and English pages include translated headlines, metadata, navigation, alt text, photo captions, vehicle specifications, references and enquiry prefill. The language switcher preserves the selected photo and section. Responsive optimized WebP images, self-hosted Hanken Grotesk, accessible navigation and native TypeScript interactions.
 
-## Pending real content/integrations
+Forms remain explicitly disabled pending submission integration. Client quotes, showroom imagery and the map remain illustrative. Fleet availability/prices require personal confirmation. Preview requests no search indexing.
 
-- Inquiry and newsletter submissions are disabled with visible explanations; no data is sent or saved. Telephone and email work.
-- Client references are explicit design placeholders, not real endorsements. Showroom photography and the map are illustrative.
-- English translation was not supplied; EN is disabled and labeled as forthcoming.
-- Fleet images/specifications and news retain the supplied design's archived content; availability/prices require personal confirmation.
-
-Original design, brand documents, photos and previous website versions are preserved. Small implementation adjustments: corrected introductory grammar, removed unverified current-inventory wording, mobile hero height and philosophy text overflow, scrollable mobile navigation, native hidden states and focus handling.
+See `design-qa.md` for verification history. Generated-image prompts remain in the source project at `../../knokar/gen_photos/hero-outpaint-2026-10-17/prompts.json`.

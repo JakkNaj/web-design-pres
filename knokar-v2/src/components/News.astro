@@ -1,32 +1,36 @@
 ---
+import { getLanguage, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import news_rr_predani_jpg from '../assets/news-rr-predani.jpg';
 import news_rr_autobiography_jpg from '../assets/news-rr-autobiography.jpg';
 import news_s400d_jpg from '../assets/news-s400d.jpg';
 
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
 ---
 <section class="sec" id="aktuality" aria-labelledby="news-h">
 <div class="wrap">
 <div class="sec-head">
-<div><p class="label">Aktuality</p><h2 class="h-1" id="news-h">Ze světa KNOKAR</h2></div>
+<div><p class="label">{t("Aktuality")}</p><h2 class="h-1" id="news-h">{t("Ze světa KNOKAR")}</h2></div>
 </div>
 <ul class="news">
 <li class="news-card">
-<figure><Image src={news_rr_predani_jpg} alt="Černý Range Rover Autobiography na červeném koberci připravený k předání." style="object-position: 50% 62%" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
-<time datetime="2023-08-16">16. 8. 2023</time>
-<h3>Range Rover Autobiography – slavnostní předání vozu klientovi</h3>
+<figure><Image src={news_rr_predani_jpg} alt={t("Černý Range Rover Autobiography na červeném koberci připravený k předání.")} style="object-position: 50% 62%" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<time datetime="2023-08-16">{t("16. 8. 2023")}</time>
+<h3>{t("Range Rover Autobiography – slavnostní předání vozu klientovi")}</h3>
 </li>
 <li class="news-card">
-<figure><Image src={news_rr_autobiography_jpg} alt="Černý Range Rover Autobiography před prodejnou Land Rover." style="object-position: 70% 70%" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
-<time datetime="2023-05-04">4. 5. 2023</time>
-<h3>Nový vůz v&nbsp;naší nabídce – Range Rover Autobiography</h3>
-<p>Nová generace nejluxusnějšího SUV je zde, ikonický model udělal obrovský skok v&nbsp;kvalitě.</p>
+<figure><Image src={news_rr_autobiography_jpg} alt={t("Černý Range Rover Autobiography před prodejnou Land Rover.")} style="object-position: 70% 70%" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<time datetime="2023-05-04">{t("4. 5. 2023")}</time>
+<h3>{t("Nový vůz v naší nabídce – Range Rover Autobiography")}</h3>
+<p>{t("Nová generace nejluxusnějšího SUV je zde, ikonický model udělal obrovský skok v kvalitě.")}</p>
 </li>
 <li class="news-card">
-<figure><Image src={news_s400d_jpg} alt="Mercedes-Benz S 400 d 4MATIC z boku v showroomu." style="object-position: 50% 60%" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
-<time datetime="2023-03-30">30. 3. 2023</time>
-<h3>Nový vůz v&nbsp;naší nabídce – Mercedes-Benz S&nbsp;400&nbsp;d 4MATIC</h3>
-<p>Naši flotilu rozšířil dechberoucí Mercedes-Benz řady S&nbsp;400&nbsp;d s&nbsp;interiérovou úpravou Manufaktur.</p>
+<figure><Image src={news_s400d_jpg} alt={t("Mercedes-Benz S 400 d 4MATIC z boku v showroomu.")} style="object-position: 50% 60%" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<time datetime="2023-03-30">{t("30. 3. 2023")}</time>
+<h3>{t("Nový vůz v naší nabídce – Mercedes-Benz S 400 d 4MATIC")}</h3>
+<p>{t("Naši flotilu rozšířil dechberoucí Mercedes-Benz řady S 400 d s interiérovou úpravou Manufaktur.")}</p>
 </li>
 </ul>
 </div>

@@ -1,25 +1,29 @@
 ---
+import { getLanguage, translator } from '../i18n';
 import { Image } from 'astro:assets';
-import rolls_hotel_jpg from '../assets/rolls-hotel.jpg';
+import rangeRover from '../assets/range-rover-alps.png';
 import { testimonials } from '../data/testimonials';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
 ---
 <section class="sec refs" aria-labelledby="refs-h">
 <div class="wrap">
 <div class="r1">
-<figure class="r1-photo"><Image src={rolls_hotel_jpg} alt="" aria-hidden="true" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<figure class="r1-photo"><Image src={rangeRover} alt="" aria-hidden="true" widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
 <div class="r1-body">
-<div class="r1-top"><p class="label" style="margin: 0">Reference</p><span class="illus" style="margin: 0">Ilustrační obsah, skutečná hodnocení doplníme</span></div>
-<h2 class="h-1" id="refs-h">Očima našich klientů</h2>
+<div class="r1-top"><p class="label" style="margin: 0">{t("Reference")}</p><span class="illus" style="margin: 0">{t("Ilustrační obsah, skutečná hodnocení doplníme")}</span></div>
+<h2 class="h-1" id="refs-h">{t("Očima našich klientů")}</h2>
 <figure class="r1-quote" aria-live="polite">
 <span class="qmark" aria-hidden="true">“</span>
-<blockquote><p data-ref-quote>{testimonials[0][0]}</p></blockquote>
-<figcaption><b data-ref-name>{testimonials[0][1]}</b><span data-ref-role>{testimonials[0][2]}</span></figcaption>
+<blockquote><p data-ref-quote>{t(testimonials[0][0])}</p></blockquote>
+<figcaption><b data-ref-name>{t(testimonials[0][1])}</b><span data-ref-role>{t(testimonials[0][2])}</span></figcaption>
 </figure>
 <div class="r1-nav">
 <span class="r1-count" data-ref-count>01 / 03</span>
 <div class="r1-btns">
-<button type="button" class="r1-btn" aria-label="Předchozí reference" data-ref-step="-1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3 5 9l6 6"></path></svg></button>
-<button type="button" class="r1-btn" aria-label="Další reference" data-ref-step="1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 3 6 6-6 6"></path></svg></button>
+<button type="button" class="r1-btn" aria-label={t("Předchozí reference")} data-ref-step="-1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3 5 9l6 6"></path></svg></button>
+<button type="button" class="r1-btn" aria-label={t("Další reference")} data-ref-step="1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 3 6 6-6 6"></path></svg></button>
 </div>
 </div>
 </div>

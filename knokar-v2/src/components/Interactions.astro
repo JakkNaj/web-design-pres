@@ -1,5 +1,7 @@
 <script>
   import { testimonials } from '../data/testimonials';
+  import { translator } from '../i18n';
+  const t = translator(document.documentElement.lang === 'en' ? 'en' : 'cs');
 
   const menuButton = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
   const menu = document.querySelector<HTMLElement>('#mobilni-menu');
@@ -11,7 +13,7 @@
     if (!menu || !menuButton) return;
     menu.hidden = !open;
     menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? 'Zavřít' : 'Menu';
+    menuButton.textContent = open ? t('Zavřít') : 'Menu';
     if (returnFocus) menuButton.focus();
   }
 
@@ -93,7 +95,7 @@
     link.addEventListener('click', (event) => {
       if (!message) return;
       event.preventDefault();
-      const opening = `Dobrý den, mám zájem o vůz ${link.dataset.vehicle}.`;
+      const opening = `${t('Dobrý den, mám zájem o vůz')} ${link.dataset.vehicle}.`;
       const existing = (previousOpening && message.value.startsWith(previousOpening)
         ? message.value.slice(previousOpening.length) : message.value).trim();
       previousOpening = opening;
@@ -110,7 +112,7 @@
       referenceIndex = (referenceIndex + Number(button.dataset.refStep) + testimonials.length) % testimonials.length;
       const [quote, name, role] = testimonials[referenceIndex];
       for (const [selector, text] of [
-        ['[data-ref-quote]', quote], ['[data-ref-name]', name], ['[data-ref-role]', role],
+        ['[data-ref-quote]', t(quote)], ['[data-ref-name]', t(name)], ['[data-ref-role]', t(role)],
         ['[data-ref-count]', `${String(referenceIndex + 1).padStart(2, '0')} / ${String(testimonials.length).padStart(2, '0')}`],
       ]) {
         const element = document.querySelector(selector);

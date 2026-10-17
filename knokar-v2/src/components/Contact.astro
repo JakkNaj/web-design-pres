@@ -1,60 +1,64 @@
 ---
+import { getLanguage, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import emblem_burgundy_svg from '../assets/emblem-burgundy.svg';
 import showroom_illustrace_jpg from '../assets/showroom-illustrace.jpg';
 
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
 ---
 <section class="sec" id="kontakt" aria-labelledby="contact-h">
 <div class="wrap">
 <div class="contact-grid">
 <div class="contact-l">
-<p class="label" style="margin: 0">Kontakt</p>
-<h2 class="h-2" id="contact-h">Máte zájem o&nbsp;konkrétní vůz, nebo naopak individuální požadavek?</h2>
-<p class="lead">Napište nám. Ozveme se vám a&nbsp;osobně s&nbsp;vámi projdeme dostupné možnosti.</p>
+<p class="label" style="margin: 0">{t("Kontakt")}</p>
+<h2 class="h-2" id="contact-h">{t("Máte zájem o konkrétní vůz, nebo naopak individuální požadavek?")}</h2>
+<p class="lead">{t("Napište nám. Ozveme se vám a osobně s vámi projdeme dostupné možnosti.")}</p>
 <Image class="call-emb" src={emblem_burgundy_svg} alt="" aria-hidden="true" loading="lazy" />
 <div class="call">
-<span>Raději voláte?</span>
+<span>{t("Raději voláte?")}</span>
 <a class="tel" href="tel:+420725949494">+420 725 94 94 94</a>
 </div>
 </div>
-<form class="form" aria-label="Poptávkový formulář" id="inquiry-form">
+<form class="form" aria-label={t("Poptávkový formulář")} id="inquiry-form">
 <div class="field">
-<label for="d-name">Jméno a příjmení *</label>
+<label for="d-name">{t("Jméno a příjmení *")}</label>
 <input id="d-name" name="name" type="text" autocomplete="name" required="required">
 </div>
 <div class="field half">
-<label for="d-tel">Telefon *</label>
+<label for="d-tel">{t("Telefon *")}</label>
 <input id="d-tel" name="tel" type="tel" autocomplete="tel" required="required">
 </div>
 <div class="field half">
-<label for="d-mail">E-mail *</label>
+<label for="d-mail">{t("E-mail *")}</label>
 <input id="d-mail" name="email" type="email" autocomplete="email" required="required">
 </div>
 <div class="field">
-<label for="d-msg">Text zprávy</label>
-<textarea id="d-msg" name="message" placeholder="O jakou službu máte zájem? Na co se potřebujete zeptat?"></textarea>
+<label for="d-msg">{t("Text zprávy")}</label>
+<textarea id="d-msg" name="message" placeholder={t("O jakou službu máte zájem? Na co se potřebujete zeptat?")}></textarea>
 </div>
-<label class="check" for="d-gdpr"><input id="d-gdpr" name="gdpr" type="checkbox" required="required"><span>Souhlasím se zpracováním osobních údajů. *</span></label>
+<label class="check" for="d-gdpr"><input id="d-gdpr" name="gdpr" type="checkbox" required="required"><span>{t("Souhlasím se zpracováním osobních údajů. *")}</span></label>
 
-<div class="notice" id="form-note"><strong>Ukázka návrhu:</strong> formulář zatím není napojený a&nbsp;zpráva nebyla odeslána. Ozvěte se nám prosím telefonicky na <a href="tel:+420725949494">+420 725 94 94 94</a>.</div>
+<div class="notice" id="form-note"><strong>{t("Ukázka návrhu:")}</strong>{t(" formulář zatím není napojený a zpráva nebyla odeslána. Ozvěte se nám prosím telefonicky na ")}<a href="tel:+420725949494">+420 725 94 94 94</a>.</div>
 
 <div class="form-foot">
-<span class="req">* povinné údaje</span>
-<button class="btn btn-primary" type="submit" disabled aria-describedby="form-note">Odeslat poptávku</button>
+<span class="req">{t("* povinné údaje")}</span>
+<button class="btn btn-primary" type="submit" disabled aria-describedby="form-note">{t("Odeslat poptávku")}</button>
 </div>
 </form>
 </div>
 
 <div class="showroom" aria-labelledby="sr-h">
-<figure class="sr-photo"><Image src={showroom_illustrace_jpg} alt="Ilustrační vizualizace showroomu KNOKAR s recepcí a logem na kamenné stěně." widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<figure class="sr-photo"><Image src={showroom_illustrace_jpg} alt={t("Ilustrační vizualizace showroomu KNOKAR s recepcí a logem na kamenné stěně.")} widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
 <div class="sr-info">
-<p class="label" style="margin: 0">Kde nás najdete</p>
+<p class="label" style="margin: 0">{t("Kde nás najdete")}</p>
 <h3 class="h-2" id="sr-h">KNOKAR Showroom</h3>
 <address>Kašperská 965/2<br>104 00 Praha 10 – Uhříněves</address>
-<div class="map" role="img" aria-label="Ilustrační mapa okolí showroomu v Praze-Uhříněvsi">
+<div class="map" role="img" aria-label={t("Ilustrační mapa okolí showroomu v Praze-Uhříněvsi")}>
 <svg viewBox="0 0 320 180" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="320" height="180" fill="#E9E4D8"></rect><path d="M-10 130 C 60 118, 120 140, 190 120 S 300 96, 340 104" stroke="#D2C9B8" stroke-width="14" fill="none"></path><path d="M70 -10 L 110 200" stroke="#F7F4EE" stroke-width="9"></path><path d="M-10 60 L 340 44" stroke="#F7F4EE" stroke-width="7"></path><path d="M210 -10 L 238 200" stroke="#F7F4EE" stroke-width="6"></path><path d="M-10 160 L 140 178" stroke="#F7F4EE" stroke-width="5"></path><rect x="128" y="70" width="46" height="30" rx="4" fill="#DCD5C6"></rect><rect x="250" y="62" width="40" height="26" rx="4" fill="#DCD5C6"></rect><rect x="20" y="78" width="38" height="34" rx="4" fill="#DCD5C6"></rect><circle cx="158" cy="62" r="20" fill="#4B2027" opacity="0.15"></circle><path d="M158 72 C 150 62, 146 56, 146 50 a12 12 0 0 1 24 0 c0 6 -4 12 -12 22z" fill="#4B2027"></path><circle cx="158" cy="50" r="4.5" fill="#F3F0E9"></circle></svg>
 </div>
-<a class="btn btn-secondary" href="https://www.google.com/maps/dir//Ka%C5%A1persk%C3%A1+965,+104+00+Praha+22-Uh%C5%99%C3%ADn%C4%9Bves/@50.035821,14.589349,17z" target="_blank" rel="noopener">Naplánovat trasu <span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-secondary" href="https://www.google.com/maps/dir//Ka%C5%A1persk%C3%A1+965,+104+00+Praha+22-Uh%C5%99%C3%ADn%C4%9Bves/@50.035821,14.589349,17z" target="_blank" rel="noopener">{t("Naplánovat trasu ")}<span class="arrow" aria-hidden="true">→</span></a>
 </div>
 </div>
 </div>

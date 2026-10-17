@@ -1,23 +1,95 @@
 ---
+import { getLanguage, translator } from '../i18n';
 import { Image } from 'astro:assets';
-import hero_tjeerd_jpg from '../assets/hero-tjeerd.jpg';
+import porscheProfile from '../assets/porsche-profile-wide.png';
+import porscheRear from '../assets/porsche-rear-wide.png';
+import mercedesAmg from '../assets/mercedes-amg-studio-wide.png';
+import rangeAlps from '../assets/range-rover-alps-wide.png';
+import rangeRoad from '../assets/range-rover-road-wide.png';
+import mercedesCla from '../assets/mercedes-cla.avif';
+import originalRolls from '../assets/hero-tjeerd.jpg';
 
+// Temporary photo comparison for the client review. First image is the proposed default.
+const photos = [
+  { id: 'porsche-profile', image: porscheProfile, label: 'Porsche · profil', alt: 'Modrošedé Porsche 911 Turbo S z boku v tmavém studiu.' },
+  { id: 'porsche-rear', image: porscheRear, label: 'Porsche · zezadu', alt: 'Tmavé Porsche 911 v ateliéru, pohled zezadu ze strany.' },
+  { id: 'mercedes-amg', image: mercedesAmg, label: 'Mercedes-AMG · studio', alt: 'Šedý Mercedes-AMG v tmavém studiu, pohled zepředu ze strany.' },
+  { id: 'range-alps', image: rangeAlps, label: 'Range Rover · Alpy', alt: 'Šedý Range Rover Sport na alpské silnici s horami v pozadí.' },
+  { id: 'range-road', image: rangeRoad, label: 'Range Rover · serpentiny', alt: 'Range Rover Sport projíždějící alpskou serpentinou.' },
+  { id: 'original-rolls', image: originalRolls, label: 'Rolls-Royce · původní', alt: 'Přední část tmavého Rolls-Royce se soškou Spirit of Ecstasy za soumraku.' },
+  { id: 'mercedes-cla', image: mercedesCla, label: 'Mercedes-Benz · město', alt: 'Stříbrný Mercedes-Benz CLA při jízdě městem.' },
+];
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
 ---
 <section class="hero" aria-labelledby="hero-title">
-<div class="hero-media">
-<Image src={hero_tjeerd_jpg} alt="Přední část tmavého Rolls-Royce se soškou Spirit of Ecstasy za soumraku." widths={[640, 960, 1440, 1920]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
-<div class="hero-shade"></div>
-<div class="hero-content">
-<div class="wrap">
-<div class="hero-text">
-<h1 class="h-display hero-title" id="hero-title" lang="en">Luxury in Motion</h1>
-<p class="hero-sub">Pronájem luxusních vozů a&nbsp;osobní servis</p>
-<div class="hero-ctas">
-<a class="btn btn-light" href="#vozy">Prohlédnout vozy <span class="arrow" aria-hidden="true">→</span></a>
-<a class="btn btn-ghost-light" href="#kontakt">Poslat poptávku</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="hero-media">
+    <div class="hero-photos" id="hero-photos">
+      {photos.map((photo, index) => (
+        <div class="hero-photo" data-hero-photo={photo.id} data-hero-label={t(photo.label)} hidden={index !== 0}>
+          <Image src={photo.image} alt={t(photo.alt)} widths={[640, 960, 1440, 1920]} sizes="100vw" format="webp" quality={85} loading={index === 0 ? 'eager' : 'lazy'} fetchpriority={index === 0 ? 'high' : 'auto'} />
+        </div>
+      ))}
+    </div>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <div class="hero-text">
+          <h1 class="h-display hero-title" id="hero-title" lang={language}>{t("Luxus ")}<span>{t("v pohybu")}</span></h1>
+          <p class="hero-sub">{t("Pronájem luxusních vozů a privátní servis")}</p>
+          <div class="hero-ctas">
+            <a class="btn btn-light" href="#vozy">{t("Prohlédnout vozy ")}<span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost-light" href="#kontakt">{t("Poslat poptávku")}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-review" role="group" aria-label={t("Porovnání úvodních fotografií")} hidden>
+      <button type="button" aria-label={t("Předchozí úvodní fotografie")} aria-controls="hero-photos" data-hero-step="-1"><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3 5 9l6 6" /></svg></button>
+      <p aria-live="polite" aria-atomic="true"><span data-hero-count>01 / {String(photos.length).padStart(2, '0')}</span><span data-hero-name>{t(photos[0].label)}</span></p>
+      <button type="button" aria-label={t("Další úvodní fotografie")} aria-controls="hero-photos" data-hero-step="1"><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 3 6 6-6 6" /></svg></button>
+    </div>
+  </div>
 </section>
+
+<script>
+  const photos = [...document.querySelectorAll<HTMLElement>('[data-hero-photo]')];
+  const review = document.querySelector<HTMLElement>('.hero-review');
+  const count = document.querySelector('[data-hero-count]');
+  const name = document.querySelector('[data-hero-name]');
+  let current = 0;
+  let selection = 0;
+
+  async function showPhoto(index: number, updateUrl = false) {
+    current = (index + photos.length) % photos.length;
+    const target = current;
+    const request = ++selection;
+    const image = photos[target].querySelector('img');
+    if (image) {
+      image.loading = 'eager';
+      try { await image.decode(); } catch { return; }
+    }
+    if (request !== selection) return;
+    photos.forEach((photo, i) => { photo.hidden = i !== current; });
+    if (count) count.textContent = `${String(current + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
+    if (name) name.textContent = photos[current].dataset.heroLabel ?? '';
+    if (updateUrl) {
+      const url = new URL(location.href);
+      url.searchParams.set('hero', photos[current].dataset.heroPhoto!);
+      history.replaceState(null, '', url);
+    }
+  }
+
+  if (photos.length && review) {
+    const selected = new URL(location.href).searchParams.get('hero');
+    void showPhoto(Math.max(0, photos.findIndex((photo) => photo.dataset.heroPhoto === selected)));
+    review.hidden = false;
+    review.querySelectorAll<HTMLElement>('[data-hero-step]').forEach((button) => {
+      button.addEventListener('click', () => {
+        // Keep the current photo visible until its replacement has decoded.
+        void showPhoto(current + Number(button.dataset.heroStep), true);
+      });
+    });
+  }
+</script>

@@ -1,4 +1,5 @@
 ---
+import { getLanguage, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import logo_rollsroyce_png from '../assets/logo-rollsroyce.png';
 import logo_bentley_png from '../assets/logo-bentley.png';
@@ -9,10 +10,13 @@ import logo_audi_png from '../assets/logo-audi.png';
 import logo_landrover_png from '../assets/logo-landrover.png';
 import logo_volvo_png from '../assets/logo-volvo.png';
 
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
 ---
 <section class="brands" aria-labelledby="brands-h">
 <div class="wrap brands-in">
-<h2 class="label" id="brands-h">Portfolio značek</h2>
+<h2 class="label" id="brands-h">{t("Portfolio značek")}</h2>
 <ul class="brand-row">
 <li><Image src={logo_rollsroyce_png} alt="Rolls-Royce" loading="lazy" /></li>
 <li><Image src={logo_bentley_png} alt="Bentley" loading="lazy" /></li>

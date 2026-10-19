@@ -2,9 +2,9 @@ export type Language = 'cs' | 'en';
 
 // Czech is the source copy. Keep complete phrases together, except deliberate styled spans.
 const english: Record<string, string> = {
-  'Luxus': 'Luxury',
+  'Klid': 'Luxury',
   'v pohybu': 'in Motion',
-  'KNOKAR — Luxus v pohybu': 'KNOKAR — Luxury in Motion',
+  'KNOKAR — Klid v pohybu': 'KNOKAR — Luxury in Motion',
   'Privátní mobilita. Osobní servis. Krátkodobý i dlouhodobý pronájem luxusních vozů pro soukromé i firemní klienty.': 'Private mobility. Personal service. Short- and long-term luxury car rental for private and corporate clients.',
   'Přejít na obsah': 'Skip to content',
   'KNOKAR — na začátek stránky': 'KNOKAR — back to top',

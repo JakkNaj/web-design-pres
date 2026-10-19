@@ -35,7 +35,7 @@ Výchozí zdroj: [Lumos for Astro](https://github.com/lumosframework/lumos-for-a
 - Plná knihovna komponent a tokenů v `src/components` a `src/styles`. Společné importy přes `src/ui.ts`.
 - Stránky používají Lumos `Section`, `Grid`, `ContentWrapper`, typografii, `Card`, `Button`, `Accordion`, `Slider`, `Input` a `Select`.
 - Úpravy pro akademii v `src/components/academy`. Galerie a ukázková přihláška mají vlastní stavovou logiku a nativní dialogy s Lumos tlačítky.
-- Značkové tokeny v `src/styles/academy.css`: tmavý základ `#0a1118`, vyvýšené plochy `#101e29`, ledová modrá `#77cce3`, grepová `#e87780`.
+- Značkové tokeny v `src/styles/academy.css`: neutrální černý základ `#0b0b0c`, sekce `#111113` a karty `#141416`, ledová modrá `#77cce3`, grepová `#e87780`.
 - Globální tmavé téma, lokální variabilní Inter, responzivní typografie a rozestupy z Lumos. Galerie podporuje tlačítka, klávesnici a tažení; ovládací ikony jsou centrované v pevných čtvercových tlačítkách.
 - Zachovaná brankářská hra z v2, přebarvená pro tmavé pozadí; její SVG používá vlastní souřadnicový systém.
 
@@ -60,3 +60,9 @@ Vše zůstává složené z Lumos komponent. `Card` přijímá sloty `visual` a 
 ### Logo akademie
 
 Ručně překreslená vektorová verze dodané předlohy: `public/brand/aga-emblem.svg`, úplné logo `aga-logo-dark.svg` a `aga-logo-light.svg`. Nápisy úplného loga jsou převedené na křivky. Sdílený `Brand` používá znak se dvěma A a brankářem v hlavičce i patičce; `public/favicon.svg` vychází ze stejné kresby. Kompaktní webová podoba používá vedle znaku čitelný název akademie.
+
+## Schválené úpravy 19. 10. 2026
+
+Přenesena schválená vizuální podoba z místní integrační verze: neutrální černá paleta, barevné portréty a nové medailonky trenérů, hero fotografie s CCM, fotografie kempu MAN07940 s vysouvacím kreditem Ondra_mann, klidnější historie a patička. Barevné body pod úvodem a helma u FAQ zachovány.
+
+GitHub Pages nadále používá statický obsah a ukázkovou přihlášku. Integrace WordPressu, účty, rezervace a lokální testovací data se sem nepřenášejí. Zdroj klientského náhledu je tento adresář; pipeline jej publikuje pod `/web-design-pres/golmansketreninky-v3/`.

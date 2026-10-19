@@ -3,65 +3,107 @@ import { Img, Heading, Button } from '@/ui';
 import type { CollectionEntry } from 'astro:content';
 import { url } from '@/lib/site';
 import Arrow from './Arrow.astro';
-interface Props { coaches: CollectionEntry<'coaches'>[]; detailed?: boolean }
-const { coaches, detailed = false } = Astro.props;
+interface Props { render?: boolean; coaches: CollectionEntry<'coaches'>[]; detailed?: boolean }
+const { render = true, coaches, detailed = false } = Astro.props;
+const team = coaches.filter(c => c.data.portrait);
 const headingTag = detailed ? 'h2' : 'h3';
+const invitations: Record<string, string> = { Martin: 'Martina', Marek: 'Marka', Daniel: 'Daniela', Luboš: 'Luboše' };
 ---
-<div class:list={['coaches_wrap', { 'coaches_wrap-detailed': detailed }]}>
-  {coaches.filter(c => c.data.portrait).map(c => {
-    const words = c.data.name.split(' ');
-    const surname = words.pop();
-    return (
-      <article class="coaches_profile" id={detailed ? c.id : undefined}>
+
+{render && <div class:list={['coaches_wrap', { detailed }]}>
+  {detailed && <nav class="coaches_navigation" aria-label="Přejít na medailonek trenéra">
+    <span>Na ledě s námi</span>
+    {team.map(c => <a href={`#${c.id}`}>{c.data.name.replace('Mgr. ', '')} <Arrow diagonal /></a>)}
+  </nav>}
+  <div class="coaches_list">
+    {team.map(c => {
+      const words = c.data.name.split(' ');
+      const surname = words.pop();
+      const firstName = c.data.name.replace('Mgr. ', '').split(' ')[0];
+      const invitation = invitations[firstName] ?? c.data.name;
+      return <article class="coaches_profile" id={detailed ? c.id : undefined}>
         <div class="coaches_profile-header">
-          <div class="coaches_profile-photo">
-            <Img src={c.data.portrait!} alt={c.data.name}  loading="lazy" />
-          </div>
+          <div class="coaches_profile-photo"><Img src={c.data.portrait!} alt={c.data.name} width={164} height={205} loading="lazy" /></div>
           <div class="coaches_profile-heading">
+            <span class="coaches_profile-specialty">{c.data.intro}</span>
             <Heading tag={headingTag} variant="h3"><span>{words.join(' ')}</span>{' '}{surname}</Heading>
             <p class="coaches_profile-summary">{c.data.summary}</p>
           </div>
         </div>
-        <div class="coaches_profile-description">
-          {detailed && <p class="coaches_profile-intro">{c.data.intro}</p>}
-          {(detailed ? c.data.body : c.data.body.slice(0, 1)).map(p => <p>{p}</p>)}
-        </div>
-        {detailed ? (
+        {detailed ? <div class="coaches_profile-description">
+          {c.data.body.map((p, index) => <p class:list={{ 'coaches_profile-intro': index === 0 }}>{p}</p>)}
           <ul class="coaches_profile-experience">{c.data.credentials.map(p => <li>{p}</li>)}</ul>
-        ) : (
-          <Button element="link" variant="link" class="coaches_profile-link" href={url(`treneri/#${c.id}`)} aria-label={`Více o trenérovi: ${c.data.name}`}>Celý medailonek <Arrow diagonal /></Button>
-        )}
-      </article>
-    );
-  })}
-</div>
+        </div> : <Button element="link" variant="link" class="coaches_profile-link" href={url(`treneri/#${c.id}`)} aria-label={`Více o trenérovi: ${c.data.name}`}>Poznej {invitation} <Arrow diagonal /></Button>}
+      </article>;
+    })}
+  </div>
+</div>}
 
 <style is:global>
 @layer components {
-  .coaches_wrap { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; }
-  .coaches_profile { --trainer-accent:var(--blue); --trainer-tint:var(--ice-dark); display:flex; flex-direction:column; padding:1.875rem; background:var(--dark-800); border:0.0625rem solid var(--border); min-width:0; scroll-margin-top:2.1875rem; }
-  .coaches_profile:nth-child(even) { --trainer-accent:var(--grapefruit); --trainer-tint:var(--rose-dark); }
-  .coaches_profile-header { display:grid; grid-template-columns:8.25rem minmax(0,1fr); align-items:start; gap:1.75rem; }
-  .coaches_profile-photo { width:8.25rem; aspect-ratio:4 / 5; overflow:hidden; background:var(--trainer-tint); }
-  .coaches_profile-photo img { width:100%; height:100%; object-fit:cover; object-position:50% 18%; }
-  .coaches_profile-heading { padding-top:0.75rem; }
-  .coaches_profile-heading::before { content:''; display:block; width:1.75rem; height:0.25rem; background:var(--trainer-accent); margin-bottom:1rem; }
-  .coaches_profile h2,.coaches_profile h3 { font-size:clamp(1.6875rem,2.3vw,2.1875rem); line-height:1.08; letter-spacing:-.045em; margin:0; text-wrap:initial; }
-  .coaches_profile h2 span,.coaches_profile h3 span { display:block; }
-  .coaches_profile-summary { color:var(--trainer-accent); font-size: 0.875rem; line-height:1.55; margin-top:0.875rem; max-width:16.5625rem; }
-  .coaches_profile-description { margin-top:1.5625rem; }
-  .coaches_profile-description p { font-size: 1rem; line-height:1.8; color:var(--text-2); max-width:37.5rem; }
-  .coaches_profile-description p+p { margin-top:0.75rem; }
-  .coaches_profile-description .coaches_profile-intro { color:var(--text); font-size: 1.0625rem; line-height:1.5; font-weight:500; }
-  .coaches_profile-link.button_wrap { display:flex; align-items:center; justify-content:space-between; gap:1.25rem; min-height:2.75rem; padding-top:1rem; margin-top:auto; font-size: 0.875rem; color:var(--trainer-accent); width:fit-content; border:0; background:none; --button-text:var(--trainer-accent); }
-  .coaches_profile-link .arrow { width:1rem; }
-  .coaches_profile-experience { list-style:none; padding:1.25rem 0 0; margin:1.5rem 0 0; border-top:0.0625rem solid var(--border); display:grid; gap:0.75rem; }
-  .coaches_profile-experience li { display:flex; gap:0.75rem; font-size: 0.875rem; line-height:1.6; color:var(--text-2); }
-  .coaches_profile-experience li::before { content:''; flex:0 0 0.4375rem; height:0.4375rem; margin-top:0.375rem; border-radius:50%; background:var(--trainer-accent); }
-  @media (hover:hover) and (pointer:fine) { .coaches_profile-link:hover { text-decoration:underline; text-underline-offset:0.3125rem; } }
-  @media (max-width:65.625rem) { .coaches_profile { padding:1.5rem; } .coaches_profile-header { grid-template-columns:6.875rem minmax(0,1fr); gap:1.375rem; } .coaches_profile-photo { width:6.875rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 1.6875rem; } }
-  @media (max-width:47.5rem) { .coaches_wrap { grid-template-columns:1fr; gap:1.25rem; } .coaches_profile-header { grid-template-columns:7.5rem minmax(0,1fr); gap:1.5rem; } .coaches_profile-photo { width:7.5rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 2rem; } }
-  @media (max-width:26.25rem) { .coaches_profile-heading { padding-top:0; } .coaches_profile { padding:1.25rem; } .coaches_profile-header { grid-template-columns:6rem minmax(0,1fr); gap:1.25rem; } .coaches_profile-photo { width:6rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 1.6875rem; } .coaches_profile-heading::before { margin-bottom:0.75rem; } .coaches_profile-summary { font-size: 0.8125rem; margin-top:0.625rem; } .coaches_profile-description { margin-top:1.375rem; } .coaches_profile-description p { font-size: 1rem; } }
-  @media (max-width:22.5rem) { .coaches_profile-header { grid-template-columns:5.125rem minmax(0,1fr); gap:0.875rem; } .coaches_profile-photo { width:5.125rem; } .coaches_profile h2,.coaches_profile h3 { font-size: 1.4375rem; } .coaches_profile { padding:1.125rem; } }
+  .coaches_wrap { width:100%; --coach-paper:var(--surface-card); --coach-ink:var(--text); --coach-muted:var(--text-2); --coach-accent:var(--blue); --coach-line:var(--border); }
+  .coaches_list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; }
+  .coaches_profile { position:relative; display:flex; flex-direction:column; min-width:0; padding:2rem; color:var(--coach-ink); background:var(--coach-paper); border-radius:.75rem; scroll-margin-top:calc(var(--nav-height) + 1.5rem); }
+  .coaches_profile-header { display:grid; grid-template-columns:7rem minmax(0,1fr); align-items:center; gap:1.75rem; }
+  .coaches_profile-photo { width:7rem; aspect-ratio:4/5; overflow:hidden; border-radius:.375rem; background:var(--dark-700); }
+  .coaches_profile-photo .image { width:100%; height:100%; object-fit:cover; object-position:50% 18%; }
+  .coaches_profile-heading { min-width:0; }
+  .coaches_profile-specialty { display:block; margin-bottom:.75rem; color:var(--coach-accent); font-size:.6875rem; line-height:1.5; font-weight:600; letter-spacing:.045em; text-transform:uppercase; }
+  .coaches_profile :is(h2,h3) { color:var(--coach-ink); margin:0; font-size:clamp(1.625rem,2.4vw,2.125rem); line-height:1.08; letter-spacing:-.04em; text-wrap:initial; }
+  .coaches_profile :is(h2,h3) span { display:block; }
+  .coaches_profile-summary { color:var(--coach-muted); font-size:.875rem; line-height:1.65; margin:1rem 0 0; max-width:36ch; }
+  .coaches_profile-link.button_wrap { width:100%; justify-content:space-between; margin-top:1.5rem; min-height:2.75rem; padding:1rem 0 0; border:0; border-top:.0625rem solid var(--coach-line); background:none; font-size:.875rem; color:var(--coach-ink); --button-text:var(--coach-ink); --button-text-hover:var(--coach-accent); }
+  .coaches_profile-link .button_text { width:100%; justify-content:space-between; gap:1rem; }
+  .coaches_profile-link .academy-arrow { width:1.125rem; height:1.125rem; }
+  .coaches_profile :focus-visible { outline:.125rem solid var(--coach-accent); outline-offset:.25rem; }
+  .coaches_navigation { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem 2rem; margin-bottom:2rem; }
+  .coaches_navigation>span { margin-right:auto; color:var(--text-2); font-size:.6875rem; letter-spacing:.1em; text-transform:uppercase; }
+  .coaches_navigation a { display:flex; align-items:center; gap:.75rem; min-height:2.75rem; font-size:.875rem; }
+  .coaches_navigation .academy-arrow { width:.875rem; height:.875rem; color:var(--text-2); }
+  .coaches_wrap.detailed .coaches_list { grid-template-columns:1fr; gap:1.5rem; }
+  .coaches_wrap.detailed .coaches_profile { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); align-items:start; gap:clamp(2rem,5vw,5rem); padding:3rem; }
+  .coaches_wrap.detailed .coaches_profile-header { grid-template-columns:10.25rem minmax(0,1fr); align-items:start; gap:2rem; }
+  .coaches_wrap.detailed .coaches_profile-photo { width:10.25rem; }
+  .coaches_wrap.detailed .coaches_profile-heading { padding-top:.5rem; }
+  .coaches_wrap.detailed .coaches_profile :is(h2,h3) { font-size:clamp(1.875rem,3vw,2.75rem); }
+  .coaches_profile-description { min-width:0; }
+  .coaches_profile-description p { max-width:58ch; color:var(--coach-muted); font-size:1rem; line-height:1.8; margin:0; }
+  .coaches_profile-description p+p { margin-top:1rem; }
+  .coaches_profile-description .coaches_profile-intro { color:var(--coach-ink); font-size:1.125rem; line-height:1.65; }
+  .coaches_profile-experience { display:grid; gap:.75rem; list-style:none; margin:1.5rem 0 0; padding:1.5rem 0 0; border-top:.0625rem solid var(--coach-line); }
+  .coaches_profile-experience li { display:flex; gap:.75rem; color:var(--coach-muted); font-size:.8125rem; line-height:1.7; }
+  .coaches_profile-experience li::before { content:'↗'; flex:none; color:var(--coach-accent); }
+  @media(hover:hover) and (pointer:fine) { .coaches_profile-link:hover { color:var(--coach-accent); } .coaches_navigation a:hover { color:var(--blue); } }
+  @media(width < 64rem) {
+    .coaches_profile { padding:1.5rem; }
+    .coaches_profile-header { grid-template-columns:5.75rem minmax(0,1fr); gap:1.25rem; }
+    .coaches_profile-photo { width:5.75rem; }
+    .coaches_profile :is(h2,h3) { font-size:1.75rem; }
+    .coaches_wrap.detailed .coaches_profile { padding:2rem; grid-template-columns:1fr; gap:2rem; }
+    .coaches_wrap.detailed .coaches_profile-header { grid-template-columns:8.5rem minmax(0,1fr); }
+    .coaches_wrap.detailed .coaches_profile-photo { width:8.5rem; }
+  }
+  @media(width < 48rem) {
+    .coaches_list { grid-template-columns:1fr; }
+    .coaches_profile-header { grid-template-columns:7rem minmax(0,1fr); gap:1.5rem; }
+    .coaches_profile-photo { width:7rem; }
+    .coaches_navigation { display:grid; grid-template-columns:1fr 1fr; gap:.25rem 1.25rem; margin-bottom:1.5rem; }
+    .coaches_navigation>span { grid-column:1/-1; margin-bottom:.5rem; }
+    .coaches_navigation a { justify-content:space-between; font-size:.75rem; }
+  }
+  @media(width <= 37.5rem) {
+    .coaches_profile { padding:1.25rem; }
+    .coaches_profile-header { grid-template-columns:5.25rem minmax(0,1fr); gap:1.125rem; align-items:start; }
+    .coaches_profile-photo { width:5.25rem; }
+    .coaches_profile-specialty { font-size:.625rem; margin-bottom:.625rem; }
+    .coaches_profile :is(h2,h3) { font-size:1.6875rem; }
+    .coaches_profile-summary { font-size:.8125rem; margin-top:.875rem; }
+    .coaches_wrap.detailed .coaches_profile { padding:1.5rem; }
+    .coaches_wrap.detailed .coaches_profile-header { grid-template-columns:5.25rem minmax(0,1fr); gap:1.125rem; }
+    .coaches_wrap.detailed .coaches_profile-photo { width:5.25rem; }
+    .coaches_wrap.detailed .coaches_profile-heading { padding-top:0; }
+    .coaches_wrap.detailed .coaches_profile :is(h2,h3) { font-size:1.6875rem; }
+    .coaches_profile-description .coaches_profile-intro { font-size:1rem; }
+  }
 }
 </style>

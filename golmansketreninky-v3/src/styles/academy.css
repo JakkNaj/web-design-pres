@@ -1,10 +1,11 @@
 :root {
-  --dark-900: #0a1118;
-  --dark-800: #101e29;
-  --dark-700: #192c39;
-  --light-100: #eef4f5;
-  --light-200: #c7d3d9;
-  --light-300: #a6b8c3;
+  --dark-900: #0b0b0c;
+  --dark-800: #111113;
+  --dark-700: #1c1c1f;
+  --surface-card: #141416;
+  --light-100: #f2f2f3;
+  --light-200: #c8c8cc;
+  --light-300: #a3a3a8;
   --brand-500: #e87780;
   --brand-text: #181018;
   --blue: #77cce3;
@@ -39,8 +40,8 @@
   --max-width-main: 82rem;
 }
 .theme-dark {
-  --text-2: #9fb0bd;
-  --border: #293844;
+  --text-2: #a3a3a8;
+  --border: #26262a;
   --heading-accent: var(--blue);
   --link-text-hover: var(--blue);
   --button-background-hover: #f3999d;
@@ -70,6 +71,6 @@ body:has(dialog[open]) {
   white-space: nowrap;
 }
 
-:root { --violet:#b19ada; --ice-dark:#182f3c; --rose-dark:#34242f; --gutter:clamp(1.5rem,4.4vw,4.5rem); --site-margin:var(--gutter); --site-width:calc(100% - var(--gutter)*2); --max-width-main:96.875rem; }
+:root { --violet:#b19ada; --ice-dark:#1c1c1f; --rose-dark:#1c1c1f; --gutter:clamp(1.5rem,4.4vw,4.5rem); --site-margin:var(--gutter); --site-width:calc(100% - var(--gutter)*2); --max-width-main:96.875rem; }
 
 :root { --ease-in-out:cubic-bezier(.77,0,.175,1); --motion-decoration-duration:3.6s; }

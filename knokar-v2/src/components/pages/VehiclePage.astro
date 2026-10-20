@@ -22,6 +22,11 @@ const opening = `${t('Dobrý den, mám zájem o vůz')} ${car.name}. `;
     <div class="gal-l" data-vehicle-gallery>
       <figure class="gal-main">
         {car.gallery.map((photo, index) => <Image src={photo.img} alt={t(photo.alt)} widths={[480, 800, 1200, 1600]} sizes="(max-width: 1100px) 100vw, 66vw" format="webp" quality={88} loading={index === 0 ? 'eager' : 'lazy'} fetchpriority={index === 0 ? 'high' : 'auto'} hidden={index !== 0} data-gallery-frame={index} />)}
+        {car.gallery.length > 1 && <>
+          <button type="button" class="gallery-arrow gallery-prev" aria-label={t('Předchozí fotografie')} data-gallery-step="-1" hidden><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m11 3-6 6 6 6" /></svg></button>
+          <button type="button" class="gallery-arrow gallery-next" aria-label={t('Další fotografie')} data-gallery-step="1" hidden><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 6 6-6 6" /></svg></button>
+          <figcaption class="gallery-status" role="status" data-gallery-status data-gallery-label={t('Fotografie')}>{t('Fotografie')} 1 / {car.gallery.length}</figcaption>
+        </>}
       </figure>
       {car.gallery.length > 1 && <div class="gal-thumbs" role="group" aria-label={t('Fotografie vozu')}>
         {car.gallery.map((photo, index) => <button type="button" class:list={['thumb', { on: index === 0 }]} aria-label={`${t('Zobrazit fotografii:')} ${t(photo.alt)}`} aria-pressed={index === 0 ? 'true' : 'false'} data-gallery-pick={index}><Image src={photo.img} alt="" widths={[160, 260]} sizes="(max-width: 760px) 30vw, 12vw" format="webp" quality={80} loading="lazy" /></button>)}
@@ -81,6 +86,7 @@ const opening = `${t('Dobrý den, mám zájem o vůz')} ${car.name}. `;
   document.querySelectorAll<HTMLElement>('[data-vehicle-gallery]').forEach((gallery) => {
     const frames = [...gallery.querySelectorAll<HTMLImageElement>('[data-gallery-frame]')];
     const buttons = [...gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-pick]')];
+    const status = gallery.querySelector<HTMLElement>('[data-gallery-status]');
     let requested = 0;
     async function select(index: number) {
       const frame = frames[index];
@@ -94,7 +100,14 @@ const opening = `${t('Dobrý den, mám zájem o vůz')} ${car.name}. `;
         button.classList.toggle('on', buttonIndex === index);
         button.setAttribute('aria-pressed', String(buttonIndex === index));
       });
+      if (status) status.textContent = `${status.dataset.galleryLabel} ${index + 1} / ${frames.length}`;
     }
+    gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-step]').forEach((button) => {
+      button.hidden = false;
+      button.addEventListener('click', () => {
+        void select((requested + Number(button.dataset.galleryStep) + frames.length) % frames.length);
+      });
+    });
     buttons.forEach((button, index) => {
       button.addEventListener('click', () => { void select(index); });
       button.addEventListener('keydown', (event) => {

@@ -19,12 +19,9 @@ const t = translator(language);
 <p>{t("Chcete dostávat informace o nových vozech a dalších novinkách? Přihlaste se k odběru našeho newsletteru.")}</p>
 <div class="nl-row">
 <div class="field"><label for="d-nl">{t("E-mailová adresa")}</label><input id="d-nl" name="nl-email" type="email" autocomplete="email" placeholder={t("E-mailová adresa")} required="required"></div>
-<button class="btn btn-light" type="submit" disabled aria-describedby="newsletter-note">{t("Přihlásit k odběru")}</button>
+<button class="btn btn-light" type="submit" disabled>{t("Přihlásit k odběru")}</button>
 </div>
 <label class="check" for="d-nl-gdpr"><input id="d-nl-gdpr" name="nl-gdpr" type="checkbox" required="required"><span>{t("Souhlasím se zasíláním newsletteru a zpracováním osobních údajů.")}</span></label>
-
-<div class="notice" id="newsletter-note"><strong>{t("Ukázka návrhu:")}</strong>{t(" odběr zatím není napojený a e-mail nebyl uložen.")}</div>
-
 </form>
 </div>
 <div class="ftr-cols">

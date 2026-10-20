@@ -1,3 +1,5 @@
+.news-page-hero .ph-media img{object-position:50% 58%}
+@media(max-width:760px){.news-page-hero .ph-media img{object-position:50% 50%}}
 .news-page-stories .news-feat{align-items:start}
 .news-holiday{min-height:360px}
 .news-holiday h2{margin:10px 0 0;font-weight:300;font-size:clamp(30px,2.8vw,42px);line-height:1.12;letter-spacing:-.02em}

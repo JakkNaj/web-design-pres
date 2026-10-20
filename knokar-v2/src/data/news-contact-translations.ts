@@ -1,4 +1,5 @@
 export const newsContactTranslations: Record<string, string> = {
+  'Šedé Porsche se staženou střechou u jezera s horami v pozadí.': 'Grey Porsche with its roof down by a lake, with mountains in the background.',
   'Drobečková navigace': 'Breadcrumb navigation',
   'Tmavý Rolls-Royce zaparkovaný v noci před osvětlenou budovou.': 'Dark Rolls-Royce parked outside an illuminated building at night.',
   'Novinky z naší nabídky, informace o službách a dění kolem KNOKAR na jednom místě.': 'New additions to our fleet, service updates and news from KNOKAR, all in one place.',

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { getLanguage, siteHref, translator } from '../../i18n';
 import '../../styles/news-contact.css';
-import rollsNight from '../../assets/hdr-rolls-night.jpg';
+import porscheLake from '../../assets/hero-porsche-lake.jpg';
 import emblemChampagne from '../../assets/emblem-champagne.svg';
 import rangeHandover from '../../assets/news-rr-predani.jpg';
 import rangeAutobiography from '../../assets/news-rr-autobiography.jpg';
@@ -64,7 +64,7 @@ const handoverHref = `https://knokar.cz${language === 'en'
 ---
 <section class="ph news-page-hero" aria-labelledby="news-page-h">
   <div class="ph-media">
-    <Image src={rollsNight} alt={t('Tmavý Rolls-Royce zaparkovaný v noci před osvětlenou budovou.')} style="object-position: 50% 82%" widths={[480, 800, 1200, 1600, 2000]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
+    <Image src={porscheLake} alt={t('Šedé Porsche se staženou střechou u jezera s horami v pozadí.')} widths={[480, 800, 1200, 1600, 2000]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
     <div class="ph-shade"></div>
     <div class="ph-content">
       <div class="wrap">

@@ -1,0 +1,11 @@
+/* Without the enhancement, all supplied cars remain in the normal responsive grid. */
+[data-related-viewport][data-related-enhanced]{overflow:hidden}
+[data-related-enhanced] [data-related-grid]{display:flex;flex-wrap:nowrap;align-items:stretch;transition:none}
+[data-related-enhanced] [data-related-grid]>.car{flex:0 0 var(--related-card-width);min-width:0}
+[data-related-enhanced] .car-img{flex-shrink:0}
+[data-related-enhanced] .car-body{flex:1}
+[data-related-enhanced] .car a:focus-visible{outline-offset:-3px}
+[data-related-enhanced] [data-related-grid][data-related-moving]{transition:transform 280ms cubic-bezier(.23,1,.32,1);will-change:transform}
+@media(prefers-reduced-motion:reduce){
+  [data-related-enhanced] [data-related-grid][data-related-moving]{transition:none}
+}

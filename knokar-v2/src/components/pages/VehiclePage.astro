@@ -5,6 +5,7 @@ import { fleet } from '../../data/fleet';
 import { getLanguage, siteHref, translator } from '../../i18n';
 import emblem from '../../assets/emblem-burgundy.svg';
 import '../../styles/fleet-pages.css';
+import '../../styles/related-cars.css';
 
 interface Props { vehicleId?: string }
 const { vehicleId = 'amg' } = Astro.props;
@@ -54,7 +55,7 @@ const opening = `${t('Dobrý den, mám zájem o vůz')} ${car.name}. `;
         <a class="btn btn-secondary" href={siteHref('/vozovy-park/', language)}>{t('Celý vozový park')}</a>
       </div>
     </div>
-    <div class="cars c3" data-related-grid>{others.map((other) => <FleetCard car={other} />)}</div>
+    <div data-related-viewport><div class="cars c3" data-related-grid>{others.map((other) => <FleetCard car={other} />)}</div></div>
     <div class="car-nav-m" data-carousel-controls hidden>
       <span class="car-count" aria-live="polite" data-related-count>01 / 06</span>
       <div class="car-btns"><button type="button" class="nav-btn" aria-label={t('Předchozí vůz')} data-related-step="-1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3 5 9l6 6"></path></svg></button><button type="button" class="nav-btn" aria-label={t('Další vůz')} data-related-step="1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 3 6 6-6 6"></path></svg></button></div>
@@ -126,30 +127,152 @@ const opening = `${t('Dobrý den, mám zájem o vůz')} ${car.name}. `;
 
   document.querySelectorAll<HTMLElement>('[data-related-cars]').forEach((section) => {
     const grid = section.querySelector<HTMLElement>('[data-related-grid]');
-    if (!grid) return;
+    const viewport = section.querySelector<HTMLElement>('[data-related-viewport]');
+    if (!grid || !viewport) return;
     const cars = [...grid.querySelectorAll<HTMLElement>('[data-fleet-car]')];
+    if (cars.length < 2) return;
+    const controls = [...section.querySelectorAll<HTMLButtonElement>('[data-related-step]')];
     const mobile = window.matchMedia('(max-width:760px)');
     const tablet = window.matchMedia('(max-width:1100px)');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)');
+    const queue: { direction: number; animate: boolean }[] = [];
     let offset = 0;
-    function render() {
-      const visible = mobile.matches ? 1 : tablet.matches ? 2 : 3;
-      for (let index = 0; index < cars.length; index++) {
-        const car = cars[(offset + index) % cars.length];
-        car.hidden = index >= visible;
-        grid!.append(car);
-      }
+    let visible = 0;
+    let measuredWidth = 0;
+    let step = 0;
+    let ready = false;
+    let lastControl: HTMLButtonElement | undefined;
+    let active: { finish: (resume?: boolean) => void } | undefined;
+
+    function focusControl() {
+      const direction = lastControl?.dataset.relatedStep;
+      const control = lastControl?.getClientRects().length ? lastControl
+        : controls.find((item) => item.dataset.relatedStep === direction && item.getClientRects().length)
+          ?? controls.find((item) => item.getClientRects().length);
+      control?.focus({ preventScroll: true });
+    }
+
+    function setAccessibility(moving = false) {
+      [...grid!.children].forEach((element, index) => {
+        const car = element as HTMLElement;
+        const available = !moving && index >= 1 && index <= visible;
+        if (!available && car.contains(document.activeElement)) focusControl();
+        car.inert = !available;
+        if (available) car.removeAttribute('aria-hidden');
+        else car.setAttribute('aria-hidden', 'true');
+      });
+    }
+
+    function updateCount() {
       section.querySelectorAll('[data-related-count]').forEach((count) => {
         count.textContent = `${String(offset + 1).padStart(2, '0')} / ${String(cars.length).padStart(2, '0')}`;
       });
     }
-    section.querySelectorAll<HTMLElement>('[data-carousel-controls]').forEach((control) => { control.hidden = false; });
-    section.querySelectorAll<HTMLElement>('[data-related-step]').forEach((button) => button.addEventListener('click', () => {
-      offset = (offset + Number(button.dataset.relatedStep) + cars.length) % cars.length;
-      render();
+
+    function snap() {
+      grid!.removeAttribute('data-related-moving');
+      grid!.style.transform = `translate3d(${-step}px,0,0)`;
+      // Commit the new buffer position before a queued transition starts.
+      void grid!.getBoundingClientRect();
+    }
+
+    function advance(direction: number) {
+      if (direction > 0) grid!.append(grid!.firstElementChild!);
+      else grid!.prepend(grid!.lastElementChild!);
+      offset = (offset + direction + cars.length) % cars.length;
+    }
+
+    function start(direction: number) {
+      let timer = 0;
+      const transition = {
+        finish(resume = true) {
+          if (active !== transition) return;
+          active = undefined;
+          window.clearTimeout(timer);
+          grid!.removeEventListener('transitionend', onEnd);
+          // Only the inaccessible buffer is moved; retained cards keep their DOM nodes.
+          advance(direction);
+          snap();
+          setAccessibility();
+          updateCount();
+          if (resume) drain();
+        },
+      };
+      function onEnd(event: TransitionEvent) {
+        if (event.target === grid && event.propertyName === 'transform') transition.finish();
+      }
+      active = transition;
+      setAccessibility(true);
+      grid!.addEventListener('transitionend', onEnd);
+      grid!.setAttribute('data-related-moving', '');
+      grid!.style.transform = `translate3d(${direction > 0 ? -2 * step : 0}px,0,0)`;
+      // A hidden tab or a cancelled transition may not emit transitionend.
+      timer = window.setTimeout(() => transition.finish(), 400);
+    }
+
+    function drain() {
+      if (!ready || active) return;
+      while (queue.length) {
+        const next = queue.shift()!;
+        if (next.animate && !reducedMotion.matches && !document.hidden) {
+          start(next.direction);
+          return;
+        }
+        advance(next.direction);
+        snap();
+        setAccessibility();
+        updateCount();
+      }
+    }
+
+    function resize() {
+      const width = viewport!.getBoundingClientRect().width;
+      const count = mobile.matches ? 1 : tablet.matches ? 2 : 3;
+      if (width < 1 || (Math.abs(width - measuredWidth) < .1 && visible === count)) return;
+      // Settle the in-flight step once, then measure and resume the remaining queue.
+      active?.finish(false);
+      if (!ready) {
+        grid!.prepend(grid!.lastElementChild!);
+        cars.forEach((car) => { car.hidden = false; });
+        viewport!.setAttribute('data-related-enhanced', '');
+        section.querySelectorAll<HTMLElement>('[data-carousel-controls]').forEach((control) => { control.hidden = false; });
+        ready = true;
+      }
+      visible = count;
+      measuredWidth = width;
+      const gap = Number.parseFloat(getComputedStyle(grid!).columnGap) || 0;
+      const cardWidth = (width - gap * (visible - 1)) / visible;
+      step = cardWidth + gap;
+      grid!.style.setProperty('--related-card-width', `${cardWidth}px`);
+      snap();
+      setAccessibility();
+      updateCount();
+      if (controls.includes(document.activeElement as HTMLButtonElement)
+        && !(document.activeElement as HTMLElement).getClientRects().length) focusControl();
+      drain();
+    }
+
+    controls.forEach((button) => button.addEventListener('click', (event) => {
+      lastControl = button;
+      const animate = event.detail > 0 && !reducedMotion.matches;
+      queue.push({ direction: Number(button.dataset.relatedStep), animate });
+      // Keyboard activation and reduced motion settle the requested state immediately.
+      if (!animate) {
+        queue.forEach((item) => { item.animate = false; });
+        active?.finish(false);
+      }
+      drain();
     }));
-    mobile.addEventListener('change', render);
-    tablet.addEventListener('change', render);
-    render();
+    reducedMotion.addEventListener('change', () => {
+      if (!reducedMotion.matches) return;
+      queue.forEach((item) => { item.animate = false; });
+      active?.finish(false);
+      drain();
+    });
+    new ResizeObserver(resize).observe(viewport);
+    mobile.addEventListener('change', resize);
+    tablet.addEventListener('change', resize);
+    resize();
   });
 
   document.querySelector<HTMLFormElement>('#vehicle-inquiry-form')?.addEventListener('submit', (event) => event.preventDefault());

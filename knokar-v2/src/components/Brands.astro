@@ -1,6 +1,7 @@
 ---
-import { getLanguage, translator } from '../i18n';
+import { getLanguage, siteHref, translator } from '../i18n';
 import { Image } from 'astro:assets';
+import { brands } from '../data/brands';
 import logo_rollsroyce_png from '../assets/logo-rollsroyce.png';
 import logo_bentley_png from '../assets/logo-bentley.png';
 import logo_porsche_png from '../assets/logo-porsche.png';
@@ -10,22 +11,28 @@ import logo_audi_png from '../assets/logo-audi.png';
 import logo_landrover_png from '../assets/logo-landrover.png';
 import logo_volvo_png from '../assets/logo-volvo.png';
 
-
+interface Props { id?: string; title?: string; }
+const { id = 'brands-h', title = 'Portfolio značek' } = Astro.props;
 const language = getLanguage(Astro.url);
 const t = translator(language);
+const logos = {
+  'rolls-royce': logo_rollsroyce_png,
+  bentley: logo_bentley_png,
+  porsche: logo_porsche_png,
+  'mercedes-benz': logo_mercedes_png,
+  bmw: logo_bmw_png,
+  audi: logo_audi_png,
+  'land-rover': logo_landrover_png,
+  volvo: logo_volvo_png,
+};
 ---
-<section class="brands" aria-labelledby="brands-h">
+<section class="brands" aria-labelledby={id}>
 <div class="wrap brands-in">
-<h2 class="label" id="brands-h">{t("Portfolio značek")}</h2>
+<h2 class="label" id={id}>{t(title)}</h2>
 <ul class="brand-row">
-<li><Image src={logo_rollsroyce_png} alt="Rolls-Royce" loading="lazy" /></li>
-<li><Image src={logo_bentley_png} alt="Bentley" loading="lazy" /></li>
-<li><Image src={logo_porsche_png} alt="Porsche" loading="lazy" /></li>
-<li><Image src={logo_mercedes_png} alt="Mercedes-Benz" loading="lazy" /></li>
-<li><Image src={logo_bmw_png} alt="BMW" loading="lazy" /></li>
-<li><Image src={logo_audi_png} alt="Audi" loading="lazy" /></li>
-<li><Image src={logo_landrover_png} alt="Land Rover" loading="lazy" /></li>
-<li><Image src={logo_volvo_png} alt="Volvo" loading="lazy" /></li>
+{brands.map((brand) => (
+  <li><a href={siteHref(`/vozovy-park/?brand=${brand.id}#vozy`, language)} aria-label={`${t('Zobrazit vozy značky')} ${brand.name}`}><Image src={logos[brand.id]} alt={brand.name} loading="lazy" /></a></li>
+))}
 </ul>
 </div>
 </section>

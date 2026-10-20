@@ -1,4 +1,10 @@
 export const fleetTranslations: Record<string, string> = {
+  'Zobrazit vozy značky': 'View cars by',
+  'Počet vozů:': 'Number of cars:',
+  'Tuto značku v online nabídce zatím nemáme.': 'This brand is not currently listed in our online fleet.',
+  'Napište nám. Rádi s vámi probereme dostupné možnosti.': 'Get in touch. We will be happy to discuss the available options with you.',
+  'Kontaktovat KNOKAR': 'Contact KNOKAR',
+  'Zobrazit všechny vozy': 'Show all cars',
   'Drobečková navigace': 'Breadcrumb navigation',
   'Vozový park': 'Our fleet',
   'Vozy v pronájmu': 'Cars for hire',

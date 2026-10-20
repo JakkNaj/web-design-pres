@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Brands from '../Brands.astro';
 import FleetCard from './FleetCard.astro';
 import { fleet } from '../../data/fleet';
+import { brands } from '../../data/brands';
 import { getLanguage, siteHref, translator } from '../../i18n';
 import hero from '../../assets/porsche-rain-detail.jpg';
 import emblem from '../../assets/emblem-champagne.svg';
@@ -10,7 +11,7 @@ import '../../styles/fleet-pages.css';
 
 const language = getLanguage(Astro.url);
 const t = translator(language);
-const filters = [{ label: 'Vše', value: '' }, { label: 'Mercedes-Benz', value: 'Mercedes-Benz' }, { label: 'Land Rover', value: 'Land Rover' }];
+const filters = [{ label: 'Vše', value: '' }, ...brands.map((brand) => ({ label: brand.name, value: brand.id }))];
 ---
 <section class="ph fleet-page" aria-labelledby="ph-h">
   <div class="ph-media">
@@ -24,7 +25,7 @@ const filters = [{ label: 'Vše', value: '' }, { label: 'Mercedes-Benz', value: 
   </div>
 </section>
 <Brands />
-<section class="sec fleet fleet-page" aria-labelledby="park-h" data-fleet-filter>
+<section class="sec fleet fleet-page" id="vozy" aria-labelledby="park-h" data-fleet-filter>
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h-1" id="park-h">{t('Vozy v pronájmu')}</h2>
@@ -34,6 +35,15 @@ const filters = [{ label: 'Vše', value: '' }, { label: 'Mercedes-Benz', value: 
       {filters.map((filter, index) => <button type="button" class:list={['chip', { on: index === 0 }]} aria-pressed={index === 0 ? 'true' : 'false'} aria-controls="fleet-cars" data-fleet-brand={filter.value}>{t(filter.label)}</button>)}
     </div>
     <div class="cars c3" id="fleet-cars">{fleet.map((car) => <FleetCard car={car} showBrand />)}</div>
+    <p class="fleet-filter-status" role="status" data-fleet-status data-status-label={t('Počet vozů:')}></p>
+    <div class="fleet-empty" data-fleet-empty hidden>
+      <h3 class="h-2">{t('Tuto značku v online nabídce zatím nemáme.')}</h3>
+      <p>{t('Napište nám. Rádi s vámi probereme dostupné možnosti.')}</p>
+      <div class="fleet-empty-actions">
+        <a class="btn btn-primary" href={siteHref('/kontakt/', language)}>{t('Kontaktovat KNOKAR')}</a>
+        <button class="btn btn-secondary" type="button" data-fleet-reset>{t('Zobrazit všechny vozy')}</button>
+      </div>
+    </div>
   </div>
 </section>
 <section class="sec cta-sec fleet-page" aria-labelledby="cta-h">
@@ -49,17 +59,59 @@ const filters = [{ label: 'Vše', value: '' }, { label: 'Mercedes-Benz', value: 
 </section>
 
 <script>
+  import { brands } from '../../data/brands';
+
   document.querySelectorAll<HTMLElement>('[data-fleet-filter]').forEach((section) => {
     const buttons = section.querySelectorAll<HTMLButtonElement>('[data-fleet-brand]');
     const cars = section.querySelectorAll<HTMLElement>('[data-fleet-car]');
-    buttons.forEach((button) => button.addEventListener('click', () => {
-      const brand = button.dataset.fleetBrand;
+    const empty = section.querySelector<HTMLElement>('[data-fleet-empty]');
+    const status = section.querySelector<HTMLElement>('[data-fleet-status]');
+
+    function syncLanguageLinks() {
+      document.querySelectorAll<HTMLAnchorElement>('[data-language-link]').forEach((link) => {
+        const url = new URL(link.href);
+        url.search = location.search;
+        url.hash = location.hash;
+        link.href = url.href;
+      });
+    }
+
+    function render(brandId: string | null = '') {
+      const brand = brands.find((item) => item.id === brandId);
       buttons.forEach((item) => {
-        const selected = item === button;
+        const selected = item.dataset.fleetBrand === (brand?.id ?? '');
         item.classList.toggle('on', selected);
         item.setAttribute('aria-pressed', String(selected));
       });
-      cars.forEach((car) => { car.hidden = Boolean(brand && car.dataset.brand !== brand); });
-    }));
+      let count = 0;
+      cars.forEach((car) => {
+        car.hidden = Boolean(brand && car.dataset.brand !== brand.name);
+        if (!car.hidden) count++;
+      });
+      if (empty) empty.hidden = count > 0;
+      if (status) status.textContent = `${status.dataset.statusLabel} ${count}`;
+    }
+
+    function select(brandId = '') {
+      render(brandId);
+      const url = new URL(location.href);
+      if (brandId) url.searchParams.set('brand', brandId);
+      else url.searchParams.delete('brand');
+      url.hash = 'vozy';
+      if (url.href !== location.href) history.pushState(null, '', url);
+      syncLanguageLinks();
+    }
+
+    buttons.forEach((button) => button.addEventListener('click', () => select(button.dataset.fleetBrand)));
+    section.querySelector('[data-fleet-reset]')?.addEventListener('click', () => {
+      select();
+      buttons[0]?.focus({ preventScroll: true });
+    });
+    const restore = () => {
+      render(new URLSearchParams(location.search).get('brand'));
+      syncLanguageLinks();
+    };
+    window.addEventListener('popstate', restore);
+    restore();
   });
 </script>

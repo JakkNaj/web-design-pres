@@ -1,0 +1,16 @@
+.long-care{align-items:start}
+.long-care .long-care-photo{grid-column:8 / span 5;width:100%;aspect-ratio:2/3}
+.long-care-photo img{object-position:40% 50%}
+@media(min-width:1101px){
+ .long-care .dots li{padding-block:34px;font-size:20px;line-height:1.65}
+ .long-care .dots li::before{top:46px}
+}
+@media(min-width:1101px) and (min-height:700px) and (prefers-reduced-motion:no-preference){
+ .long-care .long-care-photo{position:sticky;top:110px;align-self:start;max-height:calc(100svh - 150px)}
+}
+@media(max-width:1100px){
+ .long-care .long-care-photo{grid-column:1 / -1;aspect-ratio:16/10}
+}
+@media(max-width:760px){
+ .long-care .long-care-photo{aspect-ratio:4/5}
+}

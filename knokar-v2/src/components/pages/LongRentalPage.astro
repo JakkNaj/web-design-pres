@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Brands from '../Brands.astro';
 import { getLanguage, translator, siteHref } from '../../i18n';
 import '../../styles/services.css';
+import '../../styles/long-rental.css';
 import hero_gerd_jpg from '../../assets/hero-gerd.jpg';
 import hero_nir_jpg from '../../assets/hero-nir.jpg';
 import detail_rr_interior_jpg from '../../assets/detail-rr-interior.jpg';
@@ -47,7 +48,7 @@ const href = (path: string) => siteHref(path, language);
 </div>
 </section>
 <section class="sec" style="padding-top: 0" aria-labelledby="zaj-h">
-<div class="wrap split">
+<div class="wrap split long-care">
 <div class="split-text">
 <p class="label" style="margin: 0">{t("Full service plus")}</p>
 <h2 class="h-1" id="zaj-h">{t("Co pro vás zajistíme")}</h2>
@@ -60,7 +61,7 @@ const href = (path: string) => siteHref(path, language);
 <li>{t("Při nepojízdnosti vozu zajistíme asistenční služby a náhradní vozidlo.")}</li>
 </ul>
 </div>
-<figure class="split-media" style="aspect-ratio: 4 / 5"><Image src={detail_rr_interior_jpg} alt={t("Kožený interiér vozu Range Rover v koňakové barvě.")} style="object-position: 40% 70%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<figure class="split-media long-care-photo"><Image src={detail_rr_interior_jpg} alt={t("Kožený interiér vozu Range Rover v koňakové barvě.")} widths={[480, 800, 1200, 1600]} sizes="(max-width: 760px) 150vw, (max-width: 1100px) 100vw, 75vw" format="webp" quality={85} loading="lazy" /></figure>
 </div>
 </section>
 <section class="sec fleet" aria-labelledby="fleet-h">

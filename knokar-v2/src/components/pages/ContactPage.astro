@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import { getLanguage, siteHref, translator } from '../../i18n';
+import '../../styles/news-contact.css';
+import emblemBurgundy from '../../assets/emblem-burgundy.svg';
+import showroom from '../../assets/showroom-illustrace.jpg';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
+---
+<section class="ph ph-light" aria-labelledby="contact-page-h">
+  <div class="wrap">
+    <nav class="crumbs" aria-label={t('Drobečková navigace')}><a href={siteHref('/', language)}>KNOKAR</a><span aria-hidden="true">/</span><span aria-current="page">{t('Kontakt')}</span></nav>
+    <h1 class="h-display ph-title" id="contact-page-h">{t('Máte zájem o konkrétní vůz, nebo naopak individuální požadavek?')}</h1>
+    <p class="ph-lead">{t('Napište nám. Ozveme se vám a osobně s vámi projdeme dostupné možnosti.')}</p>
+  </div>
+</section>
+
+<script>
+  import { translator } from '../../i18n';
+  const t = translator(document.documentElement.lang === 'en' ? 'en' : 'cs');
+  const vehicle = new URLSearchParams(location.search).get('vehicle')?.trim();
+  const message = document.querySelector<HTMLTextAreaElement>('#d-msg');
+  if (vehicle && message && !message.value) {
+    message.value = `${t('Dobrý den, mám zájem o vůz')} ${vehicle}.`;
+  }
+</script>
+
+<section class="sec contact-page" id="poptavka" style="padding-top: clamp(24px, 3vw, 40px)" aria-label={t('Poptávkový formulář a kontakty')}>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-l">
+        <Image class="call-emb" src={emblemBurgundy} alt="" aria-hidden="true" loading="lazy" />
+        <div class="call"><span>{t('Raději voláte?')}</span><a class="tel" href="tel:+420725949494">+420 725 94 94 94</a></div>
+        <p class="muted" style="margin: 0">{t('Obchodní oddělení')}<br /><a href="mailto:obchod@knokar.cz" style="color: var(--ink)">obchod@knokar.cz</a></p>
+      </div>
+      <form class="form" id="inquiry-form" aria-label={t('Poptávkový formulář')} aria-describedby="contact-form-note">
+        <div class="field"><label for="cp-name">{t('Jméno a příjmení *')}</label><input id="cp-name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field half"><label for="cp-tel">{t('Telefon *')}</label><input id="cp-tel" name="tel" type="tel" autocomplete="tel" required /></div>
+        <div class="field half"><label for="cp-mail">{t('E-mail *')}</label><input id="cp-mail" name="email" type="email" autocomplete="email" required /></div>
+        <div class="field"><label for="d-msg">{t('Text zprávy')}</label><textarea id="d-msg" name="message" placeholder={t('O jakou službu máte zájem? Na co se potřebujete zeptat?')}></textarea></div>
+        <label class="check" for="cp-gdpr"><input id="cp-gdpr" name="gdpr" type="checkbox" required /><span>{t('Souhlasím se zpracováním osobních údajů. *')}</span></label>
+        <div class="notice" id="contact-form-note"><strong>{t('Ukázka návrhu:')}</strong>{t(' formulář zatím není napojený a zpráva nebyla odeslána. Ozvěte se nám prosím telefonicky na ')}<a href="tel:+420725949494">+420 725 94 94 94</a>.</div>
+        <div class="form-foot"><span class="req">{t('* povinné údaje')}</span><button class="btn btn-primary" type="submit" disabled aria-describedby="contact-form-note">{t('Odeslat poptávku')}</button></div>
+      </form>
+    </div>
+
+    <div class="showroom" aria-labelledby="contact-sr-h">
+      <figure class="sr-photo">
+        <Image src={showroom} alt={t('Ilustrační vizualizace showroomu KNOKAR s recepcí a logem na kamenné stěně.')} widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 58vw" format="webp" quality={85} loading="lazy" />
+        <figcaption>{t('Ilustrační vizualizace showroomu')}</figcaption>
+      </figure>
+      <div class="sr-info">
+        <p class="label" style="margin: 0">{t('Kde nás najdete')}</p>
+        <h2 class="h-2" id="contact-sr-h">KNOKAR Showroom</h2>
+        <address>Kašperská 965/2<br />104 00 Praha 10 – Uhříněves</address>
+        <div class="map" role="img" aria-label={t('Ilustrační mapa okolí showroomu v Praze-Uhříněvsi')}>
+          <svg viewBox="0 0 320 180" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><rect width="320" height="180" fill="#E9E4D8"></rect><path d="M-10 130 C 60 118, 120 140, 190 120 S 300 96, 340 104" stroke="#D2C9B8" stroke-width="14" fill="none"></path><path d="M70 -10 L 110 200" stroke="#F7F4EE" stroke-width="9"></path><path d="M-10 60 L 340 44" stroke="#F7F4EE" stroke-width="7"></path><path d="M210 -10 L 238 200" stroke="#F7F4EE" stroke-width="6"></path><path d="M-10 160 L 140 178" stroke="#F7F4EE" stroke-width="5"></path><rect x="128" y="70" width="46" height="30" rx="4" fill="#DCD5C6"></rect><rect x="250" y="62" width="40" height="26" rx="4" fill="#DCD5C6"></rect><rect x="20" y="78" width="38" height="34" rx="4" fill="#DCD5C6"></rect><circle cx="158" cy="62" r="20" fill="#4B2027" opacity="0.15"></circle><path d="M158 72 C 150 62, 146 56, 146 50 a12 12 0 0 1 24 0 c0 6 -4 12 -12 22z" fill="#4B2027"></path><circle cx="158" cy="50" r="4.5" fill="#F3F0E9"></circle></svg>
+        </div>
+        <p class="contact-map-note">{t('Ilustrační mapa')}</p>
+        <a class="btn btn-secondary" href="https://www.google.com/maps/dir//Ka%C5%A1persk%C3%A1+965,+104+00+Praha+22-Uh%C5%99%C3%ADn%C4%9Bves/@50.035821,14.589349,17z" target="_blank" rel="noopener">{t('Naplánovat trasu')}<span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="depts">
+      <div class="dept"><h2>{t('Provozovna')}</h2><p>Knokar, s.r.o.<br />Kašperská 965/2<br />104 00 Praha 10 – Uhříněves</p></div>
+      <div class="dept"><h2>{t('Fakturační údaje')}</h2><p>Knokar, s.r.o.<br />Doudlebská 1046/8, 140 00 Praha 4 – Nusle<br />{t('IČO 28219228, DIČ CZ28219228')}</p></div>
+      <div class="dept"><h2>{t('Obchodní rejstřík')}</h2><p>{t('Spisová značka C 133319 vedená u Městského soudu v Praze')}</p></div>
+    </div>
+  </div>
+</section>

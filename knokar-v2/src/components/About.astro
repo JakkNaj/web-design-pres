@@ -1,5 +1,5 @@
 ---
-import { getLanguage, translator } from '../i18n';
+import { getLanguage, siteHref, translator } from '../i18n';
 
 const language = getLanguage(Astro.url);
 const t = translator(language);
@@ -11,7 +11,7 @@ const t = translator(language);
 <h2 class="h-display" id="about-h">{t("Vztah, který drží věci ")}<em>{t("v pohybu.")}</em></h2>
 <p class="lead">{t("Zajišťujeme krátkodobý i dlouhodobý pronájem luxusních vozů a osobní servis pro klienty, kteří chtějí svou mobilitu řešit jako komplexní službu bez zbytečných starostí.")}</p>
 <p class="clients">{t("Spolupracujeme se soukromými i firemními klienty.")}</p>
-<a class="btn btn-primary" href="#kontakt">{t("Poslat poptávku ")}<span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-primary" href={siteHref('/o-nas/', language)}>{t("Více o nás ")}<span class="arrow" aria-hidden="true">→</span></a>
 </div>
 <div class="about-side">
 <div class="stat-box"><b>19</b><span>{t("let na trhu")}</span></div>

@@ -4,8 +4,8 @@ const language = getLanguage(Astro.url);
 const t = translator(language);
 ---
 <div class="lang" role="group" aria-label={t('Jazyk')}>
-  <a href={languageHref('cs')} class:list={{ on: language === 'cs' }} aria-current={language === 'cs' ? 'page' : undefined} aria-label="Čeština" lang="cs" hreflang="cs" data-language-link>CZ</a>
-  <a href={languageHref('en')} class:list={{ on: language === 'en' }} aria-current={language === 'en' ? 'page' : undefined} aria-label="English" lang="en" hreflang="en" data-language-link>EN</a>
+  <a href={languageHref('cs', Astro.url)} class:list={{ on: language === 'cs' }} aria-current={language === 'cs' ? 'page' : undefined} aria-label="Čeština" lang="cs" hreflang="cs" data-language-link>CZ</a>
+  <a href={languageHref('en', Astro.url)} class:list={{ on: language === 'en' }} aria-current={language === 'en' ? 'page' : undefined} aria-label="English" lang="en" hreflang="en" data-language-link>EN</a>
 </div>
 <script>
   // Preserve the chosen review photo and section when switching static language pages.

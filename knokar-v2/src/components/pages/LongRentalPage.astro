@@ -1,0 +1,149 @@
+---
+import { Image } from 'astro:assets';
+import { getLanguage, translator, siteHref } from '../../i18n';
+import '../../styles/services.css';
+import hero_gerd_jpg from '../../assets/hero-gerd.jpg';
+import hero_nir_jpg from '../../assets/hero-nir.jpg';
+import detail_rr_interior_jpg from '../../assets/detail-rr-interior.jpg';
+import emblem_burgundy_svg from '../../assets/emblem-burgundy.svg';
+import logo_rollsroyce_png from '../../assets/logo-rollsroyce.png';
+import logo_bentley_png from '../../assets/logo-bentley.png';
+import logo_porsche_png from '../../assets/logo-porsche.png';
+import logo_mercedes_png from '../../assets/logo-mercedes.png';
+import logo_bmw_png from '../../assets/logo-bmw.png';
+import logo_audi_png from '../../assets/logo-audi.png';
+import logo_landrover_png from '../../assets/logo-landrover.png';
+import logo_volvo_png from '../../assets/logo-volvo.png';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
+const href = (path: string) => siteHref(path, language);
+---
+<section class="ph" aria-labelledby="ph-h">
+<div class="ph-media">
+<Image src={hero_gerd_jpg} alt={t("Černobílý detail přední masky a světlometů luxusního vozu Bentley na ulici.")} style="object-position: 62% 55%" widths={[480, 800, 1200, 1600, 1920]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
+<div class="ph-shade"></div>
+<div class="ph-content">
+<div class="wrap">
+<div class="ph-text">
+<nav class="crumbs" aria-label={t("Drobečková navigace")}><a href={href("/")}>{t("KNOKAR")}</a><span aria-hidden="true">/</span><span aria-current="page">{t("Dlouhodobý pronájem vozů")}</span></nav>
+<h1 class="h-display ph-title" id="ph-h">{t("Dlouhodobý pronájem")}</h1>
+<p class="ph-lead">{t("Dlouhodobý pronájem Full service plus spojuje dlouhodobý pronájem vozidla s komplexním servisem. Co vše zahrnuje konkrétně vaše nabídka a jaké služby navíc přináší „plus“, vám představí náš obchodní tým.")}</p>
+<div class="ph-ctas"><a class="btn btn-light" href="mailto:obchod@knokar.cz">{t("Kontaktovat obchodní tým e-mailem")}</a><a class="btn btn-ghost-light" href="tel:+420725949494">{t("Telefonicky: +420 725 94 94 94")}</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" aria-labelledby="ol-h">
+<div class="wrap">
+<div class="ol-band">
+<figure class="ol-photo"><Image src={hero_nir_jpg} alt={t("Tmavý Bentley Mulsanne zaparkovaný v londýnské ulici před cihlovými domy.")} style="object-position: 50% 50%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+<div class="ol-main">
+<p class="label" style="margin: 0">{t("Full service plus")}</p>
+<h2 class="h-1" id="ol-h">{t("Výhody operativního leasingu")}</h2>
+<ul class="ol-list">
+<li><svg class="ol-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 9A8 8 0 0 0 5 7.5M4.5 15A8 8 0 0 0 19 16.5"></path><path d="M5 3.5v4h4M19 20.5v-4h-4"></path></svg><span>{t("Stále nové a moderní vozidlo")}</span></li>
+<li><svg class="ol-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M12 3.5 5 6v5.5c0 4.3 2.9 7.6 7 9 4.1-1.4 7-4.7 7-9V6z"></path><path d="m9 12 2 2 4-4"></path></svg><span>{t("Plný servis včetně pojištění")}</span></li>
+<li><svg class="ol-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3-3M20 16H6l3 3"></path></svg><span>{t("Náhradní vozidlo při nepojízdnosti")}</span></li>
+<li><svg class="ol-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"></path></svg><span>{t("Fixní měsíční splátka")}</span></li>
+<li><svg class="ol-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M4 20h16M7 16v-4M12 16V8M17 16v-6"></path></svg><span>{t("Přehlednější řízení nákladů")}</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" style="padding-top: 0" aria-labelledby="zaj-h">
+<div class="wrap split">
+<div class="split-text">
+<p class="label" style="margin: 0">{t("Full service plus")}</p>
+<h2 class="h-1" id="zaj-h">{t("Co pro vás zajistíme")}</h2>
+<ul class="dots">
+<li>{t("Pomůžeme vybrat vhodný vůz a objednáme ho u prověřených partnerů.")}</li>
+<li>{t("Zajistíme registrační značky, sjednaná pojištění, zákonné poplatky a daně.")}</li>
+<li>{t("Vyřídíme případné pojistné události.")}</li>
+<li>{t("Zprostředkujeme pravidelný servis, výměnu a uskladnění sezónních pneumatik.")}</li>
+<li>{t("V případě zájmu zajistíme palivové karty se slevou na palivo.")}</li>
+<li>{t("Při nepojízdnosti vozu zajistíme asistenční služby a náhradní vozidlo.")}</li>
+</ul>
+</div>
+<figure class="split-media" style="aspect-ratio: 4 / 5"><Image src={detail_rr_interior_jpg} alt={t("Kožený interiér vozu Range Rover v koňakové barvě.")} style="object-position: 40% 70%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+</div>
+</section>
+<section class="sec fleet" aria-labelledby="fleet-h">
+<div class="wrap">
+<div class="split rev" style="align-items: start">
+<div class="split-text">
+<p class="label" style="margin: 0">{t("Pro firemní klienty")}</p>
+<h2 class="h-1" id="fleet-h">{t("Správa vozového parku")}</h2>
+<p class="lead">{t("Zajistíme správu a provoz vašeho vozového parku. Operativní leasing pomáhá omezit administrativu a nečekané výdaje spojené s provozem vozů.")}</p>
+<Image class="fleet-emb" src={emblem_burgundy_svg} alt="" aria-hidden="true" loading="lazy" />
+</div>
+<div class="split-media" style="aspect-ratio: auto; overflow: visible; border-radius: 0; align-self: center"><ul class="dots">
+<li>{t("V pravidelných splátkách hradíte rozdíl mezi pořizovací a tržní zůstatkovou cenou vozu.")}</li>
+<li>{t("Náklady na údržbu, pneumatiky a další provozní položky garantuje pronajímatel.")}</li>
+<li>{t("Měsíční splátka zůstává po dobu leasingu fixní.")}</li>
+<li>{t("Nevážete kapitál ve vozidlech a můžete ho využít pro rozvoj firmy.")}</li>
+<li>{t("Ušetříte čas spojený se správou a péčí o vozy.")}</li>
+<li>{t("Díky spolupráci s partnery lze vyjednat podmínky u dodavatelů vozů, servisů a pojišťoven.")}</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="brands" aria-labelledby="brands-h">
+<div class="wrap brands-in">
+<h2 class="label" id="brands-h">{t("Značky vozidel")}</h2>
+<ul class="brand-row">
+<li><Image src={logo_rollsroyce_png} alt={t("Rolls-Royce")} loading="lazy" /></li>
+<li><Image src={logo_bentley_png} alt={t("Bentley")} loading="lazy" /></li>
+<li><Image src={logo_porsche_png} alt={t("Porsche")} loading="lazy" /></li>
+<li><Image src={logo_mercedes_png} alt={t("Mercedes-Benz")} loading="lazy" /></li>
+<li><Image src={logo_bmw_png} alt={t("BMW")} loading="lazy" /></li>
+<li><Image src={logo_audi_png} alt={t("Audi")} loading="lazy" /></li>
+<li><Image src={logo_landrover_png} alt={t("Land Rover")} loading="lazy" /></li>
+<li><Image src={logo_volvo_png} alt={t("Volvo")} loading="lazy" /></li>
+</ul>
+</div>
+</section>
+<section class="sec" id="poptavka" aria-labelledby="poptavka-h">
+<div class="wrap">
+<div class="contact-grid">
+<div class="contact-l">
+<p class="label" style="margin: 0">{t("Dlouhodobý pronájem")}</p>
+<h2 class="h-2" id="poptavka-h">{t("Máte zájem o dlouhodobý pronájem?")}</h2>
+<p class="lead">{t("Ozvěte se našemu obchodnímu týmu. Probere s vámi možnosti služby Full service plus a připraví další postup.")}</p>
+<Image class="call-emb" src={emblem_burgundy_svg} alt="" aria-hidden="true" loading="lazy" />
+<div class="call">
+<span>{t("Raději voláte?")}</span>
+<a class="tel" href="tel:+420725949494">+420 725 94 94 94</a>
+</div>
+</div>
+<form class="form" aria-label={t("Poptávkový formulář")} data-inquiry-form>
+<div class="field">
+<label for="d-name">{t("Jméno a příjmení *")}</label>
+<input id="d-name" name="name" type="text" autocomplete="name" required="required">
+</div>
+<div class="field half">
+<label for="d-tel">{t("Telefon *")}</label>
+<input id="d-tel" name="tel" type="tel" autocomplete="tel" required="required">
+</div>
+<div class="field half">
+<label for="d-mail">{t("E-mail *")}</label>
+<input id="d-mail" name="email" type="email" autocomplete="email" required="required">
+</div>
+<div class="field">
+<label for="d-msg">{t("Text zprávy")}</label>
+<textarea id="d-msg" name="message" placeholder={t("O jakou službu máte zájem? Na co se potřebujete zeptat?")}></textarea>
+</div>
+<label class="check" for="d-gdpr"><input id="d-gdpr" name="gdpr" type="checkbox" required="required"><span>{t("Souhlasím se zpracováním osobních údajů. *")}</span></label>
+<div class="notice" id="form-note"><strong>{t("Ukázka návrhu:")}</strong>{t(" formulář zatím není napojený a zpráva nebyla odeslána. Ozvěte se nám prosím telefonicky na ")}<a href="tel:+420725949494">+420 725 94 94 94</a>.</div>
+
+<div class="form-foot">
+<span class="req">{t("* povinné údaje")}</span>
+<button class="btn btn-primary" type="submit" disabled aria-describedby="form-note">{t("Odeslat poptávku")}</button>
+</div>
+</form>
+</div>
+</div>
+</section>

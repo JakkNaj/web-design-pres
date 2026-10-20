@@ -1,5 +1,5 @@
 ---
-import { getLanguage, translator } from '../i18n';
+import { getLanguage, siteHref, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import { vehicles } from '../data/vehicles';
 
@@ -12,41 +12,24 @@ const t = translator(language);
 <h2 class="h-1" id="fleet-h">{t("Vozy v pronájmu")}</h2>
 <div class="sec-head-r">
 <p>{t("Prohlédněte si vybrané vozy z naší nabídky. Dostupnost a podmínky konkrétního vozu s vámi rádi projdeme osobně.")}</p>
-<a class="btn btn-secondary" href="#kontakt">{t("Poslat poptávku")}</a>
+<a class="btn btn-secondary" href={siteHref('/vozovy-park/', language)}>{t("Celý vozový park")}</a>
 </div>
 </div>
 <div class="cars">
 {vehicles.map((car) => (
 <article class="car">
-<a class="car-img" href={`#detail-${car.id}`} data-open-car={car.id} aria-label={`${t('Zobrazit detail vozu')} ${car.name}`}>
+<a class="car-img" href={siteHref(`/vozovy-park/${car.id === 'rr' ? 'rra' : car.id}/`, language)} aria-label={`${t('Zobrazit detail vozu')} ${car.name}`}>
 <Image src={car.img} alt={t(car.alt)} style={`object-position: ${car.pos}`} widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, 50vw" format="webp" quality={85} loading="lazy" />
 <ul class="tags" aria-hidden="true"><li>{car.kw}</li><li>{t(car.fuel)}</li><li>4×4</li><li>{t(car.seats)}</li></ul>
 </a>
 <div class="car-body">
 <h3>{car.name}</h3>
 <div class="car-acts">
-<a class="tlink" href={`#detail-${car.id}`} data-open-car={car.id}>{t("Detail vozu ")}<span class="arrow" aria-hidden="true">→</span></a>
+<a class="tlink" href={siteHref(`/vozovy-park/${car.id === 'rr' ? 'rra' : car.id}/`, language)}>{t("Detail vozu ")}<span class="arrow" aria-hidden="true">→</span></a>
 </div>
 </div>
 </article>
 ))}
 </div>
-{vehicles.map((car) => (
-<div class="dlg" id={`detail-${car.id}`} role="region" aria-labelledby={`heading-${car.id}`} hidden tabindex="-1" data-car-detail={car.id}>
-<button type="button" class="dlg-close" data-close-car={car.id} aria-label={t("Zavřít detail vozu")}><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l10 10M13 3 3 13"></path></svg></button>
-<figure class="dlg-img"><Image src={car.img} alt={t(car.alt)} style={`object-position: ${car.pos}`} widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 60vw" format="webp" quality={85} loading="lazy" /></figure>
-<div class="dlg-body">
-<p class="label" style="margin: 0">{t("Detail vozu")}</p>
-<h3 id={`heading-${car.id}`}>{car.name}</h3>
-<dl class="specs">
-{car.specs.map(([label, value]) => (
-<div><dt>{t(label)}</dt><dd>{t(value)}</dd></div>
-))}
-</dl>
-<p>{t("Dostupnost a podmínky konkrétního vozu s vámi rádi projdeme osobně.")}</p>
-<a class="btn btn-primary" href="#kontakt" data-vehicle={car.name}>{t("Poptat tento vůz ")}<span class="arrow" aria-hidden="true">→</span></a>
-</div>
-</div>
-))}
 </div>
 </section>

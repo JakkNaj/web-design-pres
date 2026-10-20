@@ -1,0 +1,146 @@
+---
+import { Image } from 'astro:assets';
+import FleetCard from './FleetCard.astro';
+import { fleet } from '../../data/fleet';
+import { getLanguage, siteHref, translator } from '../../i18n';
+import emblem from '../../assets/emblem-burgundy.svg';
+import '../../styles/fleet-pages.css';
+
+interface Props { vehicleId?: string }
+const { vehicleId = 'amg' } = Astro.props;
+const car = fleet.find((vehicle) => vehicle.id === vehicleId) ?? fleet[0];
+const others = fleet.filter((vehicle) => vehicle.id !== car.id);
+const language = getLanguage(Astro.url);
+const t = translator(language);
+const opening = `${t('Dobrý den, mám zájem o vůz')} ${car.name}. `;
+---
+<div class="ph-light vehicle-page vehicle-breadcrumbs">
+  <div class="wrap"><nav class="crumbs" aria-label={t('Drobečková navigace')}><a href={siteHref('/', language)}>KNOKAR</a><span aria-hidden="true">/</span><a href={siteHref('/vozovy-park/', language)}>{t('Vozový park')}</a><span aria-hidden="true">/</span><span aria-current="page">{car.name}</span></nav></div>
+</div>
+<section class="sec vehicle-page vehicle-detail" aria-labelledby="det-h">
+  <div class="wrap gal">
+    <div class="gal-l" data-vehicle-gallery>
+      <figure class="gal-main">
+        {car.gallery.map((photo, index) => <Image src={photo.img} alt={t(photo.alt)} widths={[480, 800, 1200, 1600]} sizes="(max-width: 1100px) 100vw, 66vw" format="webp" quality={88} loading={index === 0 ? 'eager' : 'lazy'} fetchpriority={index === 0 ? 'high' : 'auto'} hidden={index !== 0} data-gallery-frame={index} />)}
+      </figure>
+      {car.gallery.length > 1 && <div class="gal-thumbs" role="group" aria-label={t('Fotografie vozu')}>
+        {car.gallery.map((photo, index) => <button type="button" class:list={['thumb', { on: index === 0 }]} aria-label={`${t('Zobrazit fotografii:')} ${t(photo.alt)}`} aria-pressed={index === 0 ? 'true' : 'false'} data-gallery-pick={index}><Image src={photo.img} alt="" widths={[160, 260]} sizes="(max-width: 760px) 30vw, 12vw" format="webp" quality={80} loading="lazy" /></button>)}
+      </div>}
+    </div>
+    <div class="gal-side">
+      <a class="back" href={siteHref('/vozovy-park/', language)}><span aria-hidden="true">←</span> {t('Zpět na vozový park')}</a>
+      <p class="label" style="margin:0">{car.brand}</p>
+      <h1 class="det-name" id="det-h">{car.name}</h1>
+      <ul class="tags vehicle-parameters" aria-label={t('Hlavní parametry')}><li>{car.kw}</li><li>{t(car.fuel)}</li><li>4×4</li><li>{t(car.seats)}</li></ul>
+      <dl class="specs">{car.specs.map(([label, value]) => <div><dt>{t(label)}</dt><dd>{t(value)}</dd></div>)}</dl>
+      <p class="price-note"><span><b>{t('Cena a podmínky na vyžádání.')}</b> {t('Dostupnost a podmínky konkrétního vozu s vámi rádi projdeme osobně.')}</span></p>
+      <div class="det-acts"><a class="btn btn-primary" href="#poptavka" data-vehicle-inquiry>{t('Poptat tento vůz')} <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn-secondary" href="tel:+420725949494">{t('Zavolat +420 725 94 94 94')}</a></div>
+    </div>
+  </div>
+</section>
+<section class="sec fleet vehicle-page" aria-labelledby="dal-h" data-related-cars>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h-2" id="dal-h">{t('Další vozy v pronájmu')}</h2>
+      <div class="car-nav">
+        <span class="car-count" aria-live="polite" data-related-count data-carousel-controls hidden>01 / 06</span>
+        <button type="button" class="nav-btn" aria-label={t('Předchozí vozy')} data-related-step="-1" data-carousel-controls hidden><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3 5 9l6 6"></path></svg></button>
+        <button type="button" class="nav-btn" aria-label={t('Další vozy')} data-related-step="1" data-carousel-controls hidden><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 3 6 6-6 6"></path></svg></button>
+        <a class="btn btn-secondary" href={siteHref('/vozovy-park/', language)}>{t('Celý vozový park')}</a>
+      </div>
+    </div>
+    <div class="cars c3" data-related-grid>{others.map((other) => <FleetCard car={other} />)}</div>
+    <div class="car-nav-m" data-carousel-controls hidden>
+      <span class="car-count" aria-live="polite" data-related-count>01 / 06</span>
+      <div class="car-btns"><button type="button" class="nav-btn" aria-label={t('Předchozí vůz')} data-related-step="-1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 3 5 9l6 6"></path></svg></button><button type="button" class="nav-btn" aria-label={t('Další vůz')} data-related-step="1"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 3 6 6-6 6"></path></svg></button></div>
+    </div>
+  </div>
+</section>
+<section class="sec vehicle-page" id="poptavka" aria-labelledby="poptavka-h">
+  <div class="wrap"><div class="contact-grid">
+    <div class="contact-l">
+      <p class="label" style="margin:0">{t('Poptávka vozu')}</p>
+      <h2 class="h-2" id="poptavka-h">{t('Máte zájem o tento vůz?')}</h2>
+      <p class="lead">{t('Napište nám. Ozveme se vám a osobně s vámi projdeme dostupné možnosti.')}</p>
+      <Image class="call-emb" src={emblem} alt="" aria-hidden="true" loading="lazy" />
+      <div class="call"><span>{t('Raději voláte?')}</span><a class="tel" href="tel:+420725949494">+420 725 94 94 94</a></div>
+    </div>
+    <form class="form" aria-label={t('Poptávkový formulář')} id="vehicle-inquiry-form">
+      <div class="field"><label for="vehicle-name">{t('Jméno a příjmení *')}</label><input id="vehicle-name" name="name" type="text" autocomplete="name" required /></div>
+      <div class="field half"><label for="vehicle-tel">{t('Telefon *')}</label><input id="vehicle-tel" name="tel" type="tel" autocomplete="tel" required /></div>
+      <div class="field half"><label for="vehicle-email">{t('E-mail *')}</label><input id="vehicle-email" name="email" type="email" autocomplete="email" required /></div>
+      <div class="field"><label for="vehicle-message">{t('Text zprávy')}</label><textarea id="vehicle-message" name="message" placeholder={t('O jakou službu máte zájem? Na co se potřebujete zeptat?')}>{opening}</textarea></div>
+      <label class="check" for="vehicle-consent"><input id="vehicle-consent" name="gdpr" type="checkbox" required /><span>{t('Souhlasím se zpracováním osobních údajů. *')}</span></label>
+      <div class="notice" id="vehicle-form-note"><strong>{t('Ukázka návrhu:')}</strong> {t('formulář zatím není napojený a zpráva nebyla odeslána. Ozvěte se nám prosím telefonicky na')} <a href="tel:+420725949494">+420 725 94 94 94</a>.</div>
+      <div class="form-foot"><span class="req">{t('* povinné údaje')}</span><button class="btn btn-primary" type="submit" disabled aria-describedby="vehicle-form-note">{t('Odeslat poptávku')}</button></div>
+    </form>
+  </div></div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-vehicle-gallery]').forEach((gallery) => {
+    const frames = [...gallery.querySelectorAll<HTMLImageElement>('[data-gallery-frame]')];
+    const buttons = [...gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-pick]')];
+    let requested = 0;
+    async function select(index: number) {
+      const frame = frames[index];
+      if (!frame) return;
+      requested = index;
+      frame.loading = 'eager';
+      try { await frame.decode(); } catch { return; }
+      if (requested !== index) return;
+      frames.forEach((item, itemIndex) => { item.hidden = itemIndex !== index; });
+      buttons.forEach((button, buttonIndex) => {
+        button.classList.toggle('on', buttonIndex === index);
+        button.setAttribute('aria-pressed', String(buttonIndex === index));
+      });
+    }
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => { void select(index); });
+      button.addEventListener('keydown', (event) => {
+        let next: number;
+        if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+        else if (event.key === 'ArrowLeft') next = (index + buttons.length - 1) % buttons.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = buttons.length - 1;
+        else return;
+        event.preventDefault();
+        buttons[next].focus();
+        void select(next);
+      });
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>('[data-related-cars]').forEach((section) => {
+    const grid = section.querySelector<HTMLElement>('[data-related-grid]');
+    if (!grid) return;
+    const cars = [...grid.querySelectorAll<HTMLElement>('[data-fleet-car]')];
+    const mobile = window.matchMedia('(max-width:760px)');
+    const tablet = window.matchMedia('(max-width:1100px)');
+    let offset = 0;
+    function render() {
+      const visible = mobile.matches ? 1 : tablet.matches ? 2 : 3;
+      for (let index = 0; index < cars.length; index++) {
+        const car = cars[(offset + index) % cars.length];
+        car.hidden = index >= visible;
+        grid!.append(car);
+      }
+      section.querySelectorAll('[data-related-count]').forEach((count) => {
+        count.textContent = `${String(offset + 1).padStart(2, '0')} / ${String(cars.length).padStart(2, '0')}`;
+      });
+    }
+    section.querySelectorAll<HTMLElement>('[data-carousel-controls]').forEach((control) => { control.hidden = false; });
+    section.querySelectorAll<HTMLElement>('[data-related-step]').forEach((button) => button.addEventListener('click', () => {
+      offset = (offset + Number(button.dataset.relatedStep) + cars.length) % cars.length;
+      render();
+    }));
+    mobile.addEventListener('change', render);
+    tablet.addEventListener('change', render);
+    render();
+  });
+
+  document.querySelector<HTMLFormElement>('#vehicle-inquiry-form')?.addEventListener('submit', (event) => event.preventDefault());
+  document.querySelector('[data-vehicle-inquiry]')?.addEventListener('click', () => {
+    requestAnimationFrame(() => document.querySelector<HTMLTextAreaElement>('#vehicle-message')?.focus({ preventScroll: true }));
+  });
+</script>

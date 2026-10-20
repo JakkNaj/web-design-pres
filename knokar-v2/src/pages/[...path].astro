@@ -1,0 +1,41 @@
+---
+import PageShell from '../layouts/PageShell.astro';
+import AboutPage from '../components/pages/AboutPage.astro';
+import ShortRentalPage from '../components/pages/ShortRentalPage.astro';
+import LongRentalPage from '../components/pages/LongRentalPage.astro';
+import FinancePage from '../components/pages/FinancePage.astro';
+import FleetPage from '../components/pages/FleetPage.astro';
+import VehiclePage from '../components/pages/VehiclePage.astro';
+import NewsPage from '../components/pages/NewsPage.astro';
+import ContactPage from '../components/pages/ContactPage.astro';
+import { pages, type PageId } from '../data/pages';
+import { fleet } from '../data/fleet';
+import { getLanguage, translator } from '../i18n';
+
+export function getStaticPaths() {
+  return ['', 'en/'].flatMap((prefix) => [
+    ...pages.map((page) => ({
+      params: { path: `${prefix}${page.slug}` },
+      props: { pageId: page.id, title: page.title, description: page.description },
+    })),
+    ...fleet.map((vehicle) => ({
+      params: { path: `${prefix}vozovy-park/${vehicle.id}` },
+      props: { pageId: 'vehicle', vehicleId: vehicle.id, title: vehicle.name, description: 'Dostupnost a podmínky konkrétního vozu s vámi rádi projdeme osobně.' },
+    })),
+  ]);
+}
+
+interface Props { pageId: PageId; vehicleId?: string; title: string; description: string; }
+const { pageId, vehicleId, title, description } = Astro.props;
+const t = translator(getLanguage(Astro.url));
+---
+<PageShell title={`${t(title)} — KNOKAR`} description={description}>
+  {pageId === 'about' && <AboutPage />}
+  {pageId === 'short' && <ShortRentalPage />}
+  {pageId === 'long' && <LongRentalPage />}
+  {pageId === 'finance' && <FinancePage />}
+  {pageId === 'fleet' && <FleetPage />}
+  {pageId === 'vehicle' && <VehiclePage vehicleId={vehicleId} />}
+  {pageId === 'news' && <NewsPage />}
+  {pageId === 'contact' && <ContactPage />}
+</PageShell>

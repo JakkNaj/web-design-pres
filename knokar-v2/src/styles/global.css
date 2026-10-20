@@ -447,3 +447,7 @@ a:hover .arrow,button:hover .arrow{transform:translateX(4px)}
 }
 /* Clip decorative image overflow without creating a scroll container for the sticky header. */
 .kn{overflow-x:clip}
+
+/* Service headings open their full service pages. */
+.service-page-link{text-decoration:none;text-underline-offset:5px;text-decoration-thickness:1px}
+@media (hover:hover){.service-page-link:hover{text-decoration:underline}}

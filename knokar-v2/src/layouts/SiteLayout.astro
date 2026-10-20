@@ -24,8 +24,8 @@ const { title = 'KNOKAR — Klid v pohybu', description = 'Privátní mobilita. 
 <meta property="og:title" content={t(title)} />
 <meta property="og:description" content={t(description)} />
 <meta property="og:type" content="website" />
-<link rel="alternate" hreflang="cs" href={new URL(languageHref('cs'), Astro.site)} />
-<link rel="alternate" hreflang="en" href={new URL(languageHref('en'), Astro.site)} />
+<link rel="alternate" hreflang="cs" href={new URL(languageHref('cs', Astro.url), Astro.site)} />
+<link rel="alternate" hreflang="en" href={new URL(languageHref('en', Astro.url), Astro.site)} />
 <link rel="icon" type="image/svg+xml" href={favicon.src} />
 <title>{t(title)}</title>
 </head>

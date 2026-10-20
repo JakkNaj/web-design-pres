@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import Brands from '../Brands.astro';
+import FleetCard from './FleetCard.astro';
+import { fleet } from '../../data/fleet';
+import { getLanguage, siteHref, translator } from '../../i18n';
+import hero from '../../assets/porsche-rain-detail.jpg';
+import emblem from '../../assets/emblem-champagne.svg';
+import '../../styles/fleet-pages.css';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
+const filters = [{ label: 'Vše', value: '' }, { label: 'Mercedes-Benz', value: 'Mercedes-Benz' }, { label: 'Land Rover', value: 'Land Rover' }];
+---
+<section class="ph fleet-page" aria-labelledby="ph-h">
+  <div class="ph-media">
+    <Image src={hero} alt={t('Stříbrný sportovní vůz v dešti, detail zpětného zrcátka a boku karoserie pokryté kapkami.')} style="object-position:60% 45%" widths={[640, 1000, 1440, 1920]} sizes="100vw" format="webp" quality={88} loading="eager" fetchpriority="high" />
+    <div class="ph-shade"></div>
+    <div class="ph-content"><div class="wrap"><div class="ph-text">
+      <nav class="crumbs" aria-label={t('Drobečková navigace')}><a href={siteHref('/', language)}>KNOKAR</a><span aria-hidden="true">/</span><span aria-current="page">{t('Vozový park')}</span></nav>
+      <h1 class="h-display ph-title" id="ph-h">{t('Vozový park')}</h1>
+      <p class="ph-lead">{t('Prohlédněte si vybrané vozy z naší nabídky. Dostupnost a podmínky konkrétního vozu s vámi rádi projdeme osobně.')}</p>
+    </div></div></div>
+  </div>
+</section>
+<Brands />
+<section class="sec fleet fleet-page" aria-labelledby="park-h" data-fleet-filter>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h-1" id="park-h">{t('Vozy v pronájmu')}</h2>
+      <div class="sec-head-r"><p>{t('Každý vůz vám rádi osobně představíme. Po domluvě zajistíme i projížďku.')}</p><a class="btn btn-secondary" href={siteHref('/kontakt/', language)}>{t('Poslat poptávku')}</a></div>
+    </div>
+    <div class="filters" role="group" aria-label={t('Filtrovat podle značky')}>
+      {filters.map((filter, index) => <button type="button" class:list={['chip', { on: index === 0 }]} aria-pressed={index === 0 ? 'true' : 'false'} aria-controls="fleet-cars" data-fleet-brand={filter.value}>{t(filter.label)}</button>)}
+    </div>
+    <div class="cars c3" id="fleet-cars">{fleet.map((car) => <FleetCard car={car} showBrand />)}</div>
+  </div>
+</section>
+<section class="sec cta-sec fleet-page" aria-labelledby="cta-h">
+  <div class="wrap"><div class="cta-band">
+    <div class="cta-text">
+      <p class="label">{t('Vozový park')}</p>
+      <h2 class="h-1" id="cta-h">{t('Máte zájem o konkrétní vůz?')}</h2>
+      <p>{t('Zavolejte nám. Rádi s vámi osobně projdeme možnosti a domluvíme další postup.')}</p>
+      <div class="cta-acts"><a class="btn btn-light" href={siteHref('/kontakt/', language)}>{t('Poslat poptávku')} <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn-ghost-light" href="tel:+420725949494">+420 725 94 94 94</a></div>
+    </div>
+    <Image class="cta-emb" src={emblem} alt="" aria-hidden="true" loading="lazy" />
+  </div></div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-fleet-filter]').forEach((section) => {
+    const buttons = section.querySelectorAll<HTMLButtonElement>('[data-fleet-brand]');
+    const cars = section.querySelectorAll<HTMLElement>('[data-fleet-car]');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const brand = button.dataset.fleetBrand;
+      buttons.forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle('on', selected);
+        item.setAttribute('aria-pressed', String(selected));
+      });
+      cars.forEach((car) => { car.hidden = Boolean(brand && car.dataset.brand !== brand); });
+    }));
+  });
+</script>

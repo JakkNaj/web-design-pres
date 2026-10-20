@@ -1,5 +1,5 @@
 ---
-import { getLanguage, translator } from '../i18n';
+import { getLanguage, siteHref, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import news_rr_predani_jpg from '../assets/news-rr-predani.jpg';
 import news_rr_autobiography_jpg from '../assets/news-rr-autobiography.jpg';
@@ -13,6 +13,7 @@ const t = translator(language);
 <div class="wrap">
 <div class="sec-head">
 <div><p class="label">{t("Aktuality")}</p><h2 class="h-1" id="news-h">{t("Ze světa KNOKAR")}</h2></div>
+<a class="btn btn-secondary" href={siteHref('/aktuality/', language)}>{t("Všechny aktuality")}</a>
 </div>
 <ul class="news">
 <li class="news-card">

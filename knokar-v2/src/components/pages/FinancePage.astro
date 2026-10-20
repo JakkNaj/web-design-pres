@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import { getLanguage, translator, siteHref } from '../../i18n';
+import '../../styles/services.css';
+import hero_bundo_jpg from '../../assets/hero-bundo.jpg';
+import rolls_emblem_jpg from '../../assets/rolls-emblem.jpg';
+import hero_tjeerd_jpg from '../../assets/hero-tjeerd.jpg';
+import porsche_gt3_jpg from '../../assets/porsche-gt3.jpg';
+import emblem_champagne_svg from '../../assets/emblem-champagne.svg';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
+const href = (path: string) => siteHref(path, language);
+---
+<section class="ph" aria-labelledby="ph-h">
+<div class="ph-media">
+<Image src={hero_bundo_jpg} alt={t("Černý Rolls-Royce Phantom zaparkovaný na městské ulici.")} style="object-position: 30% 78%" widths={[480, 800, 1200, 1600, 1920]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
+<div class="ph-shade"></div>
+<div class="ph-content">
+<div class="wrap">
+<div class="ph-text">
+<nav class="crumbs" aria-label={t("Drobečková navigace")}><a href={href("/")}>{t("KNOKAR")}</a><span aria-hidden="true">/</span><span aria-current="page">{t("Finanční servis")}</span></nav>
+<h1 class="h-display ph-title" id="ph-h">{t("Finanční servis")}</h1>
+<p class="ph-lead">{t("Potřebujete poradit s individuálním nastavením financování?")}</p>
+<div class="ph-ctas"><a class="btn btn-light" href="mailto:obchod@knokar.cz">{t("Napište nám ")}<span class="arrow" aria-hidden="true">→</span></a><a class="btn btn-ghost-light" href="tel:+420725949494">+420 725 94 94 94</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" aria-labelledby="fin-h">
+<div class="wrap split">
+<div class="split-text">
+<p class="label" style="margin: 0">{t("Obchodní tým")}</p>
+<h2 class="h-1" id="fin-h">{t("Napište nám.")}</h2>
+<p class="lead">{t("Potřebujete poradit s individuálním nastavením financování? Ozvěte se našemu obchodnímu týmu.")}</p>
+<div class="info-row">
+<a class="btn btn-primary" href="mailto:obchod@knokar.cz">{t("obchod@knokar.cz")}</a>
+<a class="tel" href="tel:+420725949494">+420 725 94 94 94</a>
+</div>
+</div>
+<figure class="split-media"><Image src={rolls_emblem_jpg} alt={t("Detail sošky a chladičové mřížky klasického luxusního vozu.")} style="object-position: 50% 45%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+</div>
+</section>
+<section class="sec" style="padding-top: 0" aria-labelledby="fin2-h">
+<div class="wrap">
+<div class="sec-head"><h2 class="h-2" id="fin2-h">{t("Související služby")}</h2></div>
+<div class="tiles t2">
+<a class="tile has-photo" href={href("/dlouhodoby-pronajem/")} style="text-decoration: none"><figure class="tile-photo"><Image src={hero_tjeerd_jpg} alt={t("Přední část tmavého Rolls-Royce se soškou Spirit of Ecstasy za soumraku.")} style="object-position: 50% 62%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure><div class="tile-body"><h3>{t("Dlouhodobý pronájem")}</h3><p>{t("Full service plus spojuje dlouhodobý pronájem vozidla s komplexním servisem.")}</p><span class="tlink">{t("Více o službě ")}<span class="arrow" aria-hidden="true">→</span></span></div></a>
+<a class="tile has-photo" href={href("/kratkodoby-pronajem/")} style="text-decoration: none"><figure class="tile-photo"><Image src={porsche_gt3_jpg} alt="" style="object-position: 35% 62%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure><div class="tile-body"><h3>{t("Krátkodobý pronájem")}</h3><p>{t("Vůz luxusní značky pro dobu, kdy ho potřebujete.")}</p><span class="tlink">{t("Více o službě ")}<span class="arrow" aria-hidden="true">→</span></span></div></a>
+</div>
+</div>
+</section>
+<section class="sec cta-sec" aria-labelledby="cta-h">
+<div class="wrap">
+<div class="cta-band">
+<div class="cta-text">
+<p class="label">{t("Kontakt")}</p>
+<h2 class="h-1" id="cta-h">{t("Luxus v bezstarostnosti.")}</h2>
+<p>{t("Napište nám. Ozveme se vám a osobně s vámi projdeme dostupné možnosti.")}</p>
+<div class="cta-acts">
+<a class="btn btn-light" href={href("/kontakt/")}>{t("Poslat poptávku ")}<span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-ghost-light" href="tel:+420725949494">+420 725 94 94 94</a>
+</div>
+</div>
+<Image class="cta-emb" src={emblem_champagne_svg} alt="" aria-hidden="true" loading="lazy" />
+</div>
+</div>
+</section>

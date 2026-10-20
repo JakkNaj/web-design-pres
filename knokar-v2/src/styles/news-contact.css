@@ -1,0 +1,14 @@
+.news-page-stories .news-feat{align-items:start}
+.news-holiday{min-height:360px}
+.news-holiday h2{margin:10px 0 0;font-weight:300;font-size:clamp(30px,2.8vw,42px);line-height:1.12;letter-spacing:-.02em}
+.news-holiday p{margin:0;color:rgba(243,240,233,.82)}
+.news-story-link{text-decoration:none}
+.news-story-link:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.kn .news-note :focus-visible{outline-color:var(--champ)}
+.news-photo-link{display:block}
+.contact-page .call-emb{margin-top:0}
+.contact-page .sr-photo figcaption{position:absolute;bottom:16px;left:16px;right:16px;z-index:1;width:fit-content;padding:5px 10px;border-radius:999px;background:rgba(23,23,23,.8);color:var(--bg);font-size:12px}
+.contact-map-note{margin:-12px 0 0;font-size:12px;color:var(--ink3)}
+.contact-page .sr-info{gap:16px}
+.contact-page .showroom .sr-photo{min-width:0}
+.contact-page .dept h2{margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--bur)}

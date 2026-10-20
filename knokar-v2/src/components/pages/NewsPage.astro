@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import { getLanguage, siteHref, translator } from '../../i18n';
+import '../../styles/news-contact.css';
+import rollsNight from '../../assets/hdr-rolls-night.jpg';
+import emblemChampagne from '../../assets/emblem-champagne.svg';
+import rangeHandover from '../../assets/news-rr-predani.jpg';
+import rangeAutobiography from '../../assets/news-rr-autobiography.jpg';
+import mercedesS400 from '../../assets/news-s400d.jpg';
+import rangeSport from '../../assets/news-rrsport.jpg';
+import mercedesAmg from '../../assets/fleet-amg-gt63s.jpg';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
+const stories = [
+  {
+    image: rangeAutobiography,
+    alt: 'Černý Range Rover Autobiography před prodejnou Land Rover.',
+    position: '70% 70%',
+    datetime: '2023-05-04',
+    date: '4. 5. 2023',
+    title: 'Nový vůz v naší nabídce – Range Rover Autobiography',
+    summary: 'Nová generace nejluxusnějšího SUV je zde, ikonický model udělal obrovský skok v kvalitě.',
+    path: '/2023/05/04/range-rover-autobiography/',
+    englishPath: '/en/2023/05/04/new-car-in-our-offer-range-rover-autobiography/',
+  },
+  {
+    image: mercedesS400,
+    alt: 'Mercedes-Benz S 400 d 4MATIC z boku v showroomu.',
+    position: '50% 60%',
+    datetime: '2023-03-30',
+    date: '30. 3. 2023',
+    title: 'Nový vůz v naší nabídce – Mercedes-Benz S 400 d 4MATIC',
+    summary: 'Naši flotilu rozšířil dechberoucí Mercedes-Benz řady S 400 d s interiérovou úpravou Manufaktur.',
+    path: '/2023/03/30/novy-vuz-v-nasi-nabidce-mercedes-benz-s-400-d-4matic/',
+    englishPath: '/en/2023/03/30/new-car-in-our-offer/',
+  },
+  {
+    image: rangeSport,
+    alt: 'Range Rover Sport Dynamic HSE před prodejnou Land Rover.',
+    position: '50% 62%',
+    datetime: '2023-03-14',
+    date: '14. 3. 2023',
+    title: 'Range Rover Sport Dynamic HSE',
+    summary: 'Range Rover Sport Dynamic HSE se vznětovým šestiválcem o výkonu 221 kW se od 8. 2. 2023 připojil k naší flotile.',
+    path: '/2023/03/14/novy-vuz-v-nasi-nabidce-range-rover-sport/',
+    englishPath: '/en/2023/03/14/range-rover-sport-dynamic-hse/',
+  },
+  {
+    image: mercedesAmg,
+    alt: 'Mercedes-Benz AMG GT 63 S+ 4MATIC v matně šedém laku, pohled zepředu ze strany.',
+    position: '50% 60%',
+    datetime: '2021-09-22',
+    date: '22. 9. 2021',
+    title: 'Nový vůz v naší nabídce – Mercedes-Benz GT AMG 63S+',
+    summary: '',
+    path: '/2021/09/22/mercedes-gt-amg-63s-nove-auto-v-nasi-nabidce/',
+    englishPath: '/en/2021/09/22/mercedes-benz-gt-amg-63s/',
+  },
+];
+const handoverHref = `https://knokar.cz${language === 'en'
+  ? '/en/2023/08/16/range-rover-autobiography-ceremony-handover-of-the-car-to-the-client/'
+  : '/2023/08/16/range-rover-autobiography-slavnostni-predani-vozu-klientovi/'}`;
+---
+<section class="ph news-page-hero" aria-labelledby="news-page-h">
+  <div class="ph-media">
+    <Image src={rollsNight} alt={t('Tmavý Rolls-Royce zaparkovaný v noci před osvětlenou budovou.')} style="object-position: 50% 82%" widths={[480, 800, 1200, 1600, 2000]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
+    <div class="ph-shade"></div>
+    <div class="ph-content">
+      <div class="wrap">
+        <div class="ph-text">
+          <nav class="crumbs" aria-label={t('Drobečková navigace')}><a href={siteHref('/', language)}>KNOKAR</a><span aria-hidden="true">/</span><span aria-current="page">{t('Aktuality')}</span></nav>
+          <h1 class="h-display ph-title" id="news-page-h">{t('Ze světa KNOKAR')}</h1>
+          <p class="ph-lead">{t('Novinky z naší nabídky, informace o službách a dění kolem KNOKAR na jednom místě.')}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec news-page-stories" aria-label={t('Články')}>
+  <div class="wrap">
+    <div class="news-feat">
+      <article class="news-note news-holiday">
+        <Image src={emblemChampagne} alt="" aria-hidden="true" loading="lazy" />
+        <div>
+          <time datetime="2025-12-21">{t('21. 12. 2025')}</time>
+          <h2><a class="news-story-link" href="https://knokar.cz/2025/12/21/vesele-vanoce-2026/">{t('Veselé Vánoce – PF 2026')}</a></h2>
+        </div>
+        <p>{t('Krásné a pohodové prožití vánočních svátků a vše nejlepší do nového roku přeje tým KNOKAR.')}</p>
+      </article>
+      <article class="news-feat-text">
+        <a class="news-photo-link" href={handoverHref} tabindex="-1" aria-hidden="true"><figure><Image src={rangeHandover} alt={t('Černý Range Rover Autobiography na červeném koberci připravený k předání.')} style="object-position: 50% 62%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 55vw" format="webp" quality={85} loading="lazy" /></figure></a>
+        <time datetime="2023-08-16">{t('16. 8. 2023')}</time>
+        <h2><a class="news-story-link" href={handoverHref}>{t('Range Rover Autobiography – slavnostní předání vozu klientovi')}</a></h2>
+      </article>
+    </div>
+    <ul class="news n2">
+      {stories.map((story) => {
+        const href = `https://knokar.cz${language === 'en' ? story.englishPath : story.path}`;
+        return <li class="news-card">
+          <a class="news-photo-link" href={href} tabindex="-1" aria-hidden="true"><figure><Image src={story.image} alt={t(story.alt)} style={`object-position: ${story.position}`} widths={[480, 800, 1200]} sizes="(max-width: 760px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure></a>
+          <time datetime={story.datetime}>{t(story.date)}</time>
+          <h3><a class="news-story-link" href={href}>{t(story.title)}</a></h3>
+          {story.summary && <p>{t(story.summary)}</p>}
+        </li>;
+      })}
+    </ul>
+  </div>
+</section>
+
+<section class="sec" style="padding-top: 0" aria-labelledby="news-nl-h">
+  <div class="wrap">
+    <div class="nl-band">
+      <div class="nl-band-text">
+        <p class="label" style="margin: 0">{t('Newsletter')}</p>
+        <h2 class="h-2" id="news-nl-h">{t('Novinky od KNOKAR do e-mailu')}</h2>
+        <p>{t('Chcete dostávat informace o nových vozech a dalších novinkách? Přihlaste se k odběru našeho newsletteru.')}</p>
+      </div>
+      <form aria-labelledby="news-nl-h" aria-describedby="news-nl-note">
+        <div class="nl-row">
+          <div class="field"><label for="p-nl">{t('E-mailová adresa')}</label><input id="p-nl" name="nl-email" type="email" autocomplete="email" placeholder={t('E-mailová adresa')} required /></div>
+          <button class="btn btn-primary" type="submit" disabled aria-describedby="news-nl-note">{t('Přihlásit k odběru')}</button>
+        </div>
+        <label class="check" for="p-nl-gdpr"><input id="p-nl-gdpr" name="nl-gdpr" type="checkbox" required /><span>{t('Souhlasím se zasíláním newsletteru a zpracováním osobních údajů.')}</span></label>
+        <div class="notice" id="news-nl-note"><strong>{t('Ukázka návrhu:')}</strong>{t(' odběr zatím není napojený a e-mail nebyl uložen.')}</div>
+      </form>
+    </div>
+  </div>
+</section>

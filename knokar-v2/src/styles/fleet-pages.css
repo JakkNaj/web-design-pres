@@ -1,0 +1,33 @@
+/* Fleet/detail refinements specific to the supplied page designs. */
+.fleet-page .fleet-grid-card .muted{display:block;margin-top:4px}
+.fleet-grid-card .car-body{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px}
+.fleet-grid-card .car-acts{margin-top:2px}
+@media(min-width:761px){
+  .fleet-page .cars .car-body{flex-direction:row;align-items:flex-end;justify-content:space-between;flex-wrap:nowrap;gap:16px}
+  .fleet-page .cars .car-acts{margin:0 0 -10px;flex:none}
+}
+.vehicle-page.vehicle-breadcrumbs{padding-bottom:32px}
+.vehicle-breadcrumbs .crumbs{flex-wrap:wrap;overflow-wrap:anywhere}
+.vehicle-page.vehicle-detail{padding-top:0}
+.vehicle-page .gal-side{padding-left:clamp(24px,3.2vw,56px)}
+.vehicle-page .vehicle-parameters li{border:1px solid var(--line);color:var(--ink2)}
+.vehicle-page .gal-main:has(img:only-child){width:100%}
+.vehicle-page .car-count{font-variant-numeric:tabular-nums}
+.vehicle-page .car-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.vehicle-page .car-count{font-size:14px;color:var(--bur);letter-spacing:.06em;margin-right:6px}
+.vehicle-page .nav-btn{width:48px;height:48px;border-radius:999px;border:1px solid rgba(75,32,39,.4);background:transparent;color:var(--bur);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.vehicle-page .nav-btn:hover{background:var(--bur);color:#F3F0E9}
+.vehicle-page .car-nav .btn{margin-left:10px}
+.vehicle-page .car-nav-m{display:none}
+.vehicle-page .price-note{margin:0;font-size:14px;line-height:1.5;color:var(--ink3);display:flex;gap:10px;align-items:baseline}
+.vehicle-page .price-note::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--bur);transform:translateY(-1px)}
+.vehicle-page .price-note b{font-weight:500;color:var(--ink)}
+@media(max-width:1100px){.vehicle-page .gal-side{padding-left:0;margin-top:16px}}
+@media(max-width:760px){
+  .vehicle-page .car-nav .car-count,.vehicle-page .car-nav .nav-btn{display:none}
+  .vehicle-page .car-nav .btn{margin-left:0;width:100%}
+  .vehicle-page .car-nav-m{display:flex;align-items:center;justify-content:space-between;margin-top:18px}
+  .vehicle-page .car-nav-m .car-btns{display:flex;gap:10px}
+  .vehicle-page .gal-side .specs{grid-template-columns:1fr 1fr;column-gap:16px}
+  .vehicle-page .gal-side .specs dd{font-size:15px}
+}

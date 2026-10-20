@@ -1,7 +1,18 @@
+import { serviceTranslations } from './data/service-translations';
+import { newsContactTranslations } from './data/news-contact-translations';
+import { fleetTranslations } from './data/fleet-translations';
+
 export type Language = 'cs' | 'en';
 
 // Czech is the source copy. Keep complete phrases together, except deliberate styled spans.
 const english: Record<string, string> = {
+  ...serviceTranslations,
+  ...newsContactTranslations,
+  ...fleetTranslations,
+  'Více o nás': 'More about us',
+  'Celý vozový park': 'Our full fleet',
+  'Všechny aktuality': 'All news',
+  'Privátní mobilita. Osobní servis. Poznejte KNOKAR, naši filozofii a hodnoty.': 'Private mobility. Personal service. Discover KNOKAR, our philosophy and our values.',
   'Klid': 'Luxury',
   'v pohybu': 'in Motion',
   'KNOKAR — Klid v pohybu': 'KNOKAR — Luxury in Motion',
@@ -156,9 +167,16 @@ export function getLanguage(url: URL): Language {
   return url.pathname.startsWith(`${base}/en/`) ? 'en' : 'cs';
 }
 
-export function languageHref(language: Language): string {
+export function siteHref(path: string, language: Language = 'cs'): string {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-  return `${base}/${language === 'en' ? 'en/' : ''}`;
+  return `${base}/${language === 'en' ? 'en/' : ''}${path.replace(/^\//, '')}`;
+}
+
+export function languageHref(language: Language, url?: URL): string {
+  if (!url) return siteHref('/', language);
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const path = url.pathname.slice(base.length).replace(/^\/en(?=\/)/, '');
+  return siteHref(path || '/', language);
 }
 
 export function translate(text: string, language: Language): string {

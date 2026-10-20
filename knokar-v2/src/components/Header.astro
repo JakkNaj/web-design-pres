@@ -1,5 +1,5 @@
 ---
-import { getLanguage, translator } from '../i18n';
+import { getLanguage, siteHref, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import knokar_logo_pozitiv_svg from '../assets/knokar-logo-pozitiv.svg';
@@ -12,48 +12,48 @@ const t = translator(language);
 <div class="hdr-shell">
 <div class="hdr-in glass">
 <svg class="grain" aria-hidden="true" focusable="false"><filter id="final-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#final-grain)"></rect></svg>
-<a class="hdr-logo" href="#top" aria-label={t("KNOKAR — na začátek stránky")}><Image src={knokar_logo_pozitiv_svg} alt={t("KNOKAR.cz — Pronájem luxusních vozidel")} loading="eager" /></a>
+<a class="hdr-logo" href={siteHref('/', language)} aria-label={t("KNOKAR — na začátek stránky")}><Image src={knokar_logo_pozitiv_svg} alt={t("KNOKAR.cz — Pronájem luxusních vozidel")} loading="eager" /></a>
 <nav class="nav" aria-label={t("Hlavní navigace")}>
-<a href="#onas">{t("O nás")}</a>
+<a href={siteHref('/o-nas/', language)} aria-current={Astro.url.pathname === siteHref('/o-nas/', language) ? 'page' : undefined}>{t("O nás")}</a>
 <div class="nav-dd">
 <button type="button" aria-expanded="false" data-services-toggle aria-controls="dd-sluzby">{t("Naše služby ")}<svg class="chev" viewBox="0 0 10 10" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 3.5 5 7l3.5-3.5"></path></svg></button>
 
 <div class="dd-panel glass" id="dd-sluzby" hidden>
 <svg class="grain" aria-hidden="true" focusable="false"><rect width="100%" height="100%" filter="url(#final-grain)"></rect></svg>
-<a href="#sluzby">{t("Krátkodobý pronájem vozů")}</a>
-<a href="#sluzby">{t("Dlouhodobý pronájem vozů")}</a>
-<a href="#sluzby">{t("Finanční servis")}</a>
-<a href="#sluzby">{t("Další")}</a>
+<a href={siteHref('/kratkodoby-pronajem/', language)} aria-current={Astro.url.pathname === siteHref('/kratkodoby-pronajem/', language) ? 'page' : undefined}>{t("Krátkodobý pronájem vozů")}</a>
+<a href={siteHref('/dlouhodoby-pronajem/', language)} aria-current={Astro.url.pathname === siteHref('/dlouhodoby-pronajem/', language) ? 'page' : undefined}>{t("Dlouhodobý pronájem vozů")}</a>
+<a href={siteHref('/financni-servis/', language)} aria-current={Astro.url.pathname === siteHref('/financni-servis/', language) ? 'page' : undefined}>{t("Finanční servis")}</a>
+<a href={siteHref('/#sluzby', language)} aria-current={Astro.url.pathname === siteHref('/#sluzby', language) ? 'page' : undefined}>{t("Další")}</a>
 </div>
 
 </div>
-<a href="#vozy">{t("Vozový park")}</a>
-<a href="#aktuality">{t("Aktuality")}</a>
-<a href="#kontakt">{t("Kontakt")}</a>
+<a href={siteHref('/vozovy-park/', language)} aria-current={Astro.url.pathname === siteHref('/vozovy-park/', language) ? 'page' : undefined}>{t("Vozový park")}</a>
+<a href={siteHref('/aktuality/', language)} aria-current={Astro.url.pathname === siteHref('/aktuality/', language) ? 'page' : undefined}>{t("Aktuality")}</a>
+<a href={siteHref('/kontakt/', language)} aria-current={Astro.url.pathname === siteHref('/kontakt/', language) ? 'page' : undefined}>{t("Kontakt")}</a>
 </nav>
 <div class="hdr-act">
 <LanguageSwitcher />
-<a class="btn btn-primary btn-sm" href="#kontakt">{t("Poslat poptávku")}</a>
+<a class="btn btn-primary btn-sm" href={siteHref('/kontakt/', language)}>{t("Poslat poptávku")}</a>
 <button class="menu-btn" type="button" aria-expanded="false" data-menu-toggle aria-controls="mobilni-menu">Menu</button>
 </div>
 </div>
 
 <nav class="mnav glass" id="mobilni-menu" hidden aria-label={t("Mobilní navigace")}>
 <svg class="grain" aria-hidden="true" focusable="false"><filter id="final-grain2"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#final-grain2)"></rect></svg>
-<a class="ml" href="#onas">{t("O nás ")}<span aria-hidden="true">→</span></a>
-<a class="ml" href="#sluzby">{t("Naše služby ")}<span aria-hidden="true">→</span></a>
+<a class="ml" href={siteHref('/o-nas/', language)}>{t("O nás ")}<span aria-hidden="true">→</span></a>
+<a class="ml" href={siteHref('/dlouhodoby-pronajem/', language)}>{t("Naše služby ")}<span aria-hidden="true">→</span></a>
 <div class="msub">
-<a href="#sluzby">{t("Krátkodobý pronájem vozů")}</a>
-<a href="#sluzby">{t("Dlouhodobý pronájem vozů")}</a>
-<a href="#sluzby">{t("Finanční servis")}</a>
-<a href="#sluzby">{t("Další")}</a>
+<a href={siteHref('/kratkodoby-pronajem/', language)} aria-current={Astro.url.pathname === siteHref('/kratkodoby-pronajem/', language) ? 'page' : undefined}>{t("Krátkodobý pronájem vozů")}</a>
+<a href={siteHref('/dlouhodoby-pronajem/', language)} aria-current={Astro.url.pathname === siteHref('/dlouhodoby-pronajem/', language) ? 'page' : undefined}>{t("Dlouhodobý pronájem vozů")}</a>
+<a href={siteHref('/financni-servis/', language)} aria-current={Astro.url.pathname === siteHref('/financni-servis/', language) ? 'page' : undefined}>{t("Finanční servis")}</a>
+<a href={siteHref('/#sluzby', language)} aria-current={Astro.url.pathname === siteHref('/#sluzby', language) ? 'page' : undefined}>{t("Další")}</a>
 </div>
-<a class="ml" href="#vozy">{t("Vozový park ")}<span aria-hidden="true">→</span></a>
-<a class="ml" href="#aktuality">{t("Aktuality ")}<span aria-hidden="true">→</span></a>
-<a class="ml" href="#kontakt">{t("Kontakt ")}<span aria-hidden="true">→</span></a>
+<a class="ml" href={siteHref('/vozovy-park/', language)}>{t("Vozový park ")}<span aria-hidden="true">→</span></a>
+<a class="ml" href={siteHref('/aktuality/', language)}>{t("Aktuality ")}<span aria-hidden="true">→</span></a>
+<a class="ml" href={siteHref('/kontakt/', language)}>{t("Kontakt ")}<span aria-hidden="true">→</span></a>
 <div class="mnav-foot">
 <LanguageSwitcher />
-<a class="btn btn-primary" href="#kontakt">{t("Poslat poptávku")}</a>
+<a class="btn btn-primary" href={siteHref('/kontakt/', language)}>{t("Poslat poptávku")}</a>
 <a class="btn btn-secondary" href="tel:+420725949494">{t("Zavolat +420 725 94 94 94")}</a>
 </div>
 </nav>

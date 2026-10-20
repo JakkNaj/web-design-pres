@@ -1,0 +1,133 @@
+---
+import { Image } from 'astro:assets';
+import { getLanguage, translator, siteHref } from '../../i18n';
+import '../../styles/services.css';
+import hero_nir_jpg from '../../assets/hero-nir.jpg';
+import bentley_grille_teal_jpg from '../../assets/bentley-grille-teal.jpg';
+import emblem_champagne_svg from '../../assets/emblem-champagne.svg';
+import hdr_rolls_night_jpg from '../../assets/hdr-rolls-night.jpg';
+import porsche_gt3_jpg from '../../assets/porsche-gt3.jpg';
+import logo_rollsroyce_png from '../../assets/logo-rollsroyce.png';
+import logo_bentley_png from '../../assets/logo-bentley.png';
+import logo_porsche_png from '../../assets/logo-porsche.png';
+import logo_mercedes_png from '../../assets/logo-mercedes.png';
+import logo_bmw_png from '../../assets/logo-bmw.png';
+import logo_audi_png from '../../assets/logo-audi.png';
+import logo_landrover_png from '../../assets/logo-landrover.png';
+import logo_volvo_png from '../../assets/logo-volvo.png';
+
+const language = getLanguage(Astro.url);
+const t = translator(language);
+const href = (path: string) => siteHref(path, language);
+---
+<section class="ph" aria-labelledby="ph-h">
+<div class="ph-media">
+<Image src={hero_nir_jpg} alt={t("Tmavý Bentley Mulsanne zaparkovaný v londýnské ulici před cihlovými domy.")} style="object-position: 50% 78%" widths={[480, 800, 1200, 1600, 1920]} sizes="100vw" format="webp" quality={85} loading="eager" fetchpriority="high" />
+<div class="ph-shade"></div>
+<div class="ph-content">
+<div class="wrap">
+<div class="ph-text">
+<nav class="crumbs" aria-label={t("Drobečková navigace")}><a href={href("/")}>{t("KNOKAR")}</a><span aria-hidden="true">/</span><span aria-current="page">{t("O nás")}</span></nav>
+<h1 class="h-display ph-title" id="ph-h">{t("Privátní mobilita. ")}<span style="color: var(--champ)">{t("Osobní servis.")}</span></h1>
+<p class="ph-lead">{t("Zajišťujeme krátkodobý i dlouhodobý pronájem vozů a osobní servis pro ty nejnáročnější. Spolupracujeme se soukromými i firemními klienty.")}</p>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec" aria-labelledby="known-h">
+<div class="wrap about-grid">
+<div class="about-text">
+<p class="label">{t("Od roku 2007")}</p>
+<h2 class="h-display" id="known-h" style="font-size: clamp(40px, 4.6vw, 70px)">{t("Čím déle se známe, tím méně slov ")}<em>{t("potřebujeme.")}</em></h2>
+<p class="lead">{t("Na trhu jsme již od roku 2007. Za tu dobu jsme poznali, co naši klienti potřebují a v jakých situacích. Mnozí se k nám vracejí — známe jejich preference a můžeme vždy navázat tam, kde jsme minule skončili.")}</p>
+<p>{t("Sledujeme vývoj vozů a technologií, trendy i měnící se potřeby zákazníků. Tyto poznatky promítáme do naší nabídky i způsobu, jakým o naše klienty pečujeme.")}</p>
+</div>
+<div class="about-side">
+<div class="stat-box"><b>19</b><span>{t("let na trhu")}</span></div>
+<div class="stat-box"><b>800<sup>+</sup></b><span>{t("klientů")}</span></div>
+<figure class="split-media" style="grid-column: 1 / -1; aspect-ratio: 16 / 10"><Image src={bentley_grille_teal_jpg} alt={t("Detail chromované mřížky a znaku Bentley na tmavě zelené kapotě.")} style="object-position: 50% 44%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top: 0" aria-labelledby="keys-h">
+<div class="wrap">
+<div class="quote-band">
+<div class="qb-meta"><p class="label">{t("Filozofie KNOKAR")}</p><Image class="qb-emb" src={emblem_champagne_svg} alt="" aria-hidden="true" loading="lazy" /></div>
+<h2 id="keys-h">{t("Předáme vám klíče. Ne další starosti.")}</h2>
+<blockquote>
+<p>{t("„Věříme, že skutečný komfort začíná tam, kde končí potřeba se o věci starat. Proto pro nás předání vozu není středobodem služby. Tou podstatnou je důvěra mezi lidmi – jistota, že na druhé straně je někdo, kdo zná vaše zvyklosti, rozumí situaci a dokáže reagovat dřív, než se z požadavku stane problém.“")}</p>
+<footer>{t("Jiří Knotek, zakladatel KNOKAR")}</footer>
+</blockquote>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top: 0" aria-label={t("Mise a vize")}>
+<div class="wrap">
+<div class="tiles t2">
+<article class="tile has-photo"><figure class="tile-photo"><Image src={hdr_rolls_night_jpg} alt={t("Tmavý Rolls-Royce zaparkovaný v noci před osvětlenou budovou.")} style="object-position: 50% 84%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure><div class="tile-body">
+<p class="tnum">{t("Naše mise")}</p>
+<h3 style="font-size: clamp(28px, 2.6vw, 40px); margin-top: auto">{t("Dáváme věci do pohybu. A vaše starosti necháváme stát.")}</h3>
+<p>{t("Vytváříme privátní servis pro ty, jejichž čas, soukromí a komfort mají vysokou hodnotu. Nasloucháme, předvídáme a zařizujeme – od každodenní mobility po situace, které se do běžného ceníku nevejdou.")}</p>
+</div></article>
+<article class="tile dark has-photo"><div class="tile-body">
+<p class="tnum" style="color: var(--champ)">{t("Naše vize")}</p>
+<h3 style="font-size: clamp(28px, 2.6vw, 40px); margin-top: auto">{t("Být první myšlenkou ve chvíli, kdy je potřeba něco zařídit.")}</h3>
+<p>{t("Nechceme být pouhou luxusní autopůjčovnou s prémiovými vozy. Chceme být důvěryhodným partnerem pro privátní mobilitu. Značkou, ke které se klient nevrací jen pro nové auto, ale pro pocit jistoty, že jeho požadavek má na druhé straně konkrétního člověka, který se o vše postará.")}</p>
+<p style="color: var(--champ); font-size: 18px">{t("Skutečně prémiová služba nezačíná otázkou „Jaký vůz si přejete?“, ale „Jak můžeme ulehčit váš život v pohybu?“")}</p>
+</div></article>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top: 0" aria-labelledby="val-h">
+<div class="wrap vals">
+<div class="vals-side">
+<p class="label" style="margin: 0">{t("Naše hodnoty")}</p>
+<h2 class="h-1" id="val-h">{t("Na čem stavíme")}</h2>
+<figure class="vals-photo"><Image src={porsche_gt3_jpg} alt={t("Stříbrné Porsche 911 GT3 zaparkované u moderní budovy.")} style="object-position: 40% 60%" widths={[480, 800, 1200]} sizes="(max-width: 1100px) 100vw, 50vw" format="webp" quality={85} loading="lazy" /></figure>
+</div>
+<ul class="vals-list">
+<li class="val-row"><svg class="val-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M2.5 10c2.4-2.6 4.8-2.6 7.2 0s4.8 2.6 7.2 0 3.6-1.3 4.6 0M2.5 15c2.4-2.6 4.8-2.6 7.2 0s4.8 2.6 7.2 0 3.6-1.3 4.6 0"></path></svg><div class="val-txt"><p class="tnum">{t("01 / Na stejné vlně")}</p><p class="tsub">{t("Protože skutečná osobní služba začíná porozuměním.")}</p><p>{t("Budujeme vztah, ve kterém klient nemusí při každé nové domluvě začínat od začátku. Pamatujeme si vaše preference, vnímáme souvislosti. Čím déle se známe, tím méně slov potřebujeme.")}</p></div></li>
+<li class="val-row"><svg class="val-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"></path></svg><div class="val-txt"><p class="tnum">{t("02 / V tichosti")}</p><p class="tsub">{t("Diskrétnost, která nepotřebuje být vidět.")}</p><p>{t("Jsou služby, které mají budit pozornost. A pak jsou ty skutečně privátní. Nevystavujeme vztah s klientem na odiv. Neptáme se víc, než potřebujeme vědět. Důvěra se nezískává podpisem smlouvy, ale způsobem, jakým se chováme každý den.")}</p></div></li>
+<li class="val-row"><svg class="val-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h3l1.5 4-2 1.3a10 10 0 0 0 5.7 5.7l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4z"></path></svg><div class="val-txt"><p class="tnum">{t("03 / Vždy ten, kdo vás zná, na druhé straně")}</p><p>{t("V době, kdy se spousta věcí řeší na pár kliknutí, jsme pořád přesvědčeni, že jsou věci, které technologie nenahradí. Důvěru vytváří podání ruky a konkrétní člověk, který zná situaci a drží řešení v rukou. V praxi klient vždy ví, komu zavolat, kdo jeho požadavek řeší a kdykoliv a kamkoliv za ním osobně přijede.")}</p></div></li>
+<li class="val-row"><svg class="val-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M14 6.5 19.5 12 14 17.5"></path></svg><div class="val-txt"><p class="tnum">{t("04 / Bez zbytečných odboček")}</p><p class="tsub">{t("Skutečný luxus je klid a to, že vám někdo ubere starosti.")}</p><p>{t("Klient k nám nepřichází proto, aby dostal další administrativu, další telefonní číslo nebo další problém k vyřešení. Složitost necháváme na své straně.")}</p></div></li>
+</ul>
+</div>
+</section>
+
+<section class="brands" aria-labelledby="brands-onas-h">
+<div class="wrap brands-in">
+<h2 class="label" id="brands-onas-h">{t("Portfolio značek")}</h2>
+<ul class="brand-row">
+<li><Image src={logo_rollsroyce_png} alt={t("Rolls-Royce")} loading="lazy" /></li>
+<li><Image src={logo_bentley_png} alt={t("Bentley")} loading="lazy" /></li>
+<li><Image src={logo_porsche_png} alt={t("Porsche")} loading="lazy" /></li>
+<li><Image src={logo_mercedes_png} alt={t("Mercedes-Benz")} loading="lazy" /></li>
+<li><Image src={logo_bmw_png} alt={t("BMW")} loading="lazy" /></li>
+<li><Image src={logo_audi_png} alt={t("Audi")} loading="lazy" /></li>
+<li><Image src={logo_landrover_png} alt={t("Land Rover")} loading="lazy" /></li>
+<li><Image src={logo_volvo_png} alt={t("Volvo")} loading="lazy" /></li>
+</ul>
+</div>
+</section>
+
+<section class="sec cta-sec about-cta" aria-labelledby="cta-h">
+<div class="wrap">
+<div class="cta-band">
+<div class="cta-text">
+<p class="label">{t("Kontakt")}</p>
+<h2 class="h-1" id="cta-h">{t("„Nejde to“ není nikdy naše první odpověď.")}</h2>
+<p>{t("Napište nám. Ozveme se vám a osobně s vámi projdeme dostupné možnosti.")}</p>
+<div class="cta-acts">
+<a class="btn btn-light" href={href("/kontakt/")}>{t("Poslat poptávku ")}<span class="arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-ghost-light" href="tel:+420725949494">+420 725 94 94 94</a>
+</div>
+</div>
+<Image class="cta-emb" src={emblem_champagne_svg} alt="" aria-hidden="true" loading="lazy" />
+</div>
+</div>
+</section>

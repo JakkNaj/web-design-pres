@@ -1,5 +1,5 @@
 ---
-import { getLanguage, translator } from '../i18n';
+import { getLanguage, siteHref, translator } from '../i18n';
 import { Image } from 'astro:assets';
 import knokar_logo_negativ_svg from '../assets/knokar-logo-negativ.svg';
 
@@ -31,19 +31,19 @@ const t = translator(language);
 <div class="ftr-col">
 <h3>{t("Navigace")}</h3>
 <ul>
-<li><a href="#onas">{t("O nás")}</a></li>
-<li><a href="#sluzby">{t("Naše služby")}</a></li>
-<li><a href="#vozy">{t("Vozový park")}</a></li>
-<li><a href="#aktuality">{t("Aktuality")}</a></li>
-<li><a href="#kontakt">{t("Kontakt")}</a></li>
+<li><a href={siteHref('/o-nas/', language)}>{t("O nás")}</a></li>
+<li><a href={siteHref('/dlouhodoby-pronajem/', language)}>{t("Naše služby")}</a></li>
+<li><a href={siteHref('/vozovy-park/', language)}>{t("Vozový park")}</a></li>
+<li><a href={siteHref('/aktuality/', language)}>{t("Aktuality")}</a></li>
+<li><a href={siteHref('/kontakt/', language)}>{t("Kontakt")}</a></li>
 </ul>
 </div>
 <div class="ftr-col">
 <h3>{t("Naše služby")}</h3>
 <ul>
-<li>{t("Krátkodobý pronájem vozů")}</li>
-<li>{t("Dlouhodobý pronájem vozů")}</li>
-<li>{t("Finanční servis")}</li>
+<li><a href={siteHref('/kratkodoby-pronajem/', language)}>{t("Krátkodobý pronájem vozů")}</a></li>
+<li><a href={siteHref('/dlouhodoby-pronajem/', language)}>{t("Dlouhodobý pronájem vozů")}</a></li>
+<li><a href={siteHref('/financni-servis/', language)}>{t("Finanční servis")}</a></li>
 <li>{t("Pronájem vozů s řidičem")}</li>
 </ul>
 </div>

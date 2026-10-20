@@ -53,3 +53,15 @@ Original Rolls-Royce now uses 20% of the shared overlay strength; other slides r
 Desktop hero now uses `clamp(560px, 80svh, 780px)` instead of its width-driven aspect ratio. Photo comparison control stays absolutely positioned; reduced padding, label size and arrow icons make its pill smaller while retaining 44px button targets. Desktop intro top padding reduced to 48–80px; mobile hero height preserved.
 
 Browser geometry in both languages at 1280×720, 1366×768, 1440×900, 1920×1080 and 390×844: heading and controls fit, no horizontal overflow. Hiding/showing the comparison control produces exactly the same hero height. At 1366×768, hero is 614px high and intro content begins at 662px. `npm run check`: no diagnostics. Static build passed. T3 screenshot capture failed/timed out; geometry inspection succeeded in a new preview tab.
+
+
+## Subpages — 2026-10-20
+
+- All eight supplied templates verified at 390px and 1440px: About, short-term rental, long-term rental B, financial services, fleet, vehicle detail, news and contact. No horizontal overflow, escaped controls/text or zero-height photo containers. Mobile hero can grow with long copy; a stronger top scrim protects breadcrumb contrast.
+- Selected B leasing-benefits block and loaded Bentley image verified. Financial services related long-term card uses the different Rolls-Royce dusk photograph, linked to the B route.
+- Brand filtering returns the correct two Land Rover/five Mercedes-Benz cars. All seven detail routes show the matching car. AMG gallery changes between six photos and updates accessible state; keyboard arrows/Home/End supported. Related carousel shows three/two/one cars by breakpoint and cycles correctly.
+- Czech/English page switching, service dropdown and Escape, detail inquiry prefill and contact `?vehicle=` prefill checked. No enabled form submissions or browser console errors. Article links use supplied original URLs.
+- Astro check: 0 errors/warnings/hints. Static build: 30 pages. All internal files, links, anchors, heading counts and duplicate IDs checked, including the `/web-design-pres/knokar-v2` deployment base. English copy scan found no untranslated Czech UI text.
+- Implementation synchronized to the presentation source for deployment through the existing GitHub Pages workflow. Originals, legacy site and design prototype preserved.
+
+Review screenshots: `/tmp/knokar-subpages-qa/` (desktop/mobile B hero, B benefits, financial-service related cards, About values).

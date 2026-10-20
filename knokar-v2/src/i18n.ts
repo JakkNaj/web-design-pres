@@ -30,7 +30,7 @@ const english: Record<string, string> = {
   'Krátkodobý pronájem vozů': 'Short-term car rental',
   'Dlouhodobý pronájem vozů': 'Long-term car rental',
   'Finanční servis': 'Financial services',
-  'Další': 'More',
+  'Další služby': 'Other services',
   'Jazyk': 'Language',
   'Zavřít': 'Close',
   'Poslat poptávku': 'Make an enquiry',
